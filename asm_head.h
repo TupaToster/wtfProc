@@ -6,6 +6,14 @@
 #include "cmd.h"
 #include "text.h"
 
+enum CMD {
+
+    #undef DEF_CMD
+    #define DEF_CMD(name, num, arg, code) CMD_##name = num,
+
+    #include "cmd.h"
+};
+
 enum masks {
 
     MASK_RAM = 1<<7,

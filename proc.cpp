@@ -18,6 +18,7 @@ int main (int argc, char* argv[]) {
         case 2:
 
             codeFileName = (char*) calloc (strlen (argv[1]) + 1, sizeof (char));
+
             assert (codeFileName != NULL);
 
             strcpy (codeFileName, argv[1]);
@@ -25,7 +26,7 @@ int main (int argc, char* argv[]) {
 
         default:
 
-            printf ("Wrong args");
+            printf ("Wrong arg");
             return 0;
         break;
     }
@@ -57,7 +58,7 @@ int main (int argc, char* argv[]) {
             #undef DEF_CMD
 
             #define DEF_CMD(name, num, arg, code)                 \
-                case CMD_##name:                     \
+                case CMD_##name:                                  \
                                                                   \
                     argument = NULL;                              \
                     if (arg == 1) argument = handleArg (&cpu);    \

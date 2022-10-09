@@ -47,4 +47,8 @@ DEF_CMD (dump, 7, 0, {
 DEF_CMD (hlt, 0, 0, {
     return 0;
 })
+
+DEF_CMD (pop, 8, 1, {
+    *argument = POP;
+})
 #endif

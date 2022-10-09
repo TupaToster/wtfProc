@@ -1,11 +1,10 @@
 push 1
 push 12
-mult
-out
-push 228
+add
+pop rax
+push 1
+push rax
+add
 push rax
 dump
-add
-dump
-out
 hlt

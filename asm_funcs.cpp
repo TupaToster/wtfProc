@@ -26,12 +26,18 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum) {
 
         fputc ((char) arg[1] - 'a' + 1, outFile);
     }
-    else{
+    else if (cmdNum != CMD_pop) {
 
         fputc (cmdNum | MASK_IMM, outFile);
 
         writeBin (strtod (arg, NULL), outFile);
     }
+    else {
+
+        printf ("Wrong args");
+        exit (0);
+    }
+
 
     *code->Lines[line].end = temp;
 }

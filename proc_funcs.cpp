@@ -3,7 +3,7 @@
 void ProcCtor (Proc* cpu) {
 
     cpu->code = NULL;
-    cpu->regs[rax] = 19;
+    cpu->regs[rax] = 0;
     cpu->regs[rbx] = 0;
     cpu->regs[rcx] = 0;
     cpu->regs[rdx] = 0;
@@ -24,16 +24,16 @@ elem_t* handleArg (Proc* cpu) {
 
     elem_t* arg = NULL;
 
-    if (cpu->code[cpu->ip - 1] & MASK_IMM) {
+    if (cpu->code[cpu->ip - 1] & MASK_REG) {
+
+        arg = cpu->regs + cpu->code[cpu->ip];
+        cpu->ip += sizeof (char);
+    }
+    else if ((cpu->code[cpu->ip - 1] & MASK_IMM) and (cpu->code[cpu->ip - 1] & MASK_CMD) != CMD_pop) {
 
         cpu->regs[r0x] = *(elem_t*)(cpu->code + cpu->ip);
         cpu->ip += sizeof (elem_t);
         arg = cpu->regs + r0x;
-    }
-    else if (cpu->code[cpu->ip - 1] & MASK_REG) {
-
-        arg = cpu->regs + cpu->code[cpu->ip];
-        cpu->ip += sizeof (char);
     }
 
     return arg;
