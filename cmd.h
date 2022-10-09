@@ -37,7 +37,7 @@ DEF_CMD (div, 5, 0, {
 })
 
 DEF_CMD (out, 6, 0, {
-    printf (elem_t_OUT, POP);
+    printf (elem_t_OUT "\n", POP);
 })
 
 DEF_CMD (dump, 7, 0, {

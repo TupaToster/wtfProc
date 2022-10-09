@@ -52,15 +52,16 @@ int main (int argc, char* argv[]) {
 
         elem_t* argument = NULL;
 
-        switch (cpu.code[cpu.ip++]) {
+        switch ((cpu.code[cpu.ip++] & MASK_CMD)) {
 
             #undef DEF_CMD
-            #define DEF_CMD(name, num, arg, code)             \
-                case CMD_##name:                              \
-                                                              \
-                    argument = NULL;                          \
-                    if (arg == 1) argument = handleArg (&cpu);\
-                    code                                      \
+
+            #define DEF_CMD(name, num, arg, code)                 \
+                case CMD_##name:                     \
+                                                                  \
+                    argument = NULL;                              \
+                    if (arg == 1) argument = handleArg (&cpu);    \
+                    code                                          \
                 break;
 
             #include "cmd.h"
