@@ -1,7 +1,7 @@
 #pragma once
 #include <stdio.h>
 #include <stdlib.h>
-#include "flog.cpp"
+#include "flog.h"
 #include "cmd.h"
 
 // DEFINE NDEBUG TO DISABLE LOGS

@@ -4,7 +4,12 @@ CFLAGS+=-Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equa
 
 ASM_OBJ+=asm.o flog.o asm_funcs.o text.o
 
-all: wtfasm.exe
+PROC_OBJ+=proc.o proc_funcs.o stack.o text.o flog.o
+
+all: wtfasm.exe wtfproc.exe
+
+wtfproc.exe: $(PROC_OBJ)
+	$(CC) $(PROC_OBJ) $(CFLAGS) -o wtfproc.exe
 
 wtfasm.exe: $(ASM_OBJ)
 	$(CC) $(ASM_OBJ) $(CFLAGS) -o wtfasm.exe

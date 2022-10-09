@@ -88,10 +88,10 @@ void bufferize (const char* filename, Text* writeTo) {
 
     writeTo->TextString++;
 
-    FILE* fIn = fopen (filename, "r");
+    FILE* fIn = fopen (filename, "rb");
     assert (fIn != NULL);
 
-    assert (fread (writeTo->TextString, sizeof (char), writeTo->TextSize, fIn) != writeTo->TextSize);
+    assert (fread (writeTo->TextString, sizeof (char), writeTo->TextSize, fIn) != 0);
 
     writeTo->TextString[writeTo->TextSize] = '\0';
 
