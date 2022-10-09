@@ -22,21 +22,31 @@ void ProcDtor (Proc* cpu) {
 
 elem_t* handleArg (Proc* cpu) {
 
-    elem_t* arg = NULL;
+    cpu->regs[r0x] = 0;
+    int command = cpu->ip - 1;
 
-    if (cpu->code[cpu->ip - 1] & MASK_REG) {
+    if ((cpu->code[command] & MASK_CMD) == CMD_pop) {
 
-        arg = cpu->regs + cpu->code[cpu->ip];
-        cpu->ip += sizeof (char);
+        if (cpu->code[command] & MASK_REG) {
+
+            cpu->ip++;
+            return cpu->regs + cpu->code[cpu->ip - 1];
+        }
     }
-    else if ((cpu->code[cpu->ip - 1] & MASK_IMM) and (cpu->code[cpu->ip - 1] & MASK_CMD) != CMD_pop) {
+    else if ((cpu->code[command] & MASK_CMD) == CMD_push) {
+        if (cpu->code[command] & MASK_REG) {
 
-        cpu->regs[r0x] = *(elem_t*)(cpu->code + cpu->ip);
-        cpu->ip += sizeof (elem_t);
-        arg = cpu->regs + r0x;
+            cpu->regs[r0x] += cpu->regs[cpu->code[cpu->ip]];
+            cpu->ip += sizeof (char);
+        }
+        if (cpu->code[command] & MASK_IMM) {
+
+            cpu->regs[r0x] += *(elem_t*)(cpu->code + cpu->ip);
+            cpu->ip += sizeof (elem_t);
+        }
+
+        return cpu->regs + r0x;
     }
-
-    return arg;
 }
 
 void ProcDumpInside (Proc* cpu) {

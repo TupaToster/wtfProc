@@ -1,10 +1,10 @@
 ----------------------------------------
-Logging session at compiled time : 19:23:13 Oct  9 2022
+Logging session at compiled time : 00:07:06 Oct 10 2022
 
 In file cmd.h, function main, line 45, stack named cpu.stk was dumped : 
 	Errors : 
 		[ok]
-	hash = 3237334328 (ok)
+	hash = 3274498874 (ok)
 	canL = 0xDEADBEEF (ok)
 	canR = 0xD34DB33F (ok)
 	size = 1 (ok)
@@ -12,23 +12,62 @@ In file cmd.h, function main, line 45, stack named cpu.stk was dumped :
 	stackCanL = 0xDEADBEEF (ok)
 	stackCanR = 0xD34DB33F (ok)
 	cpu.stk.stack : 
-		cpu.stk.stack[0] : 14.000000
+		cpu.stk.stack[0] : 1.000000
 		cpu.stk.stack[1] : 0.000000
 		cpu.stk.stack[2] : 0.000000
 		cpu.stk.stack[3] : 0.000000
 	End of stack
 End of dump 
 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
-F0 3F 41 01 02 07 00 00 00 00 00 00 00 00 00 0A 
-               /| ip = 37, cpu->code[ip] = 07
+43 50 30 31 21 00 00 00 00 00 00 F0 3F 07 48 01 
+                                       /| ip = 13, cpu->code[ip] = 07
 End of cpu dump
-----------------------------------------
-Logging session at compiled time : 19:23:13 Oct  9 2022
-
 In file cmd.h, function main, line 45, stack named cpu.stk was dumped : 
 	Errors : 
 		[ok]
-	hash = 498556115 (ok)
+	hash = 4006841686 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu.stk.stack : 
+		cpu.stk.stack[0] : 0.000000
+		cpu.stk.stack[1] : 0.000000
+		cpu.stk.stack[2] : 0.000000
+		cpu.stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+07 41 01 07 21 00 00 00 00 00 00 00 40 07 02 06 
+/| ip = 16, cpu->code[ip] = 07
+End of cpu dump
+In file cmd.h, function main, line 45, stack named cpu.stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 3274498874 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 1 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu.stk.stack : 
+		cpu.stk.stack[0] : 1.000000
+		cpu.stk.stack[1] : 0.000000
+		cpu.stk.stack[2] : 0.000000
+		cpu.stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+07 41 01 07 21 00 00 00 00 00 00 00 40 07 02 06 
+         /| ip = 19, cpu->code[ip] = 07
+End of cpu dump
+In file cmd.h, function main, line 45, stack named cpu.stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 396297067 (ok)
 	canL = 0xDEADBEEF (ok)
 	canR = 0xD34DB33F (ok)
 	size = 2 (ok)
@@ -36,13 +75,100 @@ In file cmd.h, function main, line 45, stack named cpu.stk was dumped :
 	stackCanL = 0xDEADBEEF (ok)
 	stackCanR = 0xD34DB33F (ok)
 	cpu.stk.stack : 
-		cpu.stk.stack[0] : 14.000000
-		cpu.stk.stack[1] : 13.000000
+		cpu.stk.stack[0] : 1.000000
+		cpu.stk.stack[1] : 2.000000
 		cpu.stk.stack[2] : 0.000000
 		cpu.stk.stack[3] : 0.000000
 	End of stack
 End of dump 
 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
-F0 3F 41 01 02 41 01 07 00 00 00 00 00 00 00 B2 
-                     /| ip = 39, cpu->code[ip] = 07
+07 41 01 07 21 00 00 00 00 00 00 00 40 07 02 06 
+                                       /| ip = 29, cpu->code[ip] = 07
+End of cpu dump
+----------------------------------------
+Logging session at compiled time : 00:07:06 Oct 10 2022
+
+In file cmd.h, function main, line 45, stack named cpu.stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 3878619362 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 1 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu.stk.stack : 
+		cpu.stk.stack[0] : 1.000000
+		cpu.stk.stack[1] : 0.000000
+		cpu.stk.stack[2] : 0.000000
+		cpu.stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+43 50 30 31 21 00 00 00 00 00 00 F0 3F 07 48 01 
+                                       /| ip = 13, cpu->code[ip] = 07
+End of cpu dump
+In file cmd.h, function main, line 45, stack named cpu.stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 315994878 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu.stk.stack : 
+		cpu.stk.stack[0] : 0.000000
+		cpu.stk.stack[1] : 0.000000
+		cpu.stk.stack[2] : 0.000000
+		cpu.stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+07 61 01 00 00 00 00 00 00 00 40 07 21 00 00 00 
+/| ip = 16, cpu->code[ip] = 07
+End of cpu dump
+In file cmd.h, function main, line 45, stack named cpu.stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 3289702647 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 1 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu.stk.stack : 
+		cpu.stk.stack[0] : 3.000000
+		cpu.stk.stack[1] : 0.000000
+		cpu.stk.stack[2] : 0.000000
+		cpu.stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+07 61 01 00 00 00 00 00 00 00 40 07 21 00 00 00 
+                                 /| ip = 27, cpu->code[ip] = 07
+End of cpu dump
+In file cmd.h, function main, line 45, stack named cpu.stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 411500840 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 2 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu.stk.stack : 
+		cpu.stk.stack[0] : 3.000000
+		cpu.stk.stack[1] : 2.000000
+		cpu.stk.stack[2] : 0.000000
+		cpu.stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+00 00 00 00 40 07 02 06 00 00 00 00 00 00 00 72 
+               /| ip = 37, cpu->code[ip] = 07
 End of cpu dump

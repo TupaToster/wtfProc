@@ -1,10 +1,11 @@
 push 1
-push 12
-add
-pop rax
-push 1
-push rax
-add
-push rax
 dump
+pop rax
+dump
+push rax+2
+dump
+push 2
+dump
+add
+out
 hlt
