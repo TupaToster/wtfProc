@@ -3,8 +3,8 @@
 typedef double elem_t;
 #define elem_t_OUT "%Lf"
 
-#define PUSH(val) StackPush (&cpu.stk, val)
-#define POP StackPop (&cpu.stk)
+#define PUSH(val) StackPush (&cpu->stk, val)
+#define POP StackPop (&cpu->stk)
 
 #define GENERAL_CMD
 
@@ -45,7 +45,7 @@ DEF_CMD (dump, 7, 0, {
 })
 
 DEF_CMD (hlt, 0, 0, {
-    return 0;
+    exit (0);
 })
 
 DEF_CMD (pop, 8, 1, {

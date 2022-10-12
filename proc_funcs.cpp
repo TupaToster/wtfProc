@@ -1,23 +1,82 @@
 #include "proc_head.h"
 
+char Proc_version[3] = "01";
+
+char* handleComLine (int argc, char* argv[]) {
+
+    char* codeFileName = NULL;
+
+    switch (argc) {
+
+        case 1:
+
+            printf ("Good usage of wtfproc.exe:\n"
+                    "./wtfproc.exe fileName\n"
+                    "fileName - name of file to run (usually a .wtf)");
+            exit (0);
+        break;
+
+        case 2:
+
+            codeFileName = (char*) calloc (strlen (argv[1]) + 1, sizeof (char));
+
+            assert (codeFileName != NULL);
+
+            strcpy (codeFileName, argv[1]);
+        break;
+
+        default:
+
+            printf ("Wrong arg");
+            exit(0);
+        break;
+    }
+
+    return codeFileName;
+}
+
 void ProcCtor (Proc* cpu) {
 
-    cpu->code = NULL;
+    cpu->code      = NULL;
     cpu->regs[rax] = 0;
     cpu->regs[rbx] = 0;
     cpu->regs[rcx] = 0;
     cpu->regs[rdx] = 0;
     cpu->regs[r0x] = 0;
-    cpu->ip = 0;
-    cpu->stk = StackCtor ();
+    cpu->code      = 0;
+    cpu->ip        = 0;
+    cpu->stk       = StackCtor ();
 }
 
 void ProcDtor (Proc* cpu) {
 
     free (cpu->code);
     free (cpu->regs);
-    cpu->ip = 0;
+    cpu->codeSize = 0;
+    cpu->ip       = 0;
     StackDtor (&cpu->stk);
+}
+
+void checkFileSign (Proc* cpu) {
+
+    if (!(cpu->code[0] == 'C'
+    and   cpu->code[1] == 'P')) {
+
+        printf ("Wrong file signature");
+        exit (0);
+    }
+
+    if (!(cpu->code[2] == Proc_version[0]
+    and   cpu->code[3] == Proc_version[1])) {
+
+        printf ("Wrong file version \n"
+                "file      : %.*s   \n"
+                "processor : %s     \n");
+        exit (0);
+    }
+
+
+    cpu->ip = 4;
 }
 
 elem_t* handleArg (Proc* cpu) {
@@ -71,4 +130,33 @@ void ProcDumpInside (Proc* cpu) {
 
     flogprintf ("/| ip = %d, cpu->code[ip] = %02X\n"
                 "End of cpu dump\n", cpu->ip - 1, cpu->code[cpu->ip - 1]);
+}
+
+void ProcRunCode (Proc* cpu) {
+
+    while (cpu->ip < cpu->codeSize) {
+
+        elem_t* argument = NULL;
+
+        switch ((cpu->code[cpu->ip++] & MASK_CMD)) {
+
+            #undef DEF_CMD
+
+            #define DEF_CMD(name, num, arg, code)                 \
+                case CMD_##name:                                  \
+                                                                  \
+                    argument = NULL;                              \
+                    if (arg == 1) argument = handleArg (cpu);    \
+                    code                                          \
+                break;
+
+            #include "cmd.h"
+
+            default:
+                printf ("Wrong command");
+                ProcDump (cpu);
+                exit (0);
+            break;
+        }
+    }
 }

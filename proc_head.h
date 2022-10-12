@@ -5,9 +5,11 @@
 #include "stack.h"
 #include "text.h"
 
+extern char Proc_version[3];
+
 #define ProcDump(cpu)\
-    StackDump (cpu.stk);\
-    ProcDumpInside (&cpu);\
+    StackDump (cpu->stk);\
+    ProcDumpInside (cpu);\
 
 enum reg {
 
@@ -34,14 +36,16 @@ enum CMD {
     #include "cmd.h"
 };
 
-
 struct Proc {
 
-    char*  code    = NULL;
-    elem_t regs[5] = {0};
-    int    ip      = 0;
-    Stack  stk     = {};
+    char*  code     = NULL;
+    size_t codeSize = 0;
+    elem_t regs[5]  = {0};
+    int    ip       = 0;
+    Stack  stk      = {};
 };
+
+char* handleComLine (int argc, char* argv[]);
 
 void ProcCtor (Proc* cpu);
 
@@ -50,3 +54,7 @@ void ProcDtor (Proc* cpu);
 elem_t* handleArg (Proc* cpu);
 
 void ProcDumpInside (Proc* cpu);
+
+void checkFileSign (Proc* cpu);
+
+void ProcRunCode (Proc* cpu);

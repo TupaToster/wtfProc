@@ -25,3 +25,7 @@ enum masks {
 void writeBin (elem_t val, FILE* outFile);
 
 void handleArg (Text* code, int line, FILE* outFile, char cmdNum);
+
+char* handleComLine (int argc, char* argv[], bool* aFlag, char** outFileName);
+
+void writeWtf (Text* codeFile, FILE* outFile);
