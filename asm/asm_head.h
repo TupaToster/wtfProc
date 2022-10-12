@@ -1,18 +1,18 @@
 #pragma once
 #include "D:\los_projectados\wtfProc\lib\globalization.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
-#include file(flog.h)
-#include file(cmd.h)
-#include file(text.h)
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <assert.h>
+#include header(flog)
+#include header(cmd)
+#include header(text)
 
 enum CMD {
 
     #undef DEF_CMD
     #define DEF_CMD(name, num, arg, code) CMD_##name = num,
 
-    #include file (cmd.h)
+    #include header (cmd)
 };
 
 enum masks {

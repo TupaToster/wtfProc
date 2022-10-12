@@ -1,10 +1,10 @@
 #pragma once
-#include "D:\los_projectados\wtfProc\globalization.h"
+#include "D:\los_projectados\wtfProc\lib\globalization.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include file(stack.h)
-#include file(text.h)
+#include header(stack)
+#include header(text)
 
 extern char Proc_version[3];
 
@@ -34,7 +34,7 @@ enum CMD {
     #undef DEF_CMD
     #define DEF_CMD(name, num, arg, code) CMD_##name = num,
 
-    #include file(cmd.h)
+    #include header(cmd)
 };
 
 struct Proc {

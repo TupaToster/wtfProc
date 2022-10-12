@@ -150,7 +150,7 @@ void ProcRunCode (Proc* cpu) {
                     code                                          \
                 break;
 
-            #include "cmd.h"
+            #include header(cmd)
 
             default:
                 printf ("Wrong command");

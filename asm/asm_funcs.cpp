@@ -159,7 +159,7 @@ void writeWtf (Text* codeFile, FILE* outFile) {
             }                                                         \
             else
 
-        #include "cmd.h"
+        #include header(cmd)
 
         //else
         {
