@@ -15,6 +15,104 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum) {
     char arg1[100] = {0};
     char arg2[100] = {0};
 
+    int it1 = 1,
+        it2 = 1;
+
+    char temp = *code->Lines[line].end;
+
+    *code->Lines[line].end = '\0';
+
+    switch (sscanf (code->Lines[line].begin, "%s%[^+\n\0]%[^\n\0 ]", arg1, arg1, arg2)) {
+
+        case 2:
+
+            if (arg1[it1] == '[') {
+
+                cmdNum |= MASK_RAM;
+                it1++;
+            }
+
+            if(arg1[it1] == 'r' and arg1[it1 + 2] == 'x') {
+
+                cmdNum |= MASK_REG;
+
+                fputc (cmdNum, outFile);
+
+                fputc (arg1[it1 + 1] - 'a' + 1, outFile);
+            }
+            else if (arg1[it1] >= '0' and arg1[it1] <= '9' or arg1[it1] == '-')  {
+
+                cmdNum |= MASK_IMM;
+
+                fputc (cmdNum, outFile);
+
+                writeBin (strtod (arg1 + it1, NULL), outFile);
+            }
+            else {
+
+                printf ("Wrong arg at line %d : %s", line + 1, *code->Lines[line].begin);
+                exit (0);
+            }
+        break;
+
+        case 3:
+
+            if (arg1[it1] == '[') {
+
+                cmdNum |= MASK_RAM;
+                it1++;
+            }
+
+            cmdNum |= MASK_REG;
+            cmdNum |= MASK_IMM;
+
+            if (arg1[it1] == 'r' and arg1[it1 + 2] == 'x') {
+
+
+                if (arg2[0] != '+') {
+
+                    printf ("Wrong arg at line %d : %s", line + 1, *code->Lines[line].begin);
+                    exit (0);
+                }
+
+                fputc (cmdNum, outFile);
+
+                fputc (arg1[it1 + 1] - 'a' + 1, outFile);
+
+                writeBin (strtod (arg2 + it2, NULL), outFile);
+            }
+            else if (arg1[it1] >= '0' and arg1[it1] <= '9' or arg1[it1] == '-') {
+
+                if (arg2[0] != '+') {
+
+                    printf ("Wrong arg at line %d : %s", line + 1, *code->Lines[line].begin);
+                    exit (0);
+                }
+
+                fputc (cmdNum, outFile);
+
+                fputc (arg2[it2] - 'a' + 1, outFile);
+
+                writeBin (strtod (arg1 + it1, NULL), outFile);
+            }
+        break;
+
+        default:
+
+            printf ("Wrong operator in line %d : %s", line + 1, *code->Lines[line].begin);
+            exit (0);
+        break;
+    }
+
+    *code->Lines[line].end = temp;
+
+}
+
+void handleArg0 (Text* code, int line, FILE* outFile, char cmdNum) {
+
+    char arg1[100] = {0};
+    char arg2[100] = {0};
+
     char temp = *code->Lines[line].end;
 
     *code->Lines[line].end = '\0';
@@ -152,9 +250,9 @@ void writeWtf (Text* codeFile, FILE* outFile) {
             if (strcmp (inputStr, #name) == 0) {                      \
                                                                       \
                 if (arg == 0) fputc (num, outFile);                   \
-                else if (arg == 1) {                                  \
+                else if (arg != 0) {                                  \
                                                                       \
-                    handleArg (codeFile, i, outFile, num);           \
+                    handleArg (codeFile, i, outFile, num);            \
                 }                                                     \
             }                                                         \
             else
@@ -163,7 +261,7 @@ void writeWtf (Text* codeFile, FILE* outFile) {
 
         //else
         {
-            printf ("Wrong operator at line %d", i + 1);
+            printf ("Wrong operator at line %d : %s", i + 1, inputStr);
             exit (0);
         }
     }

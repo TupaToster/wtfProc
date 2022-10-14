@@ -39,11 +39,12 @@ enum CMD {
 
 struct Proc {
 
-    char*  code     = NULL;
-    size_t codeSize = 0;
-    elem_t regs[5]  = {0};
-    int    ip       = 0;
-    Stack  stk      = {};
+    char*   code     = NULL;
+    size_t  codeSize = 0;
+    elem_t  regs[5]  = {0};
+    int     ip       = 0;
+    Stack   stk      = {};
+    elem_t* ram      = NULL;
 };
 
 char* handleComLine (int argc, char* argv[]);
@@ -59,3 +60,7 @@ void ProcDumpInside (Proc* cpu);
 void checkFileSign (Proc* cpu);
 
 void ProcRunCode (Proc* cpu);
+
+elem_t getValueArg (Proc* cpu);
+
+elem_t* getPtrArg (Proc* cpu);

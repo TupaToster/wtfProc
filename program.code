@@ -1,10 +1,7 @@
 push 1
-dump
-pop rax
-dump
-push rax+2
-dump
-push 2
+pop [0]
+push 1
+push [0]
 dump
 add
 out

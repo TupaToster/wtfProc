@@ -21,9 +21,11 @@ clean:
 	rm -rf asm/*.o asm/*.exe*
 	rm -rf processor/*.o processor/*.exe*
 	rm -rf lib/*.o lib/*.exe*
+	rm -rf *.o *.exe*
 	clear
 
 run:
+	make
 	./wtfasm.exe program.code
 	./wtfproc.exe a.wtf
 

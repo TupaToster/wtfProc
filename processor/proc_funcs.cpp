@@ -1,6 +1,6 @@
 #include "proc_head.h"
 
-char Proc_version[3] = "01";
+char Proc_version[3] = "02";
 
 char* handleComLine (int argc, char* argv[]) {
 
@@ -46,11 +46,13 @@ void ProcCtor (Proc* cpu) {
     cpu->code      = 0;
     cpu->ip        = 0;
     cpu->stk       = StackCtor ();
+    cpu->ram       = (elem_t*) calloc (100, sizeof (elem_t));
 }
 
 void ProcDtor (Proc* cpu) {
 
     free (cpu->code);
+    free (cpu->ram);
     free (cpu->regs);
     cpu->codeSize = 0;
     cpu->ip       = 0;
@@ -79,33 +81,60 @@ void checkFileSign (Proc* cpu) {
     cpu->ip = 4;
 }
 
-elem_t* handleArg (Proc* cpu) {
+elem_t getValueArg (Proc* cpu) {
 
-    cpu->regs[r0x] = 0;
-    int command = cpu->ip - 1;
+    char command = cpu->code[cpu->ip - 1];
 
-    if ((cpu->code[command] & MASK_CMD) == CMD_pop) {
+    elem_t retVal = 0;
 
-        if (cpu->code[command] & MASK_REG) {
+    if (command & MASK_REG) {
 
-            cpu->ip++;
-            return cpu->regs + cpu->code[cpu->ip - 1];
-        }
+        retVal += cpu->regs[cpu->code[cpu->ip]];
+        cpu->ip += sizeof (char);
     }
-    else if ((cpu->code[command] & MASK_CMD) == CMD_push) {
-        if (cpu->code[command] & MASK_REG) {
+    if (command & MASK_IMM) {
 
-            cpu->regs[r0x] += cpu->regs[cpu->code[cpu->ip]];
-            cpu->ip += sizeof (char);
-        }
-        if (cpu->code[command] & MASK_IMM) {
-
-            cpu->regs[r0x] += *(elem_t*)(cpu->code + cpu->ip);
-            cpu->ip += sizeof (elem_t);
-        }
-
-        return cpu->regs + r0x;
+        retVal += *(elem_t*)(cpu->code + cpu->ip);
+        cpu->ip += sizeof (retVal);
     }
+
+    if (command & MASK_RAM) {
+
+        retVal = cpu->ram[(size_t) retVal];
+    }
+    return retVal;
+}
+
+elem_t* getPtrArg (Proc* cpu) {
+
+
+    char command = cpu->code[cpu->ip - 1];
+
+    elem_t* retVal = NULL;
+
+    if (command & MASK_REG) {
+
+        retVal = cpu->regs + cpu->code[cpu->ip];
+        cpu->ip += sizeof (char);
+    }
+
+    if (command & MASK_IMM) {
+
+        retVal = (elem_t*)(cpu->code + cpu->ip);
+
+        if (command & MASK_RAM) {
+            retVal = cpu->ram + (size_t) *retVal + (size_t) cpu->code[cpu->ip];
+        }
+        else exit(0);
+
+        cpu->ip += sizeof (elem_t);
+    }
+    else if (command & MASK_RAM) {
+
+        retVal = cpu->ram + (size_t) *retVal;
+    }
+
+    return retVal;
 }
 
 void ProcDumpInside (Proc* cpu) {
@@ -134,20 +163,23 @@ void ProcDumpInside (Proc* cpu) {
 
 void ProcRunCode (Proc* cpu) {
 
+
     while (cpu->ip < cpu->codeSize) {
 
-        elem_t* argument = NULL;
+        elem_t* ptrArg  = NULL;
+        elem_t  valArg = 0;
+
 
         switch ((cpu->code[cpu->ip++] & MASK_CMD)) {
 
             #undef DEF_CMD
 
-            #define DEF_CMD(name, num, arg, code)                 \
-                case CMD_##name:                                  \
-                                                                  \
-                    argument = NULL;                              \
-                    if (arg == 1) argument = handleArg (cpu);    \
-                    code                                          \
+            #define DEF_CMD(name, num, arg, code)                    \
+                case CMD_##name:                                     \
+                                                                     \
+                    if      (arg == 1) valArg = getValueArg (cpu);   \
+                    else if (arg == 2) ptrArg = getPtrArg (cpu);     \
+                    code                                             \
                 break;
 
             #include header(cmd)

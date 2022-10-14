@@ -1,8 +1,8 @@
 #pragma once
 #include "D:\los_projectados\wtfProc\lib\globalization.h"
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <assert.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
 #include header(flog)
 #include header(cmd)
 #include header(text)
