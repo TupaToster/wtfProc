@@ -87,6 +87,13 @@ elem_t getValueArg (Proc* cpu) {
 
     elem_t retVal = 0;
 
+    if ((command & MASK_CMD) == CMD_jmp) {
+
+        retVal = (elem_t) *(int*)(cpu->code + cpu->ip);
+        cpu->ip += sizeof (int);
+        return retVal;
+    }
+
     if (command & MASK_REG) {
 
         retVal += cpu->regs[cpu->code[cpu->ip]];
@@ -168,7 +175,6 @@ void ProcRunCode (Proc* cpu) {
 
         elem_t* ptrArg  = NULL;
         elem_t  valArg = 0;
-
 
         switch ((cpu->code[cpu->ip++] & MASK_CMD)) {
 

@@ -15,7 +15,9 @@ typedef double elem_t;
 #else
 
 DEF_CMD (push, 1, 1, {
+    flog ("lol");
     PUSH (valArg);
+    flog ("lol1");
 })
 
 DEF_CMD (add, 2, 0, {
@@ -53,6 +55,6 @@ DEF_CMD (pop, 8, 2, {
 })
 
 DEF_CMD (jmp, 9, 1, {
-    cpu->ip = valArg;
+    cpu->ip = (int)valArg;
 })
 #endif
