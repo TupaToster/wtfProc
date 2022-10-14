@@ -7,6 +7,8 @@
 #include header(cmd)
 #include header(text)
 
+extern size_t ip;
+
 enum CMD {
 
     #undef DEF_CMD
@@ -23,10 +25,12 @@ enum masks {
     MASK_CMD = (1<<5) - 1,
 };
 
-void writeBin (elem_t val, FILE* outFile);
+#define writeBin(var, outFile) writeBinInternal (&var, outFile, sizeof (var))
 
-void handleArg (Text* code, int line, FILE* outFile, char cmdNum);
+void writeBinInternal (void* val, FILE* outFile, size_t sizeOfVar);
+
+void handleArg (Text* code, int line, FILE* outFile, char cmdNum, int tags[512]);
 
 char* handleComLine (int argc, char* argv[], bool* aFlag, char** outFileName);
 
-void writeWtf (Text* codeFile, FILE* outFile);
+void writeWtf (Text* codeFile, FILE* outFile, int tags[512]);

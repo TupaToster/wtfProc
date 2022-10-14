@@ -1,8 +1,6 @@
+1:
 push 1
-pop [0]
 push 1
-push [0]
-dump
 add
-out
+jmp :1
 hlt

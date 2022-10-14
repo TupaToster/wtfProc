@@ -1,16 +1,17 @@
 #include "asm_head.h"
 
-void writeBin (elem_t val, FILE* outFile) {
+void writeBinInternal (void* val, FILE* outFile, size_t sizeOfVar) {
 
     assert (outFile != NULL);
 
-    for (int i = 0; i < sizeof (elem_t); i++) {
+    for (int i = 0; i < sizeOfVar; i++) {
 
-        fputc (*(((char*)&val) + i), outFile);
+        fputc (*(((char*)val) + i), outFile);
+        ip += sizeof (char);
     }
 }
 
-void handleArg (Text* code, int line, FILE* outFile, char cmdNum) {
+void handleArg (Text* code, int line, FILE* outFile, char cmdNum, int tags[512]) {
 
     char arg1[100] = {0};
     char arg2[100] = {0};
@@ -37,16 +38,30 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum) {
                 cmdNum |= MASK_REG;
 
                 fputc (cmdNum, outFile);
+                ip += sizeof (char);
 
                 fputc (arg1[it1 + 1] - 'a' + 1, outFile);
+                ip+=sizeof (char);
             }
             else if (arg1[it1] >= '0' and arg1[it1] <= '9' or arg1[it1] == '-')  {
 
                 cmdNum |= MASK_IMM;
 
                 fputc (cmdNum, outFile);
+                ip += sizeof (char);
 
-                writeBin (strtod (arg1 + it1, NULL), outFile);
+
+                double value = 0;
+                sscanf (arg1 + it1, elem_t_F, &value);
+                writeBin (value, outFile);
+            }
+            else if (arg1[it1] == ':') {
+
+                fputc (cmdNum, outFile);
+                ip += sizeof (char);
+                int index = strtol (arg1 + it1 + 1, NULL, 10);
+
+                writeBin (tags[index], outFile);
             }
             else {
 
@@ -76,10 +91,14 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum) {
                 }
 
                 fputc (cmdNum, outFile);
+                ip += sizeof (char);
 
                 fputc (arg1[it1 + 1] - 'a' + 1, outFile);
+                ip += sizeof (char);
 
-                writeBin (strtod (arg2 + it2, NULL), outFile);
+                double value = 0;
+                sscanf (arg2 + it2, elem_t_F, &value);
+                writeBin (value, outFile);
             }
             else if (arg1[it1] >= '0' and arg1[it1] <= '9' or arg1[it1] == '-') {
 
@@ -90,10 +109,14 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum) {
                 }
 
                 fputc (cmdNum, outFile);
+                ip += sizeof (char);
 
                 fputc (arg2[it2] - 'a' + 1, outFile);
+                ip += sizeof (char);
 
-                writeBin (strtod (arg1 + it1, NULL), outFile);
+                double value = 0;
+                sscanf (arg1 + it1, elem_t_F, &value);
+                writeBin (value, outFile);
             }
         break;
 
@@ -106,73 +129,6 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum) {
 
     *code->Lines[line].end = temp;
 
-}
-
-void handleArg0 (Text* code, int line, FILE* outFile, char cmdNum) {
-
-    char arg1[100] = {0};
-    char arg2[100] = {0};
-
-    char temp = *code->Lines[line].end;
-
-    *code->Lines[line].end = '\0';
-
-    switch (sscanf (code->Lines[line].begin, "%s%[^+\n\0]%[^\n\0 ]", arg1, arg1, arg2)) {
-
-        case 2:
-
-            if (arg1[1] == 'r' and arg1[3] == 'x') {
-
-                fputc (cmdNum | MASK_REG, outFile);
-
-                fputc (arg1[2] - 'a' + (char)1, outFile);
-            }
-            else if (cmdNum != CMD_pop) {
-
-                fputc (cmdNum | MASK_IMM, outFile);
-
-                writeBin (strtod (arg1 + 1, NULL), outFile);
-            }
-            else {
-
-                printf ("Wrong arg on line %d", line);
-                exit (0);
-            }
-        break;
-
-        case 3:
-
-            if (arg1[1] == 'r' and arg1[3] == 'x' and cmdNum != CMD_pop) {
-
-                fputc (cmdNum | MASK_IMM | MASK_REG, outFile);
-
-                fputc (arg1[2] - 'a' + (char)1, outFile);
-
-                writeBin (strtod (arg2 + 1, NULL), outFile);
-            }
-            else if (arg2[1] == 'r' and arg2[3] == 'x' and cmdNum != CMD_pop) {
-
-                fputc (cmdNum | MASK_IMM | MASK_REG, outFile);
-
-                fputc (arg2[2] - 'a' + (char)1, outFile);
-
-                writeBin (strtod (arg1 + 1, NULL), outFile);
-            }
-            else {
-
-                printf ("Wrong arg on line %d", line);
-                exit (0);
-            }
-        break;
-
-        default:
-
-            printf ("Wrong arg on line %d", line);
-            exit (0);
-        break;
-    }
-
-    *code->Lines[line].end = temp;
 }
 
 char* handleComLine (int argc, char* argv[], bool* aFlag, char** outFileName) {
@@ -234,9 +190,11 @@ char* handleComLine (int argc, char* argv[], bool* aFlag, char** outFileName) {
     return fileName;
 }
 
-void writeWtf (Text* codeFile, FILE* outFile) {
+void writeWtf (Text* codeFile, FILE* outFile, int tags[512]) {
 
     fprintf (outFile, "%s", signa);
+
+    ip += 4 * sizeof (char);
 
     for (int i = 0; i < codeFile->stringCnt; i++) {
 
@@ -249,18 +207,28 @@ void writeWtf (Text* codeFile, FILE* outFile) {
         #define DEF_CMD(name, num, arg, code)                         \
             if (strcmp (inputStr, #name) == 0) {                      \
                                                                       \
-                if (arg == 0) fputc (num, outFile);                   \
+                if (arg == 0){                                        \
+                                                                      \
+                    fputc (num, outFile);                             \
+                    ip += sizeof (char);                              \
+                }                                                     \
                 else if (arg != 0) {                                  \
                                                                       \
-                    handleArg (codeFile, i, outFile, num);            \
+                    handleArg (codeFile, i, outFile, num, tags);      \
                 }                                                     \
             }                                                         \
             else
 
         #include header(cmd)
 
-        //else
-        {
+        if (inputStr[strlen (inputStr) - 1] == ':') {
+
+            int tagNum = 0;
+            sscanf (codeFile->Lines[i].begin, "%d", &tagNum);
+            tags[tagNum] = ip;
+        }
+        else {
+
             printf ("Wrong operator at line %d : %s", i + 1, inputStr);
             exit (0);
         }

@@ -8,7 +8,7 @@
 //Constants to specify stack element type and element output mode
 
 #define ELEM_TYPE elem_t    ///< Type of element a stack operates with
-#define OUT_FORM elem_t_OUT ///< Output format for printf functions
+#define OUT_FORM elem_t_F ///< Output format for printf functions
 
 //end of block
 

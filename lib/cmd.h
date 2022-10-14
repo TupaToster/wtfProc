@@ -1,17 +1,17 @@
 #ifndef GENERAL_CMD
 
 typedef double elem_t;
-#define elem_t_OUT "%Lf"
+#define elem_t_F "%Lf"
 
 #define PUSH(val) StackPush (&cpu->stk, val)
 #define POP StackPop (&cpu->stk)
 
-#define GENERAL_CMD
 
 #define signa "CP02"
 
 #define DEF_CMD(name, num, arg, code) ;
 
+#define GENERAL_CMD
 #else
 
 DEF_CMD (push, 1, 1, {
@@ -37,7 +37,7 @@ DEF_CMD (div, 5, 0, {
 })
 
 DEF_CMD (out, 6, 0, {
-    printf (elem_t_OUT "\n", POP);
+    printf (elem_t_F "\n", POP);
 })
 
 DEF_CMD (dump, 7, 0, {
@@ -50,5 +50,9 @@ DEF_CMD (hlt, 0, 0, {
 
 DEF_CMD (pop, 8, 2, {
     *ptrArg = POP;
+})
+
+DEF_CMD (jmp, 9, 1, {
+    cpu->ip = valArg;
 })
 #endif
