@@ -4,7 +4,9 @@ push 7
 sub
 pop [0]
 push [0]
-push [0]
 out
-jmp :1
+push [0]
+push 7
+push [0]
+jbe :1
 hlt

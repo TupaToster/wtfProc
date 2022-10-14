@@ -87,13 +87,6 @@ elem_t getValueArg (Proc* cpu) {
 
     elem_t retVal = 0;
 
-    if ((command & MASK_CMD) == CMD_jmp) {
-
-        retVal = (elem_t) *(int*)(cpu->code + cpu->ip);
-        cpu->ip += sizeof (int);
-        return retVal;
-    }
-
     if (command & MASK_REG) {
 
         retVal += cpu->regs[cpu->code[cpu->ip]];
@@ -144,6 +137,17 @@ elem_t* getPtrArg (Proc* cpu) {
     return retVal;
 }
 
+int getIpArg (Proc* cpu) {
+
+    char command = cpu->code[cpu->ip - 1];
+
+    int retVal = 0;
+
+    retVal = *(int*)(cpu->code + cpu->ip);
+    cpu->ip += sizeof (int);
+    return retVal;
+}
+
 void ProcDumpInside (Proc* cpu) {
 
     for (int i = 0; i < 16; i++) {
@@ -173,8 +177,9 @@ void ProcRunCode (Proc* cpu) {
 
     while (cpu->ip < cpu->codeSize) {
 
-        elem_t* ptrArg  = NULL;
+        elem_t* ptrArg = NULL;
         elem_t  valArg = 0;
+        int     ipArg  = 0;
 
         switch ((cpu->code[cpu->ip++] & MASK_CMD)) {
 
@@ -185,6 +190,7 @@ void ProcRunCode (Proc* cpu) {
                                                                      \
                     if      (arg == 1) valArg = getValueArg (cpu);   \
                     else if (arg == 2) ptrArg = getPtrArg (cpu);     \
+                    else if (arg == 3) ipArg  = getIpArg (cpu);      \
                     code                                             \
                 break;
 

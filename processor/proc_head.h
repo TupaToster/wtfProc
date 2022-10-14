@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
+#include <math.h>
 #include header(stack)
 #include header(text)
 
@@ -64,3 +65,5 @@ void ProcRunCode (Proc* cpu);
 elem_t getValueArg (Proc* cpu);
 
 elem_t* getPtrArg (Proc* cpu);
+
+int getIpArg (Proc* cpu);
