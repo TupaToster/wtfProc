@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir">
+    <compoundname>lib</compoundname>
+    <innerfile refid="cmd_8h">cmd.h</innerfile>
+    <innerfile refid="flog_8cpp">flog.cpp</innerfile>
+    <innerfile refid="flog_8h">flog.h</innerfile>
+    <innerfile refid="globalization_8h">globalization.h</innerfile>
+    <innerfile refid="stack_8cpp">stack.cpp</innerfile>
+    <innerfile refid="stack_8h">stack.h</innerfile>
+    <innerfile refid="text_8cpp">text.cpp</innerfile>
+    <innerfile refid="text_8h">text.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/"/>
+  </compounddef>
+</doxygen>

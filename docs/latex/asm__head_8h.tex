@@ -1,0 +1,213 @@
+\hypertarget{asm__head_8h}{}\doxysection{asm/asm\+\_\+head.h File Reference}
+\label{asm__head_8h}\index{asm/asm\_head.h@{asm/asm\_head.h}}
+{\ttfamily \#include \char`\"{}D\+:\textbackslash{}los\+\_\+projectados\textbackslash{}wtf\+Proc\textbackslash{}lib\textbackslash{}globalization.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{asm__head_8h_acf265fc2407fbc5c1aa5909a1bc4e0d3}{tag\+Check}}(...)
+\item 
+\#define \mbox{\hyperlink{asm__head_8h_aa020607c1c6794b5b426e2d70c488153}{DEF\+\_\+\+CMD}}(name,  num,  arg,  code)~CMD\+\_\+\#\#name = num,
+\item 
+\#define \mbox{\hyperlink{asm__head_8h_ac6991086843a1f1acea03a81d84aebba}{write\+Bin}}(var,  out\+File)~\mbox{\hyperlink{asm__head_8h_a3dbf87d57f9f11d4e10cf74b6887a21a}{write\+Bin\+Internal}} (\&var, out\+File, sizeof (var))
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{asm__head_8h_a04887de32e1f60f8dc157312b8f27665}{CMD}} 
+\item 
+enum \mbox{\hyperlink{asm__head_8h_adad90fa030af56592ad194a41341ffcd}{masks}} \{ \newline
+\mbox{\hyperlink{asm__head_8h_adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2}{MASK\+\_\+\+RAM}} = 1$<$$<$7
+, \mbox{\hyperlink{asm__head_8h_adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d}{MASK\+\_\+\+REG}} = 1$<$$<$6
+, \mbox{\hyperlink{asm__head_8h_adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f}{MASK\+\_\+\+IMM}} = 1$<$$<$5
+, \mbox{\hyperlink{asm__head_8h_adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70}{MASK\+\_\+\+CMD}} = (1$<$$<$5) -\/ 1
+, \newline
+\mbox{\hyperlink{proc__head_8h_adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2}{MASK\+\_\+\+RAM}} = 1$<$$<$7
+, \mbox{\hyperlink{proc__head_8h_adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d}{MASK\+\_\+\+REG}} = 1$<$$<$6
+, \mbox{\hyperlink{proc__head_8h_adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f}{MASK\+\_\+\+IMM}} = 1$<$$<$5
+, \mbox{\hyperlink{proc__head_8h_adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70}{MASK\+\_\+\+CMD}} = (1$<$$<$5) -\/ 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{asm__head_8h_a3dbf87d57f9f11d4e10cf74b6887a21a}{write\+Bin\+Internal}} (void $\ast$val, FILE $\ast$out\+File, size\+\_\+t size\+Of\+Var)
+\item 
+void \mbox{\hyperlink{asm__head_8h_afebc5259c059f1c13b2c3eb589bbd778}{handle\+Arg}} (\mbox{\hyperlink{struct_text}{Text}} $\ast$code, int line, FILE $\ast$out\+File, char cmd\+Num, int tags\mbox{[}512\mbox{]})
+\item 
+char $\ast$ \mbox{\hyperlink{asm__head_8h_ad94c08d203bdf6cd4fdad8a420073a85}{handle\+Com\+Line}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, bool $\ast$a\+Flag, char $\ast$$\ast$out\+File\+Name)
+\item 
+void \mbox{\hyperlink{asm__head_8h_aa4ecb6747b94442217ee22b2df052036}{write\+Wtf}} (\mbox{\hyperlink{struct_text}{Text}} $\ast$code\+File, FILE $\ast$out\+File, int tags\mbox{[}512\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{asm__head_8h_a5c1a69eec57cefaee3f692279022198b}{ip}}
+\item 
+bool \mbox{\hyperlink{asm__head_8h_ace8c8b51e3dcde290dd6b8a7bc5feba0}{errors}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{asm__head_8h_aa020607c1c6794b5b426e2d70c488153}\label{asm__head_8h_aa020607c1c6794b5b426e2d70c488153}} 
+\index{asm\_head.h@{asm\_head.h}!DEF\_CMD@{DEF\_CMD}}
+\index{DEF\_CMD@{DEF\_CMD}!asm\_head.h@{asm\_head.h}}
+\doxysubsubsection{\texorpdfstring{DEF\_CMD}{DEF\_CMD}}
+{\footnotesize\ttfamily \#define DEF\+\_\+\+CMD(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{num,  }\item[{}]{arg,  }\item[{}]{code }\end{DoxyParamCaption})~CMD\+\_\+\#\#name = num,}
+
+
+
+Definition at line 21 of file asm\+\_\+head.\+h.
+
+\mbox{\Hypertarget{asm__head_8h_acf265fc2407fbc5c1aa5909a1bc4e0d3}\label{asm__head_8h_acf265fc2407fbc5c1aa5909a1bc4e0d3}} 
+\index{asm\_head.h@{asm\_head.h}!tagCheck@{tagCheck}}
+\index{tagCheck@{tagCheck}!asm\_head.h@{asm\_head.h}}
+\doxysubsubsection{\texorpdfstring{tagCheck}{tagCheck}}
+{\footnotesize\ttfamily \#define tag\+Check(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (outFile != NULL) \{ \(\backslash\)}
+\DoxyCodeLine{    \_\_VA\_ARGS\_\_                              \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line 10 of file asm\+\_\+head.\+h.
+
+\mbox{\Hypertarget{asm__head_8h_ac6991086843a1f1acea03a81d84aebba}\label{asm__head_8h_ac6991086843a1f1acea03a81d84aebba}} 
+\index{asm\_head.h@{asm\_head.h}!writeBin@{writeBin}}
+\index{writeBin@{writeBin}!asm\_head.h@{asm\_head.h}}
+\doxysubsubsection{\texorpdfstring{writeBin}{writeBin}}
+{\footnotesize\ttfamily \#define write\+Bin(\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{out\+File }\end{DoxyParamCaption})~\mbox{\hyperlink{asm__head_8h_a3dbf87d57f9f11d4e10cf74b6887a21a}{write\+Bin\+Internal}} (\&var, out\+File, sizeof (var))}
+
+
+
+Definition at line 34 of file asm\+\_\+head.\+h.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{asm__head_8h_a04887de32e1f60f8dc157312b8f27665}\label{asm__head_8h_a04887de32e1f60f8dc157312b8f27665}} 
+\index{asm\_head.h@{asm\_head.h}!CMD@{CMD}}
+\index{CMD@{CMD}!asm\_head.h@{asm\_head.h}}
+\doxysubsubsection{\texorpdfstring{CMD}{CMD}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{asm__head_8h_a04887de32e1f60f8dc157312b8f27665}{CMD}}}
+
+
+
+Definition at line 18 of file asm\+\_\+head.\+h.
+
+\mbox{\Hypertarget{asm__head_8h_adad90fa030af56592ad194a41341ffcd}\label{asm__head_8h_adad90fa030af56592ad194a41341ffcd}} 
+\index{asm\_head.h@{asm\_head.h}!masks@{masks}}
+\index{masks@{masks}!asm\_head.h@{asm\_head.h}}
+\doxysubsubsection{\texorpdfstring{masks}{masks}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{asm__head_8h_adad90fa030af56592ad194a41341ffcd}{masks}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MASK\_RAM@{MASK\_RAM}!asm\_head.h@{asm\_head.h}}\index{asm\_head.h@{asm\_head.h}!MASK\_RAM@{MASK\_RAM}}}\mbox{\Hypertarget{asm__head_8h_adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2}\label{asm__head_8h_adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2}} 
+MASK\+\_\+\+RAM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MASK\_REG@{MASK\_REG}!asm\_head.h@{asm\_head.h}}\index{asm\_head.h@{asm\_head.h}!MASK\_REG@{MASK\_REG}}}\mbox{\Hypertarget{asm__head_8h_adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d}\label{asm__head_8h_adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d}} 
+MASK\+\_\+\+REG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MASK\_IMM@{MASK\_IMM}!asm\_head.h@{asm\_head.h}}\index{asm\_head.h@{asm\_head.h}!MASK\_IMM@{MASK\_IMM}}}\mbox{\Hypertarget{asm__head_8h_adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f}\label{asm__head_8h_adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f}} 
+MASK\+\_\+\+IMM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MASK\_CMD@{MASK\_CMD}!asm\_head.h@{asm\_head.h}}\index{asm\_head.h@{asm\_head.h}!MASK\_CMD@{MASK\_CMD}}}\mbox{\Hypertarget{asm__head_8h_adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70}\label{asm__head_8h_adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70}} 
+MASK\+\_\+\+CMD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MASK\_RAM@{MASK\_RAM}!asm\_head.h@{asm\_head.h}}\index{asm\_head.h@{asm\_head.h}!MASK\_RAM@{MASK\_RAM}}}\mbox{\Hypertarget{asm__head_8h_adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2}\label{asm__head_8h_adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2}} 
+MASK\+\_\+\+RAM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MASK\_REG@{MASK\_REG}!asm\_head.h@{asm\_head.h}}\index{asm\_head.h@{asm\_head.h}!MASK\_REG@{MASK\_REG}}}\mbox{\Hypertarget{asm__head_8h_adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d}\label{asm__head_8h_adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d}} 
+MASK\+\_\+\+REG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MASK\_IMM@{MASK\_IMM}!asm\_head.h@{asm\_head.h}}\index{asm\_head.h@{asm\_head.h}!MASK\_IMM@{MASK\_IMM}}}\mbox{\Hypertarget{asm__head_8h_adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f}\label{asm__head_8h_adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f}} 
+MASK\+\_\+\+IMM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MASK\_CMD@{MASK\_CMD}!asm\_head.h@{asm\_head.h}}\index{asm\_head.h@{asm\_head.h}!MASK\_CMD@{MASK\_CMD}}}\mbox{\Hypertarget{asm__head_8h_adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70}\label{asm__head_8h_adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70}} 
+MASK\+\_\+\+CMD&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 26 of file asm\+\_\+head.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{asm__head_8h_afebc5259c059f1c13b2c3eb589bbd778}\label{asm__head_8h_afebc5259c059f1c13b2c3eb589bbd778}} 
+\index{asm\_head.h@{asm\_head.h}!handleArg@{handleArg}}
+\index{handleArg@{handleArg}!asm\_head.h@{asm\_head.h}}
+\doxysubsubsection{\texorpdfstring{handleArg()}{handleArg()}}
+{\footnotesize\ttfamily void handle\+Arg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_text}{Text}} $\ast$}]{code,  }\item[{int}]{line,  }\item[{FILE $\ast$}]{out\+File,  }\item[{char}]{cmd\+Num,  }\item[{int}]{tags\mbox{[}512\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file asm\+\_\+funcs.\+cpp.
+
+\mbox{\Hypertarget{asm__head_8h_ad94c08d203bdf6cd4fdad8a420073a85}\label{asm__head_8h_ad94c08d203bdf6cd4fdad8a420073a85}} 
+\index{asm\_head.h@{asm\_head.h}!handleComLine@{handleComLine}}
+\index{handleComLine@{handleComLine}!asm\_head.h@{asm\_head.h}}
+\doxysubsubsection{\texorpdfstring{handleComLine()}{handleComLine()}}
+{\footnotesize\ttfamily char$\ast$ handle\+Com\+Line (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{bool $\ast$}]{a\+Flag,  }\item[{char $\ast$$\ast$}]{out\+File\+Name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 140 of file asm\+\_\+funcs.\+cpp.
+
+\mbox{\Hypertarget{asm__head_8h_a3dbf87d57f9f11d4e10cf74b6887a21a}\label{asm__head_8h_a3dbf87d57f9f11d4e10cf74b6887a21a}} 
+\index{asm\_head.h@{asm\_head.h}!writeBinInternal@{writeBinInternal}}
+\index{writeBinInternal@{writeBinInternal}!asm\_head.h@{asm\_head.h}}
+\doxysubsubsection{\texorpdfstring{writeBinInternal()}{writeBinInternal()}}
+{\footnotesize\ttfamily void write\+Bin\+Internal (\begin{DoxyParamCaption}\item[{void $\ast$}]{val,  }\item[{FILE $\ast$}]{out\+File,  }\item[{size\+\_\+t}]{size\+Of\+Var }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file asm\+\_\+funcs.\+cpp.
+
+\mbox{\Hypertarget{asm__head_8h_aa4ecb6747b94442217ee22b2df052036}\label{asm__head_8h_aa4ecb6747b94442217ee22b2df052036}} 
+\index{asm\_head.h@{asm\_head.h}!writeWtf@{writeWtf}}
+\index{writeWtf@{writeWtf}!asm\_head.h@{asm\_head.h}}
+\doxysubsubsection{\texorpdfstring{writeWtf()}{writeWtf()}}
+{\footnotesize\ttfamily void write\+Wtf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_text}{Text}} $\ast$}]{code\+File,  }\item[{FILE $\ast$}]{out\+File,  }\item[{int}]{tags\mbox{[}512\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 199 of file asm\+\_\+funcs.\+cpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{asm__head_8h_ace8c8b51e3dcde290dd6b8a7bc5feba0}\label{asm__head_8h_ace8c8b51e3dcde290dd6b8a7bc5feba0}} 
+\index{asm\_head.h@{asm\_head.h}!errors@{errors}}
+\index{errors@{errors}!asm\_head.h@{asm\_head.h}}
+\doxysubsubsection{\texorpdfstring{errors}{errors}}
+{\footnotesize\ttfamily bool errors\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 5 of file asm.\+cpp.
+
+\mbox{\Hypertarget{asm__head_8h_a5c1a69eec57cefaee3f692279022198b}\label{asm__head_8h_a5c1a69eec57cefaee3f692279022198b}} 
+\index{asm\_head.h@{asm\_head.h}!ip@{ip}}
+\index{ip@{ip}!asm\_head.h@{asm\_head.h}}
+\doxysubsubsection{\texorpdfstring{ip}{ip}}
+{\footnotesize\ttfamily size\+\_\+t ip\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 3 of file asm.\+cpp.
+

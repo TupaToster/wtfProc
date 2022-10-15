@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="globalization_8h" kind="file" language="C++">
+    <compoundname>globalization.h</compoundname>
+    <includedby refid="asm__head_8h" local="yes">asm/asm_head.h</includedby>
+    <includedby refid="proc__head_8h" local="yes">processor/proc_head.h</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>asm/asm.cpp</label>
+        <link refid="asm_8cpp"/>
+      </node>
+      <node id="4">
+        <label>asm/asm_funcs.cpp</label>
+        <link refid="asm__funcs_8cpp"/>
+      </node>
+      <node id="5">
+        <label>processor/proc_head.h</label>
+        <link refid="proc__head_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>lib/globalization.h</label>
+        <link refid="globalization_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>processor/proc.cpp</label>
+        <link refid="proc_8cpp"/>
+      </node>
+      <node id="2">
+        <label>asm/asm_head.h</label>
+        <link refid="asm__head_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>processor/proc_funcs.cpp</label>
+        <link refid="proc__funcs_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="globalization_8h_1aa61116f021860b324adddc9117eab64f" prot="public" static="no">
+        <name>pasta</name>
+        <param><defname>str</defname></param>
+        <initializer>#str</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/globalization.h" line="1" column="9" bodyfile="lib/globalization.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="globalization_8h_1aa61116f021860b324adddc9117eab64f" prot="public" static="no">
+        <name>pasta</name>
+        <param><defname>str</defname></param>
+        <initializer>#str</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/globalization.h" line="3" column="9" bodyfile="lib/globalization.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="globalization_8h_1ab6aea6338784d4b21e9128725ef7578e" prot="public" static="no">
+        <name>header</name>
+        <param><defname>fileName</defname></param>
+        <initializer><ref refid="globalization_8h_1aa61116f021860b324adddc9117eab64f" kindref="member">pasta</ref>(D:\los_projectados\wtfProc\lib\fileName.h)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/globalization.h" line="4" column="9" bodyfile="lib/globalization.h" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#define<sp/>pasta(str)<sp/>#str</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="globalization_8h_1aa61116f021860b324adddc9117eab64f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pasta(str)<sp/>#str</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="globalization_8h_1ab6aea6338784d4b21e9128725ef7578e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>header(fileName)<sp/>pasta(D:\los_projectados\wtfProc\lib\fileName.h)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="lib/globalization.h"/>
+  </compounddef>
+</doxygen>

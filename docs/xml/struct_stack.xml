@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_stack" kind="struct" language="C++" prot="public">
+    <compoundname>Stack</compoundname>
+    <includes refid="stack_8h" local="no">stack.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_stack_1a79193412a2c8b6a35f4ca6c45f0765dc" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Stack::canL</definition>
+        <argsstring></argsstring>
+        <name>canL</name>
+        <initializer>= 0xDEADBEEF</initializer>
+        <briefdescription>
+<para>left cannary of struct </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/stack.h" line="57" column="19" bodyfile="lib/stack.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_stack_1a65b24b547c77ac4b5e6dbdc0fd6a3283" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Stack::hash</definition>
+        <argsstring></argsstring>
+        <name>hash</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>hash value </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/stack.h" line="58" column="19" bodyfile="lib/stack.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_stack_1a3a469595caaaf49bbce059efabbe07b5" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Stack::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>size of stack </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/stack.h" line="59" column="19" bodyfile="lib/stack.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_stack_1afb6d4ad9d2904c20d50102d310c963e0" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Stack::capacity</definition>
+        <argsstring></argsstring>
+        <name>capacity</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>capacity of stack </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/stack.h" line="60" column="19" bodyfile="lib/stack.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_stack_1aed401c797b1e17541ad03a3fded5187d" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Stack::errCode</definition>
+        <argsstring></argsstring>
+        <name>errCode</name>
+        <initializer>= <ref refid="stack_8h_1abedba404d3287b5f1ba88ede8463da4bad8b76af209cd7ba83b4ebf33ba1637b2" kindref="member">ok</ref></initializer>
+        <briefdescription>
+<para>error code </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/stack.h" line="61" column="19" bodyfile="lib/stack.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_stack_1a94f7a65fb55d15a76270929f5b9c6397" prot="public" static="no" mutable="no">
+        <type><ref refid="stack_8h_1a178d810735b72dab41331e71af8bfe99" kindref="member">ELEM_TYPE</ref> *</type>
+        <definition>ELEM_TYPE* Stack::stack</definition>
+        <argsstring></argsstring>
+        <name>stack</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>ptr to stack </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/stack.h" line="62" column="18" bodyfile="lib/stack.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_stack_1abd443924fa635c0a50fadff4da57dfba" prot="public" static="no" mutable="no">
+        <type>unsigned int *</type>
+        <definition>unsigned int* Stack::stackCanL</definition>
+        <argsstring></argsstring>
+        <name>stackCanL</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>left cannary of stack </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/stack.h" line="63" column="18" bodyfile="lib/stack.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_stack_1a09a1dd7998caf0891ae5889e9b548aea" prot="public" static="no" mutable="no">
+        <type>unsigned int *</type>
+        <definition>unsigned int* Stack::stackCanR</definition>
+        <argsstring></argsstring>
+        <name>stackCanR</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>right cannary of stack </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/stack.h" line="64" column="18" bodyfile="lib/stack.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_stack_1ab067c98a0541b1d261f6c44892eb08c5" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Stack::canR</definition>
+        <argsstring></argsstring>
+        <name>canR</name>
+        <initializer>= 0xD34DB33F</initializer>
+        <briefdescription>
+<para>right cannary of struct </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/stack.h" line="65" column="19" bodyfile="lib/stack.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Stores a stack with several support variables. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/stack.h" line="55" column="1" bodyfile="lib/stack.h" bodystart="55" bodyend="66"/>
+    <listofallmembers>
+      <member refid="struct_stack_1a79193412a2c8b6a35f4ca6c45f0765dc" prot="public" virt="non-virtual"><scope>Stack</scope><name>canL</name></member>
+      <member refid="struct_stack_1ab067c98a0541b1d261f6c44892eb08c5" prot="public" virt="non-virtual"><scope>Stack</scope><name>canR</name></member>
+      <member refid="struct_stack_1afb6d4ad9d2904c20d50102d310c963e0" prot="public" virt="non-virtual"><scope>Stack</scope><name>capacity</name></member>
+      <member refid="struct_stack_1aed401c797b1e17541ad03a3fded5187d" prot="public" virt="non-virtual"><scope>Stack</scope><name>errCode</name></member>
+      <member refid="struct_stack_1a65b24b547c77ac4b5e6dbdc0fd6a3283" prot="public" virt="non-virtual"><scope>Stack</scope><name>hash</name></member>
+      <member refid="struct_stack_1a3a469595caaaf49bbce059efabbe07b5" prot="public" virt="non-virtual"><scope>Stack</scope><name>size</name></member>
+      <member refid="struct_stack_1a94f7a65fb55d15a76270929f5b9c6397" prot="public" virt="non-virtual"><scope>Stack</scope><name>stack</name></member>
+      <member refid="struct_stack_1abd443924fa635c0a50fadff4da57dfba" prot="public" virt="non-virtual"><scope>Stack</scope><name>stackCanL</name></member>
+      <member refid="struct_stack_1a09a1dd7998caf0891ae5889e9b548aea" prot="public" virt="non-virtual"><scope>Stack</scope><name>stackCanR</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

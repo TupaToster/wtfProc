@@ -1,0 +1,88 @@
+\hypertarget{asm__funcs_8cpp}{}\doxysection{asm/asm\+\_\+funcs.cpp File Reference}
+\label{asm__funcs_8cpp}\index{asm/asm\_funcs.cpp@{asm/asm\_funcs.cpp}}
+{\ttfamily \#include \char`\"{}asm\+\_\+head.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{asm__funcs_8cpp_aa020607c1c6794b5b426e2d70c488153}{DEF\+\_\+\+CMD}}(name,  num,  arg,  code)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{asm__funcs_8cpp_a3dbf87d57f9f11d4e10cf74b6887a21a}{write\+Bin\+Internal}} (void $\ast$val, FILE $\ast$out\+File, size\+\_\+t size\+Of\+Var)
+\item 
+void \mbox{\hyperlink{asm__funcs_8cpp_afebc5259c059f1c13b2c3eb589bbd778}{handle\+Arg}} (\mbox{\hyperlink{struct_text}{Text}} $\ast$code, int line, FILE $\ast$out\+File, char cmd\+Num, int tags\mbox{[}512\mbox{]})
+\item 
+char $\ast$ \mbox{\hyperlink{asm__funcs_8cpp_ad94c08d203bdf6cd4fdad8a420073a85}{handle\+Com\+Line}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, bool $\ast$a\+Flag, char $\ast$$\ast$out\+File\+Name)
+\item 
+void \mbox{\hyperlink{asm__funcs_8cpp_aa4ecb6747b94442217ee22b2df052036}{write\+Wtf}} (\mbox{\hyperlink{struct_text}{Text}} $\ast$code\+File, FILE $\ast$out\+File, int tags\mbox{[}512\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{asm__funcs_8cpp_aa020607c1c6794b5b426e2d70c488153}\label{asm__funcs_8cpp_aa020607c1c6794b5b426e2d70c488153}} 
+\index{asm\_funcs.cpp@{asm\_funcs.cpp}!DEF\_CMD@{DEF\_CMD}}
+\index{DEF\_CMD@{DEF\_CMD}!asm\_funcs.cpp@{asm\_funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{DEF\_CMD}{DEF\_CMD}}
+{\footnotesize\ttfamily \#define DEF\+\_\+\+CMD(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{num,  }\item[{}]{arg,  }\item[{}]{code }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (strcmp (inputStr, \#name) == 0) \{                      \(\backslash\)}
+\DoxyCodeLine{                                                                      \(\backslash\)}
+\DoxyCodeLine{                if (arg == 0)\{                                        \mbox{\hyperlink{asm__head_8h_acf265fc2407fbc5c1aa5909a1bc4e0d3}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{asm__head_8h_acf265fc2407fbc5c1aa5909a1bc4e0d3}{                                                                      \(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{asm__head_8h_acf265fc2407fbc5c1aa5909a1bc4e0d3}{                    tagCheck}}(fputc (num, outFile);)                   \(\backslash\)}
+\DoxyCodeLine{                    \mbox{\hyperlink{asm_8cpp_a5c1a69eec57cefaee3f692279022198b}{ip}} += \textcolor{keyword}{sizeof} (\textcolor{keywordtype}{char});                              \(\backslash\)}
+\DoxyCodeLine{                \}                                                     \(\backslash\)}
+\DoxyCodeLine{                else \textcolor{keywordflow}{if} (arg != 0) \{                                  \mbox{\hyperlink{asm__funcs_8cpp_afebc5259c059f1c13b2c3eb589bbd778}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{asm__funcs_8cpp_afebc5259c059f1c13b2c3eb589bbd778}{                                                                      \(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{asm__funcs_8cpp_afebc5259c059f1c13b2c3eb589bbd778}{                    handleArg}} (codeFile, i, outFile, num, tags);      \(\backslash\)}
+\DoxyCodeLine{                \}                                                     \(\backslash\)}
+\DoxyCodeLine{            \}                                                         \(\backslash\)}
+\DoxyCodeLine{            else}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{asm__funcs_8cpp_afebc5259c059f1c13b2c3eb589bbd778}\label{asm__funcs_8cpp_afebc5259c059f1c13b2c3eb589bbd778}} 
+\index{asm\_funcs.cpp@{asm\_funcs.cpp}!handleArg@{handleArg}}
+\index{handleArg@{handleArg}!asm\_funcs.cpp@{asm\_funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{handleArg()}{handleArg()}}
+{\footnotesize\ttfamily void handle\+Arg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_text}{Text}} $\ast$}]{code,  }\item[{int}]{line,  }\item[{FILE $\ast$}]{out\+File,  }\item[{char}]{cmd\+Num,  }\item[{int}]{tags\mbox{[}512\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file asm\+\_\+funcs.\+cpp.
+
+\mbox{\Hypertarget{asm__funcs_8cpp_ad94c08d203bdf6cd4fdad8a420073a85}\label{asm__funcs_8cpp_ad94c08d203bdf6cd4fdad8a420073a85}} 
+\index{asm\_funcs.cpp@{asm\_funcs.cpp}!handleComLine@{handleComLine}}
+\index{handleComLine@{handleComLine}!asm\_funcs.cpp@{asm\_funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{handleComLine()}{handleComLine()}}
+{\footnotesize\ttfamily char$\ast$ handle\+Com\+Line (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{bool $\ast$}]{a\+Flag,  }\item[{char $\ast$$\ast$}]{out\+File\+Name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 140 of file asm\+\_\+funcs.\+cpp.
+
+\mbox{\Hypertarget{asm__funcs_8cpp_a3dbf87d57f9f11d4e10cf74b6887a21a}\label{asm__funcs_8cpp_a3dbf87d57f9f11d4e10cf74b6887a21a}} 
+\index{asm\_funcs.cpp@{asm\_funcs.cpp}!writeBinInternal@{writeBinInternal}}
+\index{writeBinInternal@{writeBinInternal}!asm\_funcs.cpp@{asm\_funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{writeBinInternal()}{writeBinInternal()}}
+{\footnotesize\ttfamily void write\+Bin\+Internal (\begin{DoxyParamCaption}\item[{void $\ast$}]{val,  }\item[{FILE $\ast$}]{out\+File,  }\item[{size\+\_\+t}]{size\+Of\+Var }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file asm\+\_\+funcs.\+cpp.
+
+\mbox{\Hypertarget{asm__funcs_8cpp_aa4ecb6747b94442217ee22b2df052036}\label{asm__funcs_8cpp_aa4ecb6747b94442217ee22b2df052036}} 
+\index{asm\_funcs.cpp@{asm\_funcs.cpp}!writeWtf@{writeWtf}}
+\index{writeWtf@{writeWtf}!asm\_funcs.cpp@{asm\_funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{writeWtf()}{writeWtf()}}
+{\footnotesize\ttfamily void write\+Wtf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_text}{Text}} $\ast$}]{code\+File,  }\item[{FILE $\ast$}]{out\+File,  }\item[{int}]{tags\mbox{[}512\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 199 of file asm\+\_\+funcs.\+cpp.
+

@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_cmd_8h" xml:lang="en-US">
+<title>lib/cmd.h File Reference</title>
+<indexterm><primary>lib/cmd.h</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_cmd_8h_1a4700822ad9e0ed0526e8cf27557fdc1f">elem_t_F</link>   &quot;%Lf&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_cmd_8h_1a5a3cbae2605a10e52067989632af015b">PUSH</link>(val)   <link linkend="_stack_8h_1a6d12097bc4af03b6c58d724a10758a64">StackPush</link> (&amp;cpu-&gt;stk, val)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d">POP</link>   <link linkend="_stack_8h_1a0941f0fc6decbec7accf45e25ea30eb5">StackPop</link> (&amp;cpu-&gt;stk)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_cmd_8h_1a72cfd02d18b30e2e3e5b2cf4053cc4b7">signa</link>   &quot;CP02&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_cmd_8h_1aa020607c1c6794b5b426e2d70c488153">DEF_CMD</link>(name,  num,  arg,  code)   ;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_cmd_8h_1aef87c62c8715fd1f2be4e7bca3740067">GENERAL_CMD</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef double <link linkend="_cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_cmd_8h_1aa020607c1c6794b5b426e2d70c488153"/>    <section>
+    <title>DEF_CMD</title>
+<indexterm><primary>DEF_CMD</primary><secondary>cmd.h</secondary></indexterm>
+<indexterm><primary>cmd.h</primary><secondary>DEF_CMD</secondary></indexterm>
+<para><computeroutput>#define DEF_CMD( name,  num,  arg,  code)   ;</computeroutput></para><para>
+Definition at line 12 of file cmd.h.</para>
+    </section><anchor xml:id="_cmd_8h_1a4700822ad9e0ed0526e8cf27557fdc1f"/>    <section>
+    <title>elem_t_F</title>
+<indexterm><primary>elem_t_F</primary><secondary>cmd.h</secondary></indexterm>
+<indexterm><primary>cmd.h</primary><secondary>elem_t_F</secondary></indexterm>
+<para><computeroutput>#define elem_t_F   &quot;%Lf&quot;</computeroutput></para><para>
+Definition at line 4 of file cmd.h.</para>
+    </section><anchor xml:id="_cmd_8h_1aef87c62c8715fd1f2be4e7bca3740067"/>    <section>
+    <title>GENERAL_CMD</title>
+<indexterm><primary>GENERAL_CMD</primary><secondary>cmd.h</secondary></indexterm>
+<indexterm><primary>cmd.h</primary><secondary>GENERAL_CMD</secondary></indexterm>
+<para><computeroutput>#define GENERAL_CMD</computeroutput></para><para>
+Definition at line 14 of file cmd.h.</para>
+    </section><anchor xml:id="_cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d"/>    <section>
+    <title>POP</title>
+<indexterm><primary>POP</primary><secondary>cmd.h</secondary></indexterm>
+<indexterm><primary>cmd.h</primary><secondary>POP</secondary></indexterm>
+<para><computeroutput>#define POP   <link linkend="_stack_8h_1a0941f0fc6decbec7accf45e25ea30eb5">StackPop</link> (&amp;cpu-&gt;stk)</computeroutput></para><para>
+Definition at line 7 of file cmd.h.</para>
+    </section><anchor xml:id="_cmd_8h_1a5a3cbae2605a10e52067989632af015b"/>    <section>
+    <title>PUSH</title>
+<indexterm><primary>PUSH</primary><secondary>cmd.h</secondary></indexterm>
+<indexterm><primary>cmd.h</primary><secondary>PUSH</secondary></indexterm>
+<para><computeroutput>#define PUSH( val)   <link linkend="_stack_8h_1a6d12097bc4af03b6c58d724a10758a64">StackPush</link> (&amp;cpu-&gt;stk, val)</computeroutput></para><para>
+Definition at line 6 of file cmd.h.</para>
+    </section><anchor xml:id="_cmd_8h_1a72cfd02d18b30e2e3e5b2cf4053cc4b7"/>    <section>
+    <title>signa</title>
+<indexterm><primary>signa</primary><secondary>cmd.h</secondary></indexterm>
+<indexterm><primary>cmd.h</primary><secondary>signa</secondary></indexterm>
+<para><computeroutput>#define signa   &quot;CP02&quot;</computeroutput></para><para>
+Definition at line 10 of file cmd.h.</para>
+</section>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80"/>    <section>
+    <title>elem_t</title>
+<indexterm><primary>elem_t</primary><secondary>cmd.h</secondary></indexterm>
+<indexterm><primary>cmd.h</primary><secondary>elem_t</secondary></indexterm>
+<para><computeroutput>typedef double <link linkend="_cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</link></computeroutput></para><para>
+Definition at line 3 of file cmd.h.</para>
+</section>
+</section>
+</section>

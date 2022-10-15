@@ -1,0 +1,786 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stack_8h" xml:lang="en-US">
+<title>lib/stack.h File Reference</title>
+<indexterm><primary>lib/stack.h</primary></indexterm>
+<programlisting>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &quot;flog.h&quot;
+#include &quot;cmd.h&quot;
+</programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_stack">Stack</link></para>
+
+<para>Stores a stack with several support variables. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_stack_8h_1a178d810735b72dab41331e71af8bfe99">ELEM_TYPE</link>   <link linkend="_cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</link></para>
+
+<para>Type of element a stack operates with. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_stack_8h_1a11b1f1c8e585446cbd5d9817d1e3ceaa">OUT_FORM</link>   <link linkend="_cmd_8h_1a4700822ad9e0ed0526e8cf27557fdc1f">elem_t_F</link></para>
+
+<para>Output format for printf functions. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_stack_8h_1ac5ba2c9a466d94cdd0fe7324a4568dbf">CANL</link>   0xDEADBEEF</para>
+
+<para>Left cannary of a structure. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_stack_8h_1af4177486d72b0452c84830f8b67464a8">CANR</link>   0xD34DB33F</para>
+
+<para>Right cannary of a structure. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_stack_8h_1a44ce32c2c103442949904e92a5803f44">POISON1</link>   0xBD</para>
+
+<para>1 byte Poison </para>
+</listitem>
+            <listitem><para>#define <link linkend="_stack_8h_1a8ee8fd516222866a78ba4a4aae2eb10c">POISON2</link>   0xBDCF</para>
+
+<para>2 byte Poison </para>
+</listitem>
+            <listitem><para>#define <link linkend="_stack_8h_1a636a49191f541b52557a278556c8640e">POISON4</link>   0xBADC0FEE</para>
+
+<para>4 byte Poison </para>
+</listitem>
+            <listitem><para>#define <link linkend="_stack_8h_1a87f9c88b5d9ecba250a24151f4f4f9b9">POISON8</link>   0xBADC0FEEF04DED32</para>
+
+<para>8 byte Poison </para>
+</listitem>
+            <listitem><para>#define <link linkend="_stack_8h_1ac441f219c1d0f60b3f606e0e6f31abd2">MULT</link>   37u</para>
+
+<para>Multiplier for hash. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_stack_8h_1ab33094546bed65d3ddf7252ec7ee53a0">setPoison</link>(var)   <link linkend="_stack_8h_1a60bb9a078b9f0f215577719c53003db2">setPoisonInside</link> (&amp;var, sizeof (var))</para>
+
+<para>Macros for auto-poison. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_stack_8h_1a20a09eaf47ec1032181089747b89510d">isPoison</link>(var)   <link linkend="_stack_8h_1a00d7f278e2c87be49ce52a84f1f925cb">isPoisonInside</link> (&amp;var, sizeof (var))</para>
+
+<para>Macros for checking for poison. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_stack_8h_1a69595dc2450bd35617f155ffa5738490">StackDump</link>(stk)   <link linkend="_stack_8h_1aa57535478796950bea6860e32e15b33c">StackDumpInside</link> (&amp;stk, #stk, __FILE__, __FUNCTION__, __LINE__)</para>
+
+<para><link linkend="_struct_stack">Stack</link> dump macros. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_stack_8h_1abedba404d3287b5f1ba88ede8463da4b">StackErrorCodes</link> { 
+<link linkend="_stack_8h_1abedba404d3287b5f1ba88ede8463da4bad8b76af209cd7ba83b4ebf33ba1637b2">ok</link> = 0
+, <link linkend="_stack_8h_1abedba404d3287b5f1ba88ede8463da4bafaeaafb72f3224f4bb55b58b75236287">POISON_ACCESS</link> = 1&lt;&lt;0
+, <link linkend="_stack_8h_1abedba404d3287b5f1ba88ede8463da4ba4215e890c310c3f5ccd3f11486b2eb78">BAD_CAN_L</link> = 1&lt;&lt;1
+, <link linkend="_stack_8h_1abedba404d3287b5f1ba88ede8463da4ba58c89f81506bf0555b66e55bf326c6df">BAD_CAN_R</link> = 1&lt;&lt;2
+, 
+<link linkend="_stack_8h_1abedba404d3287b5f1ba88ede8463da4ba933bc67a98e186610bc08f655de7da44">BAD_STACK_CAN_L</link> = 1&lt;&lt;3
+, <link linkend="_stack_8h_1abedba404d3287b5f1ba88ede8463da4ba74459aaef8d1a41df374ff51fdbf38da">BAD_STACK_CAN_R</link> = 1&lt;&lt;4
+, <link linkend="_stack_8h_1abedba404d3287b5f1ba88ede8463da4ba55bc3e5442f1fb70cc4b4b814b9fcec5">NULL_STACK_PTR</link> = 1&lt;&lt;5
+, <link linkend="_stack_8h_1abedba404d3287b5f1ba88ede8463da4ba15dfa62adb3f9feb09ae9dc9beb7c117">NULL_STACK_CAN_L_PTR</link> = 1&lt;&lt;6
+, 
+<link linkend="_stack_8h_1abedba404d3287b5f1ba88ede8463da4ba907004763cf34ab8b352775f820539c3">NULL_STACK_CAN_R_PTR</link> = 1&lt;&lt;7
+, <link linkend="_stack_8h_1abedba404d3287b5f1ba88ede8463da4badb8b16b7866a0eee3872f249bc06c5ac">WRONG_SIZE</link> = 1&lt;&lt;8
+, <link linkend="_stack_8h_1abedba404d3287b5f1ba88ede8463da4ba5065ca273e32d5426390f43601261d6c">POISONED_ERRCOD</link> = 1&lt;&lt;9
+, <link linkend="_stack_8h_1abedba404d3287b5f1ba88ede8463da4baf82caa47427767f6099c52129b9ce508">WRONG_HASH</link> = 1&lt;&lt;10
+ }</para>
+
+<para>Describes errors within stack. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_stack">Stack</link> <link linkend="_stack_8h_1a7f20099985e66f408b861724863a2f1b">StackCtor</link> ()</para>
+
+<para>Constructor for <link linkend="_struct_stack">Stack</link>; Sets default capacity to 4. </para>
+</listitem>
+            <listitem><para>void <link linkend="_stack_8h_1a7a748c43563a85e8c5d154997597c4bb">StackDtor</link> (<link linkend="_struct_stack">Stack</link> *stk)</para>
+
+<para>Destroys a stack var. </para>
+</listitem>
+            <listitem><para>void <link linkend="_stack_8h_1a6d12097bc4af03b6c58d724a10758a64">StackPush</link> (<link linkend="_struct_stack">Stack</link> *stk, <link linkend="_stack_8h_1a178d810735b72dab41331e71af8bfe99">ELEM_TYPE</link> val)</para>
+
+<para>Places an element at the end of a stack. </para>
+</listitem>
+            <listitem><para><link linkend="_stack_8h_1a178d810735b72dab41331e71af8bfe99">ELEM_TYPE</link> <link linkend="_stack_8h_1a0941f0fc6decbec7accf45e25ea30eb5">StackPop</link> (<link linkend="_struct_stack">Stack</link> *stk)</para>
+
+<para>Removes an element from stack and returns its value. </para>
+</listitem>
+            <listitem><para>void <link linkend="_stack_8h_1ad48351fcbd6c3d4ce84d470636525430">ReallocStackSizeShift</link> (<link linkend="_struct_stack">Stack</link> *stk, int delta)</para>
+
+<para>Recallocates a whole stak with a size shift. </para>
+</listitem>
+            <listitem><para>void <link linkend="_stack_8h_1aa57535478796950bea6860e32e15b33c">StackDumpInside</link> (<link linkend="_struct_stack">Stack</link> *stk, const char *StackName, const char *fileName, const char *funcName, size_t line)</para>
+
+<para>Dumps stack to logs_out. </para>
+</listitem>
+            <listitem><para>unsigned long long <link linkend="_stack_8h_1a2ec9d6428127070aa546211087cc603b">StackErrCheck</link> (<link linkend="_struct_stack">Stack</link> *stk)</para>
+
+<para>Prints errors drom a stack variable. </para>
+</listitem>
+            <listitem><para>void <link linkend="_stack_8h_1a4fe32a828f1513115f6abf92f8f9a066">StackLogPrintErrors</link> (<link linkend="_struct_stack">Stack</link> *stk)</para>
+
+<para>Prints errors for a StackDump func. </para>
+</listitem>
+            <listitem><para>void <link linkend="_stack_8h_1a331eb5bc38763cfe6fead891904aac75">StackCountHash</link> (<link linkend="_struct_stack">Stack</link> *stk)</para>
+
+<para>Counts hash for stack. </para>
+</listitem>
+            <listitem><para>void <link linkend="_stack_8h_1a81529740cd4cad5153f44e74c5c27e64">StackVerifyHash</link> (<link linkend="_struct_stack">Stack</link> *stk)</para>
+
+<para>Verifies hash for stack (tells if it was changed without any <link linkend="_struct_stack">Stack</link> specified functions) </para>
+</listitem>
+            <listitem><para>void <link linkend="_stack_8h_1a60bb9a078b9f0f215577719c53003db2">setPoisonInside</link> (void *var, size_t sizeofVar)</para>
+
+<para>Sets var to a poisoned state. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_stack_8h_1a00d7f278e2c87be49ce52a84f1f925cb">isPoisonInside</link> (void *var, size_t sizeofVar)</para>
+
+<para>Checks for a variable to be poisoned. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_stack_8h_1ac5ba2c9a466d94cdd0fe7324a4568dbf"/>    <section>
+    <title>CANL</title>
+<indexterm><primary>CANL</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>CANL</secondary></indexterm>
+<para><computeroutput>#define CANL   0xDEADBEEF</computeroutput></para><para>
+
+<para>Left cannary of a structure. </para>
+</para>
+<para>
+Definition at line 17 of file stack.h.</para>
+    </section><anchor xml:id="_stack_8h_1af4177486d72b0452c84830f8b67464a8"/>    <section>
+    <title>CANR</title>
+<indexterm><primary>CANR</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>CANR</secondary></indexterm>
+<para><computeroutput>#define CANR   0xD34DB33F</computeroutput></para><para>
+
+<para>Right cannary of a structure. </para>
+</para>
+<para>
+Definition at line 18 of file stack.h.</para>
+    </section><anchor xml:id="_stack_8h_1a178d810735b72dab41331e71af8bfe99"/>    <section>
+    <title>ELEM_TYPE</title>
+<indexterm><primary>ELEM_TYPE</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>ELEM_TYPE</secondary></indexterm>
+<para><computeroutput>#define ELEM_TYPE   <link linkend="_cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</link></computeroutput></para><para>
+
+<para>Type of element a stack operates with. </para>
+</para>
+<para>
+Definition at line 10 of file stack.h.</para>
+    </section><anchor xml:id="_stack_8h_1a20a09eaf47ec1032181089747b89510d"/>    <section>
+    <title>isPoison</title>
+<indexterm><primary>isPoison</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>isPoison</secondary></indexterm>
+<para><computeroutput>#define isPoison( var)   <link linkend="_stack_8h_1a00d7f278e2c87be49ce52a84f1f925cb">isPoisonInside</link> (&amp;var, sizeof (var))</computeroutput></para><para>
+
+<para>Macros for checking for poison. </para>
+</para>
+<para>
+Definition at line 29 of file stack.h.</para>
+    </section><anchor xml:id="_stack_8h_1ac441f219c1d0f60b3f606e0e6f31abd2"/>    <section>
+    <title>MULT</title>
+<indexterm><primary>MULT</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>MULT</secondary></indexterm>
+<para><computeroutput>#define MULT   37u</computeroutput></para><para>
+
+<para>Multiplier for hash. </para>
+</para>
+<para>
+Definition at line 25 of file stack.h.</para>
+    </section><anchor xml:id="_stack_8h_1a11b1f1c8e585446cbd5d9817d1e3ceaa"/>    <section>
+    <title>OUT_FORM</title>
+<indexterm><primary>OUT_FORM</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>OUT_FORM</secondary></indexterm>
+<para><computeroutput>#define OUT_FORM   <link linkend="_cmd_8h_1a4700822ad9e0ed0526e8cf27557fdc1f">elem_t_F</link></computeroutput></para><para>
+
+<para>Output format for printf functions. </para>
+</para>
+<para>
+Definition at line 11 of file stack.h.</para>
+    </section><anchor xml:id="_stack_8h_1a44ce32c2c103442949904e92a5803f44"/>    <section>
+    <title>POISON1</title>
+<indexterm><primary>POISON1</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>POISON1</secondary></indexterm>
+<para><computeroutput>#define POISON1   0xBD</computeroutput></para><para>
+
+<para>1 byte Poison </para>
+</para>
+<para>
+Definition at line 20 of file stack.h.</para>
+    </section><anchor xml:id="_stack_8h_1a8ee8fd516222866a78ba4a4aae2eb10c"/>    <section>
+    <title>POISON2</title>
+<indexterm><primary>POISON2</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>POISON2</secondary></indexterm>
+<para><computeroutput>#define POISON2   0xBDCF</computeroutput></para><para>
+
+<para>2 byte Poison </para>
+</para>
+<para>
+Definition at line 21 of file stack.h.</para>
+    </section><anchor xml:id="_stack_8h_1a636a49191f541b52557a278556c8640e"/>    <section>
+    <title>POISON4</title>
+<indexterm><primary>POISON4</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>POISON4</secondary></indexterm>
+<para><computeroutput>#define POISON4   0xBADC0FEE</computeroutput></para><para>
+
+<para>4 byte Poison </para>
+</para>
+<para>
+Definition at line 22 of file stack.h.</para>
+    </section><anchor xml:id="_stack_8h_1a87f9c88b5d9ecba250a24151f4f4f9b9"/>    <section>
+    <title>POISON8</title>
+<indexterm><primary>POISON8</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>POISON8</secondary></indexterm>
+<para><computeroutput>#define POISON8   0xBADC0FEEF04DED32</computeroutput></para><para>
+
+<para>8 byte Poison </para>
+</para>
+<para>
+Definition at line 23 of file stack.h.</para>
+    </section><anchor xml:id="_stack_8h_1ab33094546bed65d3ddf7252ec7ee53a0"/>    <section>
+    <title>setPoison</title>
+<indexterm><primary>setPoison</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>setPoison</secondary></indexterm>
+<para><computeroutput>#define setPoison( var)   <link linkend="_stack_8h_1a60bb9a078b9f0f215577719c53003db2">setPoisonInside</link> (&amp;var, sizeof (var))</computeroutput></para><para>
+
+<para>Macros for auto-poison. </para>
+</para>
+<para>
+Definition at line 27 of file stack.h.</para>
+    </section><anchor xml:id="_stack_8h_1a69595dc2450bd35617f155ffa5738490"/>    <section>
+    <title>StackDump</title>
+<indexterm><primary>StackDump</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>StackDump</secondary></indexterm>
+<para><computeroutput>#define StackDump( stk)   <link linkend="_stack_8h_1aa57535478796950bea6860e32e15b33c">StackDumpInside</link> (&amp;stk, #stk, __FILE__, __FUNCTION__, __LINE__)</computeroutput></para><para>
+
+<para><link linkend="_struct_stack">Stack</link> dump macros. </para>
+</para>
+<para>
+Definition at line 32 of file stack.h.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_stack_8h_1abedba404d3287b5f1ba88ede8463da4b"/>    <section>
+    <title>StackErrorCodes</title>
+<indexterm><primary>StackErrorCodes</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>StackErrorCodes</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_stack_8h_1abedba404d3287b5f1ba88ede8463da4b">StackErrorCodes</link></computeroutput></para><para>
+
+<para>Describes errors within stack. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>ok</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>ok</secondary></indexterm>
+<anchor xml:id="_stack_8h_1abedba404d3287b5f1ba88ede8463da4bad8b76af209cd7ba83b4ebf33ba1637b2"/>ok</entry><entry>
+<para>All ok. </para>
+</entry></row><row><entry><indexterm><primary>POISON_ACCESS</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>POISON_ACCESS</secondary></indexterm>
+<anchor xml:id="_stack_8h_1abedba404d3287b5f1ba88ede8463da4bafaeaafb72f3224f4bb55b58b75236287"/>POISON_ACCESS</entry><entry>
+<para>One or more struct elements is poison. </para>
+</entry></row><row><entry><indexterm><primary>BAD_CAN_L</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>BAD_CAN_L</secondary></indexterm>
+<anchor xml:id="_stack_8h_1abedba404d3287b5f1ba88ede8463da4ba4215e890c310c3f5ccd3f11486b2eb78"/>BAD_CAN_L</entry><entry>
+<para>Dead left cannary of structure. </para>
+</entry></row><row><entry><indexterm><primary>BAD_CAN_R</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>BAD_CAN_R</secondary></indexterm>
+<anchor xml:id="_stack_8h_1abedba404d3287b5f1ba88ede8463da4ba58c89f81506bf0555b66e55bf326c6df"/>BAD_CAN_R</entry><entry>
+<para>Dead right cannary of structure. </para>
+</entry></row><row><entry><indexterm><primary>BAD_STACK_CAN_L</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>BAD_STACK_CAN_L</secondary></indexterm>
+<anchor xml:id="_stack_8h_1abedba404d3287b5f1ba88ede8463da4ba933bc67a98e186610bc08f655de7da44"/>BAD_STACK_CAN_L</entry><entry>
+<para>Dead left cannary of stack. </para>
+</entry></row><row><entry><indexterm><primary>BAD_STACK_CAN_R</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>BAD_STACK_CAN_R</secondary></indexterm>
+<anchor xml:id="_stack_8h_1abedba404d3287b5f1ba88ede8463da4ba74459aaef8d1a41df374ff51fdbf38da"/>BAD_STACK_CAN_R</entry><entry>
+<para>Dead right cannary of stack. </para>
+</entry></row><row><entry><indexterm><primary>NULL_STACK_PTR</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>NULL_STACK_PTR</secondary></indexterm>
+<anchor xml:id="_stack_8h_1abedba404d3287b5f1ba88ede8463da4ba55bc3e5442f1fb70cc4b4b814b9fcec5"/>NULL_STACK_PTR</entry><entry>
+<para>NULL ptr for stack. </para>
+</entry></row><row><entry><indexterm><primary>NULL_STACK_CAN_L_PTR</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>NULL_STACK_CAN_L_PTR</secondary></indexterm>
+<anchor xml:id="_stack_8h_1abedba404d3287b5f1ba88ede8463da4ba15dfa62adb3f9feb09ae9dc9beb7c117"/>NULL_STACK_CAN_L_PTR</entry><entry>
+<para>NULL ptr for left stack cannary. </para>
+</entry></row><row><entry><indexterm><primary>NULL_STACK_CAN_R_PTR</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>NULL_STACK_CAN_R_PTR</secondary></indexterm>
+<anchor xml:id="_stack_8h_1abedba404d3287b5f1ba88ede8463da4ba907004763cf34ab8b352775f820539c3"/>NULL_STACK_CAN_R_PTR</entry><entry>
+<para>NULL ptr for right stack cannary. </para>
+</entry></row><row><entry><indexterm><primary>WRONG_SIZE</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>WRONG_SIZE</secondary></indexterm>
+<anchor xml:id="_stack_8h_1abedba404d3287b5f1ba88ede8463da4badb8b16b7866a0eee3872f249bc06c5ac"/>WRONG_SIZE</entry><entry>
+<para>Size is more than capacity. </para>
+</entry></row><row><entry><indexterm><primary>POISONED_ERRCOD</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>POISONED_ERRCOD</secondary></indexterm>
+<anchor xml:id="_stack_8h_1abedba404d3287b5f1ba88ede8463da4ba5065ca273e32d5426390f43601261d6c"/>POISONED_ERRCOD</entry><entry>
+<para>Errcod variable is poisoned; Ususally means that struct has been destructed. </para>
+</entry></row><row><entry><indexterm><primary>WRONG_HASH</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>WRONG_HASH</secondary></indexterm>
+<anchor xml:id="_stack_8h_1abedba404d3287b5f1ba88ede8463da4baf82caa47427767f6099c52129b9ce508"/>WRONG_HASH</entry><entry>
+<para>Hash was changed without any changes from specified function. </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line 39 of file stack.h.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_stack_8h_1a00d7f278e2c87be49ce52a84f1f925cb"/>    <section>
+    <title>isPoisonInside()</title>
+<indexterm><primary>isPoisonInside</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>isPoisonInside</secondary></indexterm>
+<para><computeroutput>bool isPoisonInside (void * var, size_t sizeofVar)</computeroutput></para><para>
+
+<para>Checks for a variable to be poisoned. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>var</entry>
+                                <entry>
+<para>ptr to var </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>sizeofVar</entry>
+                                <entry>
+<para>size of var </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>1 if poisoned, 0 if not </para>
+</formalpara>
+</para>
+<para>
+Definition at line 19 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8h_1ad48351fcbd6c3d4ce84d470636525430"/>    <section>
+    <title>ReallocStackSizeShift()</title>
+<indexterm><primary>ReallocStackSizeShift</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>ReallocStackSizeShift</secondary></indexterm>
+<para><computeroutput>void ReallocStackSizeShift (<link linkend="_struct_stack">Stack</link> * stk, int delta)</computeroutput></para><para>
+
+<para>Recallocates a whole stak with a size shift. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>stk</entry>
+                                <entry>
+<para>ptr to stack </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>delta</entry>
+                                <entry>
+<para>direction of size shift: &gt;0 - doubles the size, &lt;0 halves the size </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 148 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8h_1a60bb9a078b9f0f215577719c53003db2"/>    <section>
+    <title>setPoisonInside()</title>
+<indexterm><primary>setPoisonInside</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>setPoisonInside</secondary></indexterm>
+<para><computeroutput>void setPoisonInside (void * var, size_t sizeofVar)</computeroutput></para><para>
+
+<para>Sets var to a poisoned state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>var</entry>
+                                <entry>
+<para>ptr to var </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>sizeofVar</entry>
+                                <entry>
+<para>sizeof var </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 3 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8h_1a331eb5bc38763cfe6fead891904aac75"/>    <section>
+    <title>StackCountHash()</title>
+<indexterm><primary>StackCountHash</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>StackCountHash</secondary></indexterm>
+<para><computeroutput>void StackCountHash (<link linkend="_struct_stack">Stack</link> * stk)</computeroutput></para><para>
+
+<para>Counts hash for stack. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>stk</entry>
+                                <entry>
+<para>ptr to stack </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 328 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8h_1a7f20099985e66f408b861724863a2f1b"/>    <section>
+    <title>StackCtor()</title>
+<indexterm><primary>StackCtor</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>StackCtor</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_stack">Stack</link> StackCtor ( )</computeroutput></para><para>
+
+<para>Constructor for <link linkend="_struct_stack">Stack</link>; Sets default capacity to 4. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Fully operable <link linkend="_struct_stack">Stack</link> struct </para>
+</formalpara>
+</para>
+<para>
+Definition at line 50 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8h_1a7a748c43563a85e8c5d154997597c4bb"/>    <section>
+    <title>StackDtor()</title>
+<indexterm><primary>StackDtor</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>StackDtor</secondary></indexterm>
+<para><computeroutput>void StackDtor (<link linkend="_struct_stack">Stack</link> * stk)</computeroutput></para><para>
+
+<para>Destroys a stack var. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>stk</entry>
+                                <entry>
+<para>ptr to a destroyable variable </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 76 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8h_1aa57535478796950bea6860e32e15b33c"/>    <section>
+    <title>StackDumpInside()</title>
+<indexterm><primary>StackDumpInside</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>StackDumpInside</secondary></indexterm>
+<para><computeroutput>void StackDumpInside (<link linkend="_struct_stack">Stack</link> * stk, const char * StackName, const char * fileName, const char * funcName, size_t line)</computeroutput></para><para>
+
+<para>Dumps stack to logs_out. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>stk</entry>
+                                <entry>
+<para>ptr to stack </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>StackName</entry>
+                                <entry>
+<para>name of stack </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>fileName</entry>
+                                <entry>
+<para>name of file function was called at </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>funcName</entry>
+                                <entry>
+<para>name of func function was called at </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>line</entry>
+                                <entry>
+<para>line function was called at </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 188 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8h_1a2ec9d6428127070aa546211087cc603b"/>    <section>
+    <title>StackErrCheck()</title>
+<indexterm><primary>StackErrCheck</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>StackErrCheck</secondary></indexterm>
+<para><computeroutput>unsigned long long StackErrCheck (<link linkend="_struct_stack">Stack</link> * stk)</computeroutput></para><para>
+
+<para>Prints errors drom a stack variable. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>stk</entry>
+                                <entry>
+<para>ptr to stack </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>error code stk-&gt;errCode </para>
+</formalpara>
+</para>
+<para>
+Definition at line 254 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8h_1a4fe32a828f1513115f6abf92f8f9a066"/>    <section>
+    <title>StackLogPrintErrors()</title>
+<indexterm><primary>StackLogPrintErrors</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>StackLogPrintErrors</secondary></indexterm>
+<para><computeroutput>void StackLogPrintErrors (<link linkend="_struct_stack">Stack</link> * stk)</computeroutput></para><para>
+
+<para>Prints errors for a StackDump func. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>stk</entry>
+                                <entry>
+<para>ptr to stack </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 302 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8h_1a0941f0fc6decbec7accf45e25ea30eb5"/>    <section>
+    <title>StackPop()</title>
+<indexterm><primary>StackPop</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>StackPop</secondary></indexterm>
+<para><computeroutput><link linkend="_stack_8h_1a178d810735b72dab41331e71af8bfe99">ELEM_TYPE</link> StackPop (<link linkend="_struct_stack">Stack</link> * stk)</computeroutput></para><para>
+
+<para>Removes an element from stack and returns its value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>stk</entry>
+                                <entry>
+<para>ptr to stack </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>element that was removed </para>
+</formalpara>
+</para>
+<para>
+Definition at line 122 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8h_1a6d12097bc4af03b6c58d724a10758a64"/>    <section>
+    <title>StackPush()</title>
+<indexterm><primary>StackPush</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>StackPush</secondary></indexterm>
+<para><computeroutput>void StackPush (<link linkend="_struct_stack">Stack</link> * stk, <link linkend="_stack_8h_1a178d810735b72dab41331e71af8bfe99">ELEM_TYPE</link> val)</computeroutput></para><para>
+
+<para>Places an element at the end of a stack. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>stk</entry>
+                                <entry>
+<para>ptr to stack struct </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>val</entry>
+                                <entry>
+<para>value of an element to push </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 98 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8h_1a81529740cd4cad5153f44e74c5c27e64"/>    <section>
+    <title>StackVerifyHash()</title>
+<indexterm><primary>StackVerifyHash</primary><secondary>stack.h</secondary></indexterm>
+<indexterm><primary>stack.h</primary><secondary>StackVerifyHash</secondary></indexterm>
+<para><computeroutput>void StackVerifyHash (<link linkend="_struct_stack">Stack</link> * stk)</computeroutput></para><para>
+
+<para>Verifies hash for stack (tells if it was changed without any <link linkend="_struct_stack">Stack</link> specified functions) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>stk</entry>
+                                <entry>
+<para>ptr to stack </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 364 of file stack.cpp.</para>
+</section>
+</section>
+</section>

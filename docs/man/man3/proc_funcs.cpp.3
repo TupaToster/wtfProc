@@ -1,0 +1,117 @@
+.TH "processor/proc_funcs.cpp" 3 "Sat Oct 15 2022" "Version 2" "Soft cpu" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+processor/proc_funcs.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'proc_head\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDEF_CMD\fP(name,  num,  arg,  code)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "char * \fBhandleComLine\fP (int argc, char *argv[])"
+.br
+.ti -1c
+.RI "void \fBProcCtor\fP (\fBProc\fP *cpu)"
+.br
+.ti -1c
+.RI "void \fBProcDtor\fP (\fBProc\fP *cpu)"
+.br
+.ti -1c
+.RI "void \fBcheckFileSign\fP (\fBProc\fP *cpu)"
+.br
+.ti -1c
+.RI "\fBelem_t\fP \fBgetValueArg\fP (\fBProc\fP *cpu)"
+.br
+.ti -1c
+.RI "\fBelem_t\fP * \fBgetPtrArg\fP (\fBProc\fP *cpu)"
+.br
+.ti -1c
+.RI "int \fBgetIpArg\fP (\fBProc\fP *cpu)"
+.br
+.ti -1c
+.RI "void \fBProcDumpInside\fP (\fBProc\fP *cpu)"
+.br
+.ti -1c
+.RI "void \fBProcRunCode\fP (\fBProc\fP *cpu)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "char \fBProc_version\fP [3] = '02'"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define DEF_CMD(name, num, arg, code)"
+\fBValue:\fP
+.PP
+.nf
+                case CMD_##name:                                     \
+                                                                     \
+                    if      (arg == 1) valArg = getValueArg (cpu);   \
+                    else if (arg == 2) ptrArg = getPtrArg (cpu);     \
+                    else if (arg == 3) ipArg  = getIpArg (cpu);      \
+                    code                                             \
+                break;
+.fi
+.SH "Function Documentation"
+.PP 
+.SS "void checkFileSign (\fBProc\fP * cpu)"
+
+.PP
+Definition at line 64 of file proc_funcs\&.cpp\&.
+.SS "int getIpArg (\fBProc\fP * cpu)"
+
+.PP
+Definition at line 142 of file proc_funcs\&.cpp\&.
+.SS "\fBelem_t\fP* getPtrArg (\fBProc\fP * cpu)"
+
+.PP
+Definition at line 110 of file proc_funcs\&.cpp\&.
+.SS "\fBelem_t\fP getValueArg (\fBProc\fP * cpu)"
+
+.PP
+Definition at line 86 of file proc_funcs\&.cpp\&.
+.SS "char* handleComLine (int argc, char * argv[])"
+
+.PP
+Definition at line 5 of file proc_funcs\&.cpp\&.
+.SS "void ProcCtor (\fBProc\fP * cpu)"
+
+.PP
+Definition at line 38 of file proc_funcs\&.cpp\&.
+.SS "void ProcDtor (\fBProc\fP * cpu)"
+
+.PP
+Definition at line 53 of file proc_funcs\&.cpp\&.
+.SS "void ProcDumpInside (\fBProc\fP * cpu)"
+
+.PP
+Definition at line 153 of file proc_funcs\&.cpp\&.
+.SS "void ProcRunCode (\fBProc\fP * cpu)"
+
+.PP
+Definition at line 187 of file proc_funcs\&.cpp\&.
+.SH "Variable Documentation"
+.PP 
+.SS "char Proc_version[3] = '02'"
+
+.PP
+Definition at line 3 of file proc_funcs\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Soft cpu from the source code\&.

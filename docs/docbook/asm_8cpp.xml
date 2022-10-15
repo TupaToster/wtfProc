@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_asm_8cpp" xml:lang="en-US">
+<title>asm/asm.cpp File Reference</title>
+<indexterm><primary>asm/asm.cpp</primary></indexterm>
+<programlisting>#include &quot;asm_head.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_asm_8cpp_1a0ddf1224851353fc92bfbff6f499fa97">main</link> (int argc, char *argv[])</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>size_t <link linkend="_asm_8cpp_1a5c1a69eec57cefaee3f692279022198b">ip</link> = 0</para>
+</listitem>
+            <listitem><para>bool <link linkend="_asm_8cpp_1ace8c8b51e3dcde290dd6b8a7bc5feba0">errors</link> = 0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_asm_8cpp_1a0ddf1224851353fc92bfbff6f499fa97"/>    <section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>asm.cpp</secondary></indexterm>
+<indexterm><primary>asm.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main (int argc, char * argv[])</computeroutput></para><para>
+Definition at line 7 of file asm.cpp.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_asm_8cpp_1ace8c8b51e3dcde290dd6b8a7bc5feba0"/>    <section>
+    <title>errors</title>
+<indexterm><primary>errors</primary><secondary>asm.cpp</secondary></indexterm>
+<indexterm><primary>asm.cpp</primary><secondary>errors</secondary></indexterm>
+<para><computeroutput>bool errors = 0</computeroutput></para><para>
+Definition at line 5 of file asm.cpp.</para>
+    </section><anchor xml:id="_asm_8cpp_1a5c1a69eec57cefaee3f692279022198b"/>    <section>
+    <title>ip</title>
+<indexterm><primary>ip</primary><secondary>asm.cpp</secondary></indexterm>
+<indexterm><primary>asm.cpp</primary><secondary>ip</secondary></indexterm>
+<para><computeroutput>size_t ip = 0</computeroutput></para><para>
+Definition at line 3 of file asm.cpp.</para>
+</section>
+</section>
+</section>

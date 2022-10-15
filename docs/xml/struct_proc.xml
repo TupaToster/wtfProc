@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_proc" kind="struct" language="C++" prot="public">
+    <compoundname>Proc</compoundname>
+    <includes refid="proc__head_8h" local="no">proc_head.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_proc_1a3f965d8be71bc5b90fe4be02a5b7451f" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* Proc::code</definition>
+        <argsstring></argsstring>
+        <name>code</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="44" column="12" bodyfile="processor/proc_head.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_proc_1a3e7ddbbef3cb2bdd7643696481a7dc9a" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Proc::codeSize</definition>
+        <argsstring></argsstring>
+        <name>codeSize</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="45" column="13" bodyfile="processor/proc_head.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_proc_1a7dcaf8c7ceca34684ad6425a7cf8383f" prot="public" static="no" mutable="no">
+        <type><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref></type>
+        <definition>elem_t Proc::regs[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>regs</name>
+        <initializer>= {0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="46" column="13" bodyfile="processor/proc_head.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_proc_1a035d414acb2f1e68268e1e01b31d3639" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Proc::ip</definition>
+        <argsstring></argsstring>
+        <name>ip</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="47" column="13" bodyfile="processor/proc_head.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_proc_1a9c68bfb7e83ba9b17440159dade966aa" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_stack" kindref="compound">Stack</ref></type>
+        <definition>Stack Proc::stk</definition>
+        <argsstring></argsstring>
+        <name>stk</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="48" column="13" bodyfile="processor/proc_head.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_proc_1abf87102fddf47ab184fd376d2ce8d685" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_stack" kindref="compound">Stack</ref></type>
+        <definition>Stack Proc::funcIp</definition>
+        <argsstring></argsstring>
+        <name>funcIp</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="49" column="13" bodyfile="processor/proc_head.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_proc_1a8ec1b6bbc3ed71f89837c24999bc42d4" prot="public" static="no" mutable="no">
+        <type><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref> *</type>
+        <definition>elem_t* Proc::ram</definition>
+        <argsstring></argsstring>
+        <name>ram</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="50" column="12" bodyfile="processor/proc_head.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>Stack</label>
+        <link refid="struct_stack"/>
+      </node>
+      <node id="1">
+        <label>Proc</label>
+        <link refid="struct_proc"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>funcIp</edgelabel>
+          <edgelabel>stk</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="processor/proc_head.h" line="42" column="1" bodyfile="processor/proc_head.h" bodystart="42" bodyend="51"/>
+    <listofallmembers>
+      <member refid="struct_proc_1a3f965d8be71bc5b90fe4be02a5b7451f" prot="public" virt="non-virtual"><scope>Proc</scope><name>code</name></member>
+      <member refid="struct_proc_1a3e7ddbbef3cb2bdd7643696481a7dc9a" prot="public" virt="non-virtual"><scope>Proc</scope><name>codeSize</name></member>
+      <member refid="struct_proc_1abf87102fddf47ab184fd376d2ce8d685" prot="public" virt="non-virtual"><scope>Proc</scope><name>funcIp</name></member>
+      <member refid="struct_proc_1a035d414acb2f1e68268e1e01b31d3639" prot="public" virt="non-virtual"><scope>Proc</scope><name>ip</name></member>
+      <member refid="struct_proc_1a8ec1b6bbc3ed71f89837c24999bc42d4" prot="public" virt="non-virtual"><scope>Proc</scope><name>ram</name></member>
+      <member refid="struct_proc_1a7dcaf8c7ceca34684ad6425a7cf8383f" prot="public" virt="non-virtual"><scope>Proc</scope><name>regs</name></member>
+      <member refid="struct_proc_1a9c68bfb7e83ba9b17440159dade966aa" prot="public" virt="non-virtual"><scope>Proc</scope><name>stk</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="en-US">
+<title>Class List</title>
+Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_struct_line">Line</link>
+<para>Struct to store Lines of <link linkend="_struct_text">Text</link> in format [begin, end) </para>
+<link linkend="_struct_proc">Proc</link><link linkend="_struct_stack">Stack</link>
+<para>Stores a stack with several support variables </para>
+<link linkend="_struct_text">Text</link>
+<para>Stores <link linkend="_struct_text">Text</link> in format of string and array of <link linkend="_struct_line">Line</link> structures </para>
+</section>

@@ -1,0 +1,441 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="text_8cpp" kind="file" language="C++">
+    <compoundname>text.cpp</compoundname>
+    <includes refid="text_8h" local="yes">Text.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>assert.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>lib/text.cpp</label>
+        <link refid="text_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>sys\stat.h</label>
+      </node>
+      <node id="5">
+        <label>string.h</label>
+      </node>
+      <node id="2">
+        <label>Text.h</label>
+        <link refid="text_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ctype.h</label>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="text_8cpp_1a9fa5786f95cf5ba0f1bd59156bc3c817" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initLine</definition>
+        <argsstring>(Line *target)</argsstring>
+        <name>initLine</name>
+        <param>
+          <type><ref refid="struct_line" kindref="compound">Line</ref> *</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a <ref refid="struct_line" kindref="compound">Line</ref> type var. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Line* to var to init </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/text.cpp" line="7" column="6" bodyfile="lib/text.cpp" bodystart="7" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="text_8cpp_1ab706abf6034fcdd337b414e23309fa55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void killLine</definition>
+        <argsstring>(Line *target)</argsstring>
+        <name>killLine</name>
+        <param>
+          <type><ref refid="struct_line" kindref="compound">Line</ref> *</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+<para>Deinitializes a <ref refid="struct_line" kindref="compound">Line</ref> type var. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Line* to var to kill </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/text.cpp" line="17" column="6" bodyfile="lib/text.cpp" bodystart="17" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="text_8cpp_1a01d03bc0537e22cfc834530fed3c91ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initText</definition>
+        <argsstring>(Text *target)</argsstring>
+        <name>initText</name>
+        <param>
+          <type><ref refid="struct_text" kindref="compound">Text</ref> *</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a <ref refid="struct_text" kindref="compound">Text</ref> type var. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text* to var to init </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/text.cpp" line="28" column="6" bodyfile="lib/text.cpp" bodystart="28" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="text_8cpp_1a359525e4562324c43aa6027b94c4e7b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void killText</definition>
+        <argsstring>(Text *target)</argsstring>
+        <name>killText</name>
+        <param>
+          <type><ref refid="struct_text" kindref="compound">Text</ref> *</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+<para>Deinitializes a <ref refid="struct_text" kindref="compound">Text</ref> type var. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text* to var to kill </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/text.cpp" line="40" column="6" bodyfile="lib/text.cpp" bodystart="40" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="text_8cpp_1a65e7c9fc83e04ddfa86f85715fa149de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cntLines</definition>
+        <argsstring>(Text *src)</argsstring>
+        <name>cntLines</name>
+        <param>
+          <type><ref refid="struct_text" kindref="compound">Text</ref> *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>counts amount of Lines in a <ref refid="struct_text" kindref="compound">Text</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text* to wite to and read from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/text.cpp" line="51" column="6" bodyfile="lib/text.cpp" bodystart="51" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="text_8cpp_1ac87fbefe4ae9195d7ba3a7a38eed3fdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t get_size</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>get_size</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Returns size of file in chars. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of file to measure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>sizeof file in chars </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/text.cpp" line="68" column="8" bodyfile="lib/text.cpp" bodystart="68" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="text_8cpp_1a03fe2c13cf51f8df49fbca3ca8d0f0c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bufferize</definition>
+        <argsstring>(const char *filename, Text *writeTo)</argsstring>
+        <name>bufferize</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_text" kindref="compound">Text</ref> *</type>
+          <declname>writeTo</declname>
+        </param>
+        <briefdescription>
+<para>Buffirezes file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of file to bufferize </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>writeTo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ptr to struct <ref refid="struct_text" kindref="compound">Text</ref> to write buffer and buffer length to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/text.cpp" line="82" column="6" bodyfile="lib/text.cpp" bodystart="82" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="text_8cpp_1a75a739634df7483901b62c501362ec9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_text" kindref="compound">Text</ref></type>
+        <definition>Text read_Text</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>read_Text</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Fills <ref refid="struct_text" kindref="compound">Text</ref> type var with input from file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of file to fill from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="struct_text" kindref="compound">Text</ref> struct full of stuff</para>
+</simplesect>
+Fills <ref refid="struct_text" kindref="compound">Text</ref> struct with: TextString - whole <ref refid="struct_text" kindref="compound">Text</ref> of a file Lines - array of Lines of file of type [begin, end) stringCnt - amount of strings in file TextSize - sizeof <ref refid="struct_text" kindref="compound">Text</ref> (by get_size) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/text.cpp" line="113" column="6" bodyfile="lib/text.cpp" bodystart="113" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="text_8cpp_1a3d222516c821879ff9db7cdd57b8c8ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void separateLines</definition>
+        <argsstring>(Text *writeTo)</argsstring>
+        <name>separateLines</name>
+        <param>
+          <type><ref refid="struct_text" kindref="compound">Text</ref> *</type>
+          <declname>writeTo</declname>
+        </param>
+        <briefdescription>
+<para>separates Lines in a <ref refid="struct_text" kindref="compound">Text</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>writeTo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text* to write to and read from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/text.cpp" line="135" column="6" bodyfile="lib/text.cpp" bodystart="135" bodyend="154"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="text_8h" kindref="compound">Text.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="text_8cpp_1a9fa5786f95cf5ba0f1bd59156bc3c817" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="text_8cpp_1a9fa5786f95cf5ba0f1bd59156bc3c817" kindref="member">initLine</ref>(<ref refid="struct_line" kindref="compound">Line</ref>*<sp/>target)<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>target-&gt;<ref refid="struct_line_1a902f78ce569809df653949d04f345fff" kindref="member">begin</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>target-&gt;<ref refid="struct_line_1a8159f758b3711682471b64424d4dd5ea" kindref="member">end</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="text_8cpp_1ab706abf6034fcdd337b414e23309fa55" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="text_8cpp_1ab706abf6034fcdd337b414e23309fa55" kindref="member">killLine</ref>(<ref refid="struct_line" kindref="compound">Line</ref>*<sp/>target)<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>target-&gt;<ref refid="struct_line_1a902f78ce569809df653949d04f345fff" kindref="member">begin</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>target-&gt;<ref refid="struct_line_1a8159f758b3711682471b64424d4dd5ea" kindref="member">end</ref><sp/><sp/><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="text_8cpp_1a01d03bc0537e22cfc834530fed3c91ba" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="text_8cpp_1a01d03bc0537e22cfc834530fed3c91ba" kindref="member">initText</ref>(<ref refid="struct_text" kindref="compound">Text</ref>*<sp/>target)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>target-&gt;<ref refid="struct_text_1aaaffb6c0552bbad4ce62f79fdaba570c" kindref="member">TextString</ref><sp/><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>target-&gt;<ref refid="struct_text_1a3b8d5e4b32683adc042d220c398944a6" kindref="member">TextSize</ref><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>target-&gt;<ref refid="struct_text_1ad944f27b0b4d1a6a4b9b5b1338c78a53" kindref="member">stringCnt</ref><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>target-&gt;<ref refid="struct_text_1a4e39c4552385cc08a0b1b88e5fc069f3" kindref="member">Lines</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="text_8cpp_1a359525e4562324c43aa6027b94c4e7b0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="text_8cpp_1a359525e4562324c43aa6027b94c4e7b0" kindref="member">killText</ref><sp/>(<ref refid="struct_text" kindref="compound">Text</ref>*<sp/>target)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(target-&gt;<ref refid="struct_text_1aaaffb6c0552bbad4ce62f79fdaba570c" kindref="member">TextString</ref>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(target-&gt;<ref refid="struct_text_1a4e39c4552385cc08a0b1b88e5fc069f3" kindref="member">Lines</ref>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>target-&gt;<ref refid="struct_text_1a3b8d5e4b32683adc042d220c398944a6" kindref="member">TextSize</ref><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>target-&gt;<ref refid="struct_text_1ad944f27b0b4d1a6a4b9b5b1338c78a53" kindref="member">stringCnt</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="text_8cpp_1a65e7c9fc83e04ddfa86f85715fa149de" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="text_8cpp_1a65e7c9fc83e04ddfa86f85715fa149de" kindref="member">cntLines</ref><sp/>(<ref refid="struct_text" kindref="compound">Text</ref>*<sp/>src)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(src<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>src-&gt;<ref refid="struct_text_1a3b8d5e4b32683adc042d220c398944a6" kindref="member">TextSize</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(src-&gt;<ref refid="struct_text_1aaaffb6c0552bbad4ce62f79fdaba570c" kindref="member">TextString</ref>[i]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">)<sp/>src-&gt;<ref refid="struct_text_1ad944f27b0b4d1a6a4b9b5b1338c78a53" kindref="member">stringCnt</ref>++;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>src-&gt;<ref refid="struct_text_1ad944f27b0b4d1a6a4b9b5b1338c78a53" kindref="member">stringCnt</ref>++;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="text_8cpp_1ac87fbefe4ae9195d7ba3a7a38eed3fdb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="text_8cpp_1ac87fbefe4ae9195d7ba3a7a38eed3fdb" kindref="member">get_size</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(filename<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">stat<sp/>temp<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>stat<sp/>(filename,<sp/>&amp;temp);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temp.st_size;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="text_8cpp_1a03fe2c13cf51f8df49fbca3ca8d0f0c2" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="text_8cpp_1a03fe2c13cf51f8df49fbca3ca8d0f0c2" kindref="member">bufferize</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename,<sp/><ref refid="struct_text" kindref="compound">Text</ref>*<sp/>writeTo)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>writeTo-&gt;<ref refid="struct_text_1a3b8d5e4b32683adc042d220c398944a6" kindref="member">TextSize</ref><sp/>=<sp/><ref refid="text_8cpp_1ac87fbefe4ae9195d7ba3a7a38eed3fdb" kindref="member">get_size</ref><sp/>(filename);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>writeTo-&gt;<ref refid="struct_text_1aaaffb6c0552bbad4ce62f79fdaba570c" kindref="member">TextString</ref><sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>calloc<sp/>(writeTo-&gt;<ref refid="struct_text_1a3b8d5e4b32683adc042d220c398944a6" kindref="member">TextSize</ref><sp/>+<sp/>2,<sp/>sizeof<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(writeTo-&gt;<ref refid="struct_text_1aaaffb6c0552bbad4ce62f79fdaba570c" kindref="member">TextString</ref><sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>writeTo-&gt;<ref refid="struct_text_1aaaffb6c0552bbad4ce62f79fdaba570c" kindref="member">TextString</ref>++;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>fIn<sp/>=<sp/>fopen<sp/>(filename,<sp/></highlight><highlight class="stringliteral">&quot;rb&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(fIn<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(fread<sp/>(writeTo-&gt;<ref refid="struct_text_1aaaffb6c0552bbad4ce62f79fdaba570c" kindref="member">TextString</ref>,<sp/>sizeof<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">),<sp/>writeTo-&gt;<ref refid="struct_text_1a3b8d5e4b32683adc042d220c398944a6" kindref="member">TextSize</ref>,<sp/>fIn)<sp/>!=<sp/>0);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>writeTo-&gt;<ref refid="struct_text_1aaaffb6c0552bbad4ce62f79fdaba570c" kindref="member">TextString</ref>[writeTo-&gt;<ref refid="struct_text_1a3b8d5e4b32683adc042d220c398944a6" kindref="member">TextSize</ref>]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose<sp/>(fIn);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="text_8cpp_1a75a739634df7483901b62c501362ec9d" refkind="member"><highlight class="normal"><ref refid="struct_text" kindref="compound">Text</ref><sp/><ref refid="text_8cpp_1a75a739634df7483901b62c501362ec9d" kindref="member">read_Text</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(filename<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_text" kindref="compound">Text</ref><sp/>retVal<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="text_8cpp_1a01d03bc0537e22cfc834530fed3c91ba" kindref="member">initText</ref><sp/>(&amp;retVal);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="text_8cpp_1a03fe2c13cf51f8df49fbca3ca8d0f0c2" kindref="member">bufferize</ref><sp/>(filename,<sp/>&amp;retVal);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="text_8cpp_1a65e7c9fc83e04ddfa86f85715fa149de" kindref="member">cntLines</ref><sp/>(&amp;retVal);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>retVal.<ref refid="struct_text_1a4e39c4552385cc08a0b1b88e5fc069f3" kindref="member">Lines</ref><sp/>=<sp/>(<ref refid="struct_line" kindref="compound">Line</ref>*)<sp/>calloc<sp/>(retVal.<ref refid="struct_text_1ad944f27b0b4d1a6a4b9b5b1338c78a53" kindref="member">stringCnt</ref><sp/>+<sp/>1,<sp/>sizeof<sp/>(<ref refid="struct_line" kindref="compound">Line</ref>));</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(retVal.<ref refid="struct_text_1a4e39c4552385cc08a0b1b88e5fc069f3" kindref="member">Lines</ref><sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="text_8cpp_1a3d222516c821879ff9db7cdd57b8c8ab" kindref="member">separateLines</ref><sp/>(&amp;retVal);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retVal;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="text_8cpp_1a3d222516c821879ff9db7cdd57b8c8ab" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="text_8cpp_1a3d222516c821879ff9db7cdd57b8c8ab" kindref="member">separateLines</ref><sp/>(<ref refid="struct_text" kindref="compound">Text</ref>*<sp/>writeTo)<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(writeTo<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(writeTo-&gt;<ref refid="struct_text_1a4e39c4552385cc08a0b1b88e5fc069f3" kindref="member">Lines</ref><sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>Line_iter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>writeTo-&gt;<ref refid="struct_text_1a3b8d5e4b32683adc042d220c398944a6" kindref="member">TextSize</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(writeTo-&gt;<ref refid="struct_text_1a4e39c4552385cc08a0b1b88e5fc069f3" kindref="member">Lines</ref>[Line_iter].<ref refid="struct_line_1a902f78ce569809df653949d04f345fff" kindref="member">begin</ref><sp/>==<sp/>NULL)<sp/>writeTo-&gt;<ref refid="struct_text_1a4e39c4552385cc08a0b1b88e5fc069f3" kindref="member">Lines</ref>[Line_iter].<ref refid="struct_line_1a902f78ce569809df653949d04f345fff" kindref="member">begin</ref><sp/>=<sp/>writeTo-&gt;<ref refid="struct_text_1aaaffb6c0552bbad4ce62f79fdaba570c" kindref="member">TextString</ref><sp/>+<sp/>i;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(writeTo-&gt;<ref refid="struct_text_1aaaffb6c0552bbad4ce62f79fdaba570c" kindref="member">TextString</ref>[i]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>writeTo-&gt;<ref refid="struct_text_1a4e39c4552385cc08a0b1b88e5fc069f3" kindref="member">Lines</ref>[Line_iter].<ref refid="struct_line_1a8159f758b3711682471b64424d4dd5ea" kindref="member">end</ref><sp/>=<sp/>writeTo-&gt;<ref refid="struct_text_1aaaffb6c0552bbad4ce62f79fdaba570c" kindref="member">TextString</ref><sp/>+<sp/>i<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Line_iter++;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>writeTo-&gt;<ref refid="struct_text_1a4e39c4552385cc08a0b1b88e5fc069f3" kindref="member">Lines</ref>[Line_iter].<ref refid="struct_line_1a8159f758b3711682471b64424d4dd5ea" kindref="member">end</ref><sp/>=<sp/>writeTo-&gt;<ref refid="struct_text_1aaaffb6c0552bbad4ce62f79fdaba570c" kindref="member">TextString</ref><sp/>+<sp/>writeTo-&gt;<ref refid="struct_text_1a3b8d5e4b32683adc042d220c398944a6" kindref="member">TextSize</ref>;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="lib/text.cpp"/>
+  </compounddef>
+</doxygen>

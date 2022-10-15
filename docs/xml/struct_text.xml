@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_text" kind="struct" language="C++" prot="public">
+    <compoundname>Text</compoundname>
+    <includes refid="text_8h" local="no">text.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_text_1aaaffb6c0552bbad4ce62f79fdaba570c" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* Text::TextString</definition>
+        <argsstring></argsstring>
+        <name>TextString</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>char* that points to the beginning of a <ref refid="struct_text" kindref="compound">Text</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/text.h" line="19" column="10" bodyfile="lib/text.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_text_1a3b8d5e4b32683adc042d220c398944a6" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Text::TextSize</definition>
+        <argsstring></argsstring>
+        <name>TextSize</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>size_t that declares sizeof <ref refid="struct_text" kindref="compound">Text</ref> in chars </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/text.h" line="20" column="12" bodyfile="lib/text.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_text_1a4e39c4552385cc08a0b1b88e5fc069f3" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_line" kindref="compound">Line</ref> *</type>
+        <definition>Line* Text::Lines</definition>
+        <argsstring></argsstring>
+        <name>Lines</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>ptr to a <ref refid="struct_line" kindref="compound">Line</ref> array that stores <ref refid="struct_text" kindref="compound">Text</ref> in a format of Lines </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/text.h" line="21" column="10" bodyfile="lib/text.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_text_1ad944f27b0b4d1a6a4b9b5b1338c78a53" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Text::stringCnt</definition>
+        <argsstring></argsstring>
+        <name>stringCnt</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>size_t that indicates amount of Lines in <ref refid="struct_text" kindref="compound">Text</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/text.h" line="22" column="12" bodyfile="lib/text.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Stores <ref refid="struct_text" kindref="compound">Text</ref> in format of string and array of <ref refid="struct_line" kindref="compound">Line</ref> structures. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>Line</label>
+        <link refid="struct_line"/>
+      </node>
+      <node id="1">
+        <label>Text</label>
+        <link refid="struct_text"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>Lines</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="lib/text.h" line="17" column="1" bodyfile="lib/text.h" bodystart="17" bodyend="23"/>
+    <listofallmembers>
+      <member refid="struct_text_1a4e39c4552385cc08a0b1b88e5fc069f3" prot="public" virt="non-virtual"><scope>Text</scope><name>Lines</name></member>
+      <member refid="struct_text_1ad944f27b0b4d1a6a4b9b5b1338c78a53" prot="public" virt="non-virtual"><scope>Text</scope><name>stringCnt</name></member>
+      <member refid="struct_text_1a3b8d5e4b32683adc042d220c398944a6" prot="public" virt="non-virtual"><scope>Text</scope><name>TextSize</name></member>
+      <member refid="struct_text_1aaaffb6c0552bbad4ce62f79fdaba570c" prot="public" virt="non-virtual"><scope>Text</scope><name>TextString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

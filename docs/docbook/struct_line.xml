@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_line" xml:lang="en-US">
+<title>Line Struct Reference</title>
+<indexterm><primary>Line</primary></indexterm>
+<para>
+
+<para>Struct to store Lines of <link linkend="_struct_text">Text</link> in format [begin, end) </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;text.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>char * <link linkend="_struct_line_1a902f78ce569809df653949d04f345fff">begin</link> = NULL</para>
+
+<para>Ptr to the beginning. </para>
+</listitem>
+            <listitem><para>char * <link linkend="_struct_line_1a8159f758b3711682471b64424d4dd5ea">end</link> = NULL</para>
+
+<para>Ptr to the end. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Struct to store Lines of <link linkend="_struct_text">Text</link> in format [begin, end) </para>
+<para>
+Definition at line 10 of file text.h.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_line_1a902f78ce569809df653949d04f345fff"/>    <section>
+    <title>begin</title>
+<indexterm><primary>begin</primary><secondary>Line</secondary></indexterm>
+<indexterm><primary>Line</primary><secondary>begin</secondary></indexterm>
+<para><computeroutput>char* Line::begin = NULL</computeroutput></para><para>
+
+<para>Ptr to the beginning. </para>
+</para>
+<para>
+Definition at line 12 of file text.h.</para>
+    </section><anchor xml:id="_struct_line_1a8159f758b3711682471b64424d4dd5ea"/>    <section>
+    <title>end</title>
+<indexterm><primary>end</primary><secondary>Line</secondary></indexterm>
+<indexterm><primary>Line</primary><secondary>end</secondary></indexterm>
+<para><computeroutput>char* Line::end = NULL</computeroutput></para><para>
+
+<para>Ptr to the end. </para>
+</para>
+<para>
+Definition at line 13 of file text.h.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+lib/<link linkend="_text_8h">text.h</link></section>
+</section>

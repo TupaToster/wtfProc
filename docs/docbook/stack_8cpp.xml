@@ -1,0 +1,502 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stack_8cpp" xml:lang="en-US">
+<title>lib/stack.cpp File Reference</title>
+<indexterm><primary>lib/stack.cpp</primary></indexterm>
+<programlisting>#include &quot;stack.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_stack_8cpp_1a60bb9a078b9f0f215577719c53003db2">setPoisonInside</link> (void *var, size_t sizeofVar)</para>
+
+<para>Sets var to a poisoned state. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_stack_8cpp_1a00d7f278e2c87be49ce52a84f1f925cb">isPoisonInside</link> (void *var, size_t sizeofVar)</para>
+
+<para>Checks for a variable to be poisoned. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_stack">Stack</link> <link linkend="_stack_8cpp_1a7f20099985e66f408b861724863a2f1b">StackCtor</link> ()</para>
+
+<para>Constructor for <link linkend="_struct_stack">Stack</link>; Sets default capacity to 4. </para>
+</listitem>
+            <listitem><para>void <link linkend="_stack_8cpp_1a7a748c43563a85e8c5d154997597c4bb">StackDtor</link> (<link linkend="_struct_stack">Stack</link> *stk)</para>
+
+<para>Destroys a stack var. </para>
+</listitem>
+            <listitem><para>void <link linkend="_stack_8cpp_1a6d12097bc4af03b6c58d724a10758a64">StackPush</link> (<link linkend="_struct_stack">Stack</link> *stk, <link linkend="_stack_8h_1a178d810735b72dab41331e71af8bfe99">ELEM_TYPE</link> val)</para>
+
+<para>Places an element at the end of a stack. </para>
+</listitem>
+            <listitem><para><link linkend="_stack_8h_1a178d810735b72dab41331e71af8bfe99">ELEM_TYPE</link> <link linkend="_stack_8cpp_1a0941f0fc6decbec7accf45e25ea30eb5">StackPop</link> (<link linkend="_struct_stack">Stack</link> *stk)</para>
+
+<para>Removes an element from stack and returns its value. </para>
+</listitem>
+            <listitem><para>void <link linkend="_stack_8cpp_1ad48351fcbd6c3d4ce84d470636525430">ReallocStackSizeShift</link> (<link linkend="_struct_stack">Stack</link> *stk, int delta)</para>
+
+<para>Recallocates a whole stak with a size shift. </para>
+</listitem>
+            <listitem><para>void <link linkend="_stack_8cpp_1aa57535478796950bea6860e32e15b33c">StackDumpInside</link> (<link linkend="_struct_stack">Stack</link> *stk, const char *StackName, const char *fileName, const char *funcName, size_t line)</para>
+
+<para>Dumps stack to logs_out. </para>
+</listitem>
+            <listitem><para>unsigned long long <link linkend="_stack_8cpp_1a2ec9d6428127070aa546211087cc603b">StackErrCheck</link> (<link linkend="_struct_stack">Stack</link> *stk)</para>
+
+<para>Prints errors drom a stack variable. </para>
+</listitem>
+            <listitem><para>void <link linkend="_stack_8cpp_1a4fe32a828f1513115f6abf92f8f9a066">StackLogPrintErrors</link> (<link linkend="_struct_stack">Stack</link> *stk)</para>
+
+<para>Prints errors for a StackDump func. </para>
+</listitem>
+            <listitem><para>void <link linkend="_stack_8cpp_1a331eb5bc38763cfe6fead891904aac75">StackCountHash</link> (<link linkend="_struct_stack">Stack</link> *stk)</para>
+
+<para>Counts hash for stack. </para>
+</listitem>
+            <listitem><para>void <link linkend="_stack_8cpp_1a81529740cd4cad5153f44e74c5c27e64">StackVerifyHash</link> (<link linkend="_struct_stack">Stack</link> *stk)</para>
+
+<para>Verifies hash for stack (tells if it was changed without any <link linkend="_struct_stack">Stack</link> specified functions) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_stack_8cpp_1a00d7f278e2c87be49ce52a84f1f925cb"/>    <section>
+    <title>isPoisonInside()</title>
+<indexterm><primary>isPoisonInside</primary><secondary>stack.cpp</secondary></indexterm>
+<indexterm><primary>stack.cpp</primary><secondary>isPoisonInside</secondary></indexterm>
+<para><computeroutput>bool isPoisonInside (void * var, size_t sizeofVar)</computeroutput></para><para>
+
+<para>Checks for a variable to be poisoned. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>var</entry>
+                                <entry>
+<para>ptr to var </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>sizeofVar</entry>
+                                <entry>
+<para>size of var </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>1 if poisoned, 0 if not </para>
+</formalpara>
+</para>
+<para>
+Definition at line 19 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8cpp_1ad48351fcbd6c3d4ce84d470636525430"/>    <section>
+    <title>ReallocStackSizeShift()</title>
+<indexterm><primary>ReallocStackSizeShift</primary><secondary>stack.cpp</secondary></indexterm>
+<indexterm><primary>stack.cpp</primary><secondary>ReallocStackSizeShift</secondary></indexterm>
+<para><computeroutput>void ReallocStackSizeShift (<link linkend="_struct_stack">Stack</link> * stk, int delta)</computeroutput></para><para>
+
+<para>Recallocates a whole stak with a size shift. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>stk</entry>
+                                <entry>
+<para>ptr to stack </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>delta</entry>
+                                <entry>
+<para>direction of size shift: &gt;0 - doubles the size, &lt;0 halves the size </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 148 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8cpp_1a60bb9a078b9f0f215577719c53003db2"/>    <section>
+    <title>setPoisonInside()</title>
+<indexterm><primary>setPoisonInside</primary><secondary>stack.cpp</secondary></indexterm>
+<indexterm><primary>stack.cpp</primary><secondary>setPoisonInside</secondary></indexterm>
+<para><computeroutput>void setPoisonInside (void * var, size_t sizeofVar)</computeroutput></para><para>
+
+<para>Sets var to a poisoned state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>var</entry>
+                                <entry>
+<para>ptr to var </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>sizeofVar</entry>
+                                <entry>
+<para>sizeof var </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 3 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8cpp_1a331eb5bc38763cfe6fead891904aac75"/>    <section>
+    <title>StackCountHash()</title>
+<indexterm><primary>StackCountHash</primary><secondary>stack.cpp</secondary></indexterm>
+<indexterm><primary>stack.cpp</primary><secondary>StackCountHash</secondary></indexterm>
+<para><computeroutput>void StackCountHash (<link linkend="_struct_stack">Stack</link> * stk)</computeroutput></para><para>
+
+<para>Counts hash for stack. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>stk</entry>
+                                <entry>
+<para>ptr to stack </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 328 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8cpp_1a7f20099985e66f408b861724863a2f1b"/>    <section>
+    <title>StackCtor()</title>
+<indexterm><primary>StackCtor</primary><secondary>stack.cpp</secondary></indexterm>
+<indexterm><primary>stack.cpp</primary><secondary>StackCtor</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_stack">Stack</link> StackCtor ( )</computeroutput></para><para>
+
+<para>Constructor for <link linkend="_struct_stack">Stack</link>; Sets default capacity to 4. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Fully operable <link linkend="_struct_stack">Stack</link> struct </para>
+</formalpara>
+</para>
+<para>
+Definition at line 50 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8cpp_1a7a748c43563a85e8c5d154997597c4bb"/>    <section>
+    <title>StackDtor()</title>
+<indexterm><primary>StackDtor</primary><secondary>stack.cpp</secondary></indexterm>
+<indexterm><primary>stack.cpp</primary><secondary>StackDtor</secondary></indexterm>
+<para><computeroutput>void StackDtor (<link linkend="_struct_stack">Stack</link> * stk)</computeroutput></para><para>
+
+<para>Destroys a stack var. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>stk</entry>
+                                <entry>
+<para>ptr to a destroyable variable </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 76 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8cpp_1aa57535478796950bea6860e32e15b33c"/>    <section>
+    <title>StackDumpInside()</title>
+<indexterm><primary>StackDumpInside</primary><secondary>stack.cpp</secondary></indexterm>
+<indexterm><primary>stack.cpp</primary><secondary>StackDumpInside</secondary></indexterm>
+<para><computeroutput>void StackDumpInside (<link linkend="_struct_stack">Stack</link> * stk, const char * StackName, const char * fileName, const char * funcName, size_t line)</computeroutput></para><para>
+
+<para>Dumps stack to logs_out. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>stk</entry>
+                                <entry>
+<para>ptr to stack </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>StackName</entry>
+                                <entry>
+<para>name of stack </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>fileName</entry>
+                                <entry>
+<para>name of file function was called at </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>funcName</entry>
+                                <entry>
+<para>name of func function was called at </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>line</entry>
+                                <entry>
+<para>line function was called at </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 188 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8cpp_1a2ec9d6428127070aa546211087cc603b"/>    <section>
+    <title>StackErrCheck()</title>
+<indexterm><primary>StackErrCheck</primary><secondary>stack.cpp</secondary></indexterm>
+<indexterm><primary>stack.cpp</primary><secondary>StackErrCheck</secondary></indexterm>
+<para><computeroutput>unsigned long long StackErrCheck (<link linkend="_struct_stack">Stack</link> * stk)</computeroutput></para><para>
+
+<para>Prints errors drom a stack variable. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>stk</entry>
+                                <entry>
+<para>ptr to stack </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>error code stk-&gt;errCode </para>
+</formalpara>
+</para>
+<para>
+Definition at line 254 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8cpp_1a4fe32a828f1513115f6abf92f8f9a066"/>    <section>
+    <title>StackLogPrintErrors()</title>
+<indexterm><primary>StackLogPrintErrors</primary><secondary>stack.cpp</secondary></indexterm>
+<indexterm><primary>stack.cpp</primary><secondary>StackLogPrintErrors</secondary></indexterm>
+<para><computeroutput>void StackLogPrintErrors (<link linkend="_struct_stack">Stack</link> * stk)</computeroutput></para><para>
+
+<para>Prints errors for a StackDump func. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>stk</entry>
+                                <entry>
+<para>ptr to stack </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 302 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8cpp_1a0941f0fc6decbec7accf45e25ea30eb5"/>    <section>
+    <title>StackPop()</title>
+<indexterm><primary>StackPop</primary><secondary>stack.cpp</secondary></indexterm>
+<indexterm><primary>stack.cpp</primary><secondary>StackPop</secondary></indexterm>
+<para><computeroutput><link linkend="_stack_8h_1a178d810735b72dab41331e71af8bfe99">ELEM_TYPE</link> StackPop (<link linkend="_struct_stack">Stack</link> * stk)</computeroutput></para><para>
+
+<para>Removes an element from stack and returns its value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>stk</entry>
+                                <entry>
+<para>ptr to stack </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>element that was removed </para>
+</formalpara>
+</para>
+<para>
+Definition at line 122 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8cpp_1a6d12097bc4af03b6c58d724a10758a64"/>    <section>
+    <title>StackPush()</title>
+<indexterm><primary>StackPush</primary><secondary>stack.cpp</secondary></indexterm>
+<indexterm><primary>stack.cpp</primary><secondary>StackPush</secondary></indexterm>
+<para><computeroutput>void StackPush (<link linkend="_struct_stack">Stack</link> * stk, <link linkend="_stack_8h_1a178d810735b72dab41331e71af8bfe99">ELEM_TYPE</link> val)</computeroutput></para><para>
+
+<para>Places an element at the end of a stack. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>stk</entry>
+                                <entry>
+<para>ptr to stack struct </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>val</entry>
+                                <entry>
+<para>value of an element to push </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 98 of file stack.cpp.</para>
+    </section><anchor xml:id="_stack_8cpp_1a81529740cd4cad5153f44e74c5c27e64"/>    <section>
+    <title>StackVerifyHash()</title>
+<indexterm><primary>StackVerifyHash</primary><secondary>stack.cpp</secondary></indexterm>
+<indexterm><primary>stack.cpp</primary><secondary>StackVerifyHash</secondary></indexterm>
+<para><computeroutput>void StackVerifyHash (<link linkend="_struct_stack">Stack</link> * stk)</computeroutput></para><para>
+
+<para>Verifies hash for stack (tells if it was changed without any <link linkend="_struct_stack">Stack</link> specified functions) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>stk</entry>
+                                <entry>
+<para>ptr to stack </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 364 of file stack.cpp.</para>
+</section>
+</section>
+</section>

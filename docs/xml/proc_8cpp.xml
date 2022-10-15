@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="proc_8cpp" kind="file" language="C++">
+    <compoundname>proc.cpp</compoundname>
+    <includes refid="proc__head_8h" local="yes">proc_head.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>assert.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2">
+        <label>proc_head.h</label>
+        <link refid="proc__head_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>D:\los_projectados\wtfProc\lib\globalization.h</label>
+        <link refid="globalization_8h"/>
+      </node>
+      <node id="7">
+        <label>math.h</label>
+      </node>
+      <node id="1">
+        <label>processor/proc.cpp</label>
+        <link refid="proc_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="proc_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc.cpp" line="3" column="5" bodyfile="processor/proc.cpp" bodystart="3" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="proc__head_8h" kindref="compound">proc_head.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="proc_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="proc_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[])<sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>codeFileName<sp/>=<sp/><ref refid="asm__funcs_8cpp_1ad94c08d203bdf6cd4fdad8a420073a85" kindref="member">handleComLine</ref><sp/>(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_text" kindref="compound">Text</ref><sp/>codeFile<sp/>=<sp/><ref refid="text_8cpp_1a75a739634df7483901b62c501362ec9d" kindref="member">read_Text</ref><sp/>(codeFileName);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_proc" kindref="compound">Proc</ref><sp/>cpu<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__funcs_8cpp_1aea285898f9e99e5de92495f68bc409e3" kindref="member">ProcCtor</ref><sp/>(&amp;cpu);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>cpu.<ref refid="struct_proc_1a3f965d8be71bc5b90fe4be02a5b7451f" kindref="member">code</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>codeFile.<ref refid="struct_text_1aaaffb6c0552bbad4ce62f79fdaba570c" kindref="member">TextString</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>cpu.<ref refid="struct_proc_1a3e7ddbbef3cb2bdd7643696481a7dc9a" kindref="member">codeSize</ref><sp/>=<sp/>codeFile.<ref refid="struct_text_1a3b8d5e4b32683adc042d220c398944a6" kindref="member">TextSize</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__funcs_8cpp_1a8de894df7ac03647ab4593bbd226e7ca" kindref="member">checkFileSign</ref><sp/>(&amp;cpu);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__funcs_8cpp_1ac394503074d575a0ad623a66d084b4f0" kindref="member">ProcRunCode</ref><sp/>(&amp;cpu);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__funcs_8cpp_1aeb16925431194abc0b606715b1b35e48" kindref="member">ProcDtor</ref><sp/>(&amp;cpu);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="text_8cpp_1a359525e4562324c43aa6027b94c4e7b0" kindref="member">killText</ref><sp/>(&amp;codeFile);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(codeFileName);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="processor/proc.cpp"/>
+  </compounddef>
+</doxygen>

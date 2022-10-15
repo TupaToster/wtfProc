@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_proc" xml:lang="en-US">
+<title>Proc Struct Reference</title>
+<indexterm><primary>Proc</primary></indexterm>
+<para>
+<computeroutput>#include &lt;proc_head.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>char * <link linkend="_struct_proc_1a3f965d8be71bc5b90fe4be02a5b7451f">code</link> = NULL</para>
+</listitem>
+            <listitem><para>size_t <link linkend="_struct_proc_1a3e7ddbbef3cb2bdd7643696481a7dc9a">codeSize</link> = 0</para>
+</listitem>
+            <listitem><para><link linkend="_cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</link> <link linkend="_struct_proc_1a7dcaf8c7ceca34684ad6425a7cf8383f">regs</link> [5] = {0}</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_proc_1a035d414acb2f1e68268e1e01b31d3639">ip</link> = 0</para>
+</listitem>
+            <listitem><para><link linkend="_struct_stack">Stack</link> <link linkend="_struct_proc_1a9c68bfb7e83ba9b17440159dade966aa">stk</link> = {}</para>
+</listitem>
+            <listitem><para><link linkend="_struct_stack">Stack</link> <link linkend="_struct_proc_1abf87102fddf47ab184fd376d2ce8d685">funcIp</link> = {}</para>
+</listitem>
+            <listitem><para><link linkend="_cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</link> * <link linkend="_struct_proc_1a8ec1b6bbc3ed71f89837c24999bc42d4">ram</link> = NULL</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 42 of file proc_head.h.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_proc_1a3f965d8be71bc5b90fe4be02a5b7451f"/>    <section>
+    <title>code</title>
+<indexterm><primary>code</primary><secondary>Proc</secondary></indexterm>
+<indexterm><primary>Proc</primary><secondary>code</secondary></indexterm>
+<para><computeroutput>char* Proc::code = NULL</computeroutput></para><para>
+Definition at line 44 of file proc_head.h.</para>
+    </section><anchor xml:id="_struct_proc_1a3e7ddbbef3cb2bdd7643696481a7dc9a"/>    <section>
+    <title>codeSize</title>
+<indexterm><primary>codeSize</primary><secondary>Proc</secondary></indexterm>
+<indexterm><primary>Proc</primary><secondary>codeSize</secondary></indexterm>
+<para><computeroutput>size_t Proc::codeSize = 0</computeroutput></para><para>
+Definition at line 45 of file proc_head.h.</para>
+    </section><anchor xml:id="_struct_proc_1abf87102fddf47ab184fd376d2ce8d685"/>    <section>
+    <title>funcIp</title>
+<indexterm><primary>funcIp</primary><secondary>Proc</secondary></indexterm>
+<indexterm><primary>Proc</primary><secondary>funcIp</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_stack">Stack</link> Proc::funcIp = {}</computeroutput></para><para>
+Definition at line 49 of file proc_head.h.</para>
+    </section><anchor xml:id="_struct_proc_1a035d414acb2f1e68268e1e01b31d3639"/>    <section>
+    <title>ip</title>
+<indexterm><primary>ip</primary><secondary>Proc</secondary></indexterm>
+<indexterm><primary>Proc</primary><secondary>ip</secondary></indexterm>
+<para><computeroutput>int Proc::ip = 0</computeroutput></para><para>
+Definition at line 47 of file proc_head.h.</para>
+    </section><anchor xml:id="_struct_proc_1a8ec1b6bbc3ed71f89837c24999bc42d4"/>    <section>
+    <title>ram</title>
+<indexterm><primary>ram</primary><secondary>Proc</secondary></indexterm>
+<indexterm><primary>Proc</primary><secondary>ram</secondary></indexterm>
+<para><computeroutput><link linkend="_cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</link>* Proc::ram = NULL</computeroutput></para><para>
+Definition at line 50 of file proc_head.h.</para>
+    </section><anchor xml:id="_struct_proc_1a7dcaf8c7ceca34684ad6425a7cf8383f"/>    <section>
+    <title>regs</title>
+<indexterm><primary>regs</primary><secondary>Proc</secondary></indexterm>
+<indexterm><primary>Proc</primary><secondary>regs</secondary></indexterm>
+<para><computeroutput><link linkend="_cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</link> Proc::regs[5] = {0}</computeroutput></para><para>
+Definition at line 46 of file proc_head.h.</para>
+    </section><anchor xml:id="_struct_proc_1a9c68bfb7e83ba9b17440159dade966aa"/>    <section>
+    <title>stk</title>
+<indexterm><primary>stk</primary><secondary>Proc</secondary></indexterm>
+<indexterm><primary>Proc</primary><secondary>stk</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_stack">Stack</link> Proc::stk = {}</computeroutput></para><para>
+Definition at line 48 of file proc_head.h.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+processor/<link linkend="_proc__head_8h">proc_head.h</link></section>
+</section>

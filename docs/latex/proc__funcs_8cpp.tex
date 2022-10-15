@@ -1,0 +1,160 @@
+\hypertarget{proc__funcs_8cpp}{}\doxysection{processor/proc\+\_\+funcs.cpp File Reference}
+\label{proc__funcs_8cpp}\index{processor/proc\_funcs.cpp@{processor/proc\_funcs.cpp}}
+{\ttfamily \#include \char`\"{}proc\+\_\+head.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{proc__funcs_8cpp_aa020607c1c6794b5b426e2d70c488153}{DEF\+\_\+\+CMD}}(name,  num,  arg,  code)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{proc__funcs_8cpp_a3a519805ef72bd5d68daafbaaf66d3f2}{handle\+Com\+Line}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{proc__funcs_8cpp_aea285898f9e99e5de92495f68bc409e3}{Proc\+Ctor}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
+\item 
+void \mbox{\hyperlink{proc__funcs_8cpp_aeb16925431194abc0b606715b1b35e48}{Proc\+Dtor}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
+\item 
+void \mbox{\hyperlink{proc__funcs_8cpp_a8de894df7ac03647ab4593bbd226e7ca}{check\+File\+Sign}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
+\item 
+\mbox{\hyperlink{cmd_8h_a48ca3ff2cfe9aa2266d0fd50b0858a80}{elem\+\_\+t}} \mbox{\hyperlink{proc__funcs_8cpp_a6789f3dda443cc297083852dad3fdf66}{get\+Value\+Arg}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
+\item 
+\mbox{\hyperlink{cmd_8h_a48ca3ff2cfe9aa2266d0fd50b0858a80}{elem\+\_\+t}} $\ast$ \mbox{\hyperlink{proc__funcs_8cpp_a6bf71e3a4241fd51c9f3d5c36f673037}{get\+Ptr\+Arg}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
+\item 
+int \mbox{\hyperlink{proc__funcs_8cpp_a2fdff7c8f755b16495c35026ae397d44}{get\+Ip\+Arg}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
+\item 
+void \mbox{\hyperlink{proc__funcs_8cpp_abbcaa80443c83c47ea972ef5927664fd}{Proc\+Dump\+Inside}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
+\item 
+void \mbox{\hyperlink{proc__funcs_8cpp_ac394503074d575a0ad623a66d084b4f0}{Proc\+Run\+Code}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{proc__funcs_8cpp_a49e378fb51788d3e488e0fcf7576ebba}{Proc\+\_\+version}} \mbox{[}3\mbox{]} = \char`\"{}02\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{proc__funcs_8cpp_aa020607c1c6794b5b426e2d70c488153}\label{proc__funcs_8cpp_aa020607c1c6794b5b426e2d70c488153}} 
+\index{proc\_funcs.cpp@{proc\_funcs.cpp}!DEF\_CMD@{DEF\_CMD}}
+\index{DEF\_CMD@{DEF\_CMD}!proc\_funcs.cpp@{proc\_funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{DEF\_CMD}{DEF\_CMD}}
+{\footnotesize\ttfamily \#define DEF\+\_\+\+CMD(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{num,  }\item[{}]{arg,  }\item[{}]{code }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                \textcolor{keywordflow}{case} CMD\_\#\#name:                                     \(\backslash\)}
+\DoxyCodeLine{                                                                     \(\backslash\)}
+\DoxyCodeLine{                    if      (arg == 1) valArg = \mbox{\hyperlink{proc__funcs_8cpp_a6789f3dda443cc297083852dad3fdf66}{getValueArg}} (cpu);   \(\backslash\)}
+\DoxyCodeLine{                    else if (arg == 2) ptrArg = \mbox{\hyperlink{proc__funcs_8cpp_a6bf71e3a4241fd51c9f3d5c36f673037}{getPtrArg}} (cpu);     \(\backslash\)}
+\DoxyCodeLine{                    else if (arg == 3) ipArg  = \mbox{\hyperlink{proc__funcs_8cpp_a2fdff7c8f755b16495c35026ae397d44}{getIpArg}} (cpu);      \(\backslash\)}
+\DoxyCodeLine{                    code                                             \(\backslash\)}
+\DoxyCodeLine{                break;}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{proc__funcs_8cpp_a8de894df7ac03647ab4593bbd226e7ca}\label{proc__funcs_8cpp_a8de894df7ac03647ab4593bbd226e7ca}} 
+\index{proc\_funcs.cpp@{proc\_funcs.cpp}!checkFileSign@{checkFileSign}}
+\index{checkFileSign@{checkFileSign}!proc\_funcs.cpp@{proc\_funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{checkFileSign()}{checkFileSign()}}
+{\footnotesize\ttfamily void check\+File\+Sign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_proc}{Proc}} $\ast$}]{cpu }\end{DoxyParamCaption})}
+
+
+
+Definition at line 64 of file proc\+\_\+funcs.\+cpp.
+
+\mbox{\Hypertarget{proc__funcs_8cpp_a2fdff7c8f755b16495c35026ae397d44}\label{proc__funcs_8cpp_a2fdff7c8f755b16495c35026ae397d44}} 
+\index{proc\_funcs.cpp@{proc\_funcs.cpp}!getIpArg@{getIpArg}}
+\index{getIpArg@{getIpArg}!proc\_funcs.cpp@{proc\_funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{getIpArg()}{getIpArg()}}
+{\footnotesize\ttfamily int get\+Ip\+Arg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_proc}{Proc}} $\ast$}]{cpu }\end{DoxyParamCaption})}
+
+
+
+Definition at line 142 of file proc\+\_\+funcs.\+cpp.
+
+\mbox{\Hypertarget{proc__funcs_8cpp_a6bf71e3a4241fd51c9f3d5c36f673037}\label{proc__funcs_8cpp_a6bf71e3a4241fd51c9f3d5c36f673037}} 
+\index{proc\_funcs.cpp@{proc\_funcs.cpp}!getPtrArg@{getPtrArg}}
+\index{getPtrArg@{getPtrArg}!proc\_funcs.cpp@{proc\_funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{getPtrArg()}{getPtrArg()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmd_8h_a48ca3ff2cfe9aa2266d0fd50b0858a80}{elem\+\_\+t}}$\ast$ get\+Ptr\+Arg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_proc}{Proc}} $\ast$}]{cpu }\end{DoxyParamCaption})}
+
+
+
+Definition at line 110 of file proc\+\_\+funcs.\+cpp.
+
+\mbox{\Hypertarget{proc__funcs_8cpp_a6789f3dda443cc297083852dad3fdf66}\label{proc__funcs_8cpp_a6789f3dda443cc297083852dad3fdf66}} 
+\index{proc\_funcs.cpp@{proc\_funcs.cpp}!getValueArg@{getValueArg}}
+\index{getValueArg@{getValueArg}!proc\_funcs.cpp@{proc\_funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{getValueArg()}{getValueArg()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmd_8h_a48ca3ff2cfe9aa2266d0fd50b0858a80}{elem\+\_\+t}} get\+Value\+Arg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_proc}{Proc}} $\ast$}]{cpu }\end{DoxyParamCaption})}
+
+
+
+Definition at line 86 of file proc\+\_\+funcs.\+cpp.
+
+\mbox{\Hypertarget{proc__funcs_8cpp_a3a519805ef72bd5d68daafbaaf66d3f2}\label{proc__funcs_8cpp_a3a519805ef72bd5d68daafbaaf66d3f2}} 
+\index{proc\_funcs.cpp@{proc\_funcs.cpp}!handleComLine@{handleComLine}}
+\index{handleComLine@{handleComLine}!proc\_funcs.cpp@{proc\_funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{handleComLine()}{handleComLine()}}
+{\footnotesize\ttfamily char$\ast$ handle\+Com\+Line (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file proc\+\_\+funcs.\+cpp.
+
+\mbox{\Hypertarget{proc__funcs_8cpp_aea285898f9e99e5de92495f68bc409e3}\label{proc__funcs_8cpp_aea285898f9e99e5de92495f68bc409e3}} 
+\index{proc\_funcs.cpp@{proc\_funcs.cpp}!ProcCtor@{ProcCtor}}
+\index{ProcCtor@{ProcCtor}!proc\_funcs.cpp@{proc\_funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{ProcCtor()}{ProcCtor()}}
+{\footnotesize\ttfamily void Proc\+Ctor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_proc}{Proc}} $\ast$}]{cpu }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file proc\+\_\+funcs.\+cpp.
+
+\mbox{\Hypertarget{proc__funcs_8cpp_aeb16925431194abc0b606715b1b35e48}\label{proc__funcs_8cpp_aeb16925431194abc0b606715b1b35e48}} 
+\index{proc\_funcs.cpp@{proc\_funcs.cpp}!ProcDtor@{ProcDtor}}
+\index{ProcDtor@{ProcDtor}!proc\_funcs.cpp@{proc\_funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{ProcDtor()}{ProcDtor()}}
+{\footnotesize\ttfamily void Proc\+Dtor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_proc}{Proc}} $\ast$}]{cpu }\end{DoxyParamCaption})}
+
+
+
+Definition at line 53 of file proc\+\_\+funcs.\+cpp.
+
+\mbox{\Hypertarget{proc__funcs_8cpp_abbcaa80443c83c47ea972ef5927664fd}\label{proc__funcs_8cpp_abbcaa80443c83c47ea972ef5927664fd}} 
+\index{proc\_funcs.cpp@{proc\_funcs.cpp}!ProcDumpInside@{ProcDumpInside}}
+\index{ProcDumpInside@{ProcDumpInside}!proc\_funcs.cpp@{proc\_funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{ProcDumpInside()}{ProcDumpInside()}}
+{\footnotesize\ttfamily void Proc\+Dump\+Inside (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_proc}{Proc}} $\ast$}]{cpu }\end{DoxyParamCaption})}
+
+
+
+Definition at line 153 of file proc\+\_\+funcs.\+cpp.
+
+\mbox{\Hypertarget{proc__funcs_8cpp_ac394503074d575a0ad623a66d084b4f0}\label{proc__funcs_8cpp_ac394503074d575a0ad623a66d084b4f0}} 
+\index{proc\_funcs.cpp@{proc\_funcs.cpp}!ProcRunCode@{ProcRunCode}}
+\index{ProcRunCode@{ProcRunCode}!proc\_funcs.cpp@{proc\_funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{ProcRunCode()}{ProcRunCode()}}
+{\footnotesize\ttfamily void Proc\+Run\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_proc}{Proc}} $\ast$}]{cpu }\end{DoxyParamCaption})}
+
+
+
+Definition at line 187 of file proc\+\_\+funcs.\+cpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{proc__funcs_8cpp_a49e378fb51788d3e488e0fcf7576ebba}\label{proc__funcs_8cpp_a49e378fb51788d3e488e0fcf7576ebba}} 
+\index{proc\_funcs.cpp@{proc\_funcs.cpp}!Proc\_version@{Proc\_version}}
+\index{Proc\_version@{Proc\_version}!proc\_funcs.cpp@{proc\_funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{Proc\_version}{Proc\_version}}
+{\footnotesize\ttfamily char Proc\+\_\+version\mbox{[}3\mbox{]} = \char`\"{}02\char`\"{}}
+
+
+
+Definition at line 3 of file proc\+\_\+funcs.\+cpp.
+

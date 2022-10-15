@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_4b37c35541aee0eec500a6f5b59dadfa" kind="dir">
+    <compoundname>asm</compoundname>
+    <innerfile refid="asm_8cpp">asm.cpp</innerfile>
+    <innerfile refid="asm__funcs_8cpp">asm_funcs.cpp</innerfile>
+    <innerfile refid="asm__head_8h">asm_head.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="asm/"/>
+  </compounddef>
+</doxygen>

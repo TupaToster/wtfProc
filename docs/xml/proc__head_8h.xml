@@ -1,0 +1,504 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="proc__head_8h" kind="file" language="C++">
+    <compoundname>proc_head.h</compoundname>
+    <includes refid="globalization_8h" local="yes">D:\los_projectados\wtfProc\lib\globalization.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">math.h</includes>
+    <includedby refid="proc_8cpp" local="yes">processor/proc.cpp</includedby>
+    <includedby refid="proc__funcs_8cpp" local="yes">processor/proc_funcs.cpp</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>assert.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>processor/proc_head.h</label>
+        <link refid="proc__head_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>D:\los_projectados\wtfProc\lib\globalization.h</label>
+        <link refid="globalization_8h"/>
+      </node>
+      <node id="6">
+        <label>math.h</label>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>processor/proc_head.h</label>
+        <link refid="proc__head_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>processor/proc.cpp</label>
+        <link refid="proc_8cpp"/>
+      </node>
+      <node id="3">
+        <label>processor/proc_funcs.cpp</label>
+        <link refid="proc__funcs_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_proc" prot="public">Proc</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="proc__head_8h_1aa73c95cb26c92f512ae3fd6693f5a05b" prot="public" static="no">
+        <name>ProcDump</name>
+        <param><defname>cpu</defname></param>
+        <initializer>    <ref refid="stack_8h_1a69595dc2450bd35617f155ffa5738490" kindref="member">StackDump</ref> (cpu-&gt;stk);    \
+    <ref refid="stack_8h_1a69595dc2450bd35617f155ffa5738490" kindref="member">StackDump</ref> (cpu-&gt;funcIp); \
+    <ref refid="proc__head_8h_1abbcaa80443c83c47ea972ef5927664fd" kindref="member">ProcDumpInside</ref> (cpu);    \</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="12" column="9" bodyfile="processor/proc_head.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="proc__head_8h_1aa020607c1c6794b5b426e2d70c488153" prot="public" static="no">
+        <name>DEF_CMD</name>
+        <param><defname>name</defname></param>
+        <param><defname>num</defname></param>
+        <param><defname>arg</defname></param>
+        <param><defname>code</defname></param>
+        <initializer>CMD_##name = num,</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="37" column="18" bodyfile="processor/proc_head.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191" prot="public" static="no" strong="no">
+        <type></type>
+        <name>reg</name>
+        <enumvalue id="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a99f5dab094268bbd7e983e639227a450" prot="public">
+          <name>r0x</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a7c4e2b501efe08a200520265ddd187d8" prot="public">
+          <name>rax</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a5167d112e4a951e0101af94ac6632619" prot="public">
+          <name>rbx</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191afd03e081e40ff976547d3f5246910740" prot="public">
+          <name>rcx</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a6cfff3aee7c6bc56dad8b0dff2a4fe98" prot="public">
+          <name>rdx</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="17" column="1" bodyfile="processor/proc_head.h" bodystart="17" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="enum" id="proc__head_8h_1adad90fa030af56592ad194a41341ffcd" prot="public" static="no" strong="no">
+        <type></type>
+        <name>masks</name>
+        <enumvalue id="proc__head_8h_1adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2" prot="public">
+          <name>MASK_RAM</name>
+          <initializer>= 1&lt;&lt;7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="proc__head_8h_1adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d" prot="public">
+          <name>MASK_REG</name>
+          <initializer>= 1&lt;&lt;6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="proc__head_8h_1adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f" prot="public">
+          <name>MASK_IMM</name>
+          <initializer>= 1&lt;&lt;5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="proc__head_8h_1adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70" prot="public">
+          <name>MASK_CMD</name>
+          <initializer>= (1&lt;&lt;5) - 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="proc__head_8h_1adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2" prot="public">
+          <name>MASK_RAM</name>
+          <initializer>= 1&lt;&lt;7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="proc__head_8h_1adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d" prot="public">
+          <name>MASK_REG</name>
+          <initializer>= 1&lt;&lt;6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="proc__head_8h_1adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f" prot="public">
+          <name>MASK_IMM</name>
+          <initializer>= 1&lt;&lt;5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="proc__head_8h_1adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70" prot="public">
+          <name>MASK_CMD</name>
+          <initializer>= (1&lt;&lt;5) - 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="26" column="1" bodyfile="processor/proc_head.h" bodystart="26" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="enum" id="proc__head_8h_1a04887de32e1f60f8dc157312b8f27665" prot="public" static="no" strong="no">
+        <type></type>
+        <name>CMD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="34" column="1" bodyfile="processor/proc_head.h" bodystart="34" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="proc__head_8h_1a49e378fb51788d3e488e0fcf7576ebba" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Proc_version[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>Proc_version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="10" column="13" bodyfile="processor/proc_funcs.cpp" bodystart="3" bodyend="-1" declfile="processor/proc_head.h" declline="10" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="proc__head_8h_1a3a519805ef72bd5d68daafbaaf66d3f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* handleComLine</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>handleComLine</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="53" column="6" bodyfile="processor/proc_funcs.cpp" bodystart="5" bodyend="36" declfile="processor/proc_head.h" declline="53" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="proc__head_8h_1aea285898f9e99e5de92495f68bc409e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcCtor</definition>
+        <argsstring>(Proc *cpu)</argsstring>
+        <name>ProcCtor</name>
+        <param>
+          <type><ref refid="struct_proc" kindref="compound">Proc</ref> *</type>
+          <declname>cpu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="55" column="6" bodyfile="processor/proc_funcs.cpp" bodystart="38" bodyend="51" declfile="processor/proc_head.h" declline="55" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="proc__head_8h_1aeb16925431194abc0b606715b1b35e48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcDtor</definition>
+        <argsstring>(Proc *cpu)</argsstring>
+        <name>ProcDtor</name>
+        <param>
+          <type><ref refid="struct_proc" kindref="compound">Proc</ref> *</type>
+          <declname>cpu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="57" column="6" bodyfile="processor/proc_funcs.cpp" bodystart="53" bodyend="62" declfile="processor/proc_head.h" declline="57" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="proc__head_8h_1afbea15260f301e326cefa5b7d3897c73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref> *</type>
+        <definition>elem_t* handleArg</definition>
+        <argsstring>(Proc *cpu)</argsstring>
+        <name>handleArg</name>
+        <param>
+          <type><ref refid="struct_proc" kindref="compound">Proc</ref> *</type>
+          <declname>cpu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="59" column="8" declfile="processor/proc_head.h" declline="59" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="proc__head_8h_1abbcaa80443c83c47ea972ef5927664fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcDumpInside</definition>
+        <argsstring>(Proc *cpu)</argsstring>
+        <name>ProcDumpInside</name>
+        <param>
+          <type><ref refid="struct_proc" kindref="compound">Proc</ref> *</type>
+          <declname>cpu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="61" column="6" bodyfile="processor/proc_funcs.cpp" bodystart="153" bodyend="185" declfile="processor/proc_head.h" declline="61" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="proc__head_8h_1a8de894df7ac03647ab4593bbd226e7ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void checkFileSign</definition>
+        <argsstring>(Proc *cpu)</argsstring>
+        <name>checkFileSign</name>
+        <param>
+          <type><ref refid="struct_proc" kindref="compound">Proc</ref> *</type>
+          <declname>cpu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="63" column="6" bodyfile="processor/proc_funcs.cpp" bodystart="64" bodyend="84" declfile="processor/proc_head.h" declline="63" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="proc__head_8h_1ac394503074d575a0ad623a66d084b4f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcRunCode</definition>
+        <argsstring>(Proc *cpu)</argsstring>
+        <name>ProcRunCode</name>
+        <param>
+          <type><ref refid="struct_proc" kindref="compound">Proc</ref> *</type>
+          <declname>cpu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="65" column="6" bodyfile="processor/proc_funcs.cpp" bodystart="187" bodyend="218" declfile="processor/proc_head.h" declline="65" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="proc__head_8h_1a6789f3dda443cc297083852dad3fdf66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref></type>
+        <definition>elem_t getValueArg</definition>
+        <argsstring>(Proc *cpu)</argsstring>
+        <name>getValueArg</name>
+        <param>
+          <type><ref refid="struct_proc" kindref="compound">Proc</ref> *</type>
+          <declname>cpu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="67" column="8" bodyfile="processor/proc_funcs.cpp" bodystart="86" bodyend="108" declfile="processor/proc_head.h" declline="67" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="proc__head_8h_1a6bf71e3a4241fd51c9f3d5c36f673037" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref> *</type>
+        <definition>elem_t* getPtrArg</definition>
+        <argsstring>(Proc *cpu)</argsstring>
+        <name>getPtrArg</name>
+        <param>
+          <type><ref refid="struct_proc" kindref="compound">Proc</ref> *</type>
+          <declname>cpu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="69" column="8" bodyfile="processor/proc_funcs.cpp" bodystart="110" bodyend="140" declfile="processor/proc_head.h" declline="69" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="proc__head_8h_1a2fdff7c8f755b16495c35026ae397d44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getIpArg</definition>
+        <argsstring>(Proc *cpu)</argsstring>
+        <name>getIpArg</name>
+        <param>
+          <type><ref refid="struct_proc" kindref="compound">Proc</ref> *</type>
+          <declname>cpu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="processor/proc_head.h" line="71" column="5" bodyfile="processor/proc_funcs.cpp" bodystart="142" bodyend="151" declfile="processor/proc_head.h" declline="71" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="globalization_8h" kindref="compound">D:\los_projectados\wtfProc\lib\globalization.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>header(stack)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>header(text)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1a49e378fb51788d3e488e0fcf7576ebba" kindref="member">Proc_version</ref>[3];</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="proc__head_8h_1aa73c95cb26c92f512ae3fd6693f5a05b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ProcDump(cpu)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>StackDump<sp/>(cpu-&gt;stk);<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>StackDump<sp/>(cpu-&gt;funcIp);<sp/>\</highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>ProcDumpInside<sp/>(cpu);<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191" kindref="member">reg</ref><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a99f5dab094268bbd7e983e639227a450" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a99f5dab094268bbd7e983e639227a450" kindref="member">r0x</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="20" refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a7c4e2b501efe08a200520265ddd187d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a7c4e2b501efe08a200520265ddd187d8" kindref="member">rax</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="21" refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a5167d112e4a951e0101af94ac6632619" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a5167d112e4a951e0101af94ac6632619" kindref="member">rbx</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="22" refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191afd03e081e40ff976547d3f5246910740" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191afd03e081e40ff976547d3f5246910740" kindref="member">rcx</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a6cfff3aee7c6bc56dad8b0dff2a4fe98" kindref="member">rdx</ref><sp/>=<sp/>4</highlight></codeline>
+<codeline lineno="24" refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a6cfff3aee7c6bc56dad8b0dff2a4fe98" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="asm__head_8h_1adad90fa030af56592ad194a41341ffcd" kindref="member">masks</ref><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2" kindref="member">MASK_RAM</ref><sp/>=<sp/>1&lt;&lt;7,</highlight></codeline>
+<codeline lineno="29" refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d" kindref="member">MASK_REG</ref><sp/>=<sp/>1&lt;&lt;6,</highlight></codeline>
+<codeline lineno="30" refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f" kindref="member">MASK_IMM</ref><sp/>=<sp/>1&lt;&lt;5,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70" kindref="member">MASK_CMD</ref><sp/>=<sp/>(1&lt;&lt;5)<sp/>-<sp/>1</highlight></codeline>
+<codeline lineno="32" refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="proc__head_8h_1a04887de32e1f60f8dc157312b8f27665" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="asm__head_8h_1a04887de32e1f60f8dc157312b8f27665" kindref="member">CMD</ref><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#undef<sp/>DEF_CMD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="proc__head_8h_1aa020607c1c6794b5b426e2d70c488153" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>DEF_CMD(name,<sp/>num,<sp/>arg,<sp/>code)<sp/>CMD_##name<sp/>=<sp/>num,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>header(cmd)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="struct_proc" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_proc" kindref="compound">Proc</ref><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="struct_proc_1a3f965d8be71bc5b90fe4be02a5b7451f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><ref refid="struct_proc_1a3f965d8be71bc5b90fe4be02a5b7451f" kindref="member">code</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="45" refid="struct_proc_1a3e7ddbbef3cb2bdd7643696481a7dc9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><ref refid="struct_proc_1a3e7ddbbef3cb2bdd7643696481a7dc9a" kindref="member">codeSize</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="46" refid="struct_proc_1a7dcaf8c7ceca34684ad6425a7cf8383f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref><sp/><sp/><ref refid="struct_proc_1a7dcaf8c7ceca34684ad6425a7cf8383f" kindref="member">regs</ref>[5]<sp/><sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="47" refid="struct_proc_1a035d414acb2f1e68268e1e01b31d3639" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct_proc_1a035d414acb2f1e68268e1e01b31d3639" kindref="member">ip</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="48" refid="struct_proc_1a9c68bfb7e83ba9b17440159dade966aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_stack" kindref="compound">Stack</ref><sp/><sp/><sp/><ref refid="struct_proc_1a9c68bfb7e83ba9b17440159dade966aa" kindref="member">stk</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="49" refid="struct_proc_1abf87102fddf47ab184fd376d2ce8d685" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_stack" kindref="compound">Stack</ref><sp/><sp/><sp/><ref refid="struct_proc_1abf87102fddf47ab184fd376d2ce8d685" kindref="member">funcIp</ref><sp/><sp/><sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="50" refid="struct_proc_1a8ec1b6bbc3ed71f89837c24999bc42d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref>*<sp/><ref refid="struct_proc_1a8ec1b6bbc3ed71f89837c24999bc42d4" kindref="member">ram</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="proc__head_8h_1a3a519805ef72bd5d68daafbaaf66d3f2" kindref="member">handleComLine</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[]);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1aea285898f9e99e5de92495f68bc409e3" kindref="member">ProcCtor</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1aeb16925431194abc0b606715b1b35e48" kindref="member">ProcDtor</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="proc__head_8h_1afbea15260f301e326cefa5b7d3897c73" refkind="member"><highlight class="normal"><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref>*<sp/><ref refid="proc__head_8h_1afbea15260f301e326cefa5b7d3897c73" kindref="member">handleArg</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1abbcaa80443c83c47ea972ef5927664fd" kindref="member">ProcDumpInside</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1a8de894df7ac03647ab4593bbd226e7ca" kindref="member">checkFileSign</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1ac394503074d575a0ad623a66d084b4f0" kindref="member">ProcRunCode</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref><sp/><ref refid="proc__head_8h_1a6789f3dda443cc297083852dad3fdf66" kindref="member">getValueArg</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref>*<sp/><ref refid="proc__head_8h_1a6bf71e3a4241fd51c9f3d5c36f673037" kindref="member">getPtrArg</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1a2fdff7c8f755b16495c35026ae397d44" kindref="member">getIpArg</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
+    </programlisting>
+    <location file="processor/proc_head.h"/>
+  </compounddef>
+</doxygen>

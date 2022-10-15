@@ -1,0 +1,66 @@
+.TH "Text" 3 "Sat Oct 15 2022" "Version 2" "Soft cpu" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Text \- Stores \fBText\fP in format of string and array of \fBLine\fP structures\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <text\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "char * \fBTextString\fP = NULL"
+.br
+.RI "char* that points to the beginning of a \fBText\fP "
+.ti -1c
+.RI "size_t \fBTextSize\fP = 0"
+.br
+.RI "size_t that declares sizeof \fBText\fP in chars "
+.ti -1c
+.RI "\fBLine\fP * \fBLines\fP = NULL"
+.br
+.RI "ptr to a \fBLine\fP array that stores \fBText\fP in a format of Lines "
+.ti -1c
+.RI "size_t \fBstringCnt\fP = 0"
+.br
+.RI "size_t that indicates amount of Lines in \fBText\fP "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Stores \fBText\fP in format of string and array of \fBLine\fP structures\&. 
+.PP
+Definition at line 17 of file text\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBLine\fP* Text::Lines = NULL"
+
+.PP
+ptr to a \fBLine\fP array that stores \fBText\fP in a format of Lines 
+.PP
+Definition at line 21 of file text\&.h\&.
+.SS "size_t Text::stringCnt = 0"
+
+.PP
+size_t that indicates amount of Lines in \fBText\fP 
+.PP
+Definition at line 22 of file text\&.h\&.
+.SS "size_t Text::TextSize = 0"
+
+.PP
+size_t that declares sizeof \fBText\fP in chars 
+.PP
+Definition at line 20 of file text\&.h\&.
+.SS "char* Text::TextString = NULL"
+
+.PP
+char* that points to the beginning of a \fBText\fP 
+.PP
+Definition at line 19 of file text\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Soft cpu from the source code\&.

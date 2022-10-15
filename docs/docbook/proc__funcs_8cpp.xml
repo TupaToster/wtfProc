@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_proc__funcs_8cpp" xml:lang="en-US">
+<title>processor/proc_funcs.cpp File Reference</title>
+<indexterm><primary>processor/proc_funcs.cpp</primary></indexterm>
+<programlisting>#include &quot;proc_head.h&quot;
+</programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_proc__funcs_8cpp_1aa020607c1c6794b5b426e2d70c488153">DEF_CMD</link>(name,  num,  arg,  code)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>char * <link linkend="_proc__funcs_8cpp_1a3a519805ef72bd5d68daafbaaf66d3f2">handleComLine</link> (int argc, char *argv[])</para>
+</listitem>
+            <listitem><para>void <link linkend="_proc__funcs_8cpp_1aea285898f9e99e5de92495f68bc409e3">ProcCtor</link> (<link linkend="_struct_proc">Proc</link> *cpu)</para>
+</listitem>
+            <listitem><para>void <link linkend="_proc__funcs_8cpp_1aeb16925431194abc0b606715b1b35e48">ProcDtor</link> (<link linkend="_struct_proc">Proc</link> *cpu)</para>
+</listitem>
+            <listitem><para>void <link linkend="_proc__funcs_8cpp_1a8de894df7ac03647ab4593bbd226e7ca">checkFileSign</link> (<link linkend="_struct_proc">Proc</link> *cpu)</para>
+</listitem>
+            <listitem><para><link linkend="_cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</link> <link linkend="_proc__funcs_8cpp_1a6789f3dda443cc297083852dad3fdf66">getValueArg</link> (<link linkend="_struct_proc">Proc</link> *cpu)</para>
+</listitem>
+            <listitem><para><link linkend="_cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</link> * <link linkend="_proc__funcs_8cpp_1a6bf71e3a4241fd51c9f3d5c36f673037">getPtrArg</link> (<link linkend="_struct_proc">Proc</link> *cpu)</para>
+</listitem>
+            <listitem><para>int <link linkend="_proc__funcs_8cpp_1a2fdff7c8f755b16495c35026ae397d44">getIpArg</link> (<link linkend="_struct_proc">Proc</link> *cpu)</para>
+</listitem>
+            <listitem><para>void <link linkend="_proc__funcs_8cpp_1abbcaa80443c83c47ea972ef5927664fd">ProcDumpInside</link> (<link linkend="_struct_proc">Proc</link> *cpu)</para>
+</listitem>
+            <listitem><para>void <link linkend="_proc__funcs_8cpp_1ac394503074d575a0ad623a66d084b4f0">ProcRunCode</link> (<link linkend="_struct_proc">Proc</link> *cpu)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>char <link linkend="_proc__funcs_8cpp_1a49e378fb51788d3e488e0fcf7576ebba">Proc_version</link> [3] = &quot;02&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_proc__funcs_8cpp_1aa020607c1c6794b5b426e2d70c488153"/>    <section>
+    <title>DEF_CMD</title>
+<indexterm><primary>DEF_CMD</primary><secondary>proc_funcs.cpp</secondary></indexterm>
+<indexterm><primary>proc_funcs.cpp</primary><secondary>DEF_CMD</secondary></indexterm>
+<para><computeroutput>#define DEF_CMD( name,  num,  arg,  code)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;CMD_##name:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if&#32;&#32;&#32;&#32;&#32;&#32;(arg&#32;==&#32;1)&#32;valArg&#32;=&#32;<link linkend="_proc__funcs_8cpp_1a6789f3dda443cc297083852dad3fdf66">getValueArg</link>&#32;(cpu);&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;else&#32;if&#32;(arg&#32;==&#32;2)&#32;ptrArg&#32;=&#32;<link linkend="_proc__funcs_8cpp_1a6bf71e3a4241fd51c9f3d5c36f673037">getPtrArg</link>&#32;(cpu);&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;else&#32;if&#32;(arg&#32;==&#32;3)&#32;ipArg&#32;&#32;=&#32;<link linkend="_proc__funcs_8cpp_1a2fdff7c8f755b16495c35026ae397d44">getIpArg</link>&#32;(cpu);&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;code&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;break;
+</programlisting></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_proc__funcs_8cpp_1a8de894df7ac03647ab4593bbd226e7ca"/>    <section>
+    <title>checkFileSign()</title>
+<indexterm><primary>checkFileSign</primary><secondary>proc_funcs.cpp</secondary></indexterm>
+<indexterm><primary>proc_funcs.cpp</primary><secondary>checkFileSign</secondary></indexterm>
+<para><computeroutput>void checkFileSign (<link linkend="_struct_proc">Proc</link> * cpu)</computeroutput></para><para>
+Definition at line 64 of file proc_funcs.cpp.</para>
+    </section><anchor xml:id="_proc__funcs_8cpp_1a2fdff7c8f755b16495c35026ae397d44"/>    <section>
+    <title>getIpArg()</title>
+<indexterm><primary>getIpArg</primary><secondary>proc_funcs.cpp</secondary></indexterm>
+<indexterm><primary>proc_funcs.cpp</primary><secondary>getIpArg</secondary></indexterm>
+<para><computeroutput>int getIpArg (<link linkend="_struct_proc">Proc</link> * cpu)</computeroutput></para><para>
+Definition at line 142 of file proc_funcs.cpp.</para>
+    </section><anchor xml:id="_proc__funcs_8cpp_1a6bf71e3a4241fd51c9f3d5c36f673037"/>    <section>
+    <title>getPtrArg()</title>
+<indexterm><primary>getPtrArg</primary><secondary>proc_funcs.cpp</secondary></indexterm>
+<indexterm><primary>proc_funcs.cpp</primary><secondary>getPtrArg</secondary></indexterm>
+<para><computeroutput><link linkend="_cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</link>* getPtrArg (<link linkend="_struct_proc">Proc</link> * cpu)</computeroutput></para><para>
+Definition at line 110 of file proc_funcs.cpp.</para>
+    </section><anchor xml:id="_proc__funcs_8cpp_1a6789f3dda443cc297083852dad3fdf66"/>    <section>
+    <title>getValueArg()</title>
+<indexterm><primary>getValueArg</primary><secondary>proc_funcs.cpp</secondary></indexterm>
+<indexterm><primary>proc_funcs.cpp</primary><secondary>getValueArg</secondary></indexterm>
+<para><computeroutput><link linkend="_cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</link> getValueArg (<link linkend="_struct_proc">Proc</link> * cpu)</computeroutput></para><para>
+Definition at line 86 of file proc_funcs.cpp.</para>
+    </section><anchor xml:id="_proc__funcs_8cpp_1a3a519805ef72bd5d68daafbaaf66d3f2"/>    <section>
+    <title>handleComLine()</title>
+<indexterm><primary>handleComLine</primary><secondary>proc_funcs.cpp</secondary></indexterm>
+<indexterm><primary>proc_funcs.cpp</primary><secondary>handleComLine</secondary></indexterm>
+<para><computeroutput>char* handleComLine (int argc, char * argv[])</computeroutput></para><para>
+Definition at line 5 of file proc_funcs.cpp.</para>
+    </section><anchor xml:id="_proc__funcs_8cpp_1aea285898f9e99e5de92495f68bc409e3"/>    <section>
+    <title>ProcCtor()</title>
+<indexterm><primary>ProcCtor</primary><secondary>proc_funcs.cpp</secondary></indexterm>
+<indexterm><primary>proc_funcs.cpp</primary><secondary>ProcCtor</secondary></indexterm>
+<para><computeroutput>void ProcCtor (<link linkend="_struct_proc">Proc</link> * cpu)</computeroutput></para><para>
+Definition at line 38 of file proc_funcs.cpp.</para>
+    </section><anchor xml:id="_proc__funcs_8cpp_1aeb16925431194abc0b606715b1b35e48"/>    <section>
+    <title>ProcDtor()</title>
+<indexterm><primary>ProcDtor</primary><secondary>proc_funcs.cpp</secondary></indexterm>
+<indexterm><primary>proc_funcs.cpp</primary><secondary>ProcDtor</secondary></indexterm>
+<para><computeroutput>void ProcDtor (<link linkend="_struct_proc">Proc</link> * cpu)</computeroutput></para><para>
+Definition at line 53 of file proc_funcs.cpp.</para>
+    </section><anchor xml:id="_proc__funcs_8cpp_1abbcaa80443c83c47ea972ef5927664fd"/>    <section>
+    <title>ProcDumpInside()</title>
+<indexterm><primary>ProcDumpInside</primary><secondary>proc_funcs.cpp</secondary></indexterm>
+<indexterm><primary>proc_funcs.cpp</primary><secondary>ProcDumpInside</secondary></indexterm>
+<para><computeroutput>void ProcDumpInside (<link linkend="_struct_proc">Proc</link> * cpu)</computeroutput></para><para>
+Definition at line 153 of file proc_funcs.cpp.</para>
+    </section><anchor xml:id="_proc__funcs_8cpp_1ac394503074d575a0ad623a66d084b4f0"/>    <section>
+    <title>ProcRunCode()</title>
+<indexterm><primary>ProcRunCode</primary><secondary>proc_funcs.cpp</secondary></indexterm>
+<indexterm><primary>proc_funcs.cpp</primary><secondary>ProcRunCode</secondary></indexterm>
+<para><computeroutput>void ProcRunCode (<link linkend="_struct_proc">Proc</link> * cpu)</computeroutput></para><para>
+Definition at line 187 of file proc_funcs.cpp.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_proc__funcs_8cpp_1a49e378fb51788d3e488e0fcf7576ebba"/>    <section>
+    <title>Proc_version</title>
+<indexterm><primary>Proc_version</primary><secondary>proc_funcs.cpp</secondary></indexterm>
+<indexterm><primary>proc_funcs.cpp</primary><secondary>Proc_version</secondary></indexterm>
+<para><computeroutput>char Proc_version[3] = &quot;02&quot;</computeroutput></para><para>
+Definition at line 3 of file proc_funcs.cpp.</para>
+</section>
+</section>
+</section>

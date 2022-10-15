@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>Soft cpu</title>
+    </info>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="struct_line.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_proc.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_stack.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_text.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="asm_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="asm__funcs_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="asm__head_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="cmd_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="flog_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="flog_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="globalization_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="stack_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="stack_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="text_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="text_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="proc_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="proc__funcs_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="proc__head_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

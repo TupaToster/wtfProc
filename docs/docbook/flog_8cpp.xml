@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_flog_8cpp" xml:lang="en-US">
+<title>lib/flog.cpp File Reference</title>
+<indexterm><primary>lib/flog.cpp</primary></indexterm>
+<programlisting>#include &quot;flog.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_flog_8cpp_1afec575ee9bc12668090cc4c28e8c1c66">flogIntern</link> (const void *val, const char *varType, const char *varName, size_t varSize, const char *fileName, const char *funcName, size_t line)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>FILE * <link linkend="_flog_8cpp_1a0ba15c7ed1438007848e9552341264cf">logOutf</link> = NULL</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_flog_8cpp_1afec575ee9bc12668090cc4c28e8c1c66"/>    <section>
+    <title>flogIntern()</title>
+<indexterm><primary>flogIntern</primary><secondary>flog.cpp</secondary></indexterm>
+<indexterm><primary>flog.cpp</primary><secondary>flogIntern</secondary></indexterm>
+<para><computeroutput>void flogIntern (const void * val, const char * varType, const char * varName, size_t varSize, const char * fileName, const char * funcName, size_t line)</computeroutput></para><para>
+Definition at line 30 of file flog.cpp.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_flog_8cpp_1a0ba15c7ed1438007848e9552341264cf"/>    <section>
+    <title>logOutf</title>
+<indexterm><primary>logOutf</primary><secondary>flog.cpp</secondary></indexterm>
+<indexterm><primary>flog.cpp</primary><secondary>logOutf</secondary></indexterm>
+<para><computeroutput>FILE* logOutf = NULL</computeroutput></para><para>
+Definition at line 10 of file flog.cpp.</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,92 @@
+.TH "lib/flog.h" 3 "Sat Oct 15 2022" "Version 2" "Soft cpu" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/flog.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <typeinfo>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBflog\fP(a)"
+.br
+.ti -1c
+.RI "#define \fBflogprintf\fP(\&.\&.\&.)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBflogIntern\fP (const void *val, const char *varType, const char *varName, size_t varSize, const char *fileName, const char *funcName, size_t line)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "FILE * \fBlogOutf\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define flog(a)"
+\fBValue:\fP
+.PP
+.nf
+    {                                                                         \
+    if (logOutf == NULL){                                                                 \
+        logOutf = fopen ("logs_out", "a");                                                \
+        setvbuf (logOutf, NULL, _IONBF, 0);                                               \
+        fprintf (logOutf, "----------------------------------------\n"                    \
+        "Logging session at compiled time : %s %s\n\n", __TIME__, __DATE__);              \
+    }                                                                                     \
+    flogIntern (&a, typeid (a)\&.name (), #a, sizeof (a), __FILE__, __FUNCTION__, __LINE__);\
+}
+.fi
+.PP
+Definition at line 10 of file flog\&.h\&.
+.SS "#define flogprintf( \&.\&.\&.)"
+\fBValue:\fP
+.PP
+.nf
+    {                                                                         \
+    if (logOutf == NULL){                                                                         \
+                logOutf = fopen ("logs_out", "a");                                                \
+                setvbuf (logOutf, NULL, _IONBF, 0);                                               \
+                fprintf (logOutf, "----------------------------------------\n"                    \
+                "Logging session at compiled time : %s %s\n\n", __TIME__, __DATE__);              \
+    }                                                                                             \
+    fprintf (logOutf, __VA_ARGS__);                                                               \
+}
+.fi
+.PP
+Definition at line 20 of file flog\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "void flogIntern (const void * val, const char * varType, const char * varName, size_t varSize, const char * fileName, const char * funcName, size_t line)"
+
+.PP
+Definition at line 30 of file flog\&.cpp\&.
+.SH "Variable Documentation"
+.PP 
+.SS "FILE* logOutf\fC [extern]\fP"
+
+.PP
+Definition at line 10 of file flog\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Soft cpu from the source code\&.

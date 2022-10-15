@@ -1,0 +1,75 @@
+.TH "asm/asm_funcs.cpp" 3 "Sat Oct 15 2022" "Version 2" "Soft cpu" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+asm/asm_funcs.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'asm_head\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDEF_CMD\fP(name,  num,  arg,  code)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBwriteBinInternal\fP (void *val, FILE *outFile, size_t sizeOfVar)"
+.br
+.ti -1c
+.RI "void \fBhandleArg\fP (\fBText\fP *code, int line, FILE *outFile, char cmdNum, int tags[512])"
+.br
+.ti -1c
+.RI "char * \fBhandleComLine\fP (int argc, char *argv[], bool *aFlag, char **outFileName)"
+.br
+.ti -1c
+.RI "void \fBwriteWtf\fP (\fBText\fP *codeFile, FILE *outFile, int tags[512])"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define DEF_CMD(name, num, arg, code)"
+\fBValue:\fP
+.PP
+.nf
+            if (strcmp (inputStr, #name) == 0) {                      \
+                                                                      \
+                if (arg == 0){                                        \\
+                                                                      \\
+                    tagCheck(fputc (num, outFile);)                   \
+                    ip += sizeof (char);                              \
+                }                                                     \
+                else if (arg != 0) {                                  \\
+                                                                      \\
+                    handleArg (codeFile, i, outFile, num, tags);      \
+                }                                                     \
+            }                                                         \
+            else
+.fi
+.SH "Function Documentation"
+.PP 
+.SS "void handleArg (\fBText\fP * code, int line, FILE * outFile, char cmdNum, int tags[512])"
+
+.PP
+Definition at line 12 of file asm_funcs\&.cpp\&.
+.SS "char* handleComLine (int argc, char * argv[], bool * aFlag, char ** outFileName)"
+
+.PP
+Definition at line 140 of file asm_funcs\&.cpp\&.
+.SS "void writeBinInternal (void * val, FILE * outFile, size_t sizeOfVar)"
+
+.PP
+Definition at line 3 of file asm_funcs\&.cpp\&.
+.SS "void writeWtf (\fBText\fP * codeFile, FILE * outFile, int tags[512])"
+
+.PP
+Definition at line 199 of file asm_funcs\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Soft cpu from the source code\&.

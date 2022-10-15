@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_text_8cpp" xml:lang="en-US">
+<title>lib/text.cpp File Reference</title>
+<indexterm><primary>lib/text.cpp</primary></indexterm>
+<programlisting>#include &quot;Text.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_text_8cpp_1a9fa5786f95cf5ba0f1bd59156bc3c817">initLine</link> (<link linkend="_struct_line">Line</link> *target)</para>
+
+<para>Initializes a <link linkend="_struct_line">Line</link> type var. </para>
+</listitem>
+            <listitem><para>void <link linkend="_text_8cpp_1ab706abf6034fcdd337b414e23309fa55">killLine</link> (<link linkend="_struct_line">Line</link> *target)</para>
+
+<para>Deinitializes a <link linkend="_struct_line">Line</link> type var. </para>
+</listitem>
+            <listitem><para>void <link linkend="_text_8cpp_1a01d03bc0537e22cfc834530fed3c91ba">initText</link> (<link linkend="_struct_text">Text</link> *target)</para>
+
+<para>Initializes a <link linkend="_struct_text">Text</link> type var. </para>
+</listitem>
+            <listitem><para>void <link linkend="_text_8cpp_1a359525e4562324c43aa6027b94c4e7b0">killText</link> (<link linkend="_struct_text">Text</link> *target)</para>
+
+<para>Deinitializes a <link linkend="_struct_text">Text</link> type var. </para>
+</listitem>
+            <listitem><para>void <link linkend="_text_8cpp_1a65e7c9fc83e04ddfa86f85715fa149de">cntLines</link> (<link linkend="_struct_text">Text</link> *src)</para>
+
+<para>counts amount of Lines in a <link linkend="_struct_text">Text</link> </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_text_8cpp_1ac87fbefe4ae9195d7ba3a7a38eed3fdb">get_size</link> (const char *filename)</para>
+
+<para>Returns size of file in chars. </para>
+</listitem>
+            <listitem><para>void <link linkend="_text_8cpp_1a03fe2c13cf51f8df49fbca3ca8d0f0c2">bufferize</link> (const char *filename, <link linkend="_struct_text">Text</link> *writeTo)</para>
+
+<para>Buffirezes file. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_text">Text</link> <link linkend="_text_8cpp_1a75a739634df7483901b62c501362ec9d">read_Text</link> (const char *filename)</para>
+
+<para>Fills <link linkend="_struct_text">Text</link> type var with input from file. </para>
+</listitem>
+            <listitem><para>void <link linkend="_text_8cpp_1a3d222516c821879ff9db7cdd57b8c8ab">separateLines</link> (<link linkend="_struct_text">Text</link> *writeTo)</para>
+
+<para>separates Lines in a <link linkend="_struct_text">Text</link> </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_text_8cpp_1a03fe2c13cf51f8df49fbca3ca8d0f0c2"/>    <section>
+    <title>bufferize()</title>
+<indexterm><primary>bufferize</primary><secondary>text.cpp</secondary></indexterm>
+<indexterm><primary>text.cpp</primary><secondary>bufferize</secondary></indexterm>
+<para><computeroutput>void bufferize (const char * filename, <link linkend="_struct_text">Text</link> * writeTo)</computeroutput></para><para>
+
+<para>Buffirezes file. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>filename</entry>
+                                <entry>
+<para>name of file to bufferize </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>writeTo</entry>
+                                <entry>
+<para>ptr to struct <link linkend="_struct_text">Text</link> to write buffer and buffer length to </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 82 of file text.cpp.</para>
+    </section><anchor xml:id="_text_8cpp_1a65e7c9fc83e04ddfa86f85715fa149de"/>    <section>
+    <title>cntLines()</title>
+<indexterm><primary>cntLines</primary><secondary>text.cpp</secondary></indexterm>
+<indexterm><primary>text.cpp</primary><secondary>cntLines</secondary></indexterm>
+<para><computeroutput>void cntLines (<link linkend="_struct_text">Text</link> * src)</computeroutput></para><para>
+
+<para>counts amount of Lines in a <link linkend="_struct_text">Text</link> </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>src</entry>
+                                <entry>
+<para>Text* to wite to and read from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 51 of file text.cpp.</para>
+    </section><anchor xml:id="_text_8cpp_1ac87fbefe4ae9195d7ba3a7a38eed3fdb"/>    <section>
+    <title>get_size()</title>
+<indexterm><primary>get_size</primary><secondary>text.cpp</secondary></indexterm>
+<indexterm><primary>text.cpp</primary><secondary>get_size</secondary></indexterm>
+<para><computeroutput>size_t get_size (const char * filename)</computeroutput></para><para>
+
+<para>Returns size of file in chars. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>filename</entry>
+                                <entry>
+<para>name of file to measure </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>sizeof file in chars </para>
+</formalpara>
+</para>
+<para>
+Definition at line 68 of file text.cpp.</para>
+    </section><anchor xml:id="_text_8cpp_1a9fa5786f95cf5ba0f1bd59156bc3c817"/>    <section>
+    <title>initLine()</title>
+<indexterm><primary>initLine</primary><secondary>text.cpp</secondary></indexterm>
+<indexterm><primary>text.cpp</primary><secondary>initLine</secondary></indexterm>
+<para><computeroutput>void initLine (<link linkend="_struct_line">Line</link> * target)</computeroutput></para><para>
+
+<para>Initializes a <link linkend="_struct_line">Line</link> type var. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>target</entry>
+                                <entry>
+<para>Line* to var to init </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 7 of file text.cpp.</para>
+    </section><anchor xml:id="_text_8cpp_1a01d03bc0537e22cfc834530fed3c91ba"/>    <section>
+    <title>initText()</title>
+<indexterm><primary>initText</primary><secondary>text.cpp</secondary></indexterm>
+<indexterm><primary>text.cpp</primary><secondary>initText</secondary></indexterm>
+<para><computeroutput>void initText (<link linkend="_struct_text">Text</link> * target)</computeroutput></para><para>
+
+<para>Initializes a <link linkend="_struct_text">Text</link> type var. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>target</entry>
+                                <entry>
+<para>Text* to var to init </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 28 of file text.cpp.</para>
+    </section><anchor xml:id="_text_8cpp_1ab706abf6034fcdd337b414e23309fa55"/>    <section>
+    <title>killLine()</title>
+<indexterm><primary>killLine</primary><secondary>text.cpp</secondary></indexterm>
+<indexterm><primary>text.cpp</primary><secondary>killLine</secondary></indexterm>
+<para><computeroutput>void killLine (<link linkend="_struct_line">Line</link> * target)</computeroutput></para><para>
+
+<para>Deinitializes a <link linkend="_struct_line">Line</link> type var. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>target</entry>
+                                <entry>
+<para>Line* to var to kill </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 17 of file text.cpp.</para>
+    </section><anchor xml:id="_text_8cpp_1a359525e4562324c43aa6027b94c4e7b0"/>    <section>
+    <title>killText()</title>
+<indexterm><primary>killText</primary><secondary>text.cpp</secondary></indexterm>
+<indexterm><primary>text.cpp</primary><secondary>killText</secondary></indexterm>
+<para><computeroutput>void killText (<link linkend="_struct_text">Text</link> * target)</computeroutput></para><para>
+
+<para>Deinitializes a <link linkend="_struct_text">Text</link> type var. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>target</entry>
+                                <entry>
+<para>Text* to var to kill </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 40 of file text.cpp.</para>
+    </section><anchor xml:id="_text_8cpp_1a75a739634df7483901b62c501362ec9d"/>    <section>
+    <title>read_Text()</title>
+<indexterm><primary>read_Text</primary><secondary>text.cpp</secondary></indexterm>
+<indexterm><primary>text.cpp</primary><secondary>read_Text</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_text">Text</link> read_Text (const char * filename)</computeroutput></para><para>
+
+<para>Fills <link linkend="_struct_text">Text</link> type var with input from file. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>filename</entry>
+                                <entry>
+<para>name of file to fill from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para><link linkend="_struct_text">Text</link> struct full of stuff</para>
+</formalpara>
+Fills <link linkend="_struct_text">Text</link> struct with: TextString - whole <link linkend="_struct_text">Text</link> of a file Lines - array of Lines of file of type [begin, end) stringCnt - amount of strings in file TextSize - sizeof <link linkend="_struct_text">Text</link> (by get_size) </para>
+<para>
+Definition at line 113 of file text.cpp.</para>
+    </section><anchor xml:id="_text_8cpp_1a3d222516c821879ff9db7cdd57b8c8ab"/>    <section>
+    <title>separateLines()</title>
+<indexterm><primary>separateLines</primary><secondary>text.cpp</secondary></indexterm>
+<indexterm><primary>text.cpp</primary><secondary>separateLines</secondary></indexterm>
+<para><computeroutput>void separateLines (<link linkend="_struct_text">Text</link> * writeTo)</computeroutput></para><para>
+
+<para>separates Lines in a <link linkend="_struct_text">Text</link> </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>writeTo</entry>
+                                <entry>
+<para>Text* to write to and read from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 135 of file text.cpp.</para>
+</section>
+</section>
+</section>

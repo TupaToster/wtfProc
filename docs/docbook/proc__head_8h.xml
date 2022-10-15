@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_proc__head_8h" xml:lang="en-US">
+<title>processor/proc_head.h File Reference</title>
+<indexterm><primary>processor/proc_head.h</primary></indexterm>
+<programlisting>#include &quot;D:\los_projectados\wtfProc\lib\globalization.h&quot;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;assert.h&gt;
+#include &lt;math.h&gt;
+</programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_proc">Proc</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_proc__head_8h_1aa73c95cb26c92f512ae3fd6693f5a05b">ProcDump</link>(cpu)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_proc__head_8h_1aa020607c1c6794b5b426e2d70c488153">DEF_CMD</link>(name,  num,  arg,  code)   CMD_##name = num,</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191">reg</link> { 
+<link linkend="_proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a99f5dab094268bbd7e983e639227a450">r0x</link> = 0
+, <link linkend="_proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a7c4e2b501efe08a200520265ddd187d8">rax</link> = 1
+, <link linkend="_proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a5167d112e4a951e0101af94ac6632619">rbx</link> = 2
+, <link linkend="_proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191afd03e081e40ff976547d3f5246910740">rcx</link> = 3
+, 
+<link linkend="_proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a6cfff3aee7c6bc56dad8b0dff2a4fe98">rdx</link> = 4
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_proc__head_8h_1adad90fa030af56592ad194a41341ffcd">masks</link> { 
+<link linkend="_asm__head_8h_1adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2">MASK_RAM</link> = 1&lt;&lt;7
+, <link linkend="_asm__head_8h_1adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d">MASK_REG</link> = 1&lt;&lt;6
+, <link linkend="_asm__head_8h_1adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f">MASK_IMM</link> = 1&lt;&lt;5
+, <link linkend="_asm__head_8h_1adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70">MASK_CMD</link> = (1&lt;&lt;5) - 1
+, 
+<link linkend="_proc__head_8h_1adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2">MASK_RAM</link> = 1&lt;&lt;7
+, <link linkend="_proc__head_8h_1adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d">MASK_REG</link> = 1&lt;&lt;6
+, <link linkend="_proc__head_8h_1adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f">MASK_IMM</link> = 1&lt;&lt;5
+, <link linkend="_proc__head_8h_1adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70">MASK_CMD</link> = (1&lt;&lt;5) - 1
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_proc__head_8h_1a04887de32e1f60f8dc157312b8f27665">CMD</link> </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>char * <link linkend="_proc__head_8h_1a3a519805ef72bd5d68daafbaaf66d3f2">handleComLine</link> (int argc, char *argv[])</para>
+</listitem>
+            <listitem><para>void <link linkend="_proc__head_8h_1aea285898f9e99e5de92495f68bc409e3">ProcCtor</link> (<link linkend="_struct_proc">Proc</link> *cpu)</para>
+</listitem>
+            <listitem><para>void <link linkend="_proc__head_8h_1aeb16925431194abc0b606715b1b35e48">ProcDtor</link> (<link linkend="_struct_proc">Proc</link> *cpu)</para>
+</listitem>
+            <listitem><para><link linkend="_cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</link> * <link linkend="_proc__head_8h_1afbea15260f301e326cefa5b7d3897c73">handleArg</link> (<link linkend="_struct_proc">Proc</link> *cpu)</para>
+</listitem>
+            <listitem><para>void <link linkend="_proc__head_8h_1abbcaa80443c83c47ea972ef5927664fd">ProcDumpInside</link> (<link linkend="_struct_proc">Proc</link> *cpu)</para>
+</listitem>
+            <listitem><para>void <link linkend="_proc__head_8h_1a8de894df7ac03647ab4593bbd226e7ca">checkFileSign</link> (<link linkend="_struct_proc">Proc</link> *cpu)</para>
+</listitem>
+            <listitem><para>void <link linkend="_proc__head_8h_1ac394503074d575a0ad623a66d084b4f0">ProcRunCode</link> (<link linkend="_struct_proc">Proc</link> *cpu)</para>
+</listitem>
+            <listitem><para><link linkend="_cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</link> <link linkend="_proc__head_8h_1a6789f3dda443cc297083852dad3fdf66">getValueArg</link> (<link linkend="_struct_proc">Proc</link> *cpu)</para>
+</listitem>
+            <listitem><para><link linkend="_cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</link> * <link linkend="_proc__head_8h_1a6bf71e3a4241fd51c9f3d5c36f673037">getPtrArg</link> (<link linkend="_struct_proc">Proc</link> *cpu)</para>
+</listitem>
+            <listitem><para>int <link linkend="_proc__head_8h_1a2fdff7c8f755b16495c35026ae397d44">getIpArg</link> (<link linkend="_struct_proc">Proc</link> *cpu)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>char <link linkend="_proc__head_8h_1a49e378fb51788d3e488e0fcf7576ebba">Proc_version</link> [3]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_proc__head_8h_1aa020607c1c6794b5b426e2d70c488153"/>    <section>
+    <title>DEF_CMD</title>
+<indexterm><primary>DEF_CMD</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>DEF_CMD</secondary></indexterm>
+<para><computeroutput>#define DEF_CMD( name,  num,  arg,  code)   CMD_##name = num,</computeroutput></para><para>
+Definition at line 37 of file proc_head.h.</para>
+    </section><anchor xml:id="_proc__head_8h_1aa73c95cb26c92f512ae3fd6693f5a05b"/>    <section>
+    <title>ProcDump</title>
+<indexterm><primary>ProcDump</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>ProcDump</secondary></indexterm>
+<para><computeroutput>#define ProcDump( cpu)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;<link linkend="_stack_8h_1a69595dc2450bd35617f155ffa5738490">StackDump</link>&#32;(cpu-&gt;stk);&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;StackDump&#32;(cpu-&gt;funcIp);&#32;\
+&#32;&#32;&#32;&#32;ProcDumpInside&#32;(cpu);&#32;&#32;&#32;&#32;\
+</programlisting><para>
+Definition at line 12 of file proc_head.h.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_proc__head_8h_1a04887de32e1f60f8dc157312b8f27665"/>    <section>
+    <title>CMD</title>
+<indexterm><primary>CMD</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>CMD</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_asm__head_8h_1a04887de32e1f60f8dc157312b8f27665">CMD</link></computeroutput></para><para>
+Definition at line 34 of file proc_head.h.</para>
+    </section><anchor xml:id="_proc__head_8h_1adad90fa030af56592ad194a41341ffcd"/>    <section>
+    <title>masks</title>
+<indexterm><primary>masks</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>masks</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_asm__head_8h_1adad90fa030af56592ad194a41341ffcd">masks</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>MASK_RAM</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>MASK_RAM</secondary></indexterm>
+<anchor xml:id="_proc__head_8h_1adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2"/>MASK_RAM</entry><entry></entry></row><row><entry><indexterm><primary>MASK_REG</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>MASK_REG</secondary></indexterm>
+<anchor xml:id="_proc__head_8h_1adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d"/>MASK_REG</entry><entry></entry></row><row><entry><indexterm><primary>MASK_IMM</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>MASK_IMM</secondary></indexterm>
+<anchor xml:id="_proc__head_8h_1adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f"/>MASK_IMM</entry><entry></entry></row><row><entry><indexterm><primary>MASK_CMD</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>MASK_CMD</secondary></indexterm>
+<anchor xml:id="_proc__head_8h_1adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70"/>MASK_CMD</entry><entry></entry></row><row><entry><indexterm><primary>MASK_RAM</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>MASK_RAM</secondary></indexterm>
+<anchor xml:id="_proc__head_8h_1adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2"/>MASK_RAM</entry><entry></entry></row><row><entry><indexterm><primary>MASK_REG</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>MASK_REG</secondary></indexterm>
+<anchor xml:id="_proc__head_8h_1adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d"/>MASK_REG</entry><entry></entry></row><row><entry><indexterm><primary>MASK_IMM</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>MASK_IMM</secondary></indexterm>
+<anchor xml:id="_proc__head_8h_1adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f"/>MASK_IMM</entry><entry></entry></row><row><entry><indexterm><primary>MASK_CMD</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>MASK_CMD</secondary></indexterm>
+<anchor xml:id="_proc__head_8h_1adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70"/>MASK_CMD</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line 26 of file proc_head.h.</para>
+    </section><anchor xml:id="_proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191"/>    <section>
+    <title>reg</title>
+<indexterm><primary>reg</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>reg</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191">reg</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>r0x</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>r0x</secondary></indexterm>
+<anchor xml:id="_proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a99f5dab094268bbd7e983e639227a450"/>r0x</entry><entry></entry></row><row><entry><indexterm><primary>rax</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>rax</secondary></indexterm>
+<anchor xml:id="_proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a7c4e2b501efe08a200520265ddd187d8"/>rax</entry><entry></entry></row><row><entry><indexterm><primary>rbx</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>rbx</secondary></indexterm>
+<anchor xml:id="_proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a5167d112e4a951e0101af94ac6632619"/>rbx</entry><entry></entry></row><row><entry><indexterm><primary>rcx</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>rcx</secondary></indexterm>
+<anchor xml:id="_proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191afd03e081e40ff976547d3f5246910740"/>rcx</entry><entry></entry></row><row><entry><indexterm><primary>rdx</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>rdx</secondary></indexterm>
+<anchor xml:id="_proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a6cfff3aee7c6bc56dad8b0dff2a4fe98"/>rdx</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line 17 of file proc_head.h.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_proc__head_8h_1a8de894df7ac03647ab4593bbd226e7ca"/>    <section>
+    <title>checkFileSign()</title>
+<indexterm><primary>checkFileSign</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>checkFileSign</secondary></indexterm>
+<para><computeroutput>void checkFileSign (<link linkend="_struct_proc">Proc</link> * cpu)</computeroutput></para><para>
+Definition at line 64 of file proc_funcs.cpp.</para>
+    </section><anchor xml:id="_proc__head_8h_1a2fdff7c8f755b16495c35026ae397d44"/>    <section>
+    <title>getIpArg()</title>
+<indexterm><primary>getIpArg</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>getIpArg</secondary></indexterm>
+<para><computeroutput>int getIpArg (<link linkend="_struct_proc">Proc</link> * cpu)</computeroutput></para><para>
+Definition at line 142 of file proc_funcs.cpp.</para>
+    </section><anchor xml:id="_proc__head_8h_1a6bf71e3a4241fd51c9f3d5c36f673037"/>    <section>
+    <title>getPtrArg()</title>
+<indexterm><primary>getPtrArg</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>getPtrArg</secondary></indexterm>
+<para><computeroutput><link linkend="_cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</link>* getPtrArg (<link linkend="_struct_proc">Proc</link> * cpu)</computeroutput></para><para>
+Definition at line 110 of file proc_funcs.cpp.</para>
+    </section><anchor xml:id="_proc__head_8h_1a6789f3dda443cc297083852dad3fdf66"/>    <section>
+    <title>getValueArg()</title>
+<indexterm><primary>getValueArg</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>getValueArg</secondary></indexterm>
+<para><computeroutput><link linkend="_cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</link> getValueArg (<link linkend="_struct_proc">Proc</link> * cpu)</computeroutput></para><para>
+Definition at line 86 of file proc_funcs.cpp.</para>
+    </section><anchor xml:id="_proc__head_8h_1afbea15260f301e326cefa5b7d3897c73"/>    <section>
+    <title>handleArg()</title>
+<indexterm><primary>handleArg</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>handleArg</secondary></indexterm>
+<para><computeroutput><link linkend="_cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</link>* handleArg (<link linkend="_struct_proc">Proc</link> * cpu)</computeroutput></para>    </section><anchor xml:id="_proc__head_8h_1a3a519805ef72bd5d68daafbaaf66d3f2"/>    <section>
+    <title>handleComLine()</title>
+<indexterm><primary>handleComLine</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>handleComLine</secondary></indexterm>
+<para><computeroutput>char* handleComLine (int argc, char * argv[])</computeroutput></para><para>
+Definition at line 5 of file proc_funcs.cpp.</para>
+    </section><anchor xml:id="_proc__head_8h_1aea285898f9e99e5de92495f68bc409e3"/>    <section>
+    <title>ProcCtor()</title>
+<indexterm><primary>ProcCtor</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>ProcCtor</secondary></indexterm>
+<para><computeroutput>void ProcCtor (<link linkend="_struct_proc">Proc</link> * cpu)</computeroutput></para><para>
+Definition at line 38 of file proc_funcs.cpp.</para>
+    </section><anchor xml:id="_proc__head_8h_1aeb16925431194abc0b606715b1b35e48"/>    <section>
+    <title>ProcDtor()</title>
+<indexterm><primary>ProcDtor</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>ProcDtor</secondary></indexterm>
+<para><computeroutput>void ProcDtor (<link linkend="_struct_proc">Proc</link> * cpu)</computeroutput></para><para>
+Definition at line 53 of file proc_funcs.cpp.</para>
+    </section><anchor xml:id="_proc__head_8h_1abbcaa80443c83c47ea972ef5927664fd"/>    <section>
+    <title>ProcDumpInside()</title>
+<indexterm><primary>ProcDumpInside</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>ProcDumpInside</secondary></indexterm>
+<para><computeroutput>void ProcDumpInside (<link linkend="_struct_proc">Proc</link> * cpu)</computeroutput></para><para>
+Definition at line 153 of file proc_funcs.cpp.</para>
+    </section><anchor xml:id="_proc__head_8h_1ac394503074d575a0ad623a66d084b4f0"/>    <section>
+    <title>ProcRunCode()</title>
+<indexterm><primary>ProcRunCode</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>ProcRunCode</secondary></indexterm>
+<para><computeroutput>void ProcRunCode (<link linkend="_struct_proc">Proc</link> * cpu)</computeroutput></para><para>
+Definition at line 187 of file proc_funcs.cpp.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_proc__head_8h_1a49e378fb51788d3e488e0fcf7576ebba"/>    <section>
+    <title>Proc_version</title>
+<indexterm><primary>Proc_version</primary><secondary>proc_head.h</secondary></indexterm>
+<indexterm><primary>proc_head.h</primary><secondary>Proc_version</secondary></indexterm>
+<para><computeroutput>char Proc_version[3]<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+Definition at line 3 of file proc_funcs.cpp.</para>
+</section>
+</section>
+</section>

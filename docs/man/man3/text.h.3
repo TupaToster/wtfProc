@@ -1,0 +1,207 @@
+.TH "lib/text.h" 3 "Sat Oct 15 2022" "Version 2" "Soft cpu" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/text.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <assert\&.h>\fP
+.br
+\fC#include <sys\\stat\&.h>\fP
+.br
+\fC#include <ctype\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBLine\fP"
+.br
+.RI "Struct to store Lines of \fBText\fP in format [begin, end) "
+.ti -1c
+.RI "struct \fBText\fP"
+.br
+.RI "Stores \fBText\fP in format of string and array of \fBLine\fP structures\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitText\fP (\fBText\fP *target)"
+.br
+.RI "Initializes a \fBText\fP type var\&. "
+.ti -1c
+.RI "void \fBinitLine\fP (\fBLine\fP *target)"
+.br
+.RI "Initializes a \fBLine\fP type var\&. "
+.ti -1c
+.RI "void \fBkillText\fP (\fBText\fP *target)"
+.br
+.RI "Deinitializes a \fBText\fP type var\&. "
+.ti -1c
+.RI "void \fBkillLine\fP (\fBLine\fP *target)"
+.br
+.RI "Deinitializes a \fBLine\fP type var\&. "
+.ti -1c
+.RI "size_t \fBget_size\fP (const char *filename)"
+.br
+.RI "Returns size of file in chars\&. "
+.ti -1c
+.RI "void \fBbufferize\fP (const char *filename, \fBText\fP *writeTo)"
+.br
+.RI "Buffirezes file\&. "
+.ti -1c
+.RI "\fBText\fP \fBread_Text\fP (const char *filename)"
+.br
+.RI "Fills \fBText\fP type var with input from file\&. "
+.ti -1c
+.RI "void \fBcntLines\fP (\fBText\fP *writeTo)"
+.br
+.RI "counts amount of Lines in a \fBText\fP "
+.ti -1c
+.RI "void \fBseparateLines\fP (\fBText\fP *writeTo)"
+.br
+.RI "separates Lines in a \fBText\fP "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void bufferize (const char * filename, \fBText\fP * writeTo)"
+
+.PP
+Buffirezes file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilename\fP name of file to bufferize 
+.br
+\fIwriteTo\fP ptr to struct \fBText\fP to write buffer and buffer length to 
+.RE
+.PP
+
+.PP
+Definition at line 82 of file text\&.cpp\&.
+.SS "void cntLines (\fBText\fP * src)"
+
+.PP
+counts amount of Lines in a \fBText\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsrc\fP Text* to wite to and read from 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file text\&.cpp\&.
+.SS "size_t get_size (const char * filename)"
+
+.PP
+Returns size of file in chars\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilename\fP name of file to measure 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+sizeof file in chars 
+.RE
+.PP
+
+.PP
+Definition at line 68 of file text\&.cpp\&.
+.SS "void initLine (\fBLine\fP * target)"
+
+.PP
+Initializes a \fBLine\fP type var\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItarget\fP Line* to var to init 
+.RE
+.PP
+
+.PP
+Definition at line 7 of file text\&.cpp\&.
+.SS "void initText (\fBText\fP * target)"
+
+.PP
+Initializes a \fBText\fP type var\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItarget\fP Text* to var to init 
+.RE
+.PP
+
+.PP
+Definition at line 28 of file text\&.cpp\&.
+.SS "void killLine (\fBLine\fP * target)"
+
+.PP
+Deinitializes a \fBLine\fP type var\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItarget\fP Line* to var to kill 
+.RE
+.PP
+
+.PP
+Definition at line 17 of file text\&.cpp\&.
+.SS "void killText (\fBText\fP * target)"
+
+.PP
+Deinitializes a \fBText\fP type var\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItarget\fP Text* to var to kill 
+.RE
+.PP
+
+.PP
+Definition at line 40 of file text\&.cpp\&.
+.SS "\fBText\fP read_Text (const char * filename)"
+
+.PP
+Fills \fBText\fP type var with input from file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilename\fP name of file to fill from 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBText\fP struct full of stuff
+.RE
+.PP
+Fills \fBText\fP struct with: TextString - whole \fBText\fP of a file Lines - array of Lines of file of type [begin, end) stringCnt - amount of strings in file TextSize - sizeof \fBText\fP (by get_size) 
+.PP
+Definition at line 113 of file text\&.cpp\&.
+.SS "void separateLines (\fBText\fP * writeTo)"
+
+.PP
+separates Lines in a \fBText\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwriteTo\fP Text* to write to and read from 
+.RE
+.PP
+
+.PP
+Definition at line 135 of file text\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Soft cpu from the source code\&.

@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="flog_8h" kind="file" language="C++">
+    <compoundname>flog.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">typeinfo</includes>
+    <includes local="no">time.h</includes>
+    <includes local="no">string.h</includes>
+    <includedby refid="flog_8cpp" local="yes">lib/flog.cpp</includedby>
+    <includedby refid="stack_8h" local="yes">lib/stack.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="4">
+        <label>typeinfo</label>
+      </node>
+      <node id="5">
+        <label>time.h</label>
+      </node>
+      <node id="1">
+        <label>lib/flog.h</label>
+        <link refid="flog_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>lib/stack.h</label>
+        <link refid="stack_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lib/flog.cpp</label>
+        <link refid="flog_8cpp"/>
+      </node>
+      <node id="4">
+        <label>lib/stack.cpp</label>
+        <link refid="stack_8cpp"/>
+      </node>
+      <node id="1">
+        <label>lib/flog.h</label>
+        <link refid="flog_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="flog_8h_1a23bb6ec745b7a257bfdeb70b0a492d07" prot="public" static="no">
+        <name>flog</name>
+        <param><defname>a</defname></param>
+        <initializer>    {                                                                         \
+    if (<ref refid="flog_8h_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref> == NULL){                                                                 \
+        <ref refid="flog_8h_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref> = fopen (&quot;logs_out&quot;, &quot;a&quot;);                                                \
+        setvbuf (<ref refid="flog_8h_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref>, NULL, _IONBF, 0);                                               \
+        fprintf (<ref refid="flog_8h_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref>, &quot;----------------------------------------\n&quot;                    \
+        &quot;Logging session at compiled time : %s %s\n\n&quot;, __TIME__, __DATE__);              \
+    }                                                                                     \
+    <ref refid="flog_8h_1afec575ee9bc12668090cc4c28e8c1c66" kindref="member">flogIntern</ref> (&amp;a, typeid (a).name (), #a, sizeof (a), __FILE__, __FUNCTION__, __LINE__);\
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/flog.h" line="10" column="9" bodyfile="lib/flog.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="flog_8h_1aeaf684fac254929cc9d2194df499ace7" prot="public" static="no">
+        <name>flogprintf</name>
+        <param><defname>...</defname></param>
+        <initializer>    {                                                                         \
+    if (<ref refid="flog_8h_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref> == NULL){                                                                         \
+                <ref refid="flog_8h_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref> = fopen (&quot;logs_out&quot;, &quot;a&quot;);                                                \
+                setvbuf (<ref refid="flog_8h_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref>, NULL, _IONBF, 0);                                               \
+                fprintf (<ref refid="flog_8h_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref>, &quot;----------------------------------------\n&quot;                    \
+                &quot;Logging session at compiled time : %s %s\n\n&quot;, __TIME__, __DATE__);              \
+    }                                                                                             \
+    fprintf (<ref refid="flog_8h_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref>, __VA_ARGS__);                                                               \
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/flog.h" line="20" column="9" bodyfile="lib/flog.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="flog_8h_1a0ba15c7ed1438007848e9552341264cf" prot="public" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* logOutf</definition>
+        <argsstring></argsstring>
+        <name>logOutf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/flog.h" line="8" column="13" bodyfile="lib/flog.cpp" bodystart="10" bodyend="-1" declfile="lib/flog.h" declline="8" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="flog_8h_1afec575ee9bc12668090cc4c28e8c1c66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void flogIntern</definition>
+        <argsstring>(const void *val, const char *varType, const char *varName, size_t varSize, const char *fileName, const char *funcName, size_t line)</argsstring>
+        <name>flogIntern</name>
+        <param>
+          <type>const void *</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>varType</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>varName</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>varSize</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>funcName</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/flog.h" line="30" column="6" bodyfile="lib/flog.cpp" bodystart="30" bodyend="51" declfile="lib/flog.h" declline="30" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;typeinfo&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>FILE*<sp/><ref refid="flog_8h_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="flog_8h_1a23bb6ec745b7a257bfdeb70b0a492d07" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>flog(a)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(logOutf<sp/>==<sp/>NULL){<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logOutf<sp/>=<sp/>fopen<sp/>(&quot;logs_out&quot;</highlight><highlight class="normal">,<sp/>&quot;a&quot;);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setvbuf<sp/>(logOutf,<sp/>NULL,<sp/>_IONBF,<sp/>0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf<sp/>(logOutf,<sp/>&quot;----------------------------------------\n&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;Logging<sp/>session<sp/>at<sp/>compiled<sp/>time<sp/>:<sp/>%s<sp/>%s\n\n&quot;,<sp/>__TIME__,<sp/>__DATE__);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>flogIntern<sp/>(&amp;a,<sp/>typeid<sp/>(a).name<sp/>(),<sp/>#a,<sp/>sizeof<sp/>(a),<sp/>__FILE__,<sp/>__FUNCTION__,<sp/>__LINE__);\</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="flog_8h_1aeaf684fac254929cc9d2194df499ace7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>flogprintf(...)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(logOutf<sp/>==<sp/>NULL){<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logOutf<sp/>=<sp/>fopen<sp/>(&quot;logs_out&quot;</highlight><highlight class="normal">,<sp/>&quot;a&quot;);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setvbuf<sp/>(logOutf,<sp/>NULL,<sp/>_IONBF,<sp/>0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf<sp/>(logOutf,<sp/>&quot;----------------------------------------\n&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;Logging<sp/>session<sp/>at<sp/>compiled<sp/>time<sp/>:<sp/>%s<sp/>%s\n\n&quot;,<sp/>__TIME__,<sp/>__DATE__);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf<sp/>(logOutf,<sp/>__VA_ARGS__);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="flog_8h_1afec575ee9bc12668090cc4c28e8c1c66" kindref="member">flogIntern</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>val,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>varType,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>varName,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>varSize,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fileName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>funcName,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>line);</highlight></codeline>
+    </programlisting>
+    <location file="lib/flog.h"/>
+  </compounddef>
+</doxygen>

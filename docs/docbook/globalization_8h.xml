@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_globalization_8h" xml:lang="en-US">
+<title>lib/globalization.h File Reference</title>
+<indexterm><primary>lib/globalization.h</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_globalization_8h_1aa61116f021860b324adddc9117eab64f">pasta</link>(str)   #str</para>
+</listitem>
+            <listitem><para>#define <link linkend="_globalization_8h_1aa61116f021860b324adddc9117eab64f">pasta</link>(str)   #str</para>
+</listitem>
+            <listitem><para>#define <link linkend="_globalization_8h_1ab6aea6338784d4b21e9128725ef7578e">header</link>(fileName)   <link linkend="_globalization_8h_1aa61116f021860b324adddc9117eab64f">pasta</link>(D:\los_projectados\wtfProc\lib\fileName.h)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_globalization_8h_1ab6aea6338784d4b21e9128725ef7578e"/>    <section>
+    <title>header</title>
+<indexterm><primary>header</primary><secondary>globalization.h</secondary></indexterm>
+<indexterm><primary>globalization.h</primary><secondary>header</secondary></indexterm>
+<para><computeroutput>#define header( fileName)   <link linkend="_globalization_8h_1aa61116f021860b324adddc9117eab64f">pasta</link>(D:\los_projectados\wtfProc\lib\fileName.h)</computeroutput></para><para>
+Definition at line 4 of file globalization.h.</para>
+    </section><anchor xml:id="_globalization_8h_1aa61116f021860b324adddc9117eab64f"/>    <section>
+    <title>pasta<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>pasta</primary><secondary>globalization.h</secondary></indexterm>
+<indexterm><primary>globalization.h</primary><secondary>pasta</secondary></indexterm>
+<para><computeroutput>#define pasta( str)   #str</computeroutput></para><para>
+Definition at line 3 of file globalization.h.</para>
+    </section><anchor xml:id="_globalization_8h_1aa61116f021860b324adddc9117eab64f"/>    <section>
+    <title>pasta<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>pasta</primary><secondary>globalization.h</secondary></indexterm>
+<indexterm><primary>globalization.h</primary><secondary>pasta</secondary></indexterm>
+<para><computeroutput>#define pasta( str)   #str</computeroutput></para><para>
+Definition at line 3 of file globalization.h.</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_text" xml:lang="en-US">
+<title>Text Struct Reference</title>
+<indexterm><primary>Text</primary></indexterm>
+<para>
+
+<para>Stores <link linkend="_struct_text">Text</link> in format of string and array of <link linkend="_struct_line">Line</link> structures. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;text.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>char * <link linkend="_struct_text_1aaaffb6c0552bbad4ce62f79fdaba570c">TextString</link> = NULL</para>
+
+<para>char* that points to the beginning of a <link linkend="_struct_text">Text</link> </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_struct_text_1a3b8d5e4b32683adc042d220c398944a6">TextSize</link> = 0</para>
+
+<para>size_t that declares sizeof <link linkend="_struct_text">Text</link> in chars </para>
+</listitem>
+            <listitem><para><link linkend="_struct_line">Line</link> * <link linkend="_struct_text_1a4e39c4552385cc08a0b1b88e5fc069f3">Lines</link> = NULL</para>
+
+<para>ptr to a <link linkend="_struct_line">Line</link> array that stores <link linkend="_struct_text">Text</link> in a format of Lines </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_struct_text_1ad944f27b0b4d1a6a4b9b5b1338c78a53">stringCnt</link> = 0</para>
+
+<para>size_t that indicates amount of Lines in <link linkend="_struct_text">Text</link> </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Stores <link linkend="_struct_text">Text</link> in format of string and array of <link linkend="_struct_line">Line</link> structures. </para>
+<para>
+Definition at line 17 of file text.h.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_text_1a4e39c4552385cc08a0b1b88e5fc069f3"/>    <section>
+    <title>Lines</title>
+<indexterm><primary>Lines</primary><secondary>Text</secondary></indexterm>
+<indexterm><primary>Text</primary><secondary>Lines</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_line">Line</link>* Text::Lines = NULL</computeroutput></para><para>
+
+<para>ptr to a <link linkend="_struct_line">Line</link> array that stores <link linkend="_struct_text">Text</link> in a format of Lines </para>
+</para>
+<para>
+Definition at line 21 of file text.h.</para>
+    </section><anchor xml:id="_struct_text_1ad944f27b0b4d1a6a4b9b5b1338c78a53"/>    <section>
+    <title>stringCnt</title>
+<indexterm><primary>stringCnt</primary><secondary>Text</secondary></indexterm>
+<indexterm><primary>Text</primary><secondary>stringCnt</secondary></indexterm>
+<para><computeroutput>size_t Text::stringCnt = 0</computeroutput></para><para>
+
+<para>size_t that indicates amount of Lines in <link linkend="_struct_text">Text</link> </para>
+</para>
+<para>
+Definition at line 22 of file text.h.</para>
+    </section><anchor xml:id="_struct_text_1a3b8d5e4b32683adc042d220c398944a6"/>    <section>
+    <title>TextSize</title>
+<indexterm><primary>TextSize</primary><secondary>Text</secondary></indexterm>
+<indexterm><primary>Text</primary><secondary>TextSize</secondary></indexterm>
+<para><computeroutput>size_t Text::TextSize = 0</computeroutput></para><para>
+
+<para>size_t that declares sizeof <link linkend="_struct_text">Text</link> in chars </para>
+</para>
+<para>
+Definition at line 20 of file text.h.</para>
+    </section><anchor xml:id="_struct_text_1aaaffb6c0552bbad4ce62f79fdaba570c"/>    <section>
+    <title>TextString</title>
+<indexterm><primary>TextString</primary><secondary>Text</secondary></indexterm>
+<indexterm><primary>Text</primary><secondary>TextString</secondary></indexterm>
+<para><computeroutput>char* Text::TextString = NULL</computeroutput></para><para>
+
+<para>char* that points to the beginning of a <link linkend="_struct_text">Text</link> </para>
+</para>
+<para>
+Definition at line 19 of file text.h.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+lib/<link linkend="_text_8h">text.h</link></section>
+</section>

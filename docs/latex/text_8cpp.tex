@@ -1,0 +1,206 @@
+\hypertarget{text_8cpp}{}\doxysection{lib/text.cpp File Reference}
+\label{text_8cpp}\index{lib/text.cpp@{lib/text.cpp}}
+{\ttfamily \#include \char`\"{}Text.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{text_8cpp_a9fa5786f95cf5ba0f1bd59156bc3c817}{init\+Line}} (\mbox{\hyperlink{struct_line}{Line}} $\ast$target)
+\begin{DoxyCompactList}\small\item\em Initializes a \mbox{\hyperlink{struct_line}{Line}} type var. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{text_8cpp_ab706abf6034fcdd337b414e23309fa55}{kill\+Line}} (\mbox{\hyperlink{struct_line}{Line}} $\ast$target)
+\begin{DoxyCompactList}\small\item\em Deinitializes a \mbox{\hyperlink{struct_line}{Line}} type var. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{text_8cpp_a01d03bc0537e22cfc834530fed3c91ba}{init\+Text}} (\mbox{\hyperlink{struct_text}{Text}} $\ast$target)
+\begin{DoxyCompactList}\small\item\em Initializes a \mbox{\hyperlink{struct_text}{Text}} type var. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{text_8cpp_a359525e4562324c43aa6027b94c4e7b0}{kill\+Text}} (\mbox{\hyperlink{struct_text}{Text}} $\ast$target)
+\begin{DoxyCompactList}\small\item\em Deinitializes a \mbox{\hyperlink{struct_text}{Text}} type var. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{text_8cpp_a65e7c9fc83e04ddfa86f85715fa149de}{cnt\+Lines}} (\mbox{\hyperlink{struct_text}{Text}} $\ast$src)
+\begin{DoxyCompactList}\small\item\em counts amount of Lines in a \mbox{\hyperlink{struct_text}{Text}} \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{text_8cpp_ac87fbefe4ae9195d7ba3a7a38eed3fdb}{get\+\_\+size}} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Returns size of file in chars. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{text_8cpp_a03fe2c13cf51f8df49fbca3ca8d0f0c2}{bufferize}} (const char $\ast$filename, \mbox{\hyperlink{struct_text}{Text}} $\ast$write\+To)
+\begin{DoxyCompactList}\small\item\em Buffirezes file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_text}{Text}} \mbox{\hyperlink{text_8cpp_a75a739634df7483901b62c501362ec9d}{read\+\_\+\+Text}} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Fills \mbox{\hyperlink{struct_text}{Text}} type var with input from file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{text_8cpp_a3d222516c821879ff9db7cdd57b8c8ab}{separate\+Lines}} (\mbox{\hyperlink{struct_text}{Text}} $\ast$write\+To)
+\begin{DoxyCompactList}\small\item\em separates Lines in a \mbox{\hyperlink{struct_text}{Text}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{text_8cpp_a03fe2c13cf51f8df49fbca3ca8d0f0c2}\label{text_8cpp_a03fe2c13cf51f8df49fbca3ca8d0f0c2}} 
+\index{text.cpp@{text.cpp}!bufferize@{bufferize}}
+\index{bufferize@{bufferize}!text.cpp@{text.cpp}}
+\doxysubsubsection{\texorpdfstring{bufferize()}{bufferize()}}
+{\footnotesize\ttfamily void bufferize (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{\mbox{\hyperlink{struct_text}{Text}} $\ast$}]{write\+To }\end{DoxyParamCaption})}
+
+
+
+Buffirezes file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & name of file to bufferize \\
+\hline
+{\em write\+To} & ptr to struct \mbox{\hyperlink{struct_text}{Text}} to write buffer and buffer length to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 82 of file text.\+cpp.
+
+\mbox{\Hypertarget{text_8cpp_a65e7c9fc83e04ddfa86f85715fa149de}\label{text_8cpp_a65e7c9fc83e04ddfa86f85715fa149de}} 
+\index{text.cpp@{text.cpp}!cntLines@{cntLines}}
+\index{cntLines@{cntLines}!text.cpp@{text.cpp}}
+\doxysubsubsection{\texorpdfstring{cntLines()}{cntLines()}}
+{\footnotesize\ttfamily void cnt\+Lines (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_text}{Text}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+
+
+counts amount of Lines in a \mbox{\hyperlink{struct_text}{Text}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Text$\ast$ to wite to and read from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file text.\+cpp.
+
+\mbox{\Hypertarget{text_8cpp_ac87fbefe4ae9195d7ba3a7a38eed3fdb}\label{text_8cpp_ac87fbefe4ae9195d7ba3a7a38eed3fdb}} 
+\index{text.cpp@{text.cpp}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!text.cpp@{text.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}}
+{\footnotesize\ttfamily size\+\_\+t get\+\_\+size (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Returns size of file in chars. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & name of file to measure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sizeof file in chars 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file text.\+cpp.
+
+\mbox{\Hypertarget{text_8cpp_a9fa5786f95cf5ba0f1bd59156bc3c817}\label{text_8cpp_a9fa5786f95cf5ba0f1bd59156bc3c817}} 
+\index{text.cpp@{text.cpp}!initLine@{initLine}}
+\index{initLine@{initLine}!text.cpp@{text.cpp}}
+\doxysubsubsection{\texorpdfstring{initLine()}{initLine()}}
+{\footnotesize\ttfamily void init\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_line}{Line}} $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Initializes a \mbox{\hyperlink{struct_line}{Line}} type var. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Line$\ast$ to var to init \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 7 of file text.\+cpp.
+
+\mbox{\Hypertarget{text_8cpp_a01d03bc0537e22cfc834530fed3c91ba}\label{text_8cpp_a01d03bc0537e22cfc834530fed3c91ba}} 
+\index{text.cpp@{text.cpp}!initText@{initText}}
+\index{initText@{initText}!text.cpp@{text.cpp}}
+\doxysubsubsection{\texorpdfstring{initText()}{initText()}}
+{\footnotesize\ttfamily void init\+Text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_text}{Text}} $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Initializes a \mbox{\hyperlink{struct_text}{Text}} type var. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Text$\ast$ to var to init \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 28 of file text.\+cpp.
+
+\mbox{\Hypertarget{text_8cpp_ab706abf6034fcdd337b414e23309fa55}\label{text_8cpp_ab706abf6034fcdd337b414e23309fa55}} 
+\index{text.cpp@{text.cpp}!killLine@{killLine}}
+\index{killLine@{killLine}!text.cpp@{text.cpp}}
+\doxysubsubsection{\texorpdfstring{killLine()}{killLine()}}
+{\footnotesize\ttfamily void kill\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_line}{Line}} $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Deinitializes a \mbox{\hyperlink{struct_line}{Line}} type var. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Line$\ast$ to var to kill \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 17 of file text.\+cpp.
+
+\mbox{\Hypertarget{text_8cpp_a359525e4562324c43aa6027b94c4e7b0}\label{text_8cpp_a359525e4562324c43aa6027b94c4e7b0}} 
+\index{text.cpp@{text.cpp}!killText@{killText}}
+\index{killText@{killText}!text.cpp@{text.cpp}}
+\doxysubsubsection{\texorpdfstring{killText()}{killText()}}
+{\footnotesize\ttfamily void kill\+Text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_text}{Text}} $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Deinitializes a \mbox{\hyperlink{struct_text}{Text}} type var. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Text$\ast$ to var to kill \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file text.\+cpp.
+
+\mbox{\Hypertarget{text_8cpp_a75a739634df7483901b62c501362ec9d}\label{text_8cpp_a75a739634df7483901b62c501362ec9d}} 
+\index{text.cpp@{text.cpp}!read\_Text@{read\_Text}}
+\index{read\_Text@{read\_Text}!text.cpp@{text.cpp}}
+\doxysubsubsection{\texorpdfstring{read\_Text()}{read\_Text()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_text}{Text}} read\+\_\+\+Text (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Fills \mbox{\hyperlink{struct_text}{Text}} type var with input from file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & name of file to fill from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_text}{Text}} struct full of stuff
+\end{DoxyReturn}
+Fills \mbox{\hyperlink{struct_text}{Text}} struct with\+: Text\+String -\/ whole \mbox{\hyperlink{struct_text}{Text}} of a file Lines -\/ array of Lines of file of type \mbox{[}begin, end) string\+Cnt -\/ amount of strings in file Text\+Size -\/ sizeof \mbox{\hyperlink{struct_text}{Text}} (by get\+\_\+size) 
+
+Definition at line 113 of file text.\+cpp.
+
+\mbox{\Hypertarget{text_8cpp_a3d222516c821879ff9db7cdd57b8c8ab}\label{text_8cpp_a3d222516c821879ff9db7cdd57b8c8ab}} 
+\index{text.cpp@{text.cpp}!separateLines@{separateLines}}
+\index{separateLines@{separateLines}!text.cpp@{text.cpp}}
+\doxysubsubsection{\texorpdfstring{separateLines()}{separateLines()}}
+{\footnotesize\ttfamily void separate\+Lines (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_text}{Text}} $\ast$}]{write\+To }\end{DoxyParamCaption})}
+
+
+
+separates Lines in a \mbox{\hyperlink{struct_text}{Text}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em write\+To} & Text$\ast$ to write to and read from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 135 of file text.\+cpp.
+

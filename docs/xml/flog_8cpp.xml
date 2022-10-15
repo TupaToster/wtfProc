@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="flog_8cpp" kind="file" language="C++">
+    <compoundname>flog.cpp</compoundname>
+    <includes refid="flog_8h" local="yes">flog.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>lib/flog.cpp</label>
+        <link refid="flog_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
+      <node id="5">
+        <label>typeinfo</label>
+      </node>
+      <node id="6">
+        <label>time.h</label>
+      </node>
+      <node id="2">
+        <label>flog.h</label>
+        <link refid="flog_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="flog_8cpp_1a0ba15c7ed1438007848e9552341264cf" prot="public" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* logOutf</definition>
+        <argsstring></argsstring>
+        <name>logOutf</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/flog.cpp" line="10" column="6" bodyfile="lib/flog.cpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="flog_8cpp_1afec575ee9bc12668090cc4c28e8c1c66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void flogIntern</definition>
+        <argsstring>(const void *val, const char *varType, const char *varName, size_t varSize, const char *fileName, const char *funcName, size_t line)</argsstring>
+        <name>flogIntern</name>
+        <param>
+          <type>const void *</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>varType</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>varName</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>varSize</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>funcName</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/flog.cpp" line="30" column="6" bodyfile="lib/flog.cpp" bodystart="30" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>GCC<sp/>diagnostic<sp/>ignored<sp/>&quot;-Wcast-qual&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>GCC<sp/>diagnostic<sp/>ignored<sp/>&quot;-Wformat=&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>GCC<sp/>diagnostic<sp/>ignored<sp/>&quot;-Wsign-compare&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>GCC<sp/>diagnostic<sp/>ignored<sp/>&quot;-Wformat-extra-args&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="flog_8h" kindref="compound">flog.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DEFINE<sp/>NDEBUG<sp/>TO<sp/>DISABLE<sp/>LOGS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="flog_8cpp_1a0ba15c7ed1438007848e9552341264cf" refkind="member"><highlight class="normal">FILE*<sp/><ref refid="flog_8cpp_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>NDEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>flog(a)<sp/>;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>flogFileInit<sp/>;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>i<sp/>-<sp/>int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>x<sp/>-<sp/>long<sp/>long</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>c<sp/>-<sp/>char</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>f<sp/>-<sp/>float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>d<sp/>-<sp/>double</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>e<sp/>-<sp/>long<sp/>double</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Pc<sp/>-<sp/>char*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>P<sp/>+<sp/>varType<sp/>=<sp/>varType*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//unsigned<sp/>types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>j<sp/>-<sp/>int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/>y<sp/>-<sp/>long<sp/>long</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>h<sp/>-<sp/>char</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="flog_8cpp_1afec575ee9bc12668090cc4c28e8c1c66" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="flog_8cpp_1afec575ee9bc12668090cc4c28e8c1c66" kindref="member">flogIntern</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>val,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>varType,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>varName,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>varSize,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fileName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>funcName,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>line)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf<sp/>(<ref refid="flog_8cpp_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref>,<sp/></highlight><highlight class="stringliteral">&quot;In<sp/>file<sp/>%s,<sp/>function<sp/>%s,<sp/>line<sp/>%u<sp/>:<sp/>%s<sp/>=<sp/>&quot;</highlight><highlight class="normal">,<sp/>fileName,<sp/>funcName,<sp/>line,<sp/>varName);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!strcmp<sp/>(varType,<sp/></highlight><highlight class="stringliteral">&quot;Pc&quot;</highlight><highlight class="normal">)<sp/>or<sp/>!strcmp<sp/>(varType,<sp/></highlight><highlight class="stringliteral">&quot;PKc&quot;</highlight><highlight class="normal">))<sp/>fprintf<sp/>(<ref refid="flog_8cpp_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref>,<sp/></highlight><highlight class="stringliteral">&quot;&lt;%s&gt;&quot;</highlight><highlight class="normal">,<sp/>*((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**)<sp/>val));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(varType[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;P&apos;</highlight><highlight class="normal">)<sp/>fprintf<sp/>(<ref refid="flog_8cpp_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%p&quot;</highlight><highlight class="normal">,<sp/>val);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!strcmp<sp/>(varType,<sp/></highlight><highlight class="stringliteral">&quot;i&quot;</highlight><highlight class="normal">)<sp/>or<sp/>!strcmp<sp/>(varType,<sp/></highlight><highlight class="stringliteral">&quot;Ki&quot;</highlight><highlight class="normal">))<sp/>fprintf<sp/>(<ref refid="flog_8cpp_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal"><sp/><sp/><sp/>,<sp/>*(<sp/>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val));</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!strcmp<sp/>(varType,<sp/></highlight><highlight class="stringliteral">&quot;x&quot;</highlight><highlight class="normal">)<sp/>or<sp/>!strcmp<sp/>(varType,<sp/></highlight><highlight class="stringliteral">&quot;Kx&quot;</highlight><highlight class="normal">))<sp/>fprintf<sp/>(<ref refid="flog_8cpp_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%lld&quot;</highlight><highlight class="normal"><sp/>,<sp/>*(<sp/>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val));</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!strcmp<sp/>(varType,<sp/></highlight><highlight class="stringliteral">&quot;c&quot;</highlight><highlight class="normal">)<sp/>or<sp/>!strcmp<sp/>(varType,<sp/></highlight><highlight class="stringliteral">&quot;Kc&quot;</highlight><highlight class="normal">))<sp/>fprintf<sp/>(<ref refid="flog_8cpp_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%hhd&quot;</highlight><highlight class="normal"><sp/>,<sp/>*(<sp/>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val));</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!strcmp<sp/>(varType,<sp/></highlight><highlight class="stringliteral">&quot;f&quot;</highlight><highlight class="normal">)<sp/>or<sp/>!strcmp<sp/>(varType,<sp/></highlight><highlight class="stringliteral">&quot;Kf&quot;</highlight><highlight class="normal">))<sp/>fprintf<sp/>(<ref refid="flog_8cpp_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%f&quot;</highlight><highlight class="normal"><sp/><sp/><sp/>,<sp/>*(<sp/>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val));</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!strcmp<sp/>(varType,<sp/></highlight><highlight class="stringliteral">&quot;d&quot;</highlight><highlight class="normal">)<sp/>or<sp/>!strcmp<sp/>(varType,<sp/></highlight><highlight class="stringliteral">&quot;Kd&quot;</highlight><highlight class="normal">))<sp/>fprintf<sp/>(<ref refid="flog_8cpp_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%Lf&quot;</highlight><highlight class="normal"><sp/><sp/>,<sp/>*(<sp/>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val));</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!strcmp<sp/>(varType,<sp/></highlight><highlight class="stringliteral">&quot;j&quot;</highlight><highlight class="normal">)<sp/>or<sp/>!strcmp<sp/>(varType,<sp/></highlight><highlight class="stringliteral">&quot;Kj&quot;</highlight><highlight class="normal">))<sp/>fprintf<sp/>(<ref refid="flog_8cpp_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%u&quot;</highlight><highlight class="normal"><sp/><sp/><sp/>,<sp/>*(<sp/>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>val));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!strcmp<sp/>(varType,<sp/></highlight><highlight class="stringliteral">&quot;y&quot;</highlight><highlight class="normal">)<sp/>or<sp/>!strcmp<sp/>(varType,<sp/></highlight><highlight class="stringliteral">&quot;Ky&quot;</highlight><highlight class="normal">))<sp/>fprintf<sp/>(<ref refid="flog_8cpp_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%llu&quot;</highlight><highlight class="normal"><sp/>,<sp/>*(<sp/>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*)<sp/>val));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!strcmp<sp/>(varType,<sp/></highlight><highlight class="stringliteral">&quot;h&quot;</highlight><highlight class="normal">)<sp/>or<sp/>!strcmp<sp/>(varType,<sp/></highlight><highlight class="stringliteral">&quot;Kh&quot;</highlight><highlight class="normal">))<sp/>fprintf<sp/>(<ref refid="flog_8cpp_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%hhu&quot;</highlight><highlight class="normal"><sp/>,<sp/>*(<sp/>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/><sp/><sp/><sp/><sp/><sp/>val));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>varSize;<sp/>i++)<sp/>fprintf<sp/>(<ref refid="flog_8cpp_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%hhX&quot;</highlight><highlight class="normal">,<sp/>*((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>val<sp/>+<sp/>i));</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf<sp/>(<ref refid="flog_8cpp_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref>,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>::<sp/>UNDEFINED_FORMAT<sp/>:<sp/>sizeof()<sp/>=<sp/>%u&quot;</highlight><highlight class="normal">,<sp/>varSize);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf<sp/>(<ref refid="flog_8cpp_1a0ba15c7ed1438007848e9552341264cf" kindref="member">logOutf</ref>,<sp/></highlight><highlight class="stringliteral">&quot;;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="lib/flog.cpp"/>
+  </compounddef>
+</doxygen>

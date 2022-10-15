@@ -1,0 +1,72 @@
+.TH "Proc" 3 "Sat Oct 15 2022" "Version 2" "Soft cpu" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Proc
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <proc_head\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "char * \fBcode\fP = NULL"
+.br
+.ti -1c
+.RI "size_t \fBcodeSize\fP = 0"
+.br
+.ti -1c
+.RI "\fBelem_t\fP \fBregs\fP [5] = {0}"
+.br
+.ti -1c
+.RI "int \fBip\fP = 0"
+.br
+.ti -1c
+.RI "\fBStack\fP \fBstk\fP = {}"
+.br
+.ti -1c
+.RI "\fBStack\fP \fBfuncIp\fP = {}"
+.br
+.ti -1c
+.RI "\fBelem_t\fP * \fBram\fP = NULL"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 42 of file proc_head\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "char* Proc::code = NULL"
+
+.PP
+Definition at line 44 of file proc_head\&.h\&.
+.SS "size_t Proc::codeSize = 0"
+
+.PP
+Definition at line 45 of file proc_head\&.h\&.
+.SS "\fBStack\fP Proc::funcIp = {}"
+
+.PP
+Definition at line 49 of file proc_head\&.h\&.
+.SS "int Proc::ip = 0"
+
+.PP
+Definition at line 47 of file proc_head\&.h\&.
+.SS "\fBelem_t\fP* Proc::ram = NULL"
+
+.PP
+Definition at line 50 of file proc_head\&.h\&.
+.SS "\fBelem_t\fP Proc::regs[5] = {0}"
+
+.PP
+Definition at line 46 of file proc_head\&.h\&.
+.SS "\fBStack\fP Proc::stk = {}"
+
+.PP
+Definition at line 48 of file proc_head\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Soft cpu from the source code\&.

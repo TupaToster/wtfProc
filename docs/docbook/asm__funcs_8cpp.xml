@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_asm__funcs_8cpp" xml:lang="en-US">
+<title>asm/asm_funcs.cpp File Reference</title>
+<indexterm><primary>asm/asm_funcs.cpp</primary></indexterm>
+<programlisting>#include &quot;asm_head.h&quot;
+</programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_asm__funcs_8cpp_1aa020607c1c6794b5b426e2d70c488153">DEF_CMD</link>(name,  num,  arg,  code)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_asm__funcs_8cpp_1a3dbf87d57f9f11d4e10cf74b6887a21a">writeBinInternal</link> (void *val, FILE *outFile, size_t sizeOfVar)</para>
+</listitem>
+            <listitem><para>void <link linkend="_asm__funcs_8cpp_1afebc5259c059f1c13b2c3eb589bbd778">handleArg</link> (<link linkend="_struct_text">Text</link> *code, int line, FILE *outFile, char cmdNum, int tags[512])</para>
+</listitem>
+            <listitem><para>char * <link linkend="_asm__funcs_8cpp_1ad94c08d203bdf6cd4fdad8a420073a85">handleComLine</link> (int argc, char *argv[], bool *aFlag, char **outFileName)</para>
+</listitem>
+            <listitem><para>void <link linkend="_asm__funcs_8cpp_1aa4ecb6747b94442217ee22b2df052036">writeWtf</link> (<link linkend="_struct_text">Text</link> *codeFile, FILE *outFile, int tags[512])</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_asm__funcs_8cpp_1aa020607c1c6794b5b426e2d70c488153"/>    <section>
+    <title>DEF_CMD</title>
+<indexterm><primary>DEF_CMD</primary><secondary>asm_funcs.cpp</secondary></indexterm>
+<indexterm><primary>asm_funcs.cpp</primary><secondary>DEF_CMD</secondary></indexterm>
+<para><computeroutput>#define DEF_CMD( name,  num,  arg,  code)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(strcmp&#32;(inputStr,&#32;#name)&#32;==&#32;0)&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if&#32;(arg&#32;==&#32;0){&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_asm__head_8h_1acf265fc2407fbc5c1aa5909a1bc4e0d3">\</link>
+<link linkend="_asm__head_8h_1acf265fc2407fbc5c1aa5909a1bc4e0d3">                                                                      \</link>
+<link linkend="_asm__head_8h_1acf265fc2407fbc5c1aa5909a1bc4e0d3">                    tagCheck</link>(fputc&#32;(num,&#32;outFile);)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_asm_8cpp_1a5c1a69eec57cefaee3f692279022198b">ip</link>&#32;+=&#32;<emphasis role="keyword">sizeof</emphasis>&#32;(<emphasis role="keywordtype">char</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;else&#32;<emphasis role="keywordflow">if</emphasis>&#32;(arg&#32;!=&#32;0)&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_asm__funcs_8cpp_1afebc5259c059f1c13b2c3eb589bbd778">\</link>
+<link linkend="_asm__funcs_8cpp_1afebc5259c059f1c13b2c3eb589bbd778">                                                                      \</link>
+<link linkend="_asm__funcs_8cpp_1afebc5259c059f1c13b2c3eb589bbd778">                    handleArg</link>&#32;(codeFile,&#32;i,&#32;outFile,&#32;num,&#32;tags);&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;else
+</programlisting></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_asm__funcs_8cpp_1afebc5259c059f1c13b2c3eb589bbd778"/>    <section>
+    <title>handleArg()</title>
+<indexterm><primary>handleArg</primary><secondary>asm_funcs.cpp</secondary></indexterm>
+<indexterm><primary>asm_funcs.cpp</primary><secondary>handleArg</secondary></indexterm>
+<para><computeroutput>void handleArg (<link linkend="_struct_text">Text</link> * code, int line, FILE * outFile, char cmdNum, int tags[512])</computeroutput></para><para>
+Definition at line 12 of file asm_funcs.cpp.</para>
+    </section><anchor xml:id="_asm__funcs_8cpp_1ad94c08d203bdf6cd4fdad8a420073a85"/>    <section>
+    <title>handleComLine()</title>
+<indexterm><primary>handleComLine</primary><secondary>asm_funcs.cpp</secondary></indexterm>
+<indexterm><primary>asm_funcs.cpp</primary><secondary>handleComLine</secondary></indexterm>
+<para><computeroutput>char* handleComLine (int argc, char * argv[], bool * aFlag, char ** outFileName)</computeroutput></para><para>
+Definition at line 140 of file asm_funcs.cpp.</para>
+    </section><anchor xml:id="_asm__funcs_8cpp_1a3dbf87d57f9f11d4e10cf74b6887a21a"/>    <section>
+    <title>writeBinInternal()</title>
+<indexterm><primary>writeBinInternal</primary><secondary>asm_funcs.cpp</secondary></indexterm>
+<indexterm><primary>asm_funcs.cpp</primary><secondary>writeBinInternal</secondary></indexterm>
+<para><computeroutput>void writeBinInternal (void * val, FILE * outFile, size_t sizeOfVar)</computeroutput></para><para>
+Definition at line 3 of file asm_funcs.cpp.</para>
+    </section><anchor xml:id="_asm__funcs_8cpp_1aa4ecb6747b94442217ee22b2df052036"/>    <section>
+    <title>writeWtf()</title>
+<indexterm><primary>writeWtf</primary><secondary>asm_funcs.cpp</secondary></indexterm>
+<indexterm><primary>asm_funcs.cpp</primary><secondary>writeWtf</secondary></indexterm>
+<para><computeroutput>void writeWtf (<link linkend="_struct_text">Text</link> * codeFile, FILE * outFile, int tags[512])</computeroutput></para><para>
+Definition at line 199 of file asm_funcs.cpp.</para>
+</section>
+</section>
+</section>

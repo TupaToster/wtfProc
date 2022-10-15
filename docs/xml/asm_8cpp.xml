@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="asm_8cpp" kind="file" language="C++">
+    <compoundname>asm.cpp</compoundname>
+    <includes refid="asm__head_8h" local="yes">asm_head.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>assert.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>asm/asm.cpp</label>
+        <link refid="asm_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>D:\los_projectados\wtfProc\lib\globalization.h</label>
+        <link refid="globalization_8h"/>
+      </node>
+      <node id="2">
+        <label>asm_head.h</label>
+        <link refid="asm__head_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="asm_8cpp_1a5c1a69eec57cefaee3f692279022198b" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t ip</definition>
+        <argsstring></argsstring>
+        <name>ip</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="asm/asm.cpp" line="3" column="8" bodyfile="asm/asm.cpp" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="asm_8cpp_1ace8c8b51e3dcde290dd6b8a7bc5feba0" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool errors</definition>
+        <argsstring></argsstring>
+        <name>errors</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="asm/asm.cpp" line="5" column="6" bodyfile="asm/asm.cpp" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="asm_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="asm/asm.cpp" line="7" column="5" bodyfile="asm/asm.cpp" bodystart="7" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="asm__head_8h" kindref="compound">asm_head.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="asm_8cpp_1a5c1a69eec57cefaee3f692279022198b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="asm_8cpp_1a5c1a69eec57cefaee3f692279022198b" kindref="member">ip</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="asm_8cpp_1ace8c8b51e3dcde290dd6b8a7bc5feba0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="asm_8cpp_1ace8c8b51e3dcde290dd6b8a7bc5feba0" kindref="member">errors</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="asm_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asm_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[])<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fileName<sp/><sp/><sp/><sp/>=<sp/><sp/>NULL;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>outFileName<sp/>=<sp/><sp/>NULL;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/>aFlag<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><sp/>0;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/>tags[512]<sp/><sp/><sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>512;<sp/>i++)<sp/>tags[i]<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>fileName<sp/>=<sp/><ref refid="asm__funcs_8cpp_1ad94c08d203bdf6cd4fdad8a420073a85" kindref="member">handleComLine</ref><sp/>(argc,<sp/>argv,<sp/>&amp;aFlag,<sp/>&amp;outFileName);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(fileName<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>outFile<sp/>=<sp/>fopen<sp/>(outFileName,<sp/></highlight><highlight class="stringliteral">&quot;wb&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(outFile<sp/><sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_text" kindref="compound">Text</ref><sp/>codeFile<sp/>=<sp/><ref refid="text_8cpp_1a75a739634df7483901b62c501362ec9d" kindref="member">read_Text</ref><sp/>(fileName);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="asm__funcs_8cpp_1aa4ecb6747b94442217ee22b2df052036" kindref="member">writeWtf</ref><sp/>(&amp;codeFile,<sp/>NULL,<sp/>tags);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="asm_8cpp_1ace8c8b51e3dcde290dd6b8a7bc5feba0" kindref="member">errors</ref><sp/>==<sp/>1)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="asm_8cpp_1a5c1a69eec57cefaee3f692279022198b" kindref="member">ip</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="asm__funcs_8cpp_1aa4ecb6747b94442217ee22b2df052036" kindref="member">writeWtf</ref><sp/>(&amp;codeFile,<sp/>outFile,<sp/>tags);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="text_8cpp_1a359525e4562324c43aa6027b94c4e7b0" kindref="member">killText</ref><sp/>(&amp;codeFile);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose<sp/>(outFile);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(fileName);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(outFileName);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="asm/asm.cpp"/>
+  </compounddef>
+</doxygen>

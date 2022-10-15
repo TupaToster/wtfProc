@@ -1,0 +1,72 @@
+.TH "lib/cmd.h" 3 "Sat Oct 15 2022" "Version 2" "Soft cpu" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/cmd.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBelem_t_F\fP   '%Lf'"
+.br
+.ti -1c
+.RI "#define \fBPUSH\fP(val)   \fBStackPush\fP (&cpu\->stk, val)"
+.br
+.ti -1c
+.RI "#define \fBPOP\fP   \fBStackPop\fP (&cpu\->stk)"
+.br
+.ti -1c
+.RI "#define \fBsigna\fP   'CP02'"
+.br
+.ti -1c
+.RI "#define \fBDEF_CMD\fP(name,  num,  arg,  code)   ;"
+.br
+.ti -1c
+.RI "#define \fBGENERAL_CMD\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef double \fBelem_t\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define DEF_CMD(name, num, arg, code)   ;"
+
+.PP
+Definition at line 12 of file cmd\&.h\&.
+.SS "#define elem_t_F   '%Lf'"
+
+.PP
+Definition at line 4 of file cmd\&.h\&.
+.SS "#define GENERAL_CMD"
+
+.PP
+Definition at line 14 of file cmd\&.h\&.
+.SS "#define POP   \fBStackPop\fP (&cpu\->stk)"
+
+.PP
+Definition at line 7 of file cmd\&.h\&.
+.SS "#define PUSH(val)   \fBStackPush\fP (&cpu\->stk, val)"
+
+.PP
+Definition at line 6 of file cmd\&.h\&.
+.SS "#define signa   'CP02'"
+
+.PP
+Definition at line 10 of file cmd\&.h\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef double \fBelem_t\fP"
+
+.PP
+Definition at line 3 of file cmd\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Soft cpu from the source code\&.

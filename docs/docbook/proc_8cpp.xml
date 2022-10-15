@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_proc_8cpp" xml:lang="en-US">
+<title>processor/proc.cpp File Reference</title>
+<indexterm><primary>processor/proc.cpp</primary></indexterm>
+<programlisting>#include &quot;proc_head.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_proc_8cpp_1a0ddf1224851353fc92bfbff6f499fa97">main</link> (int argc, char *argv[])</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_proc_8cpp_1a0ddf1224851353fc92bfbff6f499fa97"/>    <section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>proc.cpp</secondary></indexterm>
+<indexterm><primary>proc.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main (int argc, char * argv[])</computeroutput></para><para>
+Definition at line 3 of file proc.cpp.</para>
+</section>
+</section>
+</section>

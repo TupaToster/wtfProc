@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_line" kind="struct" language="C++" prot="public">
+    <compoundname>Line</compoundname>
+    <includes refid="text_8h" local="no">text.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_line_1a902f78ce569809df653949d04f345fff" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* Line::begin</definition>
+        <argsstring></argsstring>
+        <name>begin</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>Ptr to the beginning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/text.h" line="12" column="10" bodyfile="lib/text.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_line_1a8159f758b3711682471b64424d4dd5ea" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* Line::end</definition>
+        <argsstring></argsstring>
+        <name>end</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>Ptr to the end. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/text.h" line="13" column="10" bodyfile="lib/text.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Struct to store Lines of <ref refid="struct_text" kindref="compound">Text</ref> in format [begin, end) </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/text.h" line="10" column="1" bodyfile="lib/text.h" bodystart="10" bodyend="14"/>
+    <listofallmembers>
+      <member refid="struct_line_1a902f78ce569809df653949d04f345fff" prot="public" virt="non-virtual"><scope>Line</scope><name>begin</name></member>
+      <member refid="struct_line_1a8159f758b3711682471b64424d4dd5ea" prot="public" virt="non-virtual"><scope>Line</scope><name>end</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
