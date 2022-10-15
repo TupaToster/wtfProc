@@ -10,7 +10,10 @@
 #define tagCheck(...) if (outFile != NULL) { \
     __VA_ARGS__                              \
 }
+
 extern size_t ip;
+
+extern bool errors;
 
 enum CMD {
 

@@ -1,618 +1,86 @@
 ----------------------------------------
-Logging session at compiled time : 02:40:03 Oct 15 2022
+Logging session at compiled time : 12:35:42 Oct 15 2022
 
-In file asm/asm_funcs.cpp, function writeWtf, line 201 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 201 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 201 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 201 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 201 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 201 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 201 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 201 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 201 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 201 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 201 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 201 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 201 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 201 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 52, stack named cpu->stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 633111666 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 1 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->stk.stack : 
+		cpu->stk.stack[0] : 6.000000
+		cpu->stk.stack[1] : 0.000000
+		cpu->stk.stack[2] : 0.000000
+		cpu->stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 52, stack named cpu->funcIp was dumped : 
+	Errors : 
+		[ok]
+	hash = 2493078683 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->funcIp.stack : 
+		cpu->funcIp.stack[0] : 0.000000
+		cpu->funcIp.stack[1] : 0.000000
+		cpu->funcIp.stack[2] : 0.000000
+		cpu->funcIp.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+00 00 13 A8 00 00 00 00 00 00 2E 40 12 07 00 21 
+                                       /| ip = 29, cpu->code[ip] = 07
+RAM: 
+| 6.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 12.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 
 ----------------------------------------
-Logging session at compiled time : 02:40:51 Oct 15 2022
+Logging session at compiled time : 12:50:26 Oct 15 2022
 
-In file asm/asm_funcs.cpp, function writeWtf, line 205 : inputStr = 70757368000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 :: UNDEFINED_FORMAT : sizeof() = 100;
-In file asm/asm_funcs.cpp, function writeWtf, line 205 : inputStr = 63616C6C000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 :: UNDEFINED_FORMAT : sizeof() = 100;
-In file asm/asm_funcs.cpp, function writeWtf, line 205 : inputStr = 686C740000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 :: UNDEFINED_FORMAT : sizeof() = 100;
-In file asm/asm_funcs.cpp, function writeWtf, line 205 : inputStr = 313A00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 :: UNDEFINED_FORMAT : sizeof() = 100;
-In file asm/asm_funcs.cpp, function writeWtf, line 205 : inputStr = 70757368000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 :: UNDEFINED_FORMAT : sizeof() = 100;
-In file asm/asm_funcs.cpp, function writeWtf, line 205 : inputStr = 7375620000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 :: UNDEFINED_FORMAT : sizeof() = 100;
-In file asm/asm_funcs.cpp, function writeWtf, line 205 : inputStr = 706F700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 :: UNDEFINED_FORMAT : sizeof() = 100;
-In file asm/asm_funcs.cpp, function writeWtf, line 205 : inputStr = 70757368000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 :: UNDEFINED_FORMAT : sizeof() = 100;
-In file asm/asm_funcs.cpp, function writeWtf, line 205 : inputStr = 6F75740000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 :: UNDEFINED_FORMAT : sizeof() = 100;
-In file asm/asm_funcs.cpp, function writeWtf, line 205 : inputStr = 70757368000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 :: UNDEFINED_FORMAT : sizeof() = 100;
-In file asm/asm_funcs.cpp, function writeWtf, line 205 : inputStr = 70757368000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 :: UNDEFINED_FORMAT : sizeof() = 100;
-In file asm/asm_funcs.cpp, function writeWtf, line 205 : inputStr = 70757368000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 :: UNDEFINED_FORMAT : sizeof() = 100;
-In file asm/asm_funcs.cpp, function writeWtf, line 205 : inputStr = 6A6100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 :: UNDEFINED_FORMAT : sizeof() = 100;
-In file asm/asm_funcs.cpp, function writeWtf, line 205 : inputStr = 7265740000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 :: UNDEFINED_FORMAT : sizeof() = 100;
+In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
+In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 914;
 ----------------------------------------
-Logging session at compiled time : 02:41:53 Oct 15 2022
+Logging session at compiled time : 12:50:54 Oct 15 2022
 
-push
-call
-hlt
-1:
-push
-sub
-pop
-push
-out
-push
-push
-push
-ja
-ret
+In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
+In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 914;
 ----------------------------------------
-Logging session at compiled time : 03:01:50 Oct 15 2022
+Logging session at compiled time : 12:50:54 Oct 15 2022
 
-In file asm/asm.cpp, function main, line 26 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
+In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 914;
 ----------------------------------------
-Logging session at compiled time : 03:04:02 Oct 15 2022
+Logging session at compiled time : 12:50:54 Oct 15 2022
 
-In file asm/asm_funcs.cpp, function writeWtf, line 199 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 199 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 199 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 199 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 199 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 199 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 199 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 199 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 199 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 199 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 199 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 199 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 199 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
-In file asm/asm_funcs.cpp, function writeWtf, line 199 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
+In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 13;
+In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
+In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
+In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 13;
+In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
 ----------------------------------------
-Logging session at compiled time : 03:07:29 Oct 15 2022
+Logging session at compiled time : 12:50:54 Oct 15 2022
 
-In file asm/asm.cpp, function main, line 26 : codeFile.stringCnt = 18;
+In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
+In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 914;
 ----------------------------------------
-Logging session at compiled time : 03:14:11 Oct 15 2022
+Logging session at compiled time : 12:50:54 Oct 15 2022
 
-push
-call
-hlt
-1:
-In file asm/asm_funcs.cpp, function writeWtf, line 229 : "error" = 6572726F720 :: UNDEFINED_FORMAT : sizeof() = 6;
-push
-sub
-pop
-push
-out
-push
-push
-push
-ja
-ret
+In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
+In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 914;
 ----------------------------------------
-Logging session at compiled time : 03:15:19 Oct 15 2022
+Logging session at compiled time : 13:04:48 Oct 15 2022
 
-push
-call
-hlt
-1:
-In file asm/asm_funcs.cpp, function writeWtf, line 229 : "error" = 6572726F720 :: UNDEFINED_FORMAT : sizeof() = 6;
-push
-sub
-pop
-push
-out
-push
-push
-push
-ja
-ret
+In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
 ----------------------------------------
-Logging session at compiled time : 11:48:19 Oct 15 2022
+Logging session at compiled time : 13:05:21 Oct 15 2022
 
-In file asm/asm_funcs.cpp, function writeWtf, line 228 : tagNum = 1;
-In file asm/asm_funcs.cpp, function writeWtf, line 230 : "error" = 6572726F720 :: UNDEFINED_FORMAT : sizeof() = 6;
-----------------------------------------
-Logging session at compiled time : 11:49:12 Oct 15 2022
-
-push
-call
-hlt
-1:
-In file asm/asm_funcs.cpp, function writeWtf, line 228 : tagNum = 1;
-In file asm/asm_funcs.cpp, function writeWtf, line 230 : "error" = 6572726F720 :: UNDEFINED_FORMAT : sizeof() = 6;
-push
-sub
-pop
-push
-out
-push
-push
-push
-ja
-ret
-----------------------------------------
-Logging session at compiled time : 11:49:12 Oct 15 2022
-
-push
-call
-1:
-In file asm/asm_funcs.cpp, function writeWtf, line 228 : tagNum = 1;
-In file asm/asm_funcs.cpp, function writeWtf, line 230 : "error" = 6572726F720 :: UNDEFINED_FORMAT : sizeof() = 6;
-push
-sub
-pop
-push
-out
-push
-push
-push
-ja
-ret
-----------------------------------------
-Logging session at compiled time : 11:49:12 Oct 15 2022
-
-push
-call
-hlt
-1:
-In file asm/asm_funcs.cpp, function writeWtf, line 228 : tagNum = 1;
-In file asm/asm_funcs.cpp, function writeWtf, line 230 : "error" = 6572726F720 :: UNDEFINED_FORMAT : sizeof() = 6;
-push
-sub
-pop
-push
-out
-push
-push
-push
-ret
-----------------------------------------
-Logging session at compiled time : 11:51:57 Oct 15 2022
-
-push
-call
-hlt
-1:
-In file asm/asm_funcs.cpp, function writeWtf, line 228 : tagNum = 1;
-In file asm/asm_funcs.cpp, function writeWtf, line 230 : tagNum = 1;
-push
-sub
-pop
-push
-out
-push
-push
-push
-ret
-----------------------------------------
-Logging session at compiled time : 11:52:24 Oct 15 2022
-
-push
-call
-hlt
-1:
-In file asm/asm_funcs.cpp, function writeWtf, line 228 : tagNum = 1;
-In file asm/asm_funcs.cpp, function writeWtf, line 231 : tagNum = 1;
-push
-sub
-pop
-push
-out
-push
-push
-push
-ret
-----------------------------------------
-Logging session at compiled time : 11:52:57 Oct 15 2022
-
-push
-call
-hlt
-1:
-In file asm/asm_funcs.cpp, function writeWtf, line 228 : tagNum = 1;
-In file asm/asm_funcs.cpp, function writeWtf, line 231 : tagNum = 1;
-push
-sub
-pop
-push
-out
-push
-push
-push
-ret
-----------------------------------------
-Logging session at compiled time : 11:52:57 Oct 15 2022
-
-push
-call
-hlt
-12:
-In file asm/asm_funcs.cpp, function writeWtf, line 228 : tagNum = 12;
-In file asm/asm_funcs.cpp, function writeWtf, line 231 : tagNum = 12;
-push
-sub
-pop
-push
-out
-push
-push
-push
-ret
-----------------------------------------
-Logging session at compiled time : 11:53:57 Oct 15 2022
-
-push
-call
-hlt
-12:
-In file asm/asm_funcs.cpp, function writeWtf, line 228 : tagNum = 12;
-push
-sub
-pop
-push
-out
-push
-push
-push
-ret
-----------------------------------------
-Logging session at compiled time : 11:56:15 Oct 15 2022
-
-push
-call
-hlt
-12:
-push
-sub
-pop
-push
-out
-push
-push
-push
-ret
-----------------------------------------
-Logging session at compiled time : 11:57:03 Oct 15 2022
-
-push
-call
-hlt
-12:
-push
-sub
-pop
-push
-out
-push
-push
-push
-ret
-----------------------------------------
-Logging session at compiled time : 11:57:03 Oct 15 2022
-
-push
-call
-hlt
-12:
-push
-sub
-pop
-push
-out
-push
-push
-push
-ret
-----------------------------------------
-Logging session at compiled time : 11:59:26 Oct 15 2022
-
-push
-call
-hlt
-12:
-push
-sub
-pop
-push
-out
-push
-push
-push
-ret
-----------------------------------------
-Logging session at compiled time : 12:01:54 Oct 15 2022
-
-push
-call
-hlt
-12:
-push
-sub
-pop
-push
-out
-push
-push
-push
-ret
-----------------------------------------
-Logging session at compiled time : 12:02:31 Oct 15 2022
-
-push
-call
-hlt
-12:
-push
-sub
-pop
-push
-out
-push
-push
-push
-ret
-----------------------------------------
-Logging session at compiled time : 12:02:43 Oct 15 2022
-
-push
-call
-hlt
-12:
-push
-sub
-pop
-push
-out
-push
-push
-push
-ret
-----------------------------------------
-Logging session at compiled time : 12:04:04 Oct 15 2022
-
-push
-call
-hlt
-12:
-push
-sub
-pop
-push
-out
-push
-push
-push
-ret
-----------------------------------------
-Logging session at compiled time : 12:04:04 Oct 15 2022
-
-push
-call
-hlt
-12:
-push
-sub
-pop
-push
-out
-push
-push
-push
-jae
-call
-13:
-ret
-----------------------------------------
-Logging session at compiled time : 12:04:04 Oct 15 2022
-
-push
-12:
-push
-add
-out
-ret
-----------------------------------------
-Logging session at compiled time : 12:04:04 Oct 15 2022
-
-push
-12:
-push
-add
-out
-ret
-----------------------------------------
-Logging session at compiled time : 12:09:14 Oct 15 2022
-
-push
-12:
-push
-add
-out
-ret
-call
-push
-out
-hlt
-----------------------------------------
-Logging session at compiled time : 12:09:14 Oct 15 2022
-
-push
-12:
-push
-add
-out
-ret
-call
-push
-out
-hlt
-----------------------------------------
-Logging session at compiled time : 12:09:14 Oct 15 2022
-
-push
-call
-hlt
-12:
-push
-sub
-pop
-push
-out
-push
-push
-push
-jae
-call
-13:
-ret
-hlt
-----------------------------------------
-Logging session at compiled time : 12:09:14 Oct 15 2022
-
-push
-call
-hlt
-12:
-push
-sub
-pop
-push
-out
-push
-push
-push
-jae
-call
-13:
-ret
-hlt
-push
-call
-hlt
-12:
-push
-sub
-pop
-push
-out
-push
-push
-push
-jae
-call
-13:
-ret
-hlt
-----------------------------------------
-Logging session at compiled time : 12:14:21 Oct 15 2022
-
-push
-call
-hlt
-12:
-push
-sub
-pop
-push
-out
-push
-push
-push
-jae
-call
-13:
-ret
-hlt
-push
-call
-hlt
-12:
-push
-sub
-pop
-push
-out
-push
-push
-push
-jae
-call
-13:
-ret
-hlt
-----------------------------------------
-Logging session at compiled time : 12:14:21 Oct 15 2022
-
-push
-call
-hlt
-12:
-push
-sub
-pop
-push
-out
-push
-push
-push
-jbe
-call
-13:
-ret
-hlt
-push
-call
-hlt
-12:
-push
-sub
-pop
-push
-out
-push
-push
-push
-jbe
-call
-13:
-ret
-hlt
-----------------------------------------
-Logging session at compiled time : 12:14:21 Oct 15 2022
-
-push
-call
-hlt
-12:
-push
-sub
-pop
-push
-out
-push
-push
-push
-jbe
-call
-13:
-ret
-push
-call
-hlt
-12:
-push
-sub
-pop
-push
-out
-push
-push
-push
-jbe
-call
-13:
-ret
+In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
+In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 914;
+In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;

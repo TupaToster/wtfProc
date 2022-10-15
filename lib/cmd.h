@@ -125,4 +125,24 @@ DEF_CMD (ret, 17, 0, {
     cpu->ip = (int)StackPop (&cpu->funcIp);
 })
 
+DEF_CMD (video, 18, 0, {
+
+    for (int i = 0; i < 10; i++) {
+
+        for (int j = 0; j < 10; j++) {
+
+            if (cpu->ram[10*i + j] == 0) printf (".");
+            else printf ("*");
+        }
+        printf ("\n");
+    }
+})
+
+DEF_CMD (in, 19, 0, {
+
+    printf ("Insert number to push: ");
+    elem_t val = 0;
+    scanf (elem_t_F, &val);
+    PUSH (val);
+})
 #endif

@@ -2,6 +2,8 @@
 
 size_t ip = 0;
 
+bool errors = 0;
+
 int main (int argc, char* argv[]) {
 
     char* fileName    =  NULL;
@@ -18,11 +20,11 @@ int main (int argc, char* argv[]) {
     FILE* outFile = fopen (outFileName, "wb");
     assert (outFile  != NULL);
 
-    setvbuf (outFile, NULL, _IONBF, 0);
-
     Text codeFile = read_Text (fileName);
 
     writeWtf (&codeFile, NULL, tags);
+
+    if (errors == 1) return -1;
 
     ip = 0;
 

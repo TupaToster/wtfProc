@@ -58,12 +58,21 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, int tags[512])
                 tagCheck (fputc (cmdNum, outFile);)
                 ip += sizeof (char);
                 int index = strtol (arg1 + it1 + 1, NULL, 10);
-                writeBin (tags[index], outFile);
+
+                if (index < 512) {
+
+                    writeBin (tags[index], outFile);
+                }
+                else {
+
+                    printf ("Exceeded tags array at line %d : %s", line + 1, code->Lines[line].begin);
+                    errors = 1;
+                }
             }
             else {
 
                 printf ("Wrong arg at line %d : %s", line + 1, *code->Lines[line].begin);
-                exit (0);
+                errors = 1;
             }
         break;
 
@@ -119,8 +128,8 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, int tags[512])
 
         default:
 
-            printf ("Wrong operator in line %d : %s", line + 1, *code->Lines[line].begin);
-            exit (0);
+            printf ("Wrong operator in line %d : %s\n", line + 1, *code->Lines[line].begin);
+            errors = 1;
         break;
     }
 
@@ -140,7 +149,7 @@ char* handleComLine (int argc, char* argv[], bool* aFlag, char** outFileName) {
                     "fileName - name of file to compile (commonly .codeFile)\n"
                     "-o - optional key to set name of output file .wtf\n"
                     "outFileName - name of output file with -o (set to a.wtf by default)\n");
-            return 0;
+            exit(0);
         break;
         case 2:
 
@@ -171,7 +180,7 @@ char* handleComLine (int argc, char* argv[], bool* aFlag, char** outFileName) {
 
         default:
 
-            printf ("Wrong args");
+            printf ("Wrong command line args");
             exit (0);
         break;
     }
@@ -199,8 +208,6 @@ void writeWtf (Text* codeFile, FILE* outFile, int tags[512]) {
 
         sscanf (codeFile->Lines[i].begin, "%s", inputStr);
 
-        flogprintf ("%s\n", inputStr);
-
         #undef DEF_CMD
 
         #define DEF_CMD(name, num, arg, code)                         \
@@ -226,14 +233,14 @@ void writeWtf (Text* codeFile, FILE* outFile, int tags[512]) {
             sscanf (codeFile->Lines[i].begin, "%d", &tagNum);
             if (tagNum < 512) tags[tagNum] = ip;
             else {
-                printf ("Exceeded tag array\n");
-                exit(0);
+                printf ("Exceeded tag array at line %d : %s\n", i + 1, inputStr);
+                errors = 1;
             }
         }
         else {
 
-            printf ("Wrong operator at line %d : %s", i + 1, inputStr);
-            exit (0);
+            printf ("Wrong operator at line %d : %s\n", i + 1, inputStr);
+            errors = 1;
         }
     }
 }
