@@ -7,6 +7,9 @@
 #include header(cmd)
 #include header(text)
 
+#define tagCheck(...) if (outFile != NULL) { \
+    __VA_ARGS__                              \
+}
 extern size_t ip;
 
 enum CMD {

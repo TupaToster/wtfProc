@@ -46,6 +46,7 @@ void ProcCtor (Proc* cpu) {
     cpu->code      = 0;
     cpu->ip        = 0;
     cpu->stk       = StackCtor ();
+    cpu->funcIp    = StackCtor ();
     cpu->ram       = (elem_t*) calloc (100, sizeof (elem_t));
 }
 
@@ -57,6 +58,7 @@ void ProcDtor (Proc* cpu) {
     cpu->codeSize = 0;
     cpu->ip       = 0;
     StackDtor (&cpu->stk);
+    StackDtor (&cpu->funcIp);
 }
 
 void checkFileSign (Proc* cpu) {
@@ -165,11 +167,21 @@ void ProcDumpInside (Proc* cpu) {
     flogprintf ("\n");
 
     for (int i = 0; i < (cpu->ip - 1) % 16;i++) {
+
         flogprintf ("   ");
     }
 
-    flogprintf ("/| ip = %d, cpu->code[ip] = %02X\n"
-                "End of cpu dump\n", cpu->ip - 1, cpu->code[cpu->ip - 1]);
+    flogprintf ("/| ip = %d, cpu->code[ip] = %02X\n", cpu->ip - 1, cpu->code[cpu->ip - 1]);
+
+    flogprintf ("RAM: \n"
+                "| ");
+
+    for (int i = 0; i < 100; i++) {
+
+        flogprintf (elem_t_F " | ", cpu->ram[i]);
+    }
+
+    flogprintf ("\n");
 }
 
 void ProcRunCode (Proc* cpu) {

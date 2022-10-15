@@ -114,4 +114,15 @@ DEF_CMD (jne, 15, 3, {
     }
 })
 
+DEF_CMD (call, 16, 3, {
+
+    StackPush (&cpu->funcIp, cpu->ip);
+    cpu->ip = ipArg;
+})
+
+DEF_CMD (ret, 17, 0, {
+
+    cpu->ip = (int)StackPop (&cpu->funcIp);
+})
+
 #endif

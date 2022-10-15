@@ -2,11 +2,9 @@
 
 void writeBinInternal (void* val, FILE* outFile, size_t sizeOfVar) {
 
-    assert (outFile != NULL);
-
     for (int i = 0; i < sizeOfVar; i++) {
 
-        fputc (*(((char*)val) + i), outFile);
+        tagCheck (fputc (*(((char*)val) + i), outFile);)
         ip += sizeof (char);
     }
 }
@@ -37,17 +35,17 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, int tags[512])
 
                 cmdNum |= MASK_REG;
 
-                fputc (cmdNum, outFile);
+                tagCheck (fputc (cmdNum, outFile);)
                 ip += sizeof (char);
 
-                fputc (arg1[it1 + 1] - 'a' + 1, outFile);
+                tagCheck (fputc (arg1[it1 + 1] - 'a' + 1, outFile);)
                 ip+=sizeof (char);
             }
             else if (arg1[it1] >= '0' and arg1[it1] <= '9' or arg1[it1] == '-')  {
 
                 cmdNum |= MASK_IMM;
 
-                fputc (cmdNum, outFile);
+                tagCheck (fputc (cmdNum, outFile);)
                 ip += sizeof (char);
 
 
@@ -57,10 +55,9 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, int tags[512])
             }
             else if (arg1[it1] == ':') {
 
-                fputc (cmdNum, outFile);
+                tagCheck (fputc (cmdNum, outFile);)
                 ip += sizeof (char);
                 int index = strtol (arg1 + it1 + 1, NULL, 10);
-
                 writeBin (tags[index], outFile);
             }
             else {
@@ -90,10 +87,10 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, int tags[512])
                     exit (0);
                 }
 
-                fputc (cmdNum, outFile);
+                tagCheck (fputc (cmdNum, outFile);)
                 ip += sizeof (char);
 
-                fputc (arg1[it1 + 1] - 'a' + 1, outFile);
+                tagCheck (fputc (arg1[it1 + 1] - 'a' + 1, outFile);)
                 ip += sizeof (char);
 
                 double value = 0;
@@ -108,10 +105,10 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, int tags[512])
                     exit (0);
                 }
 
-                fputc (cmdNum, outFile);
+                tagCheck (fputc (cmdNum, outFile);)
                 ip += sizeof (char);
 
-                fputc (arg2[it2] - 'a' + 1, outFile);
+                tagCheck (fputc (arg2[it2] - 'a' + 1, outFile);)
                 ip += sizeof (char);
 
                 double value = 0;
@@ -192,7 +189,7 @@ char* handleComLine (int argc, char* argv[], bool* aFlag, char** outFileName) {
 
 void writeWtf (Text* codeFile, FILE* outFile, int tags[512]) {
 
-    fprintf (outFile, "%s", signa);
+    tagCheck (fprintf (outFile, "%s", signa);)
 
     ip += 4 * sizeof (char);
 
@@ -202,6 +199,8 @@ void writeWtf (Text* codeFile, FILE* outFile, int tags[512]) {
 
         sscanf (codeFile->Lines[i].begin, "%s", inputStr);
 
+        flogprintf ("%s\n", inputStr);
+
         #undef DEF_CMD
 
         #define DEF_CMD(name, num, arg, code)                         \
@@ -209,7 +208,7 @@ void writeWtf (Text* codeFile, FILE* outFile, int tags[512]) {
                                                                       \
                 if (arg == 0){                                        \
                                                                       \
-                    fputc (num, outFile);                             \
+                    tagCheck(fputc (num, outFile);)                   \
                     ip += sizeof (char);                              \
                 }                                                     \
                 else if (arg != 0) {                                  \
@@ -225,7 +224,11 @@ void writeWtf (Text* codeFile, FILE* outFile, int tags[512]) {
 
             int tagNum = 0;
             sscanf (codeFile->Lines[i].begin, "%d", &tagNum);
-            tags[tagNum] = ip;
+            if (tagNum < 512) tags[tagNum] = ip;
+            else {
+                printf ("Exceeded tag array\n");
+                exit(0);
+            }
         }
         else {
 

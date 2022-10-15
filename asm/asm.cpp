@@ -12,13 +12,19 @@ int main (int argc, char* argv[]) {
     for (int i = 0; i < 512; i++) tags[i] = -1;
 
     fileName = handleComLine (argc, argv, &aFlag, &outFileName);
-
-    FILE* outFile = fopen (outFileName, "wb");
-
-    assert (outFile  != NULL);
     assert (fileName != NULL);
 
+
+    FILE* outFile = fopen (outFileName, "wb");
+    assert (outFile  != NULL);
+
+    setvbuf (outFile, NULL, _IONBF, 0);
+
     Text codeFile = read_Text (fileName);
+
+    writeWtf (&codeFile, NULL, tags);
+
+    ip = 0;
 
     writeWtf (&codeFile, outFile, tags);
 

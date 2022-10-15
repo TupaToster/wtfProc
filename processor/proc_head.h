@@ -9,9 +9,10 @@
 
 extern char Proc_version[3];
 
-#define ProcDump(cpu)\
-    StackDump (cpu->stk);\
-    ProcDumpInside (cpu);\
+#define ProcDump(cpu)        \
+    StackDump (cpu->stk);    \
+    StackDump (cpu->funcIp); \
+    ProcDumpInside (cpu);    \
 
 enum reg {
 
@@ -45,6 +46,7 @@ struct Proc {
     elem_t  regs[5]  = {0};
     int     ip       = 0;
     Stack   stk      = {};
+    Stack   funcIp   = {};
     elem_t* ram      = NULL;
 };
 
