@@ -25,6 +25,10 @@
 var NAVTREE =
 [
   [ "Soft cpu", "index.html", [
+    [ "Index page", "index.html", [
+      [ "Intorduction", "index.html#Intorduction", null ],
+      [ "ASM", "index.html#ASM", null ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

@@ -68,12 +68,13 @@
     <ref refid="stack_8h_1a69595dc2450bd35617f155ffa5738490" kindref="member">StackDump</ref> (cpu-&gt;funcIp); \
     <ref refid="proc__head_8h_1abbcaa80443c83c47ea972ef5927664fd" kindref="member">ProcDumpInside</ref> (cpu);    \</initializer>
         <briefdescription>
+<para>Macros for dumping processor. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="12" column="9" bodyfile="processor/proc_head.h" bodystart="12" bodyend="-1"/>
+        <location file="processor/proc_head.h" line="14" column="9" bodyfile="processor/proc_head.h" bodystart="14" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="proc__head_8h_1aa020607c1c6794b5b426e2d70c488153" prot="public" static="no">
         <name>DEF_CMD</name>
@@ -88,7 +89,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="37" column="18" bodyfile="processor/proc_head.h" bodystart="37" bodyend="-1"/>
+        <location file="processor/proc_head.h" line="42" column="18" bodyfile="processor/proc_head.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -99,6 +100,7 @@
           <name>r0x</name>
           <initializer>= 0</initializer>
           <briefdescription>
+<para>Zero register that servers for wrong address. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -107,6 +109,7 @@
           <name>rax</name>
           <initializer>= 1</initializer>
           <briefdescription>
+<para>First reg. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -115,6 +118,7 @@
           <name>rbx</name>
           <initializer>= 2</initializer>
           <briefdescription>
+<para>Second reg. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -123,6 +127,7 @@
           <name>rcx</name>
           <initializer>= 3</initializer>
           <briefdescription>
+<para>Third reg. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -131,17 +136,19 @@
           <name>rdx</name>
           <initializer>= 4</initializer>
           <briefdescription>
+<para>Fourth reg. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <briefdescription>
+<para>names of regs array elements - regs[r*x] </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="17" column="1" bodyfile="processor/proc_head.h" bodystart="17" bodyend="24"/>
+        <location file="processor/proc_head.h" line="20" column="1" bodyfile="processor/proc_head.h" bodystart="20" bodyend="27"/>
       </memberdef>
       <memberdef kind="enum" id="proc__head_8h_1adad90fa030af56592ad194a41341ffcd" prot="public" static="no" strong="no">
         <type></type>
@@ -150,6 +157,7 @@
           <name>MASK_RAM</name>
           <initializer>= 1&lt;&lt;7</initializer>
           <briefdescription>
+<para>Ram bit. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -158,6 +166,7 @@
           <name>MASK_REG</name>
           <initializer>= 1&lt;&lt;6</initializer>
           <briefdescription>
+<para>Register bit. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -166,6 +175,7 @@
           <name>MASK_IMM</name>
           <initializer>= 1&lt;&lt;5</initializer>
           <briefdescription>
+<para>Immidiate constant bit. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -174,6 +184,7 @@
           <name>MASK_CMD</name>
           <initializer>= (1&lt;&lt;5) - 1</initializer>
           <briefdescription>
+<para>Bits for command number. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -182,6 +193,7 @@
           <name>MASK_RAM</name>
           <initializer>= 1&lt;&lt;7</initializer>
           <briefdescription>
+<para>Mask for ram access. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -190,6 +202,7 @@
           <name>MASK_REG</name>
           <initializer>= 1&lt;&lt;6</initializer>
           <briefdescription>
+<para>Mask for reg access. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -198,6 +211,7 @@
           <name>MASK_IMM</name>
           <initializer>= 1&lt;&lt;5</initializer>
           <briefdescription>
+<para>Mask for immidiate constant. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -206,28 +220,31 @@
           <name>MASK_CMD</name>
           <initializer>= (1&lt;&lt;5) - 1</initializer>
           <briefdescription>
+<para>Mask for actual command number. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <briefdescription>
+<para>Masks for bits in command byte. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="26" column="1" bodyfile="processor/proc_head.h" bodystart="26" bodyend="32"/>
+        <location file="processor/proc_head.h" line="30" column="1" bodyfile="processor/proc_head.h" bodystart="30" bodyend="36"/>
       </memberdef>
       <memberdef kind="enum" id="proc__head_8h_1a04887de32e1f60f8dc157312b8f27665" prot="public" static="no" strong="no">
         <type></type>
         <name>CMD</name>
         <briefdescription>
+<para>Enumerator for command number (generated automatically) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="34" column="1" bodyfile="processor/proc_head.h" bodystart="34" bodyend="40"/>
+        <location file="processor/proc_head.h" line="39" column="1" bodyfile="processor/proc_head.h" bodystart="39" bodyend="45"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -237,12 +254,13 @@
         <argsstring>[3]</argsstring>
         <name>Proc_version</name>
         <briefdescription>
+<para>Variable for processor version, declared in <ref refid="proc__funcs_8cpp" kindref="compound">proc_funcs.cpp</ref>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="10" column="13" bodyfile="processor/proc_funcs.cpp" bodystart="3" bodyend="-1" declfile="processor/proc_head.h" declline="10" declcolumn="13"/>
+        <location file="processor/proc_head.h" line="11" column="13" bodyfile="processor/proc_funcs.cpp" bodystart="3" bodyend="-1" declfile="processor/proc_head.h" declline="11" declcolumn="13"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -261,12 +279,33 @@
           <array>[]</array>
         </param>
         <briefdescription>
+<para>Handles command line arguments. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount of args </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of args </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Name of file to read from </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="53" column="6" bodyfile="processor/proc_funcs.cpp" bodystart="5" bodyend="36" declfile="processor/proc_head.h" declline="53" declcolumn="6"/>
+        <location file="processor/proc_head.h" line="63" column="6" bodyfile="processor/proc_funcs.cpp" bodystart="5" bodyend="36" declfile="processor/proc_head.h" declline="63" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="proc__head_8h_1aea285898f9e99e5de92495f68bc409e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -278,12 +317,23 @@
           <declname>cpu</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="struct_proc" kindref="compound">Proc</ref> var. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cpu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ptr to var to construct </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="55" column="6" bodyfile="processor/proc_funcs.cpp" bodystart="38" bodyend="51" declfile="processor/proc_head.h" declline="55" declcolumn="6"/>
+        <location file="processor/proc_head.h" line="67" column="6" bodyfile="processor/proc_funcs.cpp" bodystart="38" bodyend="51" declfile="processor/proc_head.h" declline="67" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="proc__head_8h_1aeb16925431194abc0b606715b1b35e48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -295,29 +345,23 @@
           <declname>cpu</declname>
         </param>
         <briefdescription>
+<para>Destructs a <ref refid="struct_proc" kindref="compound">Proc</ref> var. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cpu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ptr to var to destruct </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="57" column="6" bodyfile="processor/proc_funcs.cpp" bodystart="53" bodyend="62" declfile="processor/proc_head.h" declline="57" declcolumn="6"/>
-      </memberdef>
-      <memberdef kind="function" id="proc__head_8h_1afbea15260f301e326cefa5b7d3897c73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref> *</type>
-        <definition>elem_t* handleArg</definition>
-        <argsstring>(Proc *cpu)</argsstring>
-        <name>handleArg</name>
-        <param>
-          <type><ref refid="struct_proc" kindref="compound">Proc</ref> *</type>
-          <declname>cpu</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="processor/proc_head.h" line="59" column="8" declfile="processor/proc_head.h" declline="59" declcolumn="8"/>
+        <location file="processor/proc_head.h" line="71" column="6" bodyfile="processor/proc_funcs.cpp" bodystart="53" bodyend="62" declfile="processor/proc_head.h" declline="71" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="proc__head_8h_1abbcaa80443c83c47ea972ef5927664fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -329,12 +373,23 @@
           <declname>cpu</declname>
         </param>
         <briefdescription>
+<para>Dumps processor into logs_out. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cpu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ptr to var to dump </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="61" column="6" bodyfile="processor/proc_funcs.cpp" bodystart="153" bodyend="185" declfile="processor/proc_head.h" declline="61" declcolumn="6"/>
+        <location file="processor/proc_head.h" line="75" column="6" bodyfile="processor/proc_funcs.cpp" bodystart="153" bodyend="185" declfile="processor/proc_head.h" declline="75" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="proc__head_8h_1a8de894df7ac03647ab4593bbd226e7ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -346,12 +401,23 @@
           <declname>cpu</declname>
         </param>
         <briefdescription>
+<para>Checks for file signature and proc version. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cpu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ptr to var to dump </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="63" column="6" bodyfile="processor/proc_funcs.cpp" bodystart="64" bodyend="84" declfile="processor/proc_head.h" declline="63" declcolumn="6"/>
+        <location file="processor/proc_head.h" line="79" column="6" bodyfile="processor/proc_funcs.cpp" bodystart="64" bodyend="84" declfile="processor/proc_head.h" declline="79" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="proc__head_8h_1ac394503074d575a0ad623a66d084b4f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -363,12 +429,23 @@
           <declname>cpu</declname>
         </param>
         <briefdescription>
+<para>Runs code. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cpu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ptr to var to run from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="65" column="6" bodyfile="processor/proc_funcs.cpp" bodystart="187" bodyend="218" declfile="processor/proc_head.h" declline="65" declcolumn="6"/>
+        <location file="processor/proc_head.h" line="83" column="6" bodyfile="processor/proc_funcs.cpp" bodystart="187" bodyend="218" declfile="processor/proc_head.h" declline="83" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="proc__head_8h_1a6789f3dda443cc297083852dad3fdf66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref></type>
@@ -380,12 +457,25 @@
           <declname>cpu</declname>
         </param>
         <briefdescription>
+<para>Gets a elem_t arg as a value. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cpu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ptr to cpu to read from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>elem_t value </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="67" column="8" bodyfile="processor/proc_funcs.cpp" bodystart="86" bodyend="108" declfile="processor/proc_head.h" declline="67" declcolumn="8"/>
+        <location file="processor/proc_head.h" line="88" column="8" bodyfile="processor/proc_funcs.cpp" bodystart="86" bodyend="108" declfile="processor/proc_head.h" declline="88" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="proc__head_8h_1a6bf71e3a4241fd51c9f3d5c36f673037" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref> *</type>
@@ -397,12 +487,25 @@
           <declname>cpu</declname>
         </param>
         <briefdescription>
+<para>Gets a elem_t* arg. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cpu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ptr to cpu to read from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>elem_t* value </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="69" column="8" bodyfile="processor/proc_funcs.cpp" bodystart="110" bodyend="140" declfile="processor/proc_head.h" declline="69" declcolumn="8"/>
+        <location file="processor/proc_head.h" line="93" column="8" bodyfile="processor/proc_funcs.cpp" bodystart="110" bodyend="140" declfile="processor/proc_head.h" declline="93" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="proc__head_8h_1a2fdff7c8f755b16495c35026ae397d44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -414,12 +517,25 @@
           <declname>cpu</declname>
         </param>
         <briefdescription>
+<para>Gets an ip. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cpu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ptr to cpu to read from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int value </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="71" column="5" bodyfile="processor/proc_funcs.cpp" bodystart="142" bodyend="151" declfile="processor/proc_head.h" declline="71" declcolumn="5"/>
+        <location file="processor/proc_head.h" line="98" column="5" bodyfile="processor/proc_funcs.cpp" bodystart="142" bodyend="151" declfile="processor/proc_head.h" declline="98" declcolumn="5"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -436,68 +552,66 @@
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>header(stack)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>header(text)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1a49e378fb51788d3e488e0fcf7576ebba" kindref="member">Proc_version</ref>[3];</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12" refid="proc__head_8h_1aa73c95cb26c92f512ae3fd6693f5a05b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ProcDump(cpu)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="13"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>StackDump<sp/>(cpu-&gt;stk);<sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="14"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>StackDump<sp/>(cpu-&gt;funcIp);<sp/>\</highlight></codeline>
-<codeline lineno="15"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>ProcDumpInside<sp/>(cpu);<sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17" refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191" kindref="member">reg</ref><sp/>{</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19" refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a99f5dab094268bbd7e983e639227a450" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a99f5dab094268bbd7e983e639227a450" kindref="member">r0x</ref><sp/>=<sp/>0,</highlight></codeline>
-<codeline lineno="20" refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a7c4e2b501efe08a200520265ddd187d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a7c4e2b501efe08a200520265ddd187d8" kindref="member">rax</ref><sp/>=<sp/>1,</highlight></codeline>
-<codeline lineno="21" refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a5167d112e4a951e0101af94ac6632619" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a5167d112e4a951e0101af94ac6632619" kindref="member">rbx</ref><sp/>=<sp/>2,</highlight></codeline>
-<codeline lineno="22" refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191afd03e081e40ff976547d3f5246910740" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191afd03e081e40ff976547d3f5246910740" kindref="member">rcx</ref><sp/>=<sp/>3,</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a6cfff3aee7c6bc56dad8b0dff2a4fe98" kindref="member">rdx</ref><sp/>=<sp/>4</highlight></codeline>
-<codeline lineno="24" refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a6cfff3aee7c6bc56dad8b0dff2a4fe98" refkind="member"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26" refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="asm__head_8h_1adad90fa030af56592ad194a41341ffcd" kindref="member">masks</ref><sp/>{</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28" refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2" kindref="member">MASK_RAM</ref><sp/>=<sp/>1&lt;&lt;7,</highlight></codeline>
-<codeline lineno="29" refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d" kindref="member">MASK_REG</ref><sp/>=<sp/>1&lt;&lt;6,</highlight></codeline>
-<codeline lineno="30" refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f" kindref="member">MASK_IMM</ref><sp/>=<sp/>1&lt;&lt;5,</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70" kindref="member">MASK_CMD</ref><sp/>=<sp/>(1&lt;&lt;5)<sp/>-<sp/>1</highlight></codeline>
-<codeline lineno="32" refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70" refkind="member"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="proc__head_8h_1a04887de32e1f60f8dc157312b8f27665" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="asm__head_8h_1a04887de32e1f60f8dc157312b8f27665" kindref="member">CMD</ref><sp/>{</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#undef<sp/>DEF_CMD</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37" refid="proc__head_8h_1aa020607c1c6794b5b426e2d70c488153" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>DEF_CMD(name,<sp/>num,<sp/>arg,<sp/>code)<sp/>CMD_##name<sp/>=<sp/>num,</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>header(cmd)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42" refid="struct_proc" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_proc" kindref="compound">Proc</ref><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1a49e378fb51788d3e488e0fcf7576ebba" kindref="member">Proc_version</ref>[3];</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="proc__head_8h_1aa73c95cb26c92f512ae3fd6693f5a05b" refkind="member"><highlight class="preprocessor">#define<sp/>ProcDump(cpu)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>StackDump<sp/>(cpu-&gt;stk);<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>StackDump<sp/>(cpu-&gt;funcIp);<sp/>\</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>ProcDumpInside<sp/>(cpu);<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="20" refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191" kindref="member">reg</ref><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a99f5dab094268bbd7e983e639227a450" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a99f5dab094268bbd7e983e639227a450" kindref="member">r0x</ref><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="23" refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a7c4e2b501efe08a200520265ddd187d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a7c4e2b501efe08a200520265ddd187d8" kindref="member">rax</ref><sp/>=<sp/>1,<sp/></highlight></codeline>
+<codeline lineno="24" refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a5167d112e4a951e0101af94ac6632619" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a5167d112e4a951e0101af94ac6632619" kindref="member">rbx</ref><sp/>=<sp/>2,<sp/></highlight></codeline>
+<codeline lineno="25" refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191afd03e081e40ff976547d3f5246910740" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191afd03e081e40ff976547d3f5246910740" kindref="member">rcx</ref><sp/>=<sp/>3,<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a6cfff3aee7c6bc56dad8b0dff2a4fe98" kindref="member">rdx</ref><sp/>=<sp/>4<sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="proc__head_8h_1ad53b1ff8af38a0fc111be7b9fd536191a6cfff3aee7c6bc56dad8b0dff2a4fe98" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcd" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="asm__head_8h_1adad90fa030af56592ad194a41341ffcd" kindref="member">masks</ref><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2" kindref="member">MASK_RAM</ref><sp/>=<sp/>1&lt;&lt;7,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33" refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d" kindref="member">MASK_REG</ref><sp/>=<sp/>1&lt;&lt;6,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34" refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f" kindref="member">MASK_IMM</ref><sp/>=<sp/>1&lt;&lt;5,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70" kindref="member">MASK_CMD</ref><sp/>=<sp/>(1&lt;&lt;5)<sp/>-<sp/>1<sp/></highlight></codeline>
+<codeline lineno="36" refid="proc__head_8h_1adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="proc__head_8h_1a04887de32e1f60f8dc157312b8f27665" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="asm__head_8h_1a04887de32e1f60f8dc157312b8f27665" kindref="member">CMD</ref><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#undef<sp/>DEF_CMD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="proc__head_8h_1aa020607c1c6794b5b426e2d70c488153" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>DEF_CMD(name,<sp/>num,<sp/>arg,<sp/>code)<sp/>CMD_##name<sp/>=<sp/>num,</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44" refid="struct_proc_1a3f965d8be71bc5b90fe4be02a5b7451f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><ref refid="struct_proc_1a3f965d8be71bc5b90fe4be02a5b7451f" kindref="member">code</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>NULL;</highlight></codeline>
-<codeline lineno="45" refid="struct_proc_1a3e7ddbbef3cb2bdd7643696481a7dc9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><ref refid="struct_proc_1a3e7ddbbef3cb2bdd7643696481a7dc9a" kindref="member">codeSize</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="46" refid="struct_proc_1a7dcaf8c7ceca34684ad6425a7cf8383f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref><sp/><sp/><ref refid="struct_proc_1a7dcaf8c7ceca34684ad6425a7cf8383f" kindref="member">regs</ref>[5]<sp/><sp/>=<sp/>{0};</highlight></codeline>
-<codeline lineno="47" refid="struct_proc_1a035d414acb2f1e68268e1e01b31d3639" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct_proc_1a035d414acb2f1e68268e1e01b31d3639" kindref="member">ip</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="48" refid="struct_proc_1a9c68bfb7e83ba9b17440159dade966aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_stack" kindref="compound">Stack</ref><sp/><sp/><sp/><ref refid="struct_proc_1a9c68bfb7e83ba9b17440159dade966aa" kindref="member">stk</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>{};</highlight></codeline>
-<codeline lineno="49" refid="struct_proc_1abf87102fddf47ab184fd376d2ce8d685" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_stack" kindref="compound">Stack</ref><sp/><sp/><sp/><ref refid="struct_proc_1abf87102fddf47ab184fd376d2ce8d685" kindref="member">funcIp</ref><sp/><sp/><sp/>=<sp/>{};</highlight></codeline>
-<codeline lineno="50" refid="struct_proc_1a8ec1b6bbc3ed71f89837c24999bc42d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref>*<sp/><ref refid="struct_proc_1a8ec1b6bbc3ed71f89837c24999bc42d4" kindref="member">ram</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>NULL;</highlight></codeline>
-<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="proc__head_8h_1a3a519805ef72bd5d68daafbaaf66d3f2" kindref="member">handleComLine</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[]);</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1aea285898f9e99e5de92495f68bc409e3" kindref="member">ProcCtor</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1aeb16925431194abc0b606715b1b35e48" kindref="member">ProcDtor</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>header(cmd)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="struct_proc" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_proc" kindref="compound">Proc</ref><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="struct_proc_1a3f965d8be71bc5b90fe4be02a5b7451f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><ref refid="struct_proc_1a3f965d8be71bc5b90fe4be02a5b7451f" kindref="member">code</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>NULL;<sp/></highlight></codeline>
+<codeline lineno="51" refid="struct_proc_1a3e7ddbbef3cb2bdd7643696481a7dc9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><ref refid="struct_proc_1a3e7ddbbef3cb2bdd7643696481a7dc9a" kindref="member">codeSize</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52" refid="struct_proc_1a7dcaf8c7ceca34684ad6425a7cf8383f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref><sp/><sp/><ref refid="struct_proc_1a7dcaf8c7ceca34684ad6425a7cf8383f" kindref="member">regs</ref>[5]<sp/><sp/>=<sp/>{0};<sp/><sp/></highlight></codeline>
+<codeline lineno="53" refid="struct_proc_1a035d414acb2f1e68268e1e01b31d3639" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct_proc_1a035d414acb2f1e68268e1e01b31d3639" kindref="member">ip</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54" refid="struct_proc_1a9c68bfb7e83ba9b17440159dade966aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_stack" kindref="compound">Stack</ref><sp/><sp/><sp/><ref refid="struct_proc_1a9c68bfb7e83ba9b17440159dade966aa" kindref="member">stk</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>{};<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55" refid="struct_proc_1abf87102fddf47ab184fd376d2ce8d685" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_stack" kindref="compound">Stack</ref><sp/><sp/><sp/><ref refid="struct_proc_1abf87102fddf47ab184fd376d2ce8d685" kindref="member">funcIp</ref><sp/><sp/><sp/>=<sp/>{};<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="struct_proc_1a8ec1b6bbc3ed71f89837c24999bc42d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref>*<sp/><ref refid="struct_proc_1a8ec1b6bbc3ed71f89837c24999bc42d4" kindref="member">ram</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>NULL;<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59" refid="proc__head_8h_1afbea15260f301e326cefa5b7d3897c73" refkind="member"><highlight class="normal"><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref>*<sp/><ref refid="proc__head_8h_1afbea15260f301e326cefa5b7d3897c73" kindref="member">handleArg</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1abbcaa80443c83c47ea972ef5927664fd" kindref="member">ProcDumpInside</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1a8de894df7ac03647ab4593bbd226e7ca" kindref="member">checkFileSign</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
+<codeline lineno="63"><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="proc__head_8h_1a3a519805ef72bd5d68daafbaaf66d3f2" kindref="member">handleComLine</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[]);</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1ac394503074d575a0ad623a66d084b4f0" kindref="member">ProcRunCode</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref><sp/><ref refid="proc__head_8h_1a6789f3dda443cc297083852dad3fdf66" kindref="member">getValueArg</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
+<codeline lineno="67"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1aea285898f9e99e5de92495f68bc409e3" kindref="member">ProcCtor</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref>*<sp/><ref refid="proc__head_8h_1a6bf71e3a4241fd51c9f3d5c36f673037" kindref="member">getPtrArg</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1a2fdff7c8f755b16495c35026ae397d44" kindref="member">getIpArg</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
+<codeline lineno="71"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1aeb16925431194abc0b606715b1b35e48" kindref="member">ProcDtor</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1abbcaa80443c83c47ea972ef5927664fd" kindref="member">ProcDumpInside</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1a8de894df7ac03647ab4593bbd226e7ca" kindref="member">checkFileSign</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1ac394503074d575a0ad623a66d084b4f0" kindref="member">ProcRunCode</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref><sp/><ref refid="proc__head_8h_1a6789f3dda443cc297083852dad3fdf66" kindref="member">getValueArg</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref>*<sp/><ref refid="proc__head_8h_1a6bf71e3a4241fd51c9f3d5c36f673037" kindref="member">getPtrArg</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="proc__head_8h_1a2fdff7c8f755b16495c35026ae397d44" kindref="member">getIpArg</ref><sp/>(<ref refid="struct_proc" kindref="compound">Proc</ref>*<sp/>cpu);</highlight></codeline>
     </programlisting>
     <location file="processor/proc_head.h"/>
   </compounddef>

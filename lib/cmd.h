@@ -1,18 +1,30 @@
+/*! \mainpage Index page
+
+    \section Intorduction
+
+    This is a soft-cpu project with it's own asm language and hand written function to work with text and a stack to store data during it's work.
+
+    \section ASM
+
+    Language consists of commands: push, pop, add, sub, mult, div, out. dump, hlt, pop, jmp, ja, jae, jb, jbe, je, jne, call, ret, video, in. More info on those commands can
+    be seen in cmd.h, i.e. how they work and what they do.
+*/
+
 #ifndef GENERAL_CMD
 
-typedef double elem_t;
-#define elem_t_F "%Lf"
+typedef double elem_t; ///< Base element of cpu
+#define elem_t_F "%Lf" ///< Printf format string for elem_t
 
 #define PUSH(val) StackPush (&cpu->stk, val)
 #define POP StackPop (&cpu->stk)
 
-
-#define signa "CP02"
+#define signa "CP02" ///<signature of a fine file
 
 #define DEF_CMD(name, num, arg, code) ;
 
+
 #define GENERAL_CMD
-#else
+#else ///< Template for auto code gen starts here
 
 DEF_CMD (push, 1, 1, {
 
@@ -144,5 +156,10 @@ DEF_CMD (in, 19, 0, {
     elem_t val = 0;
     scanf (elem_t_F, &val);
     PUSH (val);
+})
+
+DEF_CMD (sqrt, 20, 0, {
+
+    PUSH (sqrt (POP));
 })
 #endif

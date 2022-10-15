@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Index page</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="index_1Intorduction">
+<title>Intorduction</title>
+<para>This is a soft-cpu project with it&apos;s own asm language and hand written function to work with text and a stack to store data during it&apos;s work.</para>
+</sect1>
+<sect1 id="index_1ASM">
+<title>ASM</title>
+<para>Language consists of commands: push, pop, add, sub, mult, div, out. dump, hlt, pop, jmp, ja, jae, jb, jbe, je, jne, call, ret, video, in. More info on those commands can be seen in <ref refid="cmd_8h" kindref="compound">cmd.h</ref>, i.e. how they work and what they do. </para>
+</sect1>
+    </detaileddescription>
+    <location file="lib/cmd.h"/>
+  </compounddef>
+</doxygen>

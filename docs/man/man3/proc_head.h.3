@@ -23,6 +23,7 @@ processor/proc_head.h
 .ti -1c
 .RI "struct \fBProc\fP"
 .br
+.RI "Struct to store data of a running soft cpu\&. "
 .in -1c
 .SS "Macros"
 
@@ -30,6 +31,7 @@ processor/proc_head.h
 .ti -1c
 .RI "#define \fBProcDump\fP(cpu)"
 .br
+.RI "Macros for dumping processor\&. "
 .ti -1c
 .RI "#define \fBDEF_CMD\fP(name,  num,  arg,  code)   CMD_##name = num,"
 .br
@@ -40,12 +42,15 @@ processor/proc_head.h
 .ti -1c
 .RI "enum \fBreg\fP { \fBr0x\fP = 0, \fBrax\fP = 1, \fBrbx\fP = 2, \fBrcx\fP = 3, \fBrdx\fP = 4 }"
 .br
+.RI "names of regs array elements - regs[r*x] "
 .ti -1c
 .RI "enum \fBmasks\fP { \fBMASK_RAM\fP = 1<<7, \fBMASK_REG\fP = 1<<6, \fBMASK_IMM\fP = 1<<5, \fBMASK_CMD\fP = (1<<5) - 1, \fBMASK_RAM\fP = 1<<7, \fBMASK_REG\fP = 1<<6, \fBMASK_IMM\fP = 1<<5, \fBMASK_CMD\fP = (1<<5) - 1 }"
 .br
+.RI "Masks for bits in command byte\&. "
 .ti -1c
 .RI "enum \fBCMD\fP "
 .br
+.RI "Enumerator for command number (generated automatically) "
 .in -1c
 .SS "Functions"
 
@@ -53,33 +58,39 @@ processor/proc_head.h
 .ti -1c
 .RI "char * \fBhandleComLine\fP (int argc, char *argv[])"
 .br
+.RI "Handles command line arguments\&. "
 .ti -1c
 .RI "void \fBProcCtor\fP (\fBProc\fP *cpu)"
 .br
+.RI "Constructs a \fBProc\fP var\&. "
 .ti -1c
 .RI "void \fBProcDtor\fP (\fBProc\fP *cpu)"
 .br
-.ti -1c
-.RI "\fBelem_t\fP * \fBhandleArg\fP (\fBProc\fP *cpu)"
-.br
+.RI "Destructs a \fBProc\fP var\&. "
 .ti -1c
 .RI "void \fBProcDumpInside\fP (\fBProc\fP *cpu)"
 .br
+.RI "Dumps processor into logs_out\&. "
 .ti -1c
 .RI "void \fBcheckFileSign\fP (\fBProc\fP *cpu)"
 .br
+.RI "Checks for file signature and proc version\&. "
 .ti -1c
 .RI "void \fBProcRunCode\fP (\fBProc\fP *cpu)"
 .br
+.RI "Runs code\&. "
 .ti -1c
 .RI "\fBelem_t\fP \fBgetValueArg\fP (\fBProc\fP *cpu)"
 .br
+.RI "Gets a elem_t arg as a value\&. "
 .ti -1c
 .RI "\fBelem_t\fP * \fBgetPtrArg\fP (\fBProc\fP *cpu)"
 .br
+.RI "Gets a elem_t* arg\&. "
 .ti -1c
 .RI "int \fBgetIpArg\fP (\fBProc\fP *cpu)"
 .br
+.RI "Gets an ip\&. "
 .in -1c
 .SS "Variables"
 
@@ -87,13 +98,14 @@ processor/proc_head.h
 .ti -1c
 .RI "char \fBProc_version\fP [3]"
 .br
+.RI "Variable for processor version, declared in \fBproc_funcs\&.cpp\fP\&. "
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
 .SS "#define DEF_CMD(name, num, arg, code)   CMD_##name = num,"
 
 .PP
-Definition at line 37 of file proc_head\&.h\&.
+Definition at line 42 of file proc_head\&.h\&.
 .SS "#define ProcDump(cpu)"
 \fBValue:\fP
 .PP
@@ -103,90 +115,212 @@ Definition at line 37 of file proc_head\&.h\&.
     ProcDumpInside (cpu);    \
 .fi
 .PP
-Definition at line 12 of file proc_head\&.h\&.
+Macros for dumping processor\&. 
+.PP
+Definition at line 14 of file proc_head\&.h\&.
 .SH "Enumeration Type Documentation"
 .PP 
 .SS "enum \fBCMD\fP"
 
 .PP
-Definition at line 34 of file proc_head\&.h\&.
+Enumerator for command number (generated automatically) 
+.PP
+Definition at line 39 of file proc_head\&.h\&.
 .SS "enum \fBmasks\fP"
 
+.PP
+Masks for bits in command byte\&. 
 .PP
 \fBEnumerator\fP
 .in +1c
 .TP
 \fB\fIMASK_RAM \fP\fP
+Ram bit\&. 
 .TP
 \fB\fIMASK_REG \fP\fP
+Register bit\&. 
 .TP
 \fB\fIMASK_IMM \fP\fP
+Immidiate constant bit\&. 
 .TP
 \fB\fIMASK_CMD \fP\fP
+Bits for command number\&. 
 .TP
 \fB\fIMASK_RAM \fP\fP
+Mask for ram access\&. 
 .TP
 \fB\fIMASK_REG \fP\fP
+Mask for reg access\&. 
 .TP
 \fB\fIMASK_IMM \fP\fP
+Mask for immidiate constant\&. 
 .TP
 \fB\fIMASK_CMD \fP\fP
+Mask for actual command number\&. 
 .PP
-Definition at line 26 of file proc_head\&.h\&.
+Definition at line 30 of file proc_head\&.h\&.
 .SS "enum \fBreg\fP"
 
+.PP
+names of regs array elements - regs[r*x] 
 .PP
 \fBEnumerator\fP
 .in +1c
 .TP
 \fB\fIr0x \fP\fP
+Zero register that servers for wrong address\&. 
 .TP
 \fB\fIrax \fP\fP
+First reg\&. 
 .TP
 \fB\fIrbx \fP\fP
+Second reg\&. 
 .TP
 \fB\fIrcx \fP\fP
+Third reg\&. 
 .TP
 \fB\fIrdx \fP\fP
+Fourth reg\&. 
 .PP
-Definition at line 17 of file proc_head\&.h\&.
+Definition at line 20 of file proc_head\&.h\&.
 .SH "Function Documentation"
 .PP 
 .SS "void checkFileSign (\fBProc\fP * cpu)"
+
+.PP
+Checks for file signature and proc version\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcpu\fP Ptr to var to dump 
+.RE
+.PP
 
 .PP
 Definition at line 64 of file proc_funcs\&.cpp\&.
 .SS "int getIpArg (\fBProc\fP * cpu)"
 
 .PP
+Gets an ip\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcpu\fP Ptr to cpu to read from 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int value 
+.RE
+.PP
+
+.PP
 Definition at line 142 of file proc_funcs\&.cpp\&.
 .SS "\fBelem_t\fP* getPtrArg (\fBProc\fP * cpu)"
+
+.PP
+Gets a elem_t* arg\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcpu\fP Ptr to cpu to read from 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+elem_t* value 
+.RE
+.PP
 
 .PP
 Definition at line 110 of file proc_funcs\&.cpp\&.
 .SS "\fBelem_t\fP getValueArg (\fBProc\fP * cpu)"
 
 .PP
-Definition at line 86 of file proc_funcs\&.cpp\&.
-.SS "\fBelem_t\fP* handleArg (\fBProc\fP * cpu)"
+Gets a elem_t arg as a value\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcpu\fP Ptr to cpu to read from 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+elem_t value 
+.RE
+.PP
 
+.PP
+Definition at line 86 of file proc_funcs\&.cpp\&.
 .SS "char* handleComLine (int argc, char * argv[])"
+
+.PP
+Handles command line arguments\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargc\fP Amount of args 
+.br
+\fIargv\fP Array of args 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Name of file to read from 
+.RE
+.PP
 
 .PP
 Definition at line 5 of file proc_funcs\&.cpp\&.
 .SS "void ProcCtor (\fBProc\fP * cpu)"
 
 .PP
+Constructs a \fBProc\fP var\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcpu\fP Ptr to var to construct 
+.RE
+.PP
+
+.PP
 Definition at line 38 of file proc_funcs\&.cpp\&.
 .SS "void ProcDtor (\fBProc\fP * cpu)"
+
+.PP
+Destructs a \fBProc\fP var\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcpu\fP Ptr to var to destruct 
+.RE
+.PP
 
 .PP
 Definition at line 53 of file proc_funcs\&.cpp\&.
 .SS "void ProcDumpInside (\fBProc\fP * cpu)"
 
 .PP
+Dumps processor into logs_out\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcpu\fP Ptr to var to dump 
+.RE
+.PP
+
+.PP
 Definition at line 153 of file proc_funcs\&.cpp\&.
 .SS "void ProcRunCode (\fBProc\fP * cpu)"
+
+.PP
+Runs code\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcpu\fP Ptr to var to run from 
+.RE
+.PP
 
 .PP
 Definition at line 187 of file proc_funcs\&.cpp\&.
@@ -194,6 +328,8 @@ Definition at line 187 of file proc_funcs\&.cpp\&.
 .PP 
 .SS "char Proc_version[3]\fC [extern]\fP"
 
+.PP
+Variable for processor version, declared in \fBproc_funcs\&.cpp\fP\&. 
 .PP
 Definition at line 3 of file proc_funcs\&.cpp\&.
 .SH "Author"

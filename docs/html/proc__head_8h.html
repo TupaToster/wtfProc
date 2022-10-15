@@ -28,7 +28,7 @@
    <div id="projectname">Soft cpu
    &#160;<span id="projectnumber">2</span>
    </div>
-   <div id="projectbrief">Cpu emulator program with it&#39;s own ams langauge</div>
+   <div id="projectbrief">Cpu emulator program with it&#39;s own asm langauge</div>
   </td>
  </tr>
  </tbody>
@@ -104,11 +104,13 @@ $(document).ready(function(){initNavTree('proc__head_8h.html',''); initResizable
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_proc.html">Proc</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to store data of a running soft cpu.  <a href="struct_proc.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:aa73c95cb26c92f512ae3fd6693f5a05b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="proc__head_8h.html#aa73c95cb26c92f512ae3fd6693f5a05b">ProcDump</a>(cpu)</td></tr>
+<tr class="memdesc:aa73c95cb26c92f512ae3fd6693f5a05b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macros for dumping processor.  <a href="proc__head_8h.html#aa73c95cb26c92f512ae3fd6693f5a05b">More...</a><br /></td></tr>
 <tr class="separator:aa73c95cb26c92f512ae3fd6693f5a05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa020607c1c6794b5b426e2d70c488153"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="proc__head_8h.html#aa020607c1c6794b5b426e2d70c488153">DEF_CMD</a>(name,  num,  arg,  code)&#160;&#160;&#160;CMD_##name = num,</td></tr>
 <tr class="separator:aa020607c1c6794b5b426e2d70c488153"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,6 +126,7 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="proc__head_8h.html#ad53b1ff8af38a0fc111be7b9fd536191a6cfff3aee7c6bc56dad8b0dff2a4fe98">rdx</a> = 4
 <br />
  }</td></tr>
+<tr class="memdesc:ad53b1ff8af38a0fc111be7b9fd536191"><td class="mdescLeft">&#160;</td><td class="mdescRight">names of regs array elements - regs[r*x]  <a href="proc__head_8h.html#ad53b1ff8af38a0fc111be7b9fd536191">More...</a><br /></td></tr>
 <tr class="separator:ad53b1ff8af38a0fc111be7b9fd536191"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adad90fa030af56592ad194a41341ffcd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="proc__head_8h.html#adad90fa030af56592ad194a41341ffcd">masks</a> { <br />
 &#160;&#160;<a class="el" href="asm__head_8h.html#adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2">MASK_RAM</a> = 1&lt;&lt;7
@@ -137,36 +140,46 @@ Enumerations</h2></td></tr>
 , <a class="el" href="proc__head_8h.html#adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70">MASK_CMD</a> = (1&lt;&lt;5) - 1
 <br />
  }</td></tr>
+<tr class="memdesc:adad90fa030af56592ad194a41341ffcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Masks for bits in command byte.  <a href="proc__head_8h.html#adad90fa030af56592ad194a41341ffcd">More...</a><br /></td></tr>
 <tr class="separator:adad90fa030af56592ad194a41341ffcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04887de32e1f60f8dc157312b8f27665"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="proc__head_8h.html#a04887de32e1f60f8dc157312b8f27665">CMD</a> </td></tr>
+<tr class="memdesc:a04887de32e1f60f8dc157312b8f27665"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerator for command number (generated automatically)  <a href="proc__head_8h.html#a04887de32e1f60f8dc157312b8f27665">More...</a><br /></td></tr>
 <tr class="separator:a04887de32e1f60f8dc157312b8f27665"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a3a519805ef72bd5d68daafbaaf66d3f2"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="proc__head_8h.html#a3a519805ef72bd5d68daafbaaf66d3f2">handleComLine</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a3a519805ef72bd5d68daafbaaf66d3f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles command line arguments.  <a href="proc__head_8h.html#a3a519805ef72bd5d68daafbaaf66d3f2">More...</a><br /></td></tr>
 <tr class="separator:a3a519805ef72bd5d68daafbaaf66d3f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea285898f9e99e5de92495f68bc409e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="proc__head_8h.html#aea285898f9e99e5de92495f68bc409e3">ProcCtor</a> (<a class="el" href="struct_proc.html">Proc</a> *cpu)</td></tr>
+<tr class="memdesc:aea285898f9e99e5de92495f68bc409e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="struct_proc.html" title="Struct to store data of a running soft cpu.">Proc</a> var.  <a href="proc__head_8h.html#aea285898f9e99e5de92495f68bc409e3">More...</a><br /></td></tr>
 <tr class="separator:aea285898f9e99e5de92495f68bc409e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb16925431194abc0b606715b1b35e48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="proc__head_8h.html#aeb16925431194abc0b606715b1b35e48">ProcDtor</a> (<a class="el" href="struct_proc.html">Proc</a> *cpu)</td></tr>
+<tr class="memdesc:aeb16925431194abc0b606715b1b35e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructs a <a class="el" href="struct_proc.html" title="Struct to store data of a running soft cpu.">Proc</a> var.  <a href="proc__head_8h.html#aeb16925431194abc0b606715b1b35e48">More...</a><br /></td></tr>
 <tr class="separator:aeb16925431194abc0b606715b1b35e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbea15260f301e326cefa5b7d3897c73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cmd_8h.html#a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="proc__head_8h.html#afbea15260f301e326cefa5b7d3897c73">handleArg</a> (<a class="el" href="struct_proc.html">Proc</a> *cpu)</td></tr>
-<tr class="separator:afbea15260f301e326cefa5b7d3897c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbcaa80443c83c47ea972ef5927664fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="proc__head_8h.html#abbcaa80443c83c47ea972ef5927664fd">ProcDumpInside</a> (<a class="el" href="struct_proc.html">Proc</a> *cpu)</td></tr>
+<tr class="memdesc:abbcaa80443c83c47ea972ef5927664fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dumps processor into logs_out.  <a href="proc__head_8h.html#abbcaa80443c83c47ea972ef5927664fd">More...</a><br /></td></tr>
 <tr class="separator:abbcaa80443c83c47ea972ef5927664fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8de894df7ac03647ab4593bbd226e7ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="proc__head_8h.html#a8de894df7ac03647ab4593bbd226e7ca">checkFileSign</a> (<a class="el" href="struct_proc.html">Proc</a> *cpu)</td></tr>
+<tr class="memdesc:a8de894df7ac03647ab4593bbd226e7ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for file signature and proc version.  <a href="proc__head_8h.html#a8de894df7ac03647ab4593bbd226e7ca">More...</a><br /></td></tr>
 <tr class="separator:a8de894df7ac03647ab4593bbd226e7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac394503074d575a0ad623a66d084b4f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="proc__head_8h.html#ac394503074d575a0ad623a66d084b4f0">ProcRunCode</a> (<a class="el" href="struct_proc.html">Proc</a> *cpu)</td></tr>
+<tr class="memdesc:ac394503074d575a0ad623a66d084b4f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs code.  <a href="proc__head_8h.html#ac394503074d575a0ad623a66d084b4f0">More...</a><br /></td></tr>
 <tr class="separator:ac394503074d575a0ad623a66d084b4f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6789f3dda443cc297083852dad3fdf66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cmd_8h.html#a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="proc__head_8h.html#a6789f3dda443cc297083852dad3fdf66">getValueArg</a> (<a class="el" href="struct_proc.html">Proc</a> *cpu)</td></tr>
+<tr class="memdesc:a6789f3dda443cc297083852dad3fdf66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a elem_t arg as a value.  <a href="proc__head_8h.html#a6789f3dda443cc297083852dad3fdf66">More...</a><br /></td></tr>
 <tr class="separator:a6789f3dda443cc297083852dad3fdf66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bf71e3a4241fd51c9f3d5c36f673037"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cmd_8h.html#a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="proc__head_8h.html#a6bf71e3a4241fd51c9f3d5c36f673037">getPtrArg</a> (<a class="el" href="struct_proc.html">Proc</a> *cpu)</td></tr>
+<tr class="memdesc:a6bf71e3a4241fd51c9f3d5c36f673037"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a elem_t* arg.  <a href="proc__head_8h.html#a6bf71e3a4241fd51c9f3d5c36f673037">More...</a><br /></td></tr>
 <tr class="separator:a6bf71e3a4241fd51c9f3d5c36f673037"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fdff7c8f755b16495c35026ae397d44"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="proc__head_8h.html#a2fdff7c8f755b16495c35026ae397d44">getIpArg</a> (<a class="el" href="struct_proc.html">Proc</a> *cpu)</td></tr>
+<tr class="memdesc:a2fdff7c8f755b16495c35026ae397d44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an ip.  <a href="proc__head_8h.html#a2fdff7c8f755b16495c35026ae397d44">More...</a><br /></td></tr>
 <tr class="separator:a2fdff7c8f755b16495c35026ae397d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a49e378fb51788d3e488e0fcf7576ebba"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="proc__head_8h.html#a49e378fb51788d3e488e0fcf7576ebba">Proc_version</a> [3]</td></tr>
+<tr class="memdesc:a49e378fb51788d3e488e0fcf7576ebba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable for processor version, declared in <a class="el" href="proc__funcs_8cpp.html">proc_funcs.cpp</a>.  <a href="proc__head_8h.html#a49e378fb51788d3e488e0fcf7576ebba">More...</a><br /></td></tr>
 <tr class="separator:a49e378fb51788d3e488e0fcf7576ebba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -208,7 +221,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00037">37</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00042">42</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
 
 </div>
 </div>
@@ -232,7 +245,9 @@ Variables</h2></td></tr>
 <div class="line">    ProcDumpInside (cpu);    \</div>
 <div class="ttc" id="astack_8h_html_a69595dc2450bd35617f155ffa5738490"><div class="ttname"><a href="stack_8h.html#a69595dc2450bd35617f155ffa5738490">StackDump</a></div><div class="ttdeci">#define StackDump(stk)</div><div class="ttdoc">Stack dump macros.</div><div class="ttdef"><b>Definition:</b> <a href="stack_8h_source.html#l00032">stack.h:32</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00012">12</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
+<p>Macros for dumping processor. </p>
+
+<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00014">14</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
 
 </div>
 </div>
@@ -249,7 +264,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00034">34</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
+<p>Enumerator for command number (generated automatically) </p>
+
+<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00039">39</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
 
 </div>
 </div>
@@ -264,18 +281,28 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Masks for bits in command byte. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2"></a>MASK_RAM&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d"></a>MASK_REG&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f"></a>MASK_IMM&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70"></a>MASK_CMD&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2"></a>MASK_RAM&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d"></a>MASK_REG&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f"></a>MASK_IMM&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70"></a>MASK_CMD&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2"></a>MASK_RAM&#160;</td><td class="fielddoc"><p>Ram bit. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d"></a>MASK_REG&#160;</td><td class="fielddoc"><p>Register bit. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f"></a>MASK_IMM&#160;</td><td class="fielddoc"><p>Immidiate constant bit. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70"></a>MASK_CMD&#160;</td><td class="fielddoc"><p>Bits for command number. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2"></a>MASK_RAM&#160;</td><td class="fielddoc"><p>Mask for ram access. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d"></a>MASK_REG&#160;</td><td class="fielddoc"><p>Mask for reg access. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f"></a>MASK_IMM&#160;</td><td class="fielddoc"><p>Mask for immidiate constant. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70"></a>MASK_CMD&#160;</td><td class="fielddoc"><p>Mask for actual command number. </p>
+</td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00026">26</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00030">30</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
 
 </div>
 </div>
@@ -290,15 +317,22 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>names of regs array elements - regs[r*x] </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad53b1ff8af38a0fc111be7b9fd536191a99f5dab094268bbd7e983e639227a450"></a>r0x&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad53b1ff8af38a0fc111be7b9fd536191a7c4e2b501efe08a200520265ddd187d8"></a>rax&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad53b1ff8af38a0fc111be7b9fd536191a5167d112e4a951e0101af94ac6632619"></a>rbx&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad53b1ff8af38a0fc111be7b9fd536191afd03e081e40ff976547d3f5246910740"></a>rcx&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad53b1ff8af38a0fc111be7b9fd536191a6cfff3aee7c6bc56dad8b0dff2a4fe98"></a>rdx&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad53b1ff8af38a0fc111be7b9fd536191a99f5dab094268bbd7e983e639227a450"></a>r0x&#160;</td><td class="fielddoc"><p>Zero register that servers for wrong address. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad53b1ff8af38a0fc111be7b9fd536191a7c4e2b501efe08a200520265ddd187d8"></a>rax&#160;</td><td class="fielddoc"><p>First reg. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad53b1ff8af38a0fc111be7b9fd536191a5167d112e4a951e0101af94ac6632619"></a>rbx&#160;</td><td class="fielddoc"><p>Second reg. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad53b1ff8af38a0fc111be7b9fd536191afd03e081e40ff976547d3f5246910740"></a>rcx&#160;</td><td class="fielddoc"><p>Third reg. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad53b1ff8af38a0fc111be7b9fd536191a6cfff3aee7c6bc56dad8b0dff2a4fe98"></a>rdx&#160;</td><td class="fielddoc"><p>Fourth reg. </p>
+</td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00017">17</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00020">20</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
 
 </div>
 </div>
@@ -318,6 +352,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Checks for file signature and proc version. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cpu</td><td>Ptr to var to dump </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="proc__funcs_8cpp_source.html#l00064">64</a> of file <a class="el" href="proc__funcs_8cpp_source.html">proc_funcs.cpp</a>.</p>
 
@@ -339,6 +381,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets an ip. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cpu</td><td>Ptr to cpu to read from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int value </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="proc__funcs_8cpp_source.html#l00142">142</a> of file <a class="el" href="proc__funcs_8cpp_source.html">proc_funcs.cpp</a>.</p>
 
 </div>
@@ -358,6 +409,15 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gets a elem_t* arg. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cpu</td><td>Ptr to cpu to read from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>elem_t* value </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="proc__funcs_8cpp_source.html#l00110">110</a> of file <a class="el" href="proc__funcs_8cpp_source.html">proc_funcs.cpp</a>.</p>
 
@@ -379,25 +439,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets a elem_t arg as a value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cpu</td><td>Ptr to cpu to read from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>elem_t value </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="proc__funcs_8cpp_source.html#l00086">86</a> of file <a class="el" href="proc__funcs_8cpp_source.html">proc_funcs.cpp</a>.</p>
-
-</div>
-</div>
-<a id="afbea15260f301e326cefa5b7d3897c73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbea15260f301e326cefa5b7d3897c73">&#9670;&nbsp;</a></span>handleArg()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="cmd_8h.html#a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</a>* handleArg </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_proc.html">Proc</a> *&#160;</td>
-          <td class="paramname"><em>cpu</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -427,6 +478,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Handles command line arguments. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>Amount of args </td></tr>
+    <tr><td class="paramname">argv</td><td>Array of args </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Name of file to read from </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="proc__funcs_8cpp_source.html#l00005">5</a> of file <a class="el" href="proc__funcs_8cpp_source.html">proc_funcs.cpp</a>.</p>
 
 </div>
@@ -446,6 +507,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="struct_proc.html" title="Struct to store data of a running soft cpu.">Proc</a> var. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cpu</td><td>Ptr to var to construct </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="proc__funcs_8cpp_source.html#l00038">38</a> of file <a class="el" href="proc__funcs_8cpp_source.html">proc_funcs.cpp</a>.</p>
 
@@ -467,6 +536,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Destructs a <a class="el" href="struct_proc.html" title="Struct to store data of a running soft cpu.">Proc</a> var. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cpu</td><td>Ptr to var to destruct </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="proc__funcs_8cpp_source.html#l00053">53</a> of file <a class="el" href="proc__funcs_8cpp_source.html">proc_funcs.cpp</a>.</p>
 
 </div>
@@ -487,6 +564,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Dumps processor into logs_out. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cpu</td><td>Ptr to var to dump </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="proc__funcs_8cpp_source.html#l00153">153</a> of file <a class="el" href="proc__funcs_8cpp_source.html">proc_funcs.cpp</a>.</p>
 
 </div>
@@ -506,6 +591,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Runs code. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cpu</td><td>Ptr to var to run from </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="proc__funcs_8cpp_source.html#l00187">187</a> of file <a class="el" href="proc__funcs_8cpp_source.html">proc_funcs.cpp</a>.</p>
 
@@ -531,6 +624,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Variable for processor version, declared in <a class="el" href="proc__funcs_8cpp.html">proc_funcs.cpp</a>. </p>
 
 <p class="definition">Definition at line <a class="el" href="proc__funcs_8cpp_source.html#l00003">3</a> of file <a class="el" href="proc__funcs_8cpp_source.html">proc_funcs.cpp</a>.</p>
 

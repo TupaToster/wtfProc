@@ -201,7 +201,6 @@
     <member refid="proc__head_8h_1a3a519805ef72bd5d68daafbaaf66d3f2" kind="function"><name>handleComLine</name></member>
     <member refid="proc__head_8h_1aea285898f9e99e5de92495f68bc409e3" kind="function"><name>ProcCtor</name></member>
     <member refid="proc__head_8h_1aeb16925431194abc0b606715b1b35e48" kind="function"><name>ProcDtor</name></member>
-    <member refid="proc__head_8h_1afbea15260f301e326cefa5b7d3897c73" kind="function"><name>handleArg</name></member>
     <member refid="proc__head_8h_1abbcaa80443c83c47ea972ef5927664fd" kind="function"><name>ProcDumpInside</name></member>
     <member refid="proc__head_8h_1a8de894df7ac03647ab4593bbd226e7ca" kind="function"><name>checkFileSign</name></member>
     <member refid="proc__head_8h_1ac394503074d575a0ad623a66d084b4f0" kind="function"><name>ProcRunCode</name></member>
@@ -214,5 +213,7 @@
   <compound refid="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir"><name>lib</name>
   </compound>
   <compound refid="dir_805c9f7d81aafc4cba6c5bc68aa4f714" kind="dir"><name>processor</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
   </compound>
 </doxygenindex>

@@ -44,6 +44,7 @@
         <name>ip</name>
         <initializer>= 0</initializer>
         <briefdescription>
+<para>Counts ip of current unstruction in cpu-&gt;code. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -58,6 +59,7 @@
         <name>errors</name>
         <initializer>= 0</initializer>
         <briefdescription>
+<para>Is a flag for if errors have occured. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>

@@ -28,7 +28,7 @@
    <div id="projectname">Soft cpu
    &#160;<span id="projectnumber">2</span>
    </div>
-   <div id="projectbrief">Cpu emulator program with it&#39;s own ams langauge</div>
+   <div id="projectbrief">Cpu emulator program with it&#39;s own asm langauge</div>
   </td>
  </tr>
  </tbody>
@@ -102,12 +102,16 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a3dbf87d57f9f11d4e10cf74b6887a21a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm__funcs_8cpp.html#a3dbf87d57f9f11d4e10cf74b6887a21a">writeBinInternal</a> (void *val, FILE *outFile, size_t sizeOfVar)</td></tr>
+<tr class="memdesc:a3dbf87d57f9f11d4e10cf74b6887a21a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal function for writeBin macros. Is a memcpy to file basically.  <a href="asm__funcs_8cpp.html#a3dbf87d57f9f11d4e10cf74b6887a21a">More...</a><br /></td></tr>
 <tr class="separator:a3dbf87d57f9f11d4e10cf74b6887a21a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afebc5259c059f1c13b2c3eb589bbd778"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm__funcs_8cpp.html#afebc5259c059f1c13b2c3eb589bbd778">handleArg</a> (<a class="el" href="struct_text.html">Text</a> *code, int line, FILE *outFile, char cmdNum, int tags[512])</td></tr>
+<tr class="memdesc:afebc5259c059f1c13b2c3eb589bbd778"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles argument of a command.  <a href="asm__funcs_8cpp.html#afebc5259c059f1c13b2c3eb589bbd778">More...</a><br /></td></tr>
 <tr class="separator:afebc5259c059f1c13b2c3eb589bbd778"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad94c08d203bdf6cd4fdad8a420073a85"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm__funcs_8cpp.html#ad94c08d203bdf6cd4fdad8a420073a85">handleComLine</a> (int argc, char *argv[], bool *aFlag, char **outFileName)</td></tr>
+<tr class="memdesc:ad94c08d203bdf6cd4fdad8a420073a85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles command line arguments.  <a href="asm__funcs_8cpp.html#ad94c08d203bdf6cd4fdad8a420073a85">More...</a><br /></td></tr>
 <tr class="separator:ad94c08d203bdf6cd4fdad8a420073a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4ecb6747b94442217ee22b2df052036"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm__funcs_8cpp.html#aa4ecb6747b94442217ee22b2df052036">writeWtf</a> (<a class="el" href="struct_text.html">Text</a> *codeFile, FILE *outFile, int tags[512])</td></tr>
+<tr class="memdesc:aa4ecb6747b94442217ee22b2df052036"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes into a .wtf binary file.  <a href="asm__funcs_8cpp.html#aa4ecb6747b94442217ee22b2df052036">More...</a><br /></td></tr>
 <tr class="separator:aa4ecb6747b94442217ee22b2df052036"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -161,9 +165,9 @@ Functions</h2></td></tr>
 <div class="line">                }                                                     \</div>
 <div class="line">            }                                                         \</div>
 <div class="line">            else</div>
-<div class="ttc" id="aasm_8cpp_html_a5c1a69eec57cefaee3f692279022198b"><div class="ttname"><a href="asm_8cpp.html#a5c1a69eec57cefaee3f692279022198b">ip</a></div><div class="ttdeci">size_t ip</div><div class="ttdef"><b>Definition:</b> <a href="asm_8cpp_source.html#l00003">asm.cpp:3</a></div></div>
-<div class="ttc" id="aasm__funcs_8cpp_html_afebc5259c059f1c13b2c3eb589bbd778"><div class="ttname"><a href="asm__funcs_8cpp.html#afebc5259c059f1c13b2c3eb589bbd778">handleArg</a></div><div class="ttdeci">void handleArg(Text *code, int line, FILE *outFile, char cmdNum, int tags[512])</div><div class="ttdef"><b>Definition:</b> <a href="asm__funcs_8cpp_source.html#l00012">asm_funcs.cpp:12</a></div></div>
-<div class="ttc" id="aasm__head_8h_html_acf265fc2407fbc5c1aa5909a1bc4e0d3"><div class="ttname"><a href="asm__head_8h.html#acf265fc2407fbc5c1aa5909a1bc4e0d3">tagCheck</a></div><div class="ttdeci">#define tagCheck(...)</div><div class="ttdef"><b>Definition:</b> <a href="asm__head_8h_source.html#l00010">asm_head.h:10</a></div></div>
+<div class="ttc" id="aasm_8cpp_html_a5c1a69eec57cefaee3f692279022198b"><div class="ttname"><a href="asm_8cpp.html#a5c1a69eec57cefaee3f692279022198b">ip</a></div><div class="ttdeci">size_t ip</div><div class="ttdoc">Counts ip of current unstruction in cpu-&gt;code.</div><div class="ttdef"><b>Definition:</b> <a href="asm_8cpp_source.html#l00003">asm.cpp:3</a></div></div>
+<div class="ttc" id="aasm__funcs_8cpp_html_afebc5259c059f1c13b2c3eb589bbd778"><div class="ttname"><a href="asm__funcs_8cpp.html#afebc5259c059f1c13b2c3eb589bbd778">handleArg</a></div><div class="ttdeci">void handleArg(Text *code, int line, FILE *outFile, char cmdNum, int tags[512])</div><div class="ttdoc">Handles argument of a command.</div><div class="ttdef"><b>Definition:</b> <a href="asm__funcs_8cpp_source.html#l00012">asm_funcs.cpp:12</a></div></div>
+<div class="ttc" id="aasm__head_8h_html_acf265fc2407fbc5c1aa5909a1bc4e0d3"><div class="ttname"><a href="asm__head_8h.html#acf265fc2407fbc5c1aa5909a1bc4e0d3">tagCheck</a></div><div class="ttdeci">#define tagCheck(...)</div><div class="ttdoc">Macros to check for no writing run of writeWtf.</div><div class="ttdef"><b>Definition:</b> <a href="asm__head_8h_source.html#l00011">asm_head.h:11</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -212,6 +216,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Handles argument of a command. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">code</td><td><a class="el" href="struct_text.html" title="Stores Text in format of string and array of Line structures.">Text</a> of program in asm </td></tr>
+    <tr><td class="paramname">line</td><td>Current line </td></tr>
+    <tr><td class="paramname">outFile</td><td>File to write to </td></tr>
+    <tr><td class="paramname">cmdNum</td><td>Number of command it's counting arg for </td></tr>
+    <tr><td class="paramname">tags</td><td>Array of tags for jumps </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="asm__funcs_8cpp_source.html#l00012">12</a> of file <a class="el" href="asm__funcs_8cpp_source.html">asm_funcs.cpp</a>.</p>
 
 </div>
@@ -254,6 +270,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Handles command line arguments. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>Amount of arguments </td></tr>
+    <tr><td class="paramname">argv</td><td>Array of arguments </td></tr>
+    <tr><td class="paramname">aFlag</td><td>Wrote by function. Indicates if no check for up to date (unused currently) </td></tr>
+    <tr><td class="paramname">outFileName</td><td>Wrote by function. Name of file to write to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Name of file to read from </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="asm__funcs_8cpp_source.html#l00140">140</a> of file <a class="el" href="asm__funcs_8cpp_source.html">asm_funcs.cpp</a>.</p>
 
 </div>
@@ -290,6 +318,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Internal function for writeBin macros. Is a memcpy to file basically. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>Value to write </td></tr>
+    <tr><td class="paramname">outFile</td><td>File to write to </td></tr>
+    <tr><td class="paramname">sizeOfVar</td><td>Size of variable </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="asm__funcs_8cpp_source.html#l00003">3</a> of file <a class="el" href="asm__funcs_8cpp_source.html">asm_funcs.cpp</a>.</p>
 
 </div>
@@ -325,6 +363,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Writes into a .wtf binary file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codeFile</td><td>Struct with source code </td></tr>
+    <tr><td class="paramname">outFile</td><td>File to write to </td></tr>
+    <tr><td class="paramname">tags</td><td>Array of tags for jumps </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="asm__funcs_8cpp_source.html#l00199">199</a> of file <a class="el" href="asm__funcs_8cpp_source.html">asm_funcs.cpp</a>.</p>
 

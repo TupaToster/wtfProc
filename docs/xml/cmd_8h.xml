@@ -26,12 +26,13 @@
         <name>elem_t_F</name>
         <initializer>&quot;%Lf&quot;</initializer>
         <briefdescription>
+<para>Printf format string for elem_t. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/cmd.h" line="4" column="9" bodyfile="lib/cmd.h" bodystart="4" bodyend="-1"/>
+        <location file="lib/cmd.h" line="16" column="9" bodyfile="lib/cmd.h" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="cmd_8h_1a5a3cbae2605a10e52067989632af015b" prot="public" static="no">
         <name>PUSH</name>
@@ -43,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/cmd.h" line="6" column="9" bodyfile="lib/cmd.h" bodystart="6" bodyend="-1"/>
+        <location file="lib/cmd.h" line="18" column="9" bodyfile="lib/cmd.h" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" prot="public" static="no">
         <name>POP</name>
@@ -54,18 +55,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/cmd.h" line="7" column="9" bodyfile="lib/cmd.h" bodystart="7" bodyend="-1"/>
+        <location file="lib/cmd.h" line="19" column="9" bodyfile="lib/cmd.h" bodystart="19" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="cmd_8h_1a72cfd02d18b30e2e3e5b2cf4053cc4b7" prot="public" static="no">
         <name>signa</name>
         <initializer>&quot;CP02&quot;</initializer>
         <briefdescription>
+<para>signature of a fine file </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/cmd.h" line="10" column="9" bodyfile="lib/cmd.h" bodystart="10" bodyend="-1"/>
+        <location file="lib/cmd.h" line="21" column="9" bodyfile="lib/cmd.h" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" prot="public" static="no">
         <name>DEF_CMD</name>
@@ -80,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/cmd.h" line="12" column="9" bodyfile="lib/cmd.h" bodystart="12" bodyend="-1"/>
+        <location file="lib/cmd.h" line="23" column="9" bodyfile="lib/cmd.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="cmd_8h_1aef87c62c8715fd1f2be4e7bca3740067" prot="public" static="no">
         <name>GENERAL_CMD</name>
@@ -90,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/cmd.h" line="14" column="9" bodyfile="lib/cmd.h" bodystart="14" bodyend="-1"/>
+        <location file="lib/cmd.h" line="26" column="9" bodyfile="lib/cmd.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -100,12 +102,13 @@
         <argsstring></argsstring>
         <name>elem_t</name>
         <briefdescription>
+<para>Base element of cpu. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/cmd.h" line="3" column="16" bodyfile="lib/cmd.h" bodystart="3" bodyend="-1"/>
+        <location file="lib/cmd.h" line="15" column="16" bodyfile="lib/cmd.h" bodystart="15" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -113,154 +116,155 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>GENERAL_CMD</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3" refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref>;</highlight></codeline>
-<codeline lineno="4" refid="cmd_8h_1a4700822ad9e0ed0526e8cf27557fdc1f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>elem_t_F<sp/>&quot;%Lf&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6" refid="cmd_8h_1a5a3cbae2605a10e52067989632af015b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PUSH(val)<sp/>StackPush<sp/>(&amp;cpu-&gt;stk,<sp/>val)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7" refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POP<sp/>StackPop<sp/>(&amp;cpu-&gt;stk)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10" refid="cmd_8h_1a72cfd02d18b30e2e3e5b2cf4053cc4b7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>signa<sp/>&quot;CP02&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12" refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEF_CMD(name,<sp/>num,<sp/>arg,<sp/>code)<sp/>;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14" refid="cmd_8h_1aef87c62c8715fd1f2be4e7bca3740067" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GENERAL_CMD</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(push,<sp/>1,<sp/>1,<sp/>{</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a5a3cbae2605a10e52067989632af015b" kindref="member">PUSH</ref><sp/>(valArg);</highlight></codeline>
-<codeline lineno="20"><highlight class="normal">})</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(add,<sp/>2,<sp/>0,<sp/>{</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a5a3cbae2605a10e52067989632af015b" kindref="member">PUSH</ref><sp/>(<ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref><sp/>+<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>);</highlight></codeline>
-<codeline lineno="25"><highlight class="normal">})</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(sub,<sp/>3,<sp/>0,<sp/>{</highlight></codeline>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GENERAL_CMD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref>;<sp/></highlight></codeline>
+<codeline lineno="16" refid="cmd_8h_1a4700822ad9e0ed0526e8cf27557fdc1f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>elem_t_F<sp/>&quot;%Lf&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="cmd_8h_1a5a3cbae2605a10e52067989632af015b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PUSH(val)<sp/>StackPush<sp/>(&amp;cpu-&gt;stk,<sp/>val)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POP<sp/>StackPop<sp/>(&amp;cpu-&gt;stk)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="cmd_8h_1a72cfd02d18b30e2e3e5b2cf4053cc4b7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>signa<sp/>&quot;CP02&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEF_CMD(name,<sp/>num,<sp/>arg,<sp/>code)<sp/>;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="cmd_8h_1aef87c62c8715fd1f2be4e7bca3740067" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GENERAL_CMD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref><sp/>temp<sp/>=<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a5a3cbae2605a10e52067989632af015b" kindref="member">PUSH</ref><sp/>(<ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref><sp/>-<sp/>temp);</highlight></codeline>
-<codeline lineno="31"><highlight class="normal">})</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(mult,<sp/>4,<sp/>0,<sp/>{</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a5a3cbae2605a10e52067989632af015b" kindref="member">PUSH</ref><sp/>(<ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref><sp/>*<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>);</highlight></codeline>
-<codeline lineno="36"><highlight class="normal">})</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(div,<sp/>5,<sp/>0,<sp/>{</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref><sp/>temp<sp/>=<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a5a3cbae2605a10e52067989632af015b" kindref="member">PUSH</ref><sp/>(<ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref><sp/>/<sp/>temp);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal">})</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(out,<sp/>6,<sp/>0,<sp/>{</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(<ref refid="cmd_8h_1a4700822ad9e0ed0526e8cf27557fdc1f" kindref="member">elem_t_F</ref><sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal">})</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(dump,<sp/>7,<sp/>0,<sp/>{</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1aa73c95cb26c92f512ae3fd6693f5a05b" kindref="member">ProcDump</ref><sp/>(cpu);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal">})</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(hlt,<sp/>0,<sp/>0,<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(push,<sp/>1,<sp/>1,<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a5a3cbae2605a10e52067989632af015b" kindref="member">PUSH</ref><sp/>(valArg);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">})</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(add,<sp/>2,<sp/>0,<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a5a3cbae2605a10e52067989632af015b" kindref="member">PUSH</ref><sp/>(<ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref><sp/>+<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">})</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(sub,<sp/>3,<sp/>0,<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref><sp/>temp<sp/>=<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a5a3cbae2605a10e52067989632af015b" kindref="member">PUSH</ref><sp/>(<ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref><sp/>-<sp/>temp);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">})</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(mult,<sp/>4,<sp/>0,<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a5a3cbae2605a10e52067989632af015b" kindref="member">PUSH</ref><sp/>(<ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref><sp/>*<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">})</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(div,<sp/>5,<sp/>0,<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref><sp/>temp<sp/>=<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a5a3cbae2605a10e52067989632af015b" kindref="member">PUSH</ref><sp/>(<ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref><sp/>/<sp/>temp);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">})</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>exit<sp/>(0);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal">})</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(pop,<sp/>8,<sp/>2,<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(out,<sp/>6,<sp/>0,<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(<ref refid="cmd_8h_1a4700822ad9e0ed0526e8cf27557fdc1f" kindref="member">elem_t_F</ref><sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">})</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>*ptrArg<sp/>=<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal">})</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(jmp,<sp/>9,<sp/>3,<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(dump,<sp/>7,<sp/>0,<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="proc__head_8h_1aa73c95cb26c92f512ae3fd6693f5a05b" kindref="member">ProcDump</ref><sp/>(cpu);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">})</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>cpu-&gt;ip<sp/>=<sp/>ipArg;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal">})</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(jb,<sp/>10,<sp/>3,<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(hlt,<sp/>0,<sp/>0,<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>exit<sp/>(0);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">})</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref><sp/>&gt;<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(pop,<sp/>8,<sp/>2,<sp/>{</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cpu-&gt;ip<sp/>=<sp/>ipArg;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="75"><highlight class="normal">})</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(jbe,<sp/>11,<sp/>3,<sp/>{</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref><sp/>&gt;=<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>*ptrArg<sp/>=<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">})</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(jmp,<sp/>9,<sp/>3,<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>cpu-&gt;ip<sp/>=<sp/>ipArg;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">})</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cpu-&gt;ip<sp/>=<sp/>ipArg;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="83"><highlight class="normal">})</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(jb,<sp/>10,<sp/>3,<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref><sp/>&gt;<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(ja,<sp/>12,<sp/>3,<sp/>{</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref><sp/>&lt;<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cpu-&gt;ip<sp/>=<sp/>ipArg;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">})</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cpu-&gt;ip<sp/>=<sp/>ipArg;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="91"><highlight class="normal">})</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(jbe,<sp/>11,<sp/>3,<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref><sp/>&gt;=<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(jae,<sp/>13,<sp/>3,<sp/>{</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref><sp/>&lt;=<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cpu-&gt;ip<sp/>=<sp/>ipArg;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">})</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cpu-&gt;ip<sp/>=<sp/>ipArg;</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="99"><highlight class="normal">})</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(ja,<sp/>12,<sp/>3,<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref><sp/>&lt;<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(je,<sp/>14,<sp/>3,<sp/>{</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref><sp/>==<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cpu-&gt;ip<sp/>=<sp/>ipArg;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">})</highlight></codeline>
 <codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cpu-&gt;ip<sp/>=<sp/>ipArg;</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="107"><highlight class="normal">})</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(jae,<sp/>13,<sp/>3,<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref><sp/>&lt;=<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(jne,<sp/>15,<sp/>3,<sp/>{</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref><sp/>!=<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cpu-&gt;ip<sp/>=<sp/>ipArg;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">})</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cpu-&gt;ip<sp/>=<sp/>ipArg;</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="115"><highlight class="normal">})</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(je,<sp/>14,<sp/>3,<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref><sp/>==<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(call,<sp/>16,<sp/>3,<sp/>{</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="stack_8cpp_1a6d12097bc4af03b6c58d724a10758a64" kindref="member">StackPush</ref><sp/>(&amp;cpu-&gt;funcIp,<sp/>cpu-&gt;ip);</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>cpu-&gt;ip<sp/>=<sp/>ipArg;</highlight></codeline>
-<codeline lineno="121"><highlight class="normal">})</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cpu-&gt;ip<sp/>=<sp/>ipArg;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">})</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(jne,<sp/>15,<sp/>3,<sp/>{</highlight></codeline>
 <codeline lineno="122"><highlight class="normal"></highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(ret,<sp/>17,<sp/>0,<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref><sp/>!=<sp/><ref refid="cmd_8h_1a0b06d6d6f5a540a62659a417de0ad69d" kindref="member">POP</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="124"><highlight class="normal"></highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>cpu-&gt;ip<sp/>=<sp/>(int)<ref refid="stack_8cpp_1a0941f0fc6decbec7accf45e25ea30eb5" kindref="member">StackPop</ref><sp/>(&amp;cpu-&gt;funcIp);</highlight></codeline>
-<codeline lineno="126"><highlight class="normal">})</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"></highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(video,<sp/>18,<sp/>0,<sp/>{</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"></highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>10;<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"></highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>10;<sp/>j++)<sp/>{</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"></highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cpu-&gt;ram[10*i<sp/>+<sp/>j]<sp/>==<sp/>0)<sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="139"><highlight class="normal">})</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"></highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(in,<sp/>19,<sp/>0,<sp/>{</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"></highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;Insert<sp/>number<sp/>to<sp/>push:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref><sp/>val<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>scanf<sp/>(<ref refid="cmd_8h_1a4700822ad9e0ed0526e8cf27557fdc1f" kindref="member">elem_t_F</ref>,<sp/>&amp;val);</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a5a3cbae2605a10e52067989632af015b" kindref="member">PUSH</ref><sp/>(val);</highlight></codeline>
-<codeline lineno="147"><highlight class="normal">})</highlight></codeline>
-<codeline lineno="148"><highlight class="normal">#endif</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cpu-&gt;ip<sp/>=<sp/>ipArg;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">})</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(call,<sp/>16,<sp/>3,<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="stack_8cpp_1a6d12097bc4af03b6c58d724a10758a64" kindref="member">StackPush</ref><sp/>(&amp;cpu-&gt;funcIp,<sp/>cpu-&gt;ip);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>cpu-&gt;ip<sp/>=<sp/>ipArg;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">})</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(ret,<sp/>17,<sp/>0,<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>cpu-&gt;ip<sp/>=<sp/>(int)<ref refid="stack_8cpp_1a0941f0fc6decbec7accf45e25ea30eb5" kindref="member">StackPop</ref><sp/>(&amp;cpu-&gt;funcIp);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">})</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(video,<sp/>18,<sp/>0,<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>10;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>10;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cpu-&gt;ram[10*i<sp/>+<sp/>j]<sp/>==<sp/>0)<sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">})</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><ref refid="cmd_8h_1aa020607c1c6794b5b426e2d70c488153" kindref="member">DEF_CMD</ref><sp/>(in,<sp/>19,<sp/>0,<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;Insert<sp/>number<sp/>to<sp/>push:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref><sp/>val<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>scanf<sp/>(<ref refid="cmd_8h_1a4700822ad9e0ed0526e8cf27557fdc1f" kindref="member">elem_t_F</ref>,<sp/>&amp;val);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cmd_8h_1a5a3cbae2605a10e52067989632af015b" kindref="member">PUSH</ref><sp/>(val);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">})</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">#endif</highlight></codeline>
     </programlisting>
     <location file="lib/cmd.h"/>
   </compounddef>

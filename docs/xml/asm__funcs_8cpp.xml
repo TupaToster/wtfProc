@@ -52,7 +52,7 @@
                 }                                                     \
                 else if (arg != 0) {                                  \
                                                                       \
-                    <ref refid="proc__head_8h_1afbea15260f301e326cefa5b7d3897c73" kindref="member">handleArg</ref> (codeFile, i, outFile, num, tags);      \
+                    <ref refid="asm__head_8h_1afebc5259c059f1c13b2c3eb589bbd778" kindref="member">handleArg</ref> (codeFile, i, outFile, num, tags);      \
                 }                                                     \
             }                                                         \
             else</initializer>
@@ -84,8 +84,35 @@
           <declname>sizeOfVar</declname>
         </param>
         <briefdescription>
+<para>Internal function for writeBin macros. Is a memcpy to file basically. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File to write to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sizeOfVar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of variable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -118,8 +145,51 @@
           <array>[512]</array>
         </param>
         <briefdescription>
+<para>Handles argument of a command. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>code</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_text" kindref="compound">Text</ref> of program in asm </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current line </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File to write to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cmdNum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of command it&apos;s counting arg for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of tags for jumps </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -148,8 +218,45 @@
           <declname>outFileName</declname>
         </param>
         <briefdescription>
+<para>Handles command line arguments. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount of arguments </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of arguments </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aFlag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Wrote by function. Indicates if no check for up to date (unused currently) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outFileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Wrote by function. Name of file to write to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Name of file to read from </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -174,8 +281,35 @@
           <array>[512]</array>
         </param>
         <briefdescription>
+<para>Writes into a .wtf binary file. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>codeFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Struct with source code </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File to write to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of tags for jumps </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

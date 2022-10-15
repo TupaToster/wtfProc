@@ -9,12 +9,12 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_proc}{Proc}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Struct to store data of a running soft cpu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{proc__head_8h_aa73c95cb26c92f512ae3fd6693f5a05b}{Proc\+Dump}}(cpu)
-\item 
+\begin{DoxyCompactList}\small\item\em Macros for dumping processor. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{proc__head_8h_aa020607c1c6794b5b426e2d70c488153}{DEF\+\_\+\+CMD}}(name,  num,  arg,  code)~CMD\+\_\+\#\#name = num,
 \end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
@@ -28,7 +28,7 @@ enum \mbox{\hyperlink{proc__head_8h_ad53b1ff8af38a0fc111be7b9fd536191}{reg}} \{ 
 , \newline
 \mbox{\hyperlink{proc__head_8h_ad53b1ff8af38a0fc111be7b9fd536191a6cfff3aee7c6bc56dad8b0dff2a4fe98}{rdx}} = 4
  \}
-\item 
+\begin{DoxyCompactList}\small\item\em names of regs array elements -\/ regs\mbox{[}r$\ast$x\mbox{]} \end{DoxyCompactList}\item 
 enum \mbox{\hyperlink{proc__head_8h_adad90fa030af56592ad194a41341ffcd}{masks}} \{ \newline
 \mbox{\hyperlink{asm__head_8h_adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2}{MASK\+\_\+\+RAM}} = 1$<$$<$7
 , \mbox{\hyperlink{asm__head_8h_adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d}{MASK\+\_\+\+REG}} = 1$<$$<$6
@@ -40,37 +40,35 @@ enum \mbox{\hyperlink{proc__head_8h_adad90fa030af56592ad194a41341ffcd}{masks}} \
 , \mbox{\hyperlink{proc__head_8h_adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f}{MASK\+\_\+\+IMM}} = 1$<$$<$5
 , \mbox{\hyperlink{proc__head_8h_adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70}{MASK\+\_\+\+CMD}} = (1$<$$<$5) -\/ 1
  \}
-\item 
+\begin{DoxyCompactList}\small\item\em Masks for bits in command byte. \end{DoxyCompactList}\item 
 enum \mbox{\hyperlink{proc__head_8h_a04887de32e1f60f8dc157312b8f27665}{CMD}} 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Enumerator for command number (generated automatically) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 char $\ast$ \mbox{\hyperlink{proc__head_8h_a3a519805ef72bd5d68daafbaaf66d3f2}{handle\+Com\+Line}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
-\item 
+\begin{DoxyCompactList}\small\item\em Handles command line arguments. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{proc__head_8h_aea285898f9e99e5de92495f68bc409e3}{Proc\+Ctor}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{struct_proc}{Proc}} var. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{proc__head_8h_aeb16925431194abc0b606715b1b35e48}{Proc\+Dtor}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
-\item 
-\mbox{\hyperlink{cmd_8h_a48ca3ff2cfe9aa2266d0fd50b0858a80}{elem\+\_\+t}} $\ast$ \mbox{\hyperlink{proc__head_8h_afbea15260f301e326cefa5b7d3897c73}{handle\+Arg}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
-\item 
+\begin{DoxyCompactList}\small\item\em Destructs a \mbox{\hyperlink{struct_proc}{Proc}} var. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{proc__head_8h_abbcaa80443c83c47ea972ef5927664fd}{Proc\+Dump\+Inside}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
-\item 
+\begin{DoxyCompactList}\small\item\em Dumps processor into logs\+\_\+out. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{proc__head_8h_a8de894df7ac03647ab4593bbd226e7ca}{check\+File\+Sign}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
-\item 
+\begin{DoxyCompactList}\small\item\em Checks for file signature and proc version. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{proc__head_8h_ac394503074d575a0ad623a66d084b4f0}{Proc\+Run\+Code}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
-\item 
+\begin{DoxyCompactList}\small\item\em Runs code. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{cmd_8h_a48ca3ff2cfe9aa2266d0fd50b0858a80}{elem\+\_\+t}} \mbox{\hyperlink{proc__head_8h_a6789f3dda443cc297083852dad3fdf66}{get\+Value\+Arg}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
-\item 
+\begin{DoxyCompactList}\small\item\em Gets a elem\+\_\+t arg as a value. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{cmd_8h_a48ca3ff2cfe9aa2266d0fd50b0858a80}{elem\+\_\+t}} $\ast$ \mbox{\hyperlink{proc__head_8h_a6bf71e3a4241fd51c9f3d5c36f673037}{get\+Ptr\+Arg}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
-\item 
+\begin{DoxyCompactList}\small\item\em Gets a elem\+\_\+t$\ast$ arg. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{proc__head_8h_a2fdff7c8f755b16495c35026ae397d44}{get\+Ip\+Arg}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets an ip. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 char \mbox{\hyperlink{proc__head_8h_a49e378fb51788d3e488e0fcf7576ebba}{Proc\+\_\+version}} \mbox{[}3\mbox{]}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Variable for processor version, declared in \mbox{\hyperlink{proc__funcs_8cpp}{proc\+\_\+funcs.\+cpp}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -82,7 +80,7 @@ char \mbox{\hyperlink{proc__head_8h_a49e378fb51788d3e488e0fcf7576ebba}{Proc\+\_\
 
 
 
-Definition at line 37 of file proc\+\_\+head.\+h.
+Definition at line 42 of file proc\+\_\+head.\+h.
 
 \mbox{\Hypertarget{proc__head_8h_aa73c95cb26c92f512ae3fd6693f5a05b}\label{proc__head_8h_aa73c95cb26c92f512ae3fd6693f5a05b}} 
 \index{proc\_head.h@{proc\_head.h}!ProcDump@{ProcDump}}
@@ -99,7 +97,11 @@ Definition at line 37 of file proc\+\_\+head.\+h.
 \end{DoxyCode}
 
 
-Definition at line 12 of file proc\+\_\+head.\+h.
+Macros for dumping processor. 
+
+
+
+Definition at line 14 of file proc\+\_\+head.\+h.
 
 
 
@@ -112,7 +114,11 @@ Definition at line 12 of file proc\+\_\+head.\+h.
 
 
 
-Definition at line 34 of file proc\+\_\+head.\+h.
+Enumerator for command number (generated automatically) 
+
+
+
+Definition at line 39 of file proc\+\_\+head.\+h.
 
 \mbox{\Hypertarget{proc__head_8h_adad90fa030af56592ad194a41341ffcd}\label{proc__head_8h_adad90fa030af56592ad194a41341ffcd}} 
 \index{proc\_head.h@{proc\_head.h}!masks@{masks}}
@@ -120,43 +126,47 @@ Definition at line 34 of file proc\+\_\+head.\+h.
 \doxysubsubsection{\texorpdfstring{masks}{masks}}
 {\footnotesize\ttfamily enum \mbox{\hyperlink{asm__head_8h_adad90fa030af56592ad194a41341ffcd}{masks}}}
 
+
+
+Masks for bits in command byte. 
+
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{MASK\_RAM@{MASK\_RAM}!proc\_head.h@{proc\_head.h}}\index{proc\_head.h@{proc\_head.h}!MASK\_RAM@{MASK\_RAM}}}\mbox{\Hypertarget{proc__head_8h_adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2}\label{proc__head_8h_adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2}} 
-MASK\+\_\+\+RAM&\\
+MASK\+\_\+\+RAM&Ram bit. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{MASK\_REG@{MASK\_REG}!proc\_head.h@{proc\_head.h}}\index{proc\_head.h@{proc\_head.h}!MASK\_REG@{MASK\_REG}}}\mbox{\Hypertarget{proc__head_8h_adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d}\label{proc__head_8h_adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d}} 
-MASK\+\_\+\+REG&\\
+MASK\+\_\+\+REG&Register bit. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{MASK\_IMM@{MASK\_IMM}!proc\_head.h@{proc\_head.h}}\index{proc\_head.h@{proc\_head.h}!MASK\_IMM@{MASK\_IMM}}}\mbox{\Hypertarget{proc__head_8h_adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f}\label{proc__head_8h_adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f}} 
-MASK\+\_\+\+IMM&\\
+MASK\+\_\+\+IMM&Immidiate constant bit. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{MASK\_CMD@{MASK\_CMD}!proc\_head.h@{proc\_head.h}}\index{proc\_head.h@{proc\_head.h}!MASK\_CMD@{MASK\_CMD}}}\mbox{\Hypertarget{proc__head_8h_adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70}\label{proc__head_8h_adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70}} 
-MASK\+\_\+\+CMD&\\
+MASK\+\_\+\+CMD&Bits for command number. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{MASK\_RAM@{MASK\_RAM}!proc\_head.h@{proc\_head.h}}\index{proc\_head.h@{proc\_head.h}!MASK\_RAM@{MASK\_RAM}}}\mbox{\Hypertarget{proc__head_8h_adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2}\label{proc__head_8h_adad90fa030af56592ad194a41341ffcda4db5e001347c36d91aefd5b7fd523ba2}} 
-MASK\+\_\+\+RAM&\\
+MASK\+\_\+\+RAM&Mask for ram access. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{MASK\_REG@{MASK\_REG}!proc\_head.h@{proc\_head.h}}\index{proc\_head.h@{proc\_head.h}!MASK\_REG@{MASK\_REG}}}\mbox{\Hypertarget{proc__head_8h_adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d}\label{proc__head_8h_adad90fa030af56592ad194a41341ffcda9782d5c7f682da2c29f879755e3b028d}} 
-MASK\+\_\+\+REG&\\
+MASK\+\_\+\+REG&Mask for reg access. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{MASK\_IMM@{MASK\_IMM}!proc\_head.h@{proc\_head.h}}\index{proc\_head.h@{proc\_head.h}!MASK\_IMM@{MASK\_IMM}}}\mbox{\Hypertarget{proc__head_8h_adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f}\label{proc__head_8h_adad90fa030af56592ad194a41341ffcda0a4eede2840471178edb9122dcba577f}} 
-MASK\+\_\+\+IMM&\\
+MASK\+\_\+\+IMM&Mask for immidiate constant. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{MASK\_CMD@{MASK\_CMD}!proc\_head.h@{proc\_head.h}}\index{proc\_head.h@{proc\_head.h}!MASK\_CMD@{MASK\_CMD}}}\mbox{\Hypertarget{proc__head_8h_adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70}\label{proc__head_8h_adad90fa030af56592ad194a41341ffcda9c0d0344611dae38b63521e9e87b4c70}} 
-MASK\+\_\+\+CMD&\\
+MASK\+\_\+\+CMD&Mask for actual command number. \\
 \hline
 
 \end{DoxyEnumFields}
 
 
-Definition at line 26 of file proc\+\_\+head.\+h.
+Definition at line 30 of file proc\+\_\+head.\+h.
 
 \mbox{\Hypertarget{proc__head_8h_ad53b1ff8af38a0fc111be7b9fd536191}\label{proc__head_8h_ad53b1ff8af38a0fc111be7b9fd536191}} 
 \index{proc\_head.h@{proc\_head.h}!reg@{reg}}
@@ -164,31 +174,35 @@ Definition at line 26 of file proc\+\_\+head.\+h.
 \doxysubsubsection{\texorpdfstring{reg}{reg}}
 {\footnotesize\ttfamily enum \mbox{\hyperlink{proc__head_8h_ad53b1ff8af38a0fc111be7b9fd536191}{reg}}}
 
+
+
+names of regs array elements -\/ regs\mbox{[}r$\ast$x\mbox{]} 
+
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{r0x@{r0x}!proc\_head.h@{proc\_head.h}}\index{proc\_head.h@{proc\_head.h}!r0x@{r0x}}}\mbox{\Hypertarget{proc__head_8h_ad53b1ff8af38a0fc111be7b9fd536191a99f5dab094268bbd7e983e639227a450}\label{proc__head_8h_ad53b1ff8af38a0fc111be7b9fd536191a99f5dab094268bbd7e983e639227a450}} 
-r0x&\\
+r0x&Zero register that servers for wrong address. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{rax@{rax}!proc\_head.h@{proc\_head.h}}\index{proc\_head.h@{proc\_head.h}!rax@{rax}}}\mbox{\Hypertarget{proc__head_8h_ad53b1ff8af38a0fc111be7b9fd536191a7c4e2b501efe08a200520265ddd187d8}\label{proc__head_8h_ad53b1ff8af38a0fc111be7b9fd536191a7c4e2b501efe08a200520265ddd187d8}} 
-rax&\\
+rax&First reg. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{rbx@{rbx}!proc\_head.h@{proc\_head.h}}\index{proc\_head.h@{proc\_head.h}!rbx@{rbx}}}\mbox{\Hypertarget{proc__head_8h_ad53b1ff8af38a0fc111be7b9fd536191a5167d112e4a951e0101af94ac6632619}\label{proc__head_8h_ad53b1ff8af38a0fc111be7b9fd536191a5167d112e4a951e0101af94ac6632619}} 
-rbx&\\
+rbx&Second reg. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{rcx@{rcx}!proc\_head.h@{proc\_head.h}}\index{proc\_head.h@{proc\_head.h}!rcx@{rcx}}}\mbox{\Hypertarget{proc__head_8h_ad53b1ff8af38a0fc111be7b9fd536191afd03e081e40ff976547d3f5246910740}\label{proc__head_8h_ad53b1ff8af38a0fc111be7b9fd536191afd03e081e40ff976547d3f5246910740}} 
-rcx&\\
+rcx&Third reg. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{rdx@{rdx}!proc\_head.h@{proc\_head.h}}\index{proc\_head.h@{proc\_head.h}!rdx@{rdx}}}\mbox{\Hypertarget{proc__head_8h_ad53b1ff8af38a0fc111be7b9fd536191a6cfff3aee7c6bc56dad8b0dff2a4fe98}\label{proc__head_8h_ad53b1ff8af38a0fc111be7b9fd536191a6cfff3aee7c6bc56dad8b0dff2a4fe98}} 
-rdx&\\
+rdx&Fourth reg. \\
 \hline
 
 \end{DoxyEnumFields}
 
 
-Definition at line 17 of file proc\+\_\+head.\+h.
+Definition at line 20 of file proc\+\_\+head.\+h.
 
 
 
@@ -201,6 +215,15 @@ Definition at line 17 of file proc\+\_\+head.\+h.
 
 
 
+Checks for file signature and proc version. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & Ptr to var to dump \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 64 of file proc\+\_\+funcs.\+cpp.
 
 \mbox{\Hypertarget{proc__head_8h_a2fdff7c8f755b16495c35026ae397d44}\label{proc__head_8h_a2fdff7c8f755b16495c35026ae397d44}} 
@@ -209,6 +232,18 @@ Definition at line 64 of file proc\+\_\+funcs.\+cpp.
 \doxysubsubsection{\texorpdfstring{getIpArg()}{getIpArg()}}
 {\footnotesize\ttfamily int get\+Ip\+Arg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_proc}{Proc}} $\ast$}]{cpu }\end{DoxyParamCaption})}
 
+
+
+Gets an ip. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & Ptr to cpu to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int value 
+\end{DoxyReturn}
 
 
 Definition at line 142 of file proc\+\_\+funcs.\+cpp.
@@ -221,6 +256,18 @@ Definition at line 142 of file proc\+\_\+funcs.\+cpp.
 
 
 
+Gets a elem\+\_\+t$\ast$ arg. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & Ptr to cpu to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+elem\+\_\+t$\ast$ value 
+\end{DoxyReturn}
+
+
 Definition at line 110 of file proc\+\_\+funcs.\+cpp.
 
 \mbox{\Hypertarget{proc__head_8h_a6789f3dda443cc297083852dad3fdf66}\label{proc__head_8h_a6789f3dda443cc297083852dad3fdf66}} 
@@ -231,13 +278,19 @@ Definition at line 110 of file proc\+\_\+funcs.\+cpp.
 
 
 
-Definition at line 86 of file proc\+\_\+funcs.\+cpp.
+Gets a elem\+\_\+t arg as a value. 
 
-\mbox{\Hypertarget{proc__head_8h_afbea15260f301e326cefa5b7d3897c73}\label{proc__head_8h_afbea15260f301e326cefa5b7d3897c73}} 
-\index{proc\_head.h@{proc\_head.h}!handleArg@{handleArg}}
-\index{handleArg@{handleArg}!proc\_head.h@{proc\_head.h}}
-\doxysubsubsection{\texorpdfstring{handleArg()}{handleArg()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{cmd_8h_a48ca3ff2cfe9aa2266d0fd50b0858a80}{elem\+\_\+t}}$\ast$ handle\+Arg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_proc}{Proc}} $\ast$}]{cpu }\end{DoxyParamCaption})}
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & Ptr to cpu to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+elem\+\_\+t value 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file proc\+\_\+funcs.\+cpp.
 
 \mbox{\Hypertarget{proc__head_8h_a3a519805ef72bd5d68daafbaaf66d3f2}\label{proc__head_8h_a3a519805ef72bd5d68daafbaaf66d3f2}} 
 \index{proc\_head.h@{proc\_head.h}!handleComLine@{handleComLine}}
@@ -245,6 +298,20 @@ Definition at line 86 of file proc\+\_\+funcs.\+cpp.
 \doxysubsubsection{\texorpdfstring{handleComLine()}{handleComLine()}}
 {\footnotesize\ttfamily char$\ast$ handle\+Com\+Line (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
+
+
+Handles command line arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Amount of args \\
+\hline
+{\em argv} & Array of args \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Name of file to read from 
+\end{DoxyReturn}
 
 
 Definition at line 5 of file proc\+\_\+funcs.\+cpp.
@@ -257,6 +324,15 @@ Definition at line 5 of file proc\+\_\+funcs.\+cpp.
 
 
 
+Constructs a \mbox{\hyperlink{struct_proc}{Proc}} var. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & Ptr to var to construct \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 38 of file proc\+\_\+funcs.\+cpp.
 
 \mbox{\Hypertarget{proc__head_8h_aeb16925431194abc0b606715b1b35e48}\label{proc__head_8h_aeb16925431194abc0b606715b1b35e48}} 
@@ -265,6 +341,15 @@ Definition at line 38 of file proc\+\_\+funcs.\+cpp.
 \doxysubsubsection{\texorpdfstring{ProcDtor()}{ProcDtor()}}
 {\footnotesize\ttfamily void Proc\+Dtor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_proc}{Proc}} $\ast$}]{cpu }\end{DoxyParamCaption})}
 
+
+
+Destructs a \mbox{\hyperlink{struct_proc}{Proc}} var. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & Ptr to var to destruct \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 53 of file proc\+\_\+funcs.\+cpp.
@@ -277,6 +362,15 @@ Definition at line 53 of file proc\+\_\+funcs.\+cpp.
 
 
 
+Dumps processor into logs\+\_\+out. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & Ptr to var to dump \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 153 of file proc\+\_\+funcs.\+cpp.
 
 \mbox{\Hypertarget{proc__head_8h_ac394503074d575a0ad623a66d084b4f0}\label{proc__head_8h_ac394503074d575a0ad623a66d084b4f0}} 
@@ -285,6 +379,15 @@ Definition at line 153 of file proc\+\_\+funcs.\+cpp.
 \doxysubsubsection{\texorpdfstring{ProcRunCode()}{ProcRunCode()}}
 {\footnotesize\ttfamily void Proc\+Run\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_proc}{Proc}} $\ast$}]{cpu }\end{DoxyParamCaption})}
 
+
+
+Runs code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & Ptr to var to run from \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 187 of file proc\+\_\+funcs.\+cpp.
@@ -297,6 +400,10 @@ Definition at line 187 of file proc\+\_\+funcs.\+cpp.
 \index{Proc\_version@{Proc\_version}!proc\_head.h@{proc\_head.h}}
 \doxysubsubsection{\texorpdfstring{Proc\_version}{Proc\_version}}
 {\footnotesize\ttfamily char Proc\+\_\+version\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Variable for processor version, declared in \mbox{\hyperlink{proc__funcs_8cpp}{proc\+\_\+funcs.\+cpp}}. 
 
 
 

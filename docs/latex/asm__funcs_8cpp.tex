@@ -10,13 +10,13 @@
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{asm__funcs_8cpp_a3dbf87d57f9f11d4e10cf74b6887a21a}{write\+Bin\+Internal}} (void $\ast$val, FILE $\ast$out\+File, size\+\_\+t size\+Of\+Var)
-\item 
+\begin{DoxyCompactList}\small\item\em Internal function for write\+Bin macros. Is a memcpy to file basically. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{asm__funcs_8cpp_afebc5259c059f1c13b2c3eb589bbd778}{handle\+Arg}} (\mbox{\hyperlink{struct_text}{Text}} $\ast$code, int line, FILE $\ast$out\+File, char cmd\+Num, int tags\mbox{[}512\mbox{]})
-\item 
+\begin{DoxyCompactList}\small\item\em Handles argument of a command. \end{DoxyCompactList}\item 
 char $\ast$ \mbox{\hyperlink{asm__funcs_8cpp_ad94c08d203bdf6cd4fdad8a420073a85}{handle\+Com\+Line}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, bool $\ast$a\+Flag, char $\ast$$\ast$out\+File\+Name)
-\item 
+\begin{DoxyCompactList}\small\item\em Handles command line arguments. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{asm__funcs_8cpp_aa4ecb6747b94442217ee22b2df052036}{write\+Wtf}} (\mbox{\hyperlink{struct_text}{Text}} $\ast$code\+File, FILE $\ast$out\+File, int tags\mbox{[}512\mbox{]})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Writes into a .wtf binary file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -54,6 +54,23 @@ void \mbox{\hyperlink{asm__funcs_8cpp_aa4ecb6747b94442217ee22b2df052036}{write\+
 
 
 
+Handles argument of a command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & \mbox{\hyperlink{struct_text}{Text}} of program in asm \\
+\hline
+{\em line} & Current line \\
+\hline
+{\em out\+File} & File to write to \\
+\hline
+{\em cmd\+Num} & Number of command it\textquotesingle{}s counting arg for \\
+\hline
+{\em tags} & Array of tags for jumps \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 12 of file asm\+\_\+funcs.\+cpp.
 
 \mbox{\Hypertarget{asm__funcs_8cpp_ad94c08d203bdf6cd4fdad8a420073a85}\label{asm__funcs_8cpp_ad94c08d203bdf6cd4fdad8a420073a85}} 
@@ -62,6 +79,24 @@ Definition at line 12 of file asm\+\_\+funcs.\+cpp.
 \doxysubsubsection{\texorpdfstring{handleComLine()}{handleComLine()}}
 {\footnotesize\ttfamily char$\ast$ handle\+Com\+Line (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{bool $\ast$}]{a\+Flag,  }\item[{char $\ast$$\ast$}]{out\+File\+Name }\end{DoxyParamCaption})}
 
+
+
+Handles command line arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Amount of arguments \\
+\hline
+{\em argv} & Array of arguments \\
+\hline
+{\em a\+Flag} & Wrote by function. Indicates if no check for up to date (unused currently) \\
+\hline
+{\em out\+File\+Name} & Wrote by function. Name of file to write to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Name of file to read from 
+\end{DoxyReturn}
 
 
 Definition at line 140 of file asm\+\_\+funcs.\+cpp.
@@ -74,6 +109,19 @@ Definition at line 140 of file asm\+\_\+funcs.\+cpp.
 
 
 
+Internal function for write\+Bin macros. Is a memcpy to file basically. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Value to write \\
+\hline
+{\em out\+File} & File to write to \\
+\hline
+{\em size\+Of\+Var} & Size of variable \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 3 of file asm\+\_\+funcs.\+cpp.
 
 \mbox{\Hypertarget{asm__funcs_8cpp_aa4ecb6747b94442217ee22b2df052036}\label{asm__funcs_8cpp_aa4ecb6747b94442217ee22b2df052036}} 
@@ -82,6 +130,19 @@ Definition at line 3 of file asm\+\_\+funcs.\+cpp.
 \doxysubsubsection{\texorpdfstring{writeWtf()}{writeWtf()}}
 {\footnotesize\ttfamily void write\+Wtf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_text}{Text}} $\ast$}]{code\+File,  }\item[{FILE $\ast$}]{out\+File,  }\item[{int}]{tags\mbox{[}512\mbox{]} }\end{DoxyParamCaption})}
 
+
+
+Writes into a .wtf binary file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code\+File} & Struct with source code \\
+\hline
+{\em out\+File} & File to write to \\
+\hline
+{\em tags} & Array of tags for jumps \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 199 of file asm\+\_\+funcs.\+cpp.

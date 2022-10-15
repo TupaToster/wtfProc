@@ -11,12 +11,13 @@
         <name>code</name>
         <initializer>= NULL</initializer>
         <briefdescription>
+<para>String of binary code. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="44" column="12" bodyfile="processor/proc_head.h" bodystart="44" bodyend="-1"/>
+        <location file="processor/proc_head.h" line="50" column="12" bodyfile="processor/proc_head.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_proc_1a3e7ddbbef3cb2bdd7643696481a7dc9a" prot="public" static="no" mutable="no">
         <type>size_t</type>
@@ -25,12 +26,13 @@
         <name>codeSize</name>
         <initializer>= 0</initializer>
         <briefdescription>
+<para>Size of code. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="45" column="13" bodyfile="processor/proc_head.h" bodystart="45" bodyend="-1"/>
+        <location file="processor/proc_head.h" line="51" column="13" bodyfile="processor/proc_head.h" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_proc_1a7dcaf8c7ceca34684ad6425a7cf8383f" prot="public" static="no" mutable="no">
         <type><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref></type>
@@ -39,12 +41,13 @@
         <name>regs</name>
         <initializer>= {0}</initializer>
         <briefdescription>
+<para>Array of registers. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="46" column="13" bodyfile="processor/proc_head.h" bodystart="46" bodyend="-1"/>
+        <location file="processor/proc_head.h" line="52" column="13" bodyfile="processor/proc_head.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_proc_1a035d414acb2f1e68268e1e01b31d3639" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -53,12 +56,13 @@
         <name>ip</name>
         <initializer>= 0</initializer>
         <briefdescription>
+<para>Instruction pointer. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="47" column="13" bodyfile="processor/proc_head.h" bodystart="47" bodyend="-1"/>
+        <location file="processor/proc_head.h" line="53" column="13" bodyfile="processor/proc_head.h" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_proc_1a9c68bfb7e83ba9b17440159dade966aa" prot="public" static="no" mutable="no">
         <type><ref refid="struct_stack" kindref="compound">Stack</ref></type>
@@ -67,12 +71,13 @@
         <name>stk</name>
         <initializer>= {}</initializer>
         <briefdescription>
+<para><ref refid="struct_stack" kindref="compound">Stack</ref> of elem_t for work of process. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="48" column="13" bodyfile="processor/proc_head.h" bodystart="48" bodyend="-1"/>
+        <location file="processor/proc_head.h" line="54" column="13" bodyfile="processor/proc_head.h" bodystart="54" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_proc_1abf87102fddf47ab184fd376d2ce8d685" prot="public" static="no" mutable="no">
         <type><ref refid="struct_stack" kindref="compound">Stack</ref></type>
@@ -81,12 +86,13 @@
         <name>funcIp</name>
         <initializer>= {}</initializer>
         <briefdescription>
+<para><ref refid="struct_stack" kindref="compound">Stack</ref> of ip for function calls. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="49" column="13" bodyfile="processor/proc_head.h" bodystart="49" bodyend="-1"/>
+        <location file="processor/proc_head.h" line="55" column="13" bodyfile="processor/proc_head.h" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_proc_1a8ec1b6bbc3ed71f89837c24999bc42d4" prot="public" static="no" mutable="no">
         <type><ref refid="cmd_8h_1a48ca3ff2cfe9aa2266d0fd50b0858a80" kindref="member">elem_t</ref> *</type>
@@ -95,15 +101,17 @@
         <name>ram</name>
         <initializer>= NULL</initializer>
         <briefdescription>
+<para>Array that represents RAM. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="processor/proc_head.h" line="50" column="12" bodyfile="processor/proc_head.h" bodystart="50" bodyend="-1"/>
+        <location file="processor/proc_head.h" line="56" column="12" bodyfile="processor/proc_head.h" bodystart="56" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Struct to store data of a running soft cpu. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -121,7 +129,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="processor/proc_head.h" line="42" column="1" bodyfile="processor/proc_head.h" bodystart="42" bodyend="51"/>
+    <location file="processor/proc_head.h" line="48" column="1" bodyfile="processor/proc_head.h" bodystart="48" bodyend="57"/>
     <listofallmembers>
       <member refid="struct_proc_1a3f965d8be71bc5b90fe4be02a5b7451f" prot="public" virt="non-virtual"><scope>Proc</scope><name>code</name></member>
       <member refid="struct_proc_1a3e7ddbbef3cb2bdd7643696481a7dc9a" prot="public" virt="non-virtual"><scope>Proc</scope><name>codeSize</name></member>

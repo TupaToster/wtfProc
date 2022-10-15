@@ -72,6 +72,7 @@
         <name>Proc_version</name>
         <initializer>= &quot;02&quot;</initializer>
         <briefdescription>
+<para>Variable for processor version, declared in <ref refid="proc__funcs_8cpp" kindref="compound">proc_funcs.cpp</ref>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -96,8 +97,29 @@
           <array>[]</array>
         </param>
         <briefdescription>
+<para>Handles command line arguments. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount of args </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of args </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Name of file to read from </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -113,8 +135,19 @@
           <declname>cpu</declname>
         </param>
         <briefdescription>
+<para>Constructs a <ref refid="struct_proc" kindref="compound">Proc</ref> var. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cpu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ptr to var to construct </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -130,8 +163,19 @@
           <declname>cpu</declname>
         </param>
         <briefdescription>
+<para>Destructs a <ref refid="struct_proc" kindref="compound">Proc</ref> var. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cpu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ptr to var to destruct </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -147,8 +191,19 @@
           <declname>cpu</declname>
         </param>
         <briefdescription>
+<para>Checks for file signature and proc version. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cpu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ptr to var to dump </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -164,8 +219,21 @@
           <declname>cpu</declname>
         </param>
         <briefdescription>
+<para>Gets a elem_t arg as a value. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cpu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ptr to cpu to read from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>elem_t value </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -181,8 +249,21 @@
           <declname>cpu</declname>
         </param>
         <briefdescription>
+<para>Gets a elem_t* arg. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cpu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ptr to cpu to read from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>elem_t* value </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -198,8 +279,21 @@
           <declname>cpu</declname>
         </param>
         <briefdescription>
+<para>Gets an ip. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cpu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ptr to cpu to read from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int value </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -215,8 +309,19 @@
           <declname>cpu</declname>
         </param>
         <briefdescription>
+<para>Dumps processor into logs_out. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cpu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ptr to var to dump </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -232,8 +337,19 @@
           <declname>cpu</declname>
         </param>
         <briefdescription>
+<para>Runs code. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cpu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ptr to var to run from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

@@ -25,7 +25,6 @@ var proc__head_8h =
     [ "getIpArg", "proc__head_8h.html#a2fdff7c8f755b16495c35026ae397d44", null ],
     [ "getPtrArg", "proc__head_8h.html#a6bf71e3a4241fd51c9f3d5c36f673037", null ],
     [ "getValueArg", "proc__head_8h.html#a6789f3dda443cc297083852dad3fdf66", null ],
-    [ "handleArg", "proc__head_8h.html#afbea15260f301e326cefa5b7d3897c73", null ],
     [ "handleComLine", "proc__head_8h.html#a3a519805ef72bd5d68daafbaaf66d3f2", null ],
     [ "ProcCtor", "proc__head_8h.html#aea285898f9e99e5de92495f68bc409e3", null ],
     [ "ProcDtor", "proc__head_8h.html#aeb16925431194abc0b606715b1b35e48", null ],

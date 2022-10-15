@@ -1,0 +1,29 @@
+in
+call :1
+out
+hlt
+1:
+pop rax
+push rax
+push 1
+je :2
+push rax
+push 2
+je :2
+push rax
+push 1
+sub
+push rax
+push 2
+sub
+call :1
+pop rax
+pop rbx
+push rax
+push rbx
+call :1
+add
+ret
+2:
+push 1
+ret

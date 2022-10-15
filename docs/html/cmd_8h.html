@@ -28,7 +28,7 @@
    <div id="projectname">Soft cpu
    &#160;<span id="projectnumber">2</span>
    </div>
-   <div id="projectbrief">Cpu emulator program with it&#39;s own ams langauge</div>
+   <div id="projectbrief">Cpu emulator program with it&#39;s own asm langauge</div>
   </td>
  </tr>
  </tbody>
@@ -96,12 +96,14 @@ $(document).ready(function(){initNavTree('cmd_8h.html',''); initResizable(); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a4700822ad9e0ed0526e8cf27557fdc1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8h.html#a4700822ad9e0ed0526e8cf27557fdc1f">elem_t_F</a>&#160;&#160;&#160;&quot;%Lf&quot;</td></tr>
+<tr class="memdesc:a4700822ad9e0ed0526e8cf27557fdc1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Printf format string for elem_t.  <a href="cmd_8h.html#a4700822ad9e0ed0526e8cf27557fdc1f">More...</a><br /></td></tr>
 <tr class="separator:a4700822ad9e0ed0526e8cf27557fdc1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a3cbae2605a10e52067989632af015b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8h.html#a5a3cbae2605a10e52067989632af015b">PUSH</a>(val)&#160;&#160;&#160;<a class="el" href="stack_8h.html#a6d12097bc4af03b6c58d724a10758a64">StackPush</a> (&amp;cpu-&gt;stk, val)</td></tr>
 <tr class="separator:a5a3cbae2605a10e52067989632af015b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b06d6d6f5a540a62659a417de0ad69d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8h.html#a0b06d6d6f5a540a62659a417de0ad69d">POP</a>&#160;&#160;&#160;<a class="el" href="stack_8h.html#a0941f0fc6decbec7accf45e25ea30eb5">StackPop</a> (&amp;cpu-&gt;stk)</td></tr>
 <tr class="separator:a0b06d6d6f5a540a62659a417de0ad69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72cfd02d18b30e2e3e5b2cf4053cc4b7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8h.html#a72cfd02d18b30e2e3e5b2cf4053cc4b7">signa</a>&#160;&#160;&#160;&quot;CP02&quot;</td></tr>
+<tr class="memdesc:a72cfd02d18b30e2e3e5b2cf4053cc4b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">signature of a fine file  <a href="cmd_8h.html#a72cfd02d18b30e2e3e5b2cf4053cc4b7">More...</a><br /></td></tr>
 <tr class="separator:a72cfd02d18b30e2e3e5b2cf4053cc4b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa020607c1c6794b5b426e2d70c488153"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8h.html#aa020607c1c6794b5b426e2d70c488153">DEF_CMD</a>(name,  num,  arg,  code)&#160;&#160;&#160;;</td></tr>
 <tr class="separator:aa020607c1c6794b5b426e2d70c488153"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,6 +113,7 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a48ca3ff2cfe9aa2266d0fd50b0858a80"><td class="memItemLeft" align="right" valign="top">typedef double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8h.html#a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</a></td></tr>
+<tr class="memdesc:a48ca3ff2cfe9aa2266d0fd50b0858a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base element of cpu.  <a href="cmd_8h.html#a48ca3ff2cfe9aa2266d0fd50b0858a80">More...</a><br /></td></tr>
 <tr class="separator:a48ca3ff2cfe9aa2266d0fd50b0858a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -152,7 +155,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="cmd_8h_source.html#l00012">12</a> of file <a class="el" href="cmd_8h_source.html">cmd.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cmd_8h_source.html#l00023">23</a> of file <a class="el" href="cmd_8h_source.html">cmd.h</a>.</p>
 
 </div>
 </div>
@@ -168,7 +171,9 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="cmd_8h_source.html#l00004">4</a> of file <a class="el" href="cmd_8h_source.html">cmd.h</a>.</p>
+<p>Printf format string for elem_t. </p>
+
+<p class="definition">Definition at line <a class="el" href="cmd_8h_source.html#l00016">16</a> of file <a class="el" href="cmd_8h_source.html">cmd.h</a>.</p>
 
 </div>
 </div>
@@ -184,7 +189,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="cmd_8h_source.html#l00014">14</a> of file <a class="el" href="cmd_8h_source.html">cmd.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cmd_8h_source.html#l00026">26</a> of file <a class="el" href="cmd_8h_source.html">cmd.h</a>.</p>
 
 </div>
 </div>
@@ -200,7 +205,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="cmd_8h_source.html#l00007">7</a> of file <a class="el" href="cmd_8h_source.html">cmd.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cmd_8h_source.html#l00019">19</a> of file <a class="el" href="cmd_8h_source.html">cmd.h</a>.</p>
 
 </div>
 </div>
@@ -220,7 +225,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="cmd_8h_source.html#l00006">6</a> of file <a class="el" href="cmd_8h_source.html">cmd.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cmd_8h_source.html#l00018">18</a> of file <a class="el" href="cmd_8h_source.html">cmd.h</a>.</p>
 
 </div>
 </div>
@@ -236,7 +241,9 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="cmd_8h_source.html#l00010">10</a> of file <a class="el" href="cmd_8h_source.html">cmd.h</a>.</p>
+<p>signature of a fine file </p>
+
+<p class="definition">Definition at line <a class="el" href="cmd_8h_source.html#l00021">21</a> of file <a class="el" href="cmd_8h_source.html">cmd.h</a>.</p>
 
 </div>
 </div>
@@ -253,7 +260,9 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="cmd_8h_source.html#l00003">3</a> of file <a class="el" href="cmd_8h_source.html">cmd.h</a>.</p>
+<p>Base element of cpu. </p>
+
+<p class="definition">Definition at line <a class="el" href="cmd_8h_source.html#l00015">15</a> of file <a class="el" href="cmd_8h_source.html">cmd.h</a>.</p>
 
 </div>
 </div>

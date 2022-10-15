@@ -12,6 +12,7 @@ lib/cmd.h
 .ti -1c
 .RI "#define \fBelem_t_F\fP   '%Lf'"
 .br
+.RI "Printf format string for elem_t\&. "
 .ti -1c
 .RI "#define \fBPUSH\fP(val)   \fBStackPush\fP (&cpu\->stk, val)"
 .br
@@ -21,6 +22,7 @@ lib/cmd.h
 .ti -1c
 .RI "#define \fBsigna\fP   'CP02'"
 .br
+.RI "signature of a fine file "
 .ti -1c
 .RI "#define \fBDEF_CMD\fP(name,  num,  arg,  code)   ;"
 .br
@@ -34,39 +36,46 @@ lib/cmd.h
 .ti -1c
 .RI "typedef double \fBelem_t\fP"
 .br
+.RI "Base element of cpu\&. "
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
 .SS "#define DEF_CMD(name, num, arg, code)   ;"
 
 .PP
-Definition at line 12 of file cmd\&.h\&.
+Definition at line 23 of file cmd\&.h\&.
 .SS "#define elem_t_F   '%Lf'"
 
 .PP
-Definition at line 4 of file cmd\&.h\&.
+Printf format string for elem_t\&. 
+.PP
+Definition at line 16 of file cmd\&.h\&.
 .SS "#define GENERAL_CMD"
 
 .PP
-Definition at line 14 of file cmd\&.h\&.
+Definition at line 26 of file cmd\&.h\&.
 .SS "#define POP   \fBStackPop\fP (&cpu\->stk)"
 
 .PP
-Definition at line 7 of file cmd\&.h\&.
+Definition at line 19 of file cmd\&.h\&.
 .SS "#define PUSH(val)   \fBStackPush\fP (&cpu\->stk, val)"
 
 .PP
-Definition at line 6 of file cmd\&.h\&.
+Definition at line 18 of file cmd\&.h\&.
 .SS "#define signa   'CP02'"
 
 .PP
-Definition at line 10 of file cmd\&.h\&.
+signature of a fine file 
+.PP
+Definition at line 21 of file cmd\&.h\&.
 .SH "Typedef Documentation"
 .PP 
 .SS "typedef double \fBelem_t\fP"
 
 .PP
-Definition at line 3 of file cmd\&.h\&.
+Base element of cpu\&. 
+.PP
+Definition at line 15 of file cmd\&.h\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Soft cpu from the source code\&.

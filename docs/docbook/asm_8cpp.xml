@@ -14,8 +14,12 @@
     <title>Variables    </title>
         <itemizedlist>
             <listitem><para>size_t <link linkend="_asm_8cpp_1a5c1a69eec57cefaee3f692279022198b">ip</link> = 0</para>
+
+<para>Counts ip of current unstruction in cpu-&gt;code. </para>
 </listitem>
             <listitem><para>bool <link linkend="_asm_8cpp_1ace8c8b51e3dcde290dd6b8a7bc5feba0">errors</link> = 0</para>
+
+<para>Is a flag for if errors have occured. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -36,12 +40,20 @@ Definition at line 7 of file asm.cpp.</para>
 <indexterm><primary>errors</primary><secondary>asm.cpp</secondary></indexterm>
 <indexterm><primary>asm.cpp</primary><secondary>errors</secondary></indexterm>
 <para><computeroutput>bool errors = 0</computeroutput></para><para>
+
+<para>Is a flag for if errors have occured. </para>
+</para>
+<para>
 Definition at line 5 of file asm.cpp.</para>
     </section><anchor xml:id="_asm_8cpp_1a5c1a69eec57cefaee3f692279022198b"/>    <section>
     <title>ip</title>
 <indexterm><primary>ip</primary><secondary>asm.cpp</secondary></indexterm>
 <indexterm><primary>asm.cpp</primary><secondary>ip</secondary></indexterm>
 <para><computeroutput>size_t ip = 0</computeroutput></para><para>
+
+<para>Counts ip of current unstruction in cpu-&gt;code. </para>
+</para>
+<para>
 Definition at line 3 of file asm.cpp.</para>
 </section>
 </section>

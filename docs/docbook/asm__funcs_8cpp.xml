@@ -14,12 +14,20 @@
     <title>Functions    </title>
         <itemizedlist>
             <listitem><para>void <link linkend="_asm__funcs_8cpp_1a3dbf87d57f9f11d4e10cf74b6887a21a">writeBinInternal</link> (void *val, FILE *outFile, size_t sizeOfVar)</para>
+
+<para>Internal function for writeBin macros. Is a memcpy to file basically. </para>
 </listitem>
             <listitem><para>void <link linkend="_asm__funcs_8cpp_1afebc5259c059f1c13b2c3eb589bbd778">handleArg</link> (<link linkend="_struct_text">Text</link> *code, int line, FILE *outFile, char cmdNum, int tags[512])</para>
+
+<para>Handles argument of a command. </para>
 </listitem>
             <listitem><para>char * <link linkend="_asm__funcs_8cpp_1ad94c08d203bdf6cd4fdad8a420073a85">handleComLine</link> (int argc, char *argv[], bool *aFlag, char **outFileName)</para>
+
+<para>Handles command line arguments. </para>
 </listitem>
             <listitem><para>void <link linkend="_asm__funcs_8cpp_1aa4ecb6747b94442217ee22b2df052036">writeWtf</link> (<link linkend="_struct_text">Text</link> *codeFile, FILE *outFile, int tags[512])</para>
+
+<para>Writes into a .wtf binary file. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -51,24 +59,202 @@
 <indexterm><primary>handleArg</primary><secondary>asm_funcs.cpp</secondary></indexterm>
 <indexterm><primary>asm_funcs.cpp</primary><secondary>handleArg</secondary></indexterm>
 <para><computeroutput>void handleArg (<link linkend="_struct_text">Text</link> * code, int line, FILE * outFile, char cmdNum, int tags[512])</computeroutput></para><para>
+
+<para>Handles argument of a command. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>code</entry>
+                                <entry>
+<para><link linkend="_struct_text">Text</link> of program in asm </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>line</entry>
+                                <entry>
+<para>Current line </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>outFile</entry>
+                                <entry>
+<para>File to write to </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>cmdNum</entry>
+                                <entry>
+<para>Number of command it&apos;s counting arg for </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>tags</entry>
+                                <entry>
+<para>Array of tags for jumps </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
 Definition at line 12 of file asm_funcs.cpp.</para>
     </section><anchor xml:id="_asm__funcs_8cpp_1ad94c08d203bdf6cd4fdad8a420073a85"/>    <section>
     <title>handleComLine()</title>
 <indexterm><primary>handleComLine</primary><secondary>asm_funcs.cpp</secondary></indexterm>
 <indexterm><primary>asm_funcs.cpp</primary><secondary>handleComLine</secondary></indexterm>
 <para><computeroutput>char* handleComLine (int argc, char * argv[], bool * aFlag, char ** outFileName)</computeroutput></para><para>
+
+<para>Handles command line arguments. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>argc</entry>
+                                <entry>
+<para>Amount of arguments </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>argv</entry>
+                                <entry>
+<para>Array of arguments </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>aFlag</entry>
+                                <entry>
+<para>Wrote by function. Indicates if no check for up to date (unused currently) </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>outFileName</entry>
+                                <entry>
+<para>Wrote by function. Name of file to write to </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Name of file to read from </para>
+</formalpara>
+</para>
+<para>
 Definition at line 140 of file asm_funcs.cpp.</para>
     </section><anchor xml:id="_asm__funcs_8cpp_1a3dbf87d57f9f11d4e10cf74b6887a21a"/>    <section>
     <title>writeBinInternal()</title>
 <indexterm><primary>writeBinInternal</primary><secondary>asm_funcs.cpp</secondary></indexterm>
 <indexterm><primary>asm_funcs.cpp</primary><secondary>writeBinInternal</secondary></indexterm>
 <para><computeroutput>void writeBinInternal (void * val, FILE * outFile, size_t sizeOfVar)</computeroutput></para><para>
+
+<para>Internal function for writeBin macros. Is a memcpy to file basically. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>val</entry>
+                                <entry>
+<para>Value to write </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>outFile</entry>
+                                <entry>
+<para>File to write to </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>sizeOfVar</entry>
+                                <entry>
+<para>Size of variable </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
 Definition at line 3 of file asm_funcs.cpp.</para>
     </section><anchor xml:id="_asm__funcs_8cpp_1aa4ecb6747b94442217ee22b2df052036"/>    <section>
     <title>writeWtf()</title>
 <indexterm><primary>writeWtf</primary><secondary>asm_funcs.cpp</secondary></indexterm>
 <indexterm><primary>asm_funcs.cpp</primary><secondary>writeWtf</secondary></indexterm>
 <para><computeroutput>void writeWtf (<link linkend="_struct_text">Text</link> * codeFile, FILE * outFile, int tags[512])</computeroutput></para><para>
+
+<para>Writes into a .wtf binary file. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>codeFile</entry>
+                                <entry>
+<para>Struct with source code </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>outFile</entry>
+                                <entry>
+<para>File to write to </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>tags</entry>
+                                <entry>
+<para>Array of tags for jumps </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
 Definition at line 199 of file asm_funcs.cpp.</para>
 </section>
 </section>

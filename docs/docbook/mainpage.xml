@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mainpage" xml:lang="en-US">
+<section xml:id="_index_1Intorduction">
+<title>Intorduction</title>
+
+<para>This is a soft-cpu project with it&apos;s own asm language and hand written function to work with text and a stack to store data during it&apos;s work.</para>
+</section>
+<section xml:id="_index_1ASM">
+<title>ASM</title>
+
+<para>Language consists of commands: push, pop, add, sub, mult, div, out. dump, hlt, pop, jmp, ja, jae, jb, jbe, je, jne, call, ret, video, in. More info on those commands can be seen in <link linkend="_cmd_8h">cmd.h</link>, i.e. how they work and what they do. </para>
+</section>
+</chapter>

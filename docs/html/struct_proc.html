@@ -28,7 +28,7 @@
    <div id="projectname">Soft cpu
    &#160;<span id="projectnumber">2</span>
    </div>
-   <div id="projectbrief">Cpu emulator program with it&#39;s own ams langauge</div>
+   <div id="projectbrief">Cpu emulator program with it&#39;s own asm langauge</div>
   </td>
  </tr>
  </tbody>
@@ -91,28 +91,39 @@ $(document).ready(function(){initNavTree('struct_proc.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 
+<p>Struct to store data of a running soft cpu.  
+ <a href="struct_proc.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="proc__head_8h_source.html">proc_head.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a3f965d8be71bc5b90fe4be02a5b7451f"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_proc.html#a3f965d8be71bc5b90fe4be02a5b7451f">code</a> = NULL</td></tr>
+<tr class="memdesc:a3f965d8be71bc5b90fe4be02a5b7451f"><td class="mdescLeft">&#160;</td><td class="mdescRight">String of binary code.  <a href="struct_proc.html#a3f965d8be71bc5b90fe4be02a5b7451f">More...</a><br /></td></tr>
 <tr class="separator:a3f965d8be71bc5b90fe4be02a5b7451f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e7ddbbef3cb2bdd7643696481a7dc9a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_proc.html#a3e7ddbbef3cb2bdd7643696481a7dc9a">codeSize</a> = 0</td></tr>
+<tr class="memdesc:a3e7ddbbef3cb2bdd7643696481a7dc9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of code.  <a href="struct_proc.html#a3e7ddbbef3cb2bdd7643696481a7dc9a">More...</a><br /></td></tr>
 <tr class="separator:a3e7ddbbef3cb2bdd7643696481a7dc9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dcaf8c7ceca34684ad6425a7cf8383f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cmd_8h.html#a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_proc.html#a7dcaf8c7ceca34684ad6425a7cf8383f">regs</a> [5] = {0}</td></tr>
+<tr class="memdesc:a7dcaf8c7ceca34684ad6425a7cf8383f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of registers.  <a href="struct_proc.html#a7dcaf8c7ceca34684ad6425a7cf8383f">More...</a><br /></td></tr>
 <tr class="separator:a7dcaf8c7ceca34684ad6425a7cf8383f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a035d414acb2f1e68268e1e01b31d3639"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_proc.html#a035d414acb2f1e68268e1e01b31d3639">ip</a> = 0</td></tr>
+<tr class="memdesc:a035d414acb2f1e68268e1e01b31d3639"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instruction pointer.  <a href="struct_proc.html#a035d414acb2f1e68268e1e01b31d3639">More...</a><br /></td></tr>
 <tr class="separator:a035d414acb2f1e68268e1e01b31d3639"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c68bfb7e83ba9b17440159dade966aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_stack.html">Stack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_proc.html#a9c68bfb7e83ba9b17440159dade966aa">stk</a> = {}</td></tr>
+<tr class="memdesc:a9c68bfb7e83ba9b17440159dade966aa"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_stack.html" title="Stores a stack with several support variables.">Stack</a> of elem_t for work of process.  <a href="struct_proc.html#a9c68bfb7e83ba9b17440159dade966aa">More...</a><br /></td></tr>
 <tr class="separator:a9c68bfb7e83ba9b17440159dade966aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf87102fddf47ab184fd376d2ce8d685"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_stack.html">Stack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_proc.html#abf87102fddf47ab184fd376d2ce8d685">funcIp</a> = {}</td></tr>
+<tr class="memdesc:abf87102fddf47ab184fd376d2ce8d685"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_stack.html" title="Stores a stack with several support variables.">Stack</a> of ip for function calls.  <a href="struct_proc.html#abf87102fddf47ab184fd376d2ce8d685">More...</a><br /></td></tr>
 <tr class="separator:abf87102fddf47ab184fd376d2ce8d685"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ec1b6bbc3ed71f89837c24999bc42d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cmd_8h.html#a48ca3ff2cfe9aa2266d0fd50b0858a80">elem_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_proc.html#a8ec1b6bbc3ed71f89837c24999bc42d4">ram</a> = NULL</td></tr>
+<tr class="memdesc:a8ec1b6bbc3ed71f89837c24999bc42d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array that represents RAM.  <a href="struct_proc.html#a8ec1b6bbc3ed71f89837c24999bc42d4">More...</a><br /></td></tr>
 <tr class="separator:a8ec1b6bbc3ed71f89837c24999bc42d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00042">42</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
+<div class="textblock"><p>Struct to store data of a running soft cpu. </p>
+
+<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00048">48</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a3f965d8be71bc5b90fe4be02a5b7451f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f965d8be71bc5b90fe4be02a5b7451f">&#9670;&nbsp;</a></span>code</h2>
@@ -126,7 +137,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00044">44</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
+<p>String of binary code. </p>
+
+<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00050">50</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
 
 </div>
 </div>
@@ -142,7 +155,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00045">45</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
+<p>Size of code. </p>
+
+<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00051">51</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
 
 </div>
 </div>
@@ -158,7 +173,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00049">49</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
+<p><a class="el" href="struct_stack.html" title="Stores a stack with several support variables.">Stack</a> of ip for function calls. </p>
+
+<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00055">55</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
 
 </div>
 </div>
@@ -174,7 +191,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00047">47</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
+<p>Instruction pointer. </p>
+
+<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00053">53</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
 
 </div>
 </div>
@@ -190,7 +209,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00050">50</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
+<p>Array that represents RAM. </p>
+
+<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00056">56</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
 
 </div>
 </div>
@@ -206,7 +227,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00046">46</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
+<p>Array of registers. </p>
+
+<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00052">52</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
 
 </div>
 </div>
@@ -222,7 +245,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00048">48</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
+<p><a class="el" href="struct_stack.html" title="Stores a stack with several support variables.">Stack</a> of elem_t for work of process. </p>
+
+<p class="definition">Definition at line <a class="el" href="proc__head_8h_source.html#l00054">54</a> of file <a class="el" href="proc__head_8h_source.html">proc_head.h</a>.</p>
 
 </div>
 </div>

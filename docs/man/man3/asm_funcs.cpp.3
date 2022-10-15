@@ -22,15 +22,19 @@ asm/asm_funcs.cpp
 .ti -1c
 .RI "void \fBwriteBinInternal\fP (void *val, FILE *outFile, size_t sizeOfVar)"
 .br
+.RI "Internal function for writeBin macros\&. Is a memcpy to file basically\&. "
 .ti -1c
 .RI "void \fBhandleArg\fP (\fBText\fP *code, int line, FILE *outFile, char cmdNum, int tags[512])"
 .br
+.RI "Handles argument of a command\&. "
 .ti -1c
 .RI "char * \fBhandleComLine\fP (int argc, char *argv[], bool *aFlag, char **outFileName)"
 .br
+.RI "Handles command line arguments\&. "
 .ti -1c
 .RI "void \fBwriteWtf\fP (\fBText\fP *codeFile, FILE *outFile, int tags[512])"
 .br
+.RI "Writes into a \&.wtf binary file\&. "
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
@@ -57,16 +61,79 @@ asm/asm_funcs.cpp
 .SS "void handleArg (\fBText\fP * code, int line, FILE * outFile, char cmdNum, int tags[512])"
 
 .PP
+Handles argument of a command\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcode\fP \fBText\fP of program in asm 
+.br
+\fIline\fP Current line 
+.br
+\fIoutFile\fP File to write to 
+.br
+\fIcmdNum\fP Number of command it's counting arg for 
+.br
+\fItags\fP Array of tags for jumps 
+.RE
+.PP
+
+.PP
 Definition at line 12 of file asm_funcs\&.cpp\&.
 .SS "char* handleComLine (int argc, char * argv[], bool * aFlag, char ** outFileName)"
+
+.PP
+Handles command line arguments\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargc\fP Amount of arguments 
+.br
+\fIargv\fP Array of arguments 
+.br
+\fIaFlag\fP Wrote by function\&. Indicates if no check for up to date (unused currently) 
+.br
+\fIoutFileName\fP Wrote by function\&. Name of file to write to 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Name of file to read from 
+.RE
+.PP
 
 .PP
 Definition at line 140 of file asm_funcs\&.cpp\&.
 .SS "void writeBinInternal (void * val, FILE * outFile, size_t sizeOfVar)"
 
 .PP
+Internal function for writeBin macros\&. Is a memcpy to file basically\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIval\fP Value to write 
+.br
+\fIoutFile\fP File to write to 
+.br
+\fIsizeOfVar\fP Size of variable 
+.RE
+.PP
+
+.PP
 Definition at line 3 of file asm_funcs\&.cpp\&.
 .SS "void writeWtf (\fBText\fP * codeFile, FILE * outFile, int tags[512])"
+
+.PP
+Writes into a \&.wtf binary file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcodeFile\fP Struct with source code 
+.br
+\fIoutFile\fP File to write to 
+.br
+\fItags\fP Array of tags for jumps 
+.RE
+.PP
 
 .PP
 Definition at line 199 of file asm_funcs\&.cpp\&.

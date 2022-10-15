@@ -4,6 +4,10 @@
     <title>Soft cpu</title>
     </info>
 <chapter>
+    <title>Index page</title>
+    <xi:include href="mainpage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
     <title>Class Documentation</title>
     <xi:include href="struct_line.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="struct_proc.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>

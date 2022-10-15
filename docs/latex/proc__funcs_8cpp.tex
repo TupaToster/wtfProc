@@ -10,28 +10,28 @@
 \begin{DoxyCompactItemize}
 \item 
 char $\ast$ \mbox{\hyperlink{proc__funcs_8cpp_a3a519805ef72bd5d68daafbaaf66d3f2}{handle\+Com\+Line}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
-\item 
+\begin{DoxyCompactList}\small\item\em Handles command line arguments. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{proc__funcs_8cpp_aea285898f9e99e5de92495f68bc409e3}{Proc\+Ctor}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{struct_proc}{Proc}} var. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{proc__funcs_8cpp_aeb16925431194abc0b606715b1b35e48}{Proc\+Dtor}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
-\item 
+\begin{DoxyCompactList}\small\item\em Destructs a \mbox{\hyperlink{struct_proc}{Proc}} var. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{proc__funcs_8cpp_a8de894df7ac03647ab4593bbd226e7ca}{check\+File\+Sign}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
-\item 
+\begin{DoxyCompactList}\small\item\em Checks for file signature and proc version. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{cmd_8h_a48ca3ff2cfe9aa2266d0fd50b0858a80}{elem\+\_\+t}} \mbox{\hyperlink{proc__funcs_8cpp_a6789f3dda443cc297083852dad3fdf66}{get\+Value\+Arg}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
-\item 
+\begin{DoxyCompactList}\small\item\em Gets a elem\+\_\+t arg as a value. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{cmd_8h_a48ca3ff2cfe9aa2266d0fd50b0858a80}{elem\+\_\+t}} $\ast$ \mbox{\hyperlink{proc__funcs_8cpp_a6bf71e3a4241fd51c9f3d5c36f673037}{get\+Ptr\+Arg}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
-\item 
+\begin{DoxyCompactList}\small\item\em Gets a elem\+\_\+t$\ast$ arg. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{proc__funcs_8cpp_a2fdff7c8f755b16495c35026ae397d44}{get\+Ip\+Arg}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
-\item 
+\begin{DoxyCompactList}\small\item\em Gets an ip. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{proc__funcs_8cpp_abbcaa80443c83c47ea972ef5927664fd}{Proc\+Dump\+Inside}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
-\item 
+\begin{DoxyCompactList}\small\item\em Dumps processor into logs\+\_\+out. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{proc__funcs_8cpp_ac394503074d575a0ad623a66d084b4f0}{Proc\+Run\+Code}} (\mbox{\hyperlink{struct_proc}{Proc}} $\ast$cpu)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Runs code. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 char \mbox{\hyperlink{proc__funcs_8cpp_a49e378fb51788d3e488e0fcf7576ebba}{Proc\+\_\+version}} \mbox{[}3\mbox{]} = \char`\"{}02\char`\"{}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Variable for processor version, declared in \mbox{\hyperlink{proc__funcs_8cpp}{proc\+\_\+funcs.\+cpp}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -63,6 +63,15 @@ char \mbox{\hyperlink{proc__funcs_8cpp_a49e378fb51788d3e488e0fcf7576ebba}{Proc\+
 
 
 
+Checks for file signature and proc version. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & Ptr to var to dump \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 64 of file proc\+\_\+funcs.\+cpp.
 
 \mbox{\Hypertarget{proc__funcs_8cpp_a2fdff7c8f755b16495c35026ae397d44}\label{proc__funcs_8cpp_a2fdff7c8f755b16495c35026ae397d44}} 
@@ -71,6 +80,18 @@ Definition at line 64 of file proc\+\_\+funcs.\+cpp.
 \doxysubsubsection{\texorpdfstring{getIpArg()}{getIpArg()}}
 {\footnotesize\ttfamily int get\+Ip\+Arg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_proc}{Proc}} $\ast$}]{cpu }\end{DoxyParamCaption})}
 
+
+
+Gets an ip. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & Ptr to cpu to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int value 
+\end{DoxyReturn}
 
 
 Definition at line 142 of file proc\+\_\+funcs.\+cpp.
@@ -83,6 +104,18 @@ Definition at line 142 of file proc\+\_\+funcs.\+cpp.
 
 
 
+Gets a elem\+\_\+t$\ast$ arg. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & Ptr to cpu to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+elem\+\_\+t$\ast$ value 
+\end{DoxyReturn}
+
+
 Definition at line 110 of file proc\+\_\+funcs.\+cpp.
 
 \mbox{\Hypertarget{proc__funcs_8cpp_a6789f3dda443cc297083852dad3fdf66}\label{proc__funcs_8cpp_a6789f3dda443cc297083852dad3fdf66}} 
@@ -91,6 +124,18 @@ Definition at line 110 of file proc\+\_\+funcs.\+cpp.
 \doxysubsubsection{\texorpdfstring{getValueArg()}{getValueArg()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{cmd_8h_a48ca3ff2cfe9aa2266d0fd50b0858a80}{elem\+\_\+t}} get\+Value\+Arg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_proc}{Proc}} $\ast$}]{cpu }\end{DoxyParamCaption})}
 
+
+
+Gets a elem\+\_\+t arg as a value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & Ptr to cpu to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+elem\+\_\+t value 
+\end{DoxyReturn}
 
 
 Definition at line 86 of file proc\+\_\+funcs.\+cpp.
@@ -103,6 +148,20 @@ Definition at line 86 of file proc\+\_\+funcs.\+cpp.
 
 
 
+Handles command line arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Amount of args \\
+\hline
+{\em argv} & Array of args \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Name of file to read from 
+\end{DoxyReturn}
+
+
 Definition at line 5 of file proc\+\_\+funcs.\+cpp.
 
 \mbox{\Hypertarget{proc__funcs_8cpp_aea285898f9e99e5de92495f68bc409e3}\label{proc__funcs_8cpp_aea285898f9e99e5de92495f68bc409e3}} 
@@ -111,6 +170,15 @@ Definition at line 5 of file proc\+\_\+funcs.\+cpp.
 \doxysubsubsection{\texorpdfstring{ProcCtor()}{ProcCtor()}}
 {\footnotesize\ttfamily void Proc\+Ctor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_proc}{Proc}} $\ast$}]{cpu }\end{DoxyParamCaption})}
 
+
+
+Constructs a \mbox{\hyperlink{struct_proc}{Proc}} var. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & Ptr to var to construct \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 38 of file proc\+\_\+funcs.\+cpp.
@@ -123,6 +191,15 @@ Definition at line 38 of file proc\+\_\+funcs.\+cpp.
 
 
 
+Destructs a \mbox{\hyperlink{struct_proc}{Proc}} var. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & Ptr to var to destruct \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 53 of file proc\+\_\+funcs.\+cpp.
 
 \mbox{\Hypertarget{proc__funcs_8cpp_abbcaa80443c83c47ea972ef5927664fd}\label{proc__funcs_8cpp_abbcaa80443c83c47ea972ef5927664fd}} 
@@ -131,6 +208,15 @@ Definition at line 53 of file proc\+\_\+funcs.\+cpp.
 \doxysubsubsection{\texorpdfstring{ProcDumpInside()}{ProcDumpInside()}}
 {\footnotesize\ttfamily void Proc\+Dump\+Inside (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_proc}{Proc}} $\ast$}]{cpu }\end{DoxyParamCaption})}
 
+
+
+Dumps processor into logs\+\_\+out. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & Ptr to var to dump \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 153 of file proc\+\_\+funcs.\+cpp.
@@ -143,6 +229,15 @@ Definition at line 153 of file proc\+\_\+funcs.\+cpp.
 
 
 
+Runs code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu} & Ptr to var to run from \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 187 of file proc\+\_\+funcs.\+cpp.
 
 
@@ -153,6 +248,10 @@ Definition at line 187 of file proc\+\_\+funcs.\+cpp.
 \index{Proc\_version@{Proc\_version}!proc\_funcs.cpp@{proc\_funcs.cpp}}
 \doxysubsubsection{\texorpdfstring{Proc\_version}{Proc\_version}}
 {\footnotesize\ttfamily char Proc\+\_\+version\mbox{[}3\mbox{]} = \char`\"{}02\char`\"{}}
+
+
+
+Variable for processor version, declared in \mbox{\hyperlink{proc__funcs_8cpp}{proc\+\_\+funcs.\+cpp}}. 
 
 
 
