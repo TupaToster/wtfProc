@@ -77,8 +77,8 @@ void checkFileSign (Proc* cpu) {
         exit (0);
     }
 
-    if (!(cpu->code[2] == signa[3]
-    and   cpu->code[3] == signa[4])) {
+    if (!(cpu->code[2] == signa[2]
+    and   cpu->code[3] == signa[3])) {
 
         printf ("Wrong file version \n"
                 "file      : %.2s   \n"

@@ -725,3 +725,8 @@ In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.co
 Logging session at compiled time : 03:37:56 Oct 18 2022
 
 In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+----------------------------------------
+Logging session at compiled time : 00:25:15 Oct 19 2022
+
+In file processor/proc_funcs.cpp, function checkFileSign, line 80 : signa[3] = 50;
+In file processor/proc_funcs.cpp, function checkFileSign, line 81 : signa[4] = 0;

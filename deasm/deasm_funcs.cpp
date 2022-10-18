@@ -192,7 +192,7 @@ void ProcDeasmCode (Proc* cpu) {
 
             #define DEF_CMD(name, num, arg, program)                                              \
             case CMD_##name:                                                                      \
-                for (int i = 0; i < TAGS_SIZE; i++) {                                                   \
+                for (int i = 0; i < TAGS_SIZE; i++) {                                             \
                                                                                                   \
                     if (tags[i] == cpu->ip - 1) {                                                 \
                         if (outFile != NULL) fprintf (outFile, "%d:\n", i);                       \
@@ -206,7 +206,7 @@ void ProcDeasmCode (Proc* cpu) {
                                                                                                   \
                     for (int i = 0; i < 513; i++) {                                               \
                                                                                                   \
-                        if (i == TAGS_SIZE) {                                                           \
+                        if (i == TAGS_SIZE) {                                                     \
                             tags[tgIter] = *(int*)(cpu->code + cpu->ip);                          \
                             tgIter++;                                                             \
                         }                                                                         \
