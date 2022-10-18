@@ -2,6 +2,8 @@
 
 char* handleComLine (int argc, char* argv[]) {
 
+    assert (argv != NULL);
+
     char* codeFileName = NULL;
 
     switch (argc) {
@@ -35,6 +37,8 @@ char* handleComLine (int argc, char* argv[]) {
 
 void ProcCtor (Proc* cpu) {
 
+    assert (cpu != NULL);
+
     cpu->code      = NULL;
     cpu->regs[rax] = 0;
     cpu->regs[rbx] = 0;
@@ -50,6 +54,8 @@ void ProcCtor (Proc* cpu) {
 
 void ProcDtor (Proc* cpu) {
 
+    assert (cpu != NULL);
+
     free (cpu->code);
     free (cpu->ram);
     free (cpu->regs);
@@ -60,6 +66,9 @@ void ProcDtor (Proc* cpu) {
 }
 
 void checkFileSign (Proc* cpu) {
+
+    assert (cpu != NULL);
+    assert (cpu->code != NULL);
 
     if (!(cpu->code[0] == signa[0]
     and   cpu->code[1] == signa[1])) {
@@ -81,6 +90,11 @@ void checkFileSign (Proc* cpu) {
 }
 
 elem_t getValueArg (Proc* cpu) {
+
+    assert (cpu       != NULL);
+    assert (cpu->code != NULL);
+    assert (cpu->ram  != NULL);
+    assert (cpu->regs != NULL);
 
     char command = cpu->code[cpu->ip - 1];
 
@@ -106,6 +120,10 @@ elem_t getValueArg (Proc* cpu) {
 
 elem_t* getPtrArg (Proc* cpu) {
 
+    assert (cpu       != NULL);
+    assert (cpu->code != NULL);
+    assert (cpu->ram  != NULL);
+    assert (cpu->regs != NULL);
 
     char command = cpu->code[cpu->ip - 1];
 
@@ -138,6 +156,11 @@ elem_t* getPtrArg (Proc* cpu) {
 
 int getIpArg (Proc* cpu) {
 
+    assert (cpu       != NULL);
+    assert (cpu->code != NULL);
+    assert (cpu->ram  != NULL);
+    assert (cpu->regs != NULL);
+
     char command = cpu->code[cpu->ip - 1];
 
     int retVal = 0;
@@ -148,6 +171,11 @@ int getIpArg (Proc* cpu) {
 }
 
 void ProcDumpInside (Proc* cpu) {
+
+    assert (cpu       != NULL);
+    assert (cpu->code != NULL);
+    assert (cpu->ram  != NULL);
+    assert (cpu->regs != NULL);
 
     for (int i = 0; i < 16; i++) {
 
@@ -183,6 +211,10 @@ void ProcDumpInside (Proc* cpu) {
 
 void ProcRunCode (Proc* cpu) {
 
+    assert (cpu       != NULL);
+    assert (cpu->code != NULL);
+    assert (cpu->ram  != NULL);
+    assert (cpu->regs != NULL);
 
     while (cpu->ip < cpu->codeSize) {
 

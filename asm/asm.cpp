@@ -30,6 +30,8 @@ for (int i = 0; i < TAGS_SIZE; i++) tags[i] = -1;
 
     writeWtf (&codeFile, outFile, tags);
 
+    if (errors == 1) return -1;
+
     killText (&codeFile);
     fclose (outFile);
     free (fileName);

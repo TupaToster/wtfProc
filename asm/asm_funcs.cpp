@@ -2,6 +2,9 @@
 
 void writeBinInternal (void* val, FILE* outFile, size_t sizeOfVar) {
 
+    assert (val != NULL);
+    assert (outFile != NULL);
+
     for (int i = 0; i < sizeOfVar; i++) {
 
         tagCheck (fputc (*(((char*)val) + i), outFile);)
@@ -10,6 +13,10 @@ void writeBinInternal (void* val, FILE* outFile, size_t sizeOfVar) {
 }
 
 void handleArg (Text* code, int line, FILE* outFile, char cmdNum, int tags[TAGS_SIZE]) {
+
+    assert (code != NULL);
+    assert (outFile != NULL);
+    assert (tags != NULL);
 
     char arg1[100] = {0};
     char arg2[100] = {0};
@@ -139,6 +146,10 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, int tags[TAGS_
 
 char* handleComLine (int argc, char* argv[], bool* aFlag, char** outFileName) {
 
+    assert (argv != NULL);
+    assert (aFlag != NULL);
+    assert (outFileName != NULL);
+
     char* fileName = NULL;
 
     switch (argc) {
@@ -197,6 +208,10 @@ char* handleComLine (int argc, char* argv[], bool* aFlag, char** outFileName) {
 }
 
 void writeWtf (Text* codeFile, FILE* outFile, int tags[TAGS_SIZE]) {
+
+    assert (codeFile != NULL);
+    assert (outFile != NULL);
+    assert (tags != NULL);
 
     tagCheck (fprintf (outFile, "%s", signa);)
 

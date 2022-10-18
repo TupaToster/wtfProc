@@ -6,6 +6,7 @@ int   tags[TAGS_SIZE] = {0};
 int main (int argc, char* argv[]) {
 
     char* codeFileName = handleComLine (argc, argv);
+    assert (codeFileName != NULL);
 
     Text codeFile = read_Text (codeFileName);
 

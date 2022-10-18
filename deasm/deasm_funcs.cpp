@@ -2,6 +2,7 @@
 
 char* handleComLine (int argc, char* argv[]) {
 
+    assert (argv != NULL);
     char* codeFileName = NULL;
 
     switch (argc) {
@@ -17,7 +18,6 @@ char* handleComLine (int argc, char* argv[]) {
         case 2:
 
             codeFileName = (char*) calloc (strlen (argv[1]) + 1, sizeof (char));
-
             assert (codeFileName != NULL);
 
             strcpy (codeFileName, argv[1]);
@@ -35,6 +35,8 @@ char* handleComLine (int argc, char* argv[]) {
 
 void ProcCtor (Proc* cpu) {
 
+    assert (cpu != NULL);
+
     cpu->code      = NULL;
     cpu->regs[rax] = 0;
     cpu->regs[rbx] = 0;
@@ -50,6 +52,8 @@ void ProcCtor (Proc* cpu) {
 
 void ProcDtor (Proc* cpu) {
 
+    assert (cpu != NULL);
+
     free (cpu->code);
     free (cpu->ram);
     free (cpu->regs);
@@ -60,6 +64,9 @@ void ProcDtor (Proc* cpu) {
 }
 
 void checkFileSign (Proc* cpu) {
+
+    assert (cpu != NULL);
+    assert (cpu->code != NULL);
 
     if (!(cpu->code[0] == signa[0]
     and   cpu->code[1] == signa[1])) {
@@ -81,6 +88,12 @@ void checkFileSign (Proc* cpu) {
 }
 
 void printValuePtrArg (Proc* cpu) {
+
+    assert (cpu != NULL);
+    assert (cpu->code != NULL);
+    assert (cpu->ram != NULL);
+    assert (cpu->regs != NULL);
+    assert (tags != NULL);
 
     char command = cpu->code[cpu->ip - 1];
 
@@ -105,6 +118,10 @@ void printValuePtrArg (Proc* cpu) {
 
 void printIpArg (Proc* cpu) {
 
+    assert (cpu != NULL);
+    assert (cpu->code != NULL);
+    assert (tags != NULL);
+
     for (int i = 0; i < TAGS_SIZE; i++) {
 
         if (tags[i] == *(int*)(cpu->code + cpu->ip)) {
@@ -117,6 +134,11 @@ void printIpArg (Proc* cpu) {
 }
 
 void ProcDumpInside (Proc* cpu) {
+
+    assert (cpu != NULL);
+    assert (cpu->code != NULL);
+    assert (cpu->ram != NULL);
+    assert (cpu->regs != NULL);
 
     for (int i = 0; i < 16; i++) {
 
@@ -151,6 +173,12 @@ void ProcDumpInside (Proc* cpu) {
 }
 
 void ProcDeasmCode (Proc* cpu) {
+
+    assert (cpu != NULL);
+    assert (cpu->code != NULL);
+    assert (cpu->ram != NULL);
+    assert (cpu->regs != NULL);
+    assert (tags != NULL);
 
     int tgIter = 0;
 
