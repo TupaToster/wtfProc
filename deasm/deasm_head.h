@@ -4,6 +4,7 @@
 #include <assert.h>
 #include <math.h>
 #include "D:\los_projectados\wtfProc\lib\globalization.h"
+#include header(flog)
 #include header(stack)
 #include header(text)
 #include header(cmd)

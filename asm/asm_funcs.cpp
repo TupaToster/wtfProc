@@ -9,7 +9,7 @@ void writeBinInternal (void* val, FILE* outFile, size_t sizeOfVar) {
     }
 }
 
-void handleArg (Text* code, int line, FILE* outFile, char cmdNum, int tags[512]) {
+void handleArg (Text* code, int line, FILE* outFile, char cmdNum, int tags[TAGS_SIZE]) {
 
     char arg1[100] = {0};
     char arg2[100] = {0};
@@ -59,7 +59,7 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, int tags[512])
                 ip += sizeof (char);
                 int index = strtol (arg1 + it1 + 1, NULL, 10);
 
-                if (index < 512) {
+                if (index < TAGS_SIZE) {
 
                     writeBin (tags[index], outFile);
                 }
@@ -196,7 +196,7 @@ char* handleComLine (int argc, char* argv[], bool* aFlag, char** outFileName) {
     return fileName;
 }
 
-void writeWtf (Text* codeFile, FILE* outFile, int tags[512]) {
+void writeWtf (Text* codeFile, FILE* outFile, int tags[TAGS_SIZE]) {
 
     tagCheck (fprintf (outFile, "%s", signa);)
 
@@ -231,7 +231,7 @@ void writeWtf (Text* codeFile, FILE* outFile, int tags[512]) {
 
             int tagNum = 0;
             sscanf (codeFile->Lines[i].begin, "%d", &tagNum);
-            if (tagNum < 512) tags[tagNum] = ip;
+            if (tagNum < TAGS_SIZE) tags[tagNum] = ip;
             else {
                 printf ("Exceeded tag array at line %d : %s\n", i + 1, inputStr);
                 errors = 1;
