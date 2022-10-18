@@ -1,7 +1,5 @@
 #include "deasm_head.h"
 
-char Proc_version[3] = "02";
-
 char* handleComLine (int argc, char* argv[]) {
 
     char* codeFileName = NULL;
@@ -47,7 +45,7 @@ void ProcCtor (Proc* cpu) {
     cpu->ip        = 0;
     cpu->stk       = StackCtor ();
     cpu->funcIp    = StackCtor ();
-    cpu->ram       = (elem_t*) calloc (100, sizeof (elem_t));
+    cpu->ram       = (elem_t*) calloc (RAM_SIZE, sizeof (elem_t));
 }
 
 void ProcDtor (Proc* cpu) {
@@ -63,26 +61,26 @@ void ProcDtor (Proc* cpu) {
 
 void checkFileSign (Proc* cpu) {
 
-    if (!(cpu->code[0] == 'C'
-    and   cpu->code[1] == 'P')) {
+    if (!(cpu->code[0] == signa[0]
+    and   cpu->code[1] == signa[1])) {
 
         printf ("Wrong file signature");
         exit (0);
     }
 
-    if (!(cpu->code[2] == Proc_version[0]
-    and   cpu->code[3] == Proc_version[1])) {
+    if (!(cpu->code[2] == signa[2]
+    and   cpu->code[3] == signa[3])) {
 
         printf ("Wrong file version \n"
                 "file      : %.2s   \n"
-                "processor : %s     \n", cpu->code + 2, Proc_version);
+                "processor : %s     \n", cpu->code + 2, signa + 2);
         exit (0);
     }
 
     cpu->ip = 4;
 }
 
-void printValuePtrArg (Proc* cpu, FILE* outFile) {
+void printValuePtrArg (Proc* cpu) {
 
     char command = cpu->code[cpu->ip - 1];
 
@@ -105,9 +103,9 @@ void printValuePtrArg (Proc* cpu, FILE* outFile) {
     if ((command & MASK_RAM) and outFile != NULL) fprintf (outFile, "]");
 }
 
-void printIpArg (Proc* cpu, FILE* outFile) {
+void printIpArg (Proc* cpu) {
 
-    for (int i = 0; i < 512; i++) {
+    for (int i = 0; i < TAGS_SIZE; i++) {
 
         if (tags[i] == *(int*)(cpu->code + cpu->ip)) {
 
@@ -144,7 +142,7 @@ void ProcDumpInside (Proc* cpu) {
     flogprintf ("RAM: \n"
                 "| ");
 
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < RAM_SIZE; i++) {
 
         flogprintf (elem_t_F " | ", cpu->ram[i]);
     }
@@ -152,7 +150,7 @@ void ProcDumpInside (Proc* cpu) {
     flogprintf ("\n");
 }
 
-void ProcRunCode (Proc* cpu, FILE* outFile) {
+void ProcDeasmCode (Proc* cpu) {
 
     int tgIter = 0;
 
@@ -166,7 +164,7 @@ void ProcRunCode (Proc* cpu, FILE* outFile) {
 
             #define DEF_CMD(name, num, arg, program)                                              \
             case CMD_##name:                                                                      \
-                for (int i = 0; i < 512; i++) {                                                   \
+                for (int i = 0; i < TAGS_SIZE; i++) {                                                   \
                                                                                                   \
                     if (tags[i] == cpu->ip - 1) {                                                 \
                         if (outFile != NULL) fprintf (outFile, "%d:\n", i);                       \
@@ -174,13 +172,13 @@ void ProcRunCode (Proc* cpu, FILE* outFile) {
                     }                                                                             \
                 }                                                                                 \
                 if (outFile != NULL) fprintf (outFile, #name " ");                                \
-                if      (arg == 1 or arg == 2) printValuePtrArg   (cpu, outFile);                 \
-                else if (arg == 3 and outFile != NULL) printIpArg (cpu, outFile);                 \
+                if      (arg == 1 or arg == 2) printValuePtrArg   (cpu);                          \
+                else if (arg == 3 and outFile != NULL) printIpArg (cpu);                          \
                 else if (arg == 3 and outFile == NULL) {                                          \
                                                                                                   \
                     for (int i = 0; i < 513; i++) {                                               \
                                                                                                   \
-                        if (i == 512) {                                                           \
+                        if (i == TAGS_SIZE) {                                                           \
                             tags[tgIter] = *(int*)(cpu->code + cpu->ip);                          \
                             tgIter++;                                                             \
                         }                                                                         \

@@ -1,7 +1,7 @@
 #include "deasm_head.h"
 
-char* outStr  = NULL;
-int   tags[512] = {0};
+FILE* outFile = NULL;
+int   tags[TAGS_SIZE] = {0};
 
 int main (int argc, char* argv[]) {
 
@@ -9,7 +9,7 @@ int main (int argc, char* argv[]) {
 
     Text codeFile = read_Text (codeFileName);
 
-    memset (tags, -1, 512 * sizeof (int));
+    memset (tags, -1, TAGS_SIZE * sizeof (int));
 
     Proc cpu = {};
     ProcCtor (&cpu);
@@ -17,11 +17,9 @@ int main (int argc, char* argv[]) {
     cpu.code     = codeFile.TextString;
     cpu.codeSize = codeFile.TextSize;
 
-    FILE* outFile = NULL;
-
     checkFileSign (&cpu);
 
-    ProcRunCode (&cpu, outFile);
+    ProcDeasmCode (&cpu);
 
     codeFileName = (char*) realloc (codeFileName, strlen(codeFileName) + strlen("_deasm.code") + 1);
     assert (codeFileName != NULL);
@@ -30,12 +28,13 @@ int main (int argc, char* argv[]) {
     assert (codeFileName != NULL);
 
     outFile = fopen (codeFileName , "w");
+    assert (outFile != NULL);
 
-    flog (codeFileName);
+    cpu.ip = 0;
 
-    cpu.ip = 4;
+    checkFileSign (&cpu);
 
-    ProcRunCode (&cpu, outFile);
+    ProcDeasmCode (&cpu);
 
     ProcDtor (&cpu);
     killText (&codeFile);

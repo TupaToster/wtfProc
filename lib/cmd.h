@@ -11,6 +11,7 @@
 */
 
 #ifndef GENERAL_CMD
+#define GENERAL_CMD
 
 typedef double elem_t; ///< Base element of cpu
 #define elem_t_F "%Lf" ///< Printf format string for elem_t
@@ -22,8 +23,12 @@ typedef double elem_t; ///< Base element of cpu
 
 #define DEF_CMD(name, num, arg, code) ;
 
+#define TAGS_SIZE 512
 
-#define GENERAL_CMD
+#define RAM_SIZE 100
+
+#define REG_SIZE 5
+
 #else ///< Template for auto code gen starts here
 
 DEF_CMD (push, 1, 1, {
@@ -162,4 +167,5 @@ DEF_CMD (sqrt, 20, 0, {
 
     PUSH (sqrt (POP));
 })
+
 #endif
