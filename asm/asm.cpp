@@ -11,7 +11,7 @@ int main (int argc, char* argv[]) {
     bool  aFlag       =  0;
     int   tags[TAGS_SIZE]   = {0};
 
-    for (int i = 0; i < TAGS_SIZE; i++) tags[i] = -1;
+for (int i = 0; i < TAGS_SIZE; i++) tags[i] = -1;
 
     fileName = handleComLine (argc, argv, &aFlag, &outFileName);
     assert (fileName != NULL);

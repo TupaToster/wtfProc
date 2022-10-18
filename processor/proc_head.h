@@ -16,33 +16,6 @@ extern char Proc_version[3];
     StackDump (cpu->funcIp); \
     ProcDumpInside (cpu);    \
 
-/// @brief names of regs array elements - regs[r*x]
-enum reg {
-
-    r0x = 0, ///< Zero register that servers for wrong address
-    rax = 1, ///< First reg
-    rbx = 2, ///< Second reg
-    rcx = 3, ///< Third reg
-    rdx = 4  ///< Fourth reg
-};
-
-/// @brief Masks for bits in command byte
-enum masks {
-
-    MASK_RAM = 1<<7,      ///< Mask for ram access
-    MASK_REG = 1<<6,      ///< Mask for reg access
-    MASK_IMM = 1<<5,      ///< Mask for immidiate constant
-    MASK_CMD = (1<<5) - 1 ///< Mask for actual command number
-};
-
-/// @brief Enumerator for command number (generated automatically)
-enum CMD {
-
-    #undef DEF_CMD
-    #define DEF_CMD(name, num, arg, code) CMD_##name = num,
-
-    #include header(cmd)
-};
 
 /// @brief Struct to store data of a running soft cpu
 struct Proc {

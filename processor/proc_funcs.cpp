@@ -1,7 +1,5 @@
 #include "proc_head.h"
 
-char Proc_version[3] = "02";
-
 char* handleComLine (int argc, char* argv[]) {
 
     char* codeFileName = NULL;
@@ -47,7 +45,7 @@ void ProcCtor (Proc* cpu) {
     cpu->ip        = 0;
     cpu->stk       = StackCtor ();
     cpu->funcIp    = StackCtor ();
-    cpu->ram       = (elem_t*) calloc (100, sizeof (elem_t));
+    cpu->ram       = (elem_t*) calloc (RAM_SIZE, sizeof (elem_t));
 }
 
 void ProcDtor (Proc* cpu) {
@@ -63,15 +61,15 @@ void ProcDtor (Proc* cpu) {
 
 void checkFileSign (Proc* cpu) {
 
-    if (!(cpu->code[0] == 'C'
-    and   cpu->code[1] == 'P')) {
+    if (!(cpu->code[0] == signa[0]
+    and   cpu->code[1] == signa[1])) {
 
         printf ("Wrong file signature");
         exit (0);
     }
 
-    if (!(cpu->code[2] == Proc_version[0]
-    and   cpu->code[3] == Proc_version[1])) {
+    if (!(cpu->code[2] == signa[3]
+    and   cpu->code[3] == signa[4])) {
 
         printf ("Wrong file version \n"
                 "file      : %.2s   \n"
@@ -175,7 +173,7 @@ void ProcDumpInside (Proc* cpu) {
     flogprintf ("RAM: \n"
                 "| ");
 
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < RAM_SIZE; i++) {
 
         flogprintf (elem_t_F " | ", cpu->ram[i]);
     }
