@@ -208,6 +208,8 @@ void writeWtf (Text* codeFile, FILE* outFile, int tags[TAGS_SIZE]) {
 
         sscanf (codeFile->Lines[i].begin, "%s", inputStr);
 
+        if (inputStr[0] == '#') continue;
+
         #undef DEF_CMD
 
         #define DEF_CMD(name, num, arg, code)                         \

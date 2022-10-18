@@ -73,7 +73,7 @@ void checkFileSign (Proc* cpu) {
 
         printf ("Wrong file version \n"
                 "file      : %.2s   \n"
-                "processor : %s     \n", cpu->code + 2, Proc_version);
+                "processor : %s     \n", cpu->code + 2, signa + 2);
         exit (0);
     }
 

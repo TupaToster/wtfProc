@@ -1,6 +1,7 @@
 1:
 push 1
 push 1
+# blyat okno ahuennoe
 add
 jmp :1
 hlt
