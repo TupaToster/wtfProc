@@ -1,2 +1,6 @@
-push -7
-out
+1:
+push 1
+push 1
+add
+jmp :1
+hlt

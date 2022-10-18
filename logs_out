@@ -1,27 +1,72 @@
 ----------------------------------------
-Logging session at compiled time : 12:35:42 Oct 15 2022
+Logging session at compiled time : 22:09:21 Oct 17 2022
 
-In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 52, stack named cpu->stk was dumped : 
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 74 : cpu->code[2] = 48;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 75 : cpu->code[3] = 51;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 76 : Proc_version = 30320 :: UNDEFINED_FORMAT : sizeof() = 3;
+----------------------------------------
+Logging session at compiled time : 22:10:46 Oct 17 2022
+
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 74 : cpu->code[2] = 48;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 75 : cpu->code[3] = 51;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 76 : Proc_version[0] = 48;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 77 : Proc_version[1] = 50;
+----------------------------------------
+Logging session at compiled time : 22:11:06 Oct 17 2022
+
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 74 : cpu->code[2] = 48;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 75 : cpu->code[3] = 51;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 76 : Proc_version[0] = 48;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 77 : Proc_version[1] = 50;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 82 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+----------------------------------------
+Logging session at compiled time : 22:11:24 Oct 17 2022
+
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 74 : cpu->code[2] = 48;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 75 : cpu->code[3] = 51;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 76 : Proc_version[0] = 48;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 77 : Proc_version[1] = 50;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 82 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+----------------------------------------
+Logging session at compiled time : 22:11:52 Oct 17 2022
+
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 74 : cpu->code[2] = 48;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 75 : cpu->code[3] = 51;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 76 : Proc_version[0] = 48;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 77 : Proc_version[1] = 50;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 82 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+----------------------------------------
+Logging session at compiled time : 22:12:23 Oct 17 2022
+
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 74 : cpu->code[2] = 48;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 75 : cpu->code[3] = 51;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 76 : Proc_version[0] = 48;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 77 : Proc_version[1] = 50;
+In file deasm/deasm_funcs.cpp, function checkFileSign, line 82 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+----------------------------------------
+Logging session at compiled time : 00:20:44 Oct 18 2022
+
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 194, stack named cpu->stk was dumped : 
 	Errors : 
 		[ok]
-	hash = 633111666 (ok)
+	hash = 3509096326 (ok)
 	canL = 0xDEADBEEF (ok)
 	canR = 0xD34DB33F (ok)
-	size = 1 (ok)
+	size = 0 (ok)
 	capacity = 4 (ok)
 	stackCanL = 0xDEADBEEF (ok)
 	stackCanR = 0xD34DB33F (ok)
 	cpu->stk.stack : 
-		cpu->stk.stack[0] : 6.000000
+		cpu->stk.stack[0] : 0.000000
 		cpu->stk.stack[1] : 0.000000
 		cpu->stk.stack[2] : 0.000000
 		cpu->stk.stack[3] : 0.000000
 	End of stack
 End of dump 
-In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 52, stack named cpu->funcIp was dumped : 
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 194, stack named cpu->funcIp was dumped : 
 	Errors : 
 		[ok]
-	hash = 2493078683 (ok)
+	hash = 1197103520 (ok)
 	canL = 0xDEADBEEF (ok)
 	canR = 0xD34DB33F (ok)
 	size = 0 (ok)
@@ -36,51 +81,647 @@ In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 52, sta
 	End of stack
 End of dump 
 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
-00 00 13 A8 00 00 00 00 00 00 2E 40 12 07 00 21 
-                                       /| ip = 29, cpu->code[ip] = 07
+43 50 30 32 21 00 00 00 00 00 00 1C C0 06 00 00 
+                                 /| ip = 11, cpu->code[ip] = 1C
 RAM: 
-| 6.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 12.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 
+| 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 
 ----------------------------------------
-Logging session at compiled time : 12:50:26 Oct 15 2022
+Logging session at compiled time : 00:20:44 Oct 18 2022
 
-In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
-In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 914;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 194, stack named cpu->stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 1534185735 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->stk.stack : 
+		cpu->stk.stack[0] : 0.000000
+		cpu->stk.stack[1] : 0.000000
+		cpu->stk.stack[2] : 0.000000
+		cpu->stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 194, stack named cpu->funcIp was dumped : 
+	Errors : 
+		[ok]
+	hash = 3517160225 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->funcIp.stack : 
+		cpu->funcIp.stack[0] : 0.000000
+		cpu->funcIp.stack[1] : 0.000000
+		cpu->funcIp.stack[2] : 0.000000
+		cpu->funcIp.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+43 50 30 32 21 00 00 00 00 00 00 1C C0 06 00 00 
+                                 /| ip = 11, cpu->code[ip] = 1C
+RAM: 
+| 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 
 ----------------------------------------
-Logging session at compiled time : 12:50:54 Oct 15 2022
+Logging session at compiled time : 00:20:44 Oct 18 2022
 
-In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
-In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 914;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 194, stack named cpu->stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 3519198020 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->stk.stack : 
+		cpu->stk.stack[0] : 0.000000
+		cpu->stk.stack[1] : 0.000000
+		cpu->stk.stack[2] : 0.000000
+		cpu->stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 194, stack named cpu->funcIp was dumped : 
+	Errors : 
+		[ok]
+	hash = 1207205214 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->funcIp.stack : 
+		cpu->funcIp.stack[0] : 0.000000
+		cpu->funcIp.stack[1] : 0.000000
+		cpu->funcIp.stack[2] : 0.000000
+		cpu->funcIp.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+43 50 30 32 21 00 00 00 00 00 00 1C C0 06 00 00 
+                                 /| ip = 11, cpu->code[ip] = 1C
+RAM: 
+| 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 
 ----------------------------------------
-Logging session at compiled time : 12:50:54 Oct 15 2022
+Logging session at compiled time : 01:28:25 Oct 18 2022
 
-In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
-In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 914;
+In file deasm/deasm.cpp, function main, line 24 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
 ----------------------------------------
-Logging session at compiled time : 12:50:54 Oct 15 2022
+Logging session at compiled time : 01:28:34 Oct 18 2022
 
-In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
-In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 13;
-In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
-In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
-In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 13;
-In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
+In file deasm/deasm.cpp, function main, line 37 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
 ----------------------------------------
-Logging session at compiled time : 12:50:54 Oct 15 2022
+Logging session at compiled time : 01:47:12 Oct 18 2022
 
-In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
-In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 914;
+In file deasm/deasm.cpp, function main, line 21 : "first" = 66697273740 :: UNDEFINED_FORMAT : sizeof() = 6;
+In file deasm/deasm.cpp, function main, line 34 : "second" = 7365636F6E640 :: UNDEFINED_FORMAT : sizeof() = 7;
 ----------------------------------------
-Logging session at compiled time : 12:50:54 Oct 15 2022
+Logging session at compiled time : 01:47:26 Oct 18 2022
 
-In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
-In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 914;
+In file deasm/deasm.cpp, function main, line 21 : "first" = 66697273740 :: UNDEFINED_FORMAT : sizeof() = 6;
+In file deasm/deasm.cpp, function main, line 34 : "second" = 7365636F6E640 :: UNDEFINED_FORMAT : sizeof() = 7;
+In file deasm/deasm.cpp, function main, line 36 : "third" = 74686972640 :: UNDEFINED_FORMAT : sizeof() = 6;
 ----------------------------------------
-Logging session at compiled time : 13:04:48 Oct 15 2022
+Logging session at compiled time : 01:47:26 Oct 18 2022
 
-In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
+In file deasm/deasm.cpp, function main, line 21 : "first" = 66697273740 :: UNDEFINED_FORMAT : sizeof() = 6;
 ----------------------------------------
-Logging session at compiled time : 13:05:21 Oct 15 2022
+Logging session at compiled time : 01:48:02 Oct 18 2022
 
-In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
-In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 914;
-In file asm/asm_funcs.cpp, function handleArg, line 61 : index = 12;
+In file deasm/deasm.cpp, function main, line 21 : "first" = 66697273740 :: UNDEFINED_FORMAT : sizeof() = 6;
+In file deasm/deasm.cpp, function main, line 33 : outFile = 0064FEE8;
+----------------------------------------
+Logging session at compiled time : 01:48:23 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 21 : "first" = 66697273740 :: UNDEFINED_FORMAT : sizeof() = 6;
+----------------------------------------
+Logging session at compiled time : 01:48:23 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 21 : "first" = 66697273740 :: UNDEFINED_FORMAT : sizeof() = 6;
+In file deasm/deasm.cpp, function main, line 36 : "second" = 7365636F6E640 :: UNDEFINED_FORMAT : sizeof() = 7;
+In file deasm/deasm.cpp, function main, line 38 : "third" = 74686972640 :: UNDEFINED_FORMAT : sizeof() = 6;
+----------------------------------------
+Logging session at compiled time : 01:50:12 Oct 18 2022
+
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 156 : outFile = 00425020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 156 : outFile = 00425020;
+----------------------------------------
+Logging session at compiled time : 01:50:12 Oct 18 2022
+
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 156 : outFile = 00425020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 156 : outFile = 00425020;
+----------------------------------------
+Logging session at compiled time : 01:50:12 Oct 18 2022
+
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 156 : outFile = 00425020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 156 : outFile = 00425020;
+----------------------------------------
+Logging session at compiled time : 01:53:48 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 23 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 160 : outFile = 00426020;
+----------------------------------------
+Logging session at compiled time : 01:53:48 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 23 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 156 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 156 : outFile = 00426020;
+----------------------------------------
+Logging session at compiled time : 02:02:55 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 23 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 156 : outFile = 00426020;
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <.\a.wtf_deasm.code>;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 156 : outFile = 00426020;
+----------------------------------------
+Logging session at compiled time : 02:02:55 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 23 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 156 : outFile = 00426020;
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 156 : outFile = 00426020;
+----------------------------------------
+Logging session at compiled time : 01:54:06 Oct 18 2022
+
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 156 : outFile = 00426020;
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 156 : outFile = 00426020;
+----------------------------------------
+Logging session at compiled time : 01:54:06 Oct 18 2022
+
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 156 : outFile = 00426020;
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 156 : outFile = 00426020;
+----------------------------------------
+Logging session at compiled time : 02:57:33 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+----------------------------------------
+Logging session at compiled time : 02:57:33 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+----------------------------------------
+Logging session at compiled time : 02:57:33 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+----------------------------------------
+Logging session at compiled time : 03:00:23 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 43 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 43 : "sub" = 7375620 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133 : "call" = 63616C6C0 :: UNDEFINED_FORMAT : sizeof() = 5;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133 : "call" = 63616C6C0 :: UNDEFINED_FORMAT : sizeof() = 5;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 151 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 151 : "video" = 766964656F0 :: UNDEFINED_FORMAT : sizeof() = 6;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 32 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 32 : "push" = 707573680 :: UNDEFINED_FORMAT : sizeof() = 5;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 32 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 32 : "push" = 707573680 :: UNDEFINED_FORMAT : sizeof() = 5;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 37 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 37 : "add" = 6164640 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 64 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 64 : "dump" = 64756D700 :: UNDEFINED_FORMAT : sizeof() = 5;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 59 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 59 : "out" = 6F75740 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 69 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 69 : "hlt" = 686C740 :: UNDEFINED_FORMAT : sizeof() = 4;
+----------------------------------------
+Logging session at compiled time : 03:00:23 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 43 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 43 : "sub" = 7375620 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133 : "call" = 63616C6C0 :: UNDEFINED_FORMAT : sizeof() = 5;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133 : "call" = 63616C6C0 :: UNDEFINED_FORMAT : sizeof() = 5;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 151 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 151 : "video" = 766964656F0 :: UNDEFINED_FORMAT : sizeof() = 6;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 32 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 32 : "push" = 707573680 :: UNDEFINED_FORMAT : sizeof() = 5;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 32 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 32 : "push" = 707573680 :: UNDEFINED_FORMAT : sizeof() = 5;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 37 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 37 : "add" = 6164640 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 64 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 64 : "dump" = 64756D700 :: UNDEFINED_FORMAT : sizeof() = 5;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 59 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 59 : "out" = 6F75740 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 69 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 69 : "hlt" = 686C740 :: UNDEFINED_FORMAT : sizeof() = 4;
+----------------------------------------
+Logging session at compiled time : 03:00:23 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 43 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 151 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 32 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 32 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 37 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 64 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 59 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 69 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+----------------------------------------
+Logging session at compiled time : 03:01:49 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+----------------------------------------
+Logging session at compiled time : 03:01:49 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+----------------------------------------
+Logging session at compiled time : 03:01:49 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+----------------------------------------
+Logging session at compiled time : 03:05:25 Oct 18 2022
+
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133 : tags[tgIter] = -1;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133 : tags[tgIter] = -1;
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+----------------------------------------
+Logging session at compiled time : 03:07:35 Oct 18 2022
+
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133 : tags[tgIter] = -1;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133, stack named cpu->stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 2113051988 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->stk.stack : 
+		cpu->stk.stack[0] : 0.000000
+		cpu->stk.stack[1] : 0.000000
+		cpu->stk.stack[2] : 0.000000
+		cpu->stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133, stack named cpu->funcIp was dumped : 
+	Errors : 
+		[ok]
+	hash = 537116374 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->funcIp.stack : 
+		cpu->funcIp.stack[0] : 0.000000
+		cpu->funcIp.stack[1] : 0.000000
+		cpu->funcIp.stack[2] : 0.000000
+		cpu->funcIp.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+43 50 30 32 21 00 00 00 00 00 00 F0 3F 21 00 00 
+                                 /| ip = 11, cpu->code[ip] = FFFFFFF0
+RAM: 
+| 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133 : tags[tgIter] = -1;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133, stack named cpu->stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 2113051988 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->stk.stack : 
+		cpu->stk.stack[0] : 0.000000
+		cpu->stk.stack[1] : 0.000000
+		cpu->stk.stack[2] : 0.000000
+		cpu->stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133, stack named cpu->funcIp was dumped : 
+	Errors : 
+		[ok]
+	hash = 537116374 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->funcIp.stack : 
+		cpu->funcIp.stack[0] : 0.000000
+		cpu->funcIp.stack[1] : 0.000000
+		cpu->funcIp.stack[2] : 0.000000
+		cpu->funcIp.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+00 00 00 00 F0 3F 02 09 04 00 00 00 00 00 00 33 
+            /| ip = 20, cpu->code[ip] = FFFFFFF0
+RAM: 
+| 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+----------------------------------------
+Logging session at compiled time : 03:07:35 Oct 18 2022
+
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133 : tags[tgIter] = -1;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133, stack named cpu->stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 2778089981 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->stk.stack : 
+		cpu->stk.stack[0] : 0.000000
+		cpu->stk.stack[1] : 0.000000
+		cpu->stk.stack[2] : 0.000000
+		cpu->stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133, stack named cpu->funcIp was dumped : 
+	Errors : 
+		[ok]
+	hash = 1202154367 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->funcIp.stack : 
+		cpu->funcIp.stack[0] : 0.000000
+		cpu->funcIp.stack[1] : 0.000000
+		cpu->funcIp.stack[2] : 0.000000
+		cpu->funcIp.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+43 50 30 32 21 00 00 00 00 00 00 F0 3F 21 00 00 
+                                 /| ip = 11, cpu->code[ip] = FFFFFFF0
+RAM: 
+| 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133 : tags[tgIter] = -1;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133, stack named cpu->stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 2778089981 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->stk.stack : 
+		cpu->stk.stack[0] : 0.000000
+		cpu->stk.stack[1] : 0.000000
+		cpu->stk.stack[2] : 0.000000
+		cpu->stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 133, stack named cpu->funcIp was dumped : 
+	Errors : 
+		[ok]
+	hash = 1202154367 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->funcIp.stack : 
+		cpu->funcIp.stack[0] : 0.000000
+		cpu->funcIp.stack[1] : 0.000000
+		cpu->funcIp.stack[2] : 0.000000
+		cpu->funcIp.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+00 00 00 00 F0 3F 02 09 04 00 00 00 00 00 00 6B 
+            /| ip = 20, cpu->code[ip] = FFFFFFF0
+RAM: 
+| 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+----------------------------------------
+Logging session at compiled time : 03:28:27 Oct 18 2022
+
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 79 : tags[tgIter] = -1;
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 79, stack named cpu->stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 4103115120 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->stk.stack : 
+		cpu->stk.stack[0] : 0.000000
+		cpu->stk.stack[1] : 0.000000
+		cpu->stk.stack[2] : 0.000000
+		cpu->stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+In file D:\los_projectados\wtfProc\lib\cmd.h, function ProcRunCode, line 79, stack named cpu->funcIp was dumped : 
+	Errors : 
+		[ok]
+	hash = 2527179506 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->funcIp.stack : 
+		cpu->funcIp.stack[0] : 0.000000
+		cpu->funcIp.stack[1] : 0.000000
+		cpu->funcIp.stack[2] : 0.000000
+		cpu->funcIp.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+00 00 00 00 F0 3F 02 09 04 00 00 00 00 00 00 C7 
+                     /| ip = 23, cpu->code[ip] = 09
+RAM: 
+| 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+----------------------------------------
+Logging session at compiled time : 03:01:49 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+----------------------------------------
+Logging session at compiled time : 03:01:49 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+----------------------------------------
+Logging session at compiled time : 03:01:49 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+----------------------------------------
+Logging session at compiled time : 03:35:22 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+----------------------------------------
+Logging session at compiled time : 03:36:10 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+----------------------------------------
+Logging session at compiled time : 03:37:28 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+----------------------------------------
+Logging session at compiled time : 03:37:56 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+----------------------------------------
+Logging session at compiled time : 00:20:44 Oct 18 2022
+
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 198, stack named cpu->stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 1537198787 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->stk.stack : 
+		cpu->stk.stack[0] : 0.000000
+		cpu->stk.stack[1] : 0.000000
+		cpu->stk.stack[2] : 0.000000
+		cpu->stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 198, stack named cpu->funcIp was dumped : 
+	Errors : 
+		[ok]
+	hash = 2665422163 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->funcIp.stack : 
+		cpu->funcIp.stack[0] : 0.000000
+		cpu->funcIp.stack[1] : 0.000000
+		cpu->funcIp.stack[2] : 0.000000
+		cpu->funcIp.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+21 00 00 00 00 00 00 F0 3F 0E 5A 00 00 00 41 01 
+                              /| ip = 26, cpu->code[ip] = 5A
+RAM: 
+| 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 
+----------------------------------------
+Logging session at compiled time : 00:20:44 Oct 18 2022
+
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 198, stack named cpu->stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 877211641 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->stk.stack : 
+		cpu->stk.stack[0] : 0.000000
+		cpu->stk.stack[1] : 0.000000
+		cpu->stk.stack[2] : 0.000000
+		cpu->stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+In file deasm/deasm_funcs.cpp, function ProcRunCode, line 198, stack named cpu->funcIp was dumped : 
+	Errors : 
+		[ok]
+	hash = 2005435017 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->funcIp.stack : 
+		cpu->funcIp.stack[0] : 0.000000
+		cpu->funcIp.stack[1] : 0.000000
+		cpu->funcIp.stack[2] : 0.000000
+		cpu->funcIp.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+21 00 00 00 00 00 00 00 40 0E 5A 00 00 00 41 01 
+                              /| ip = 42, cpu->code[ip] = 5A
+RAM: 
+| 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 
+----------------------------------------
+Logging session at compiled time : 03:37:56 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;
+----------------------------------------
+Logging session at compiled time : 03:37:56 Oct 18 2022
+
+In file deasm/deasm.cpp, function main, line 34 : codeFileName = <a.wtf_deasm.code>;

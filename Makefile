@@ -6,7 +6,10 @@ ASM_OBJ+=asm/asm.o lib/flog.o asm/asm_funcs.o lib/text.o
 
 PROC_OBJ+=processor/proc.o processor/proc_funcs.o lib/stack.o lib/text.o lib/flog.o
 
-all: wtfasm.exe wtfproc.exe
+DEASM_OBJ+=deasm/deasm.o deasm/deasm_funcs.o lib/stack.o lib/text.o lib/flog.o
+
+
+all: wtfasm.exe wtfproc.exe wtfdeasm.exe
 
 wtfproc.exe: $(PROC_OBJ)
 	$(CC) $(PROC_OBJ) $(CFLAGS) -o wtfproc.exe
@@ -14,6 +17,8 @@ wtfproc.exe: $(PROC_OBJ)
 wtfasm.exe: $(ASM_OBJ)
 	$(CC) $(ASM_OBJ) $(CFLAGS) -o wtfasm.exe
 
+wtfdeasm.exe: $(DEASM_OBJ)
+	$(CC) $(DEASM_OBJ) $(CFLAGS) -o wtfdeasm.exe
 *.o: *.cpp
 	$(CC) $(CFLAGS) *.cpp -c
 
@@ -21,6 +26,7 @@ clean:
 	rm -rf asm/*.o asm/*.exe*
 	rm -rf processor/*.o processor/*.exe*
 	rm -rf lib/*.o lib/*.exe*
+	rm -rf deasm/*.o deasm/*.exe*
 	rm -rf *.o *.exe*
 	clear
 
