@@ -16,14 +16,14 @@ sub
 pop rdx
 push rdx
 push 0
-ja :1
+ja :two_roots
 push rdx
 push 0
-je :2
+je :one_root
 push rdx
 push 0
-jb :3
-1:
+jb :zero_roots
+two_roots:
 push rbx
 push -1
 mult
@@ -47,7 +47,7 @@ mult
 div
 out
 hlt
-2:
+one_root:
 push rbx
 push -1
 mult
@@ -57,5 +57,5 @@ mult
 div
 out
 hlt
-3:
+zero_roots:
 hlt

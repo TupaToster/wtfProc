@@ -10,6 +10,8 @@
 /// @brief Variable for processor version, declared in proc_funcs.cpp
 extern char Proc_version[3];
 
+#define EPS 0.00001
+
 /// @brief Macros for dumping processor
 #define ProcDump(cpu)        \
     StackDump (cpu->stk);    \
@@ -69,3 +71,5 @@ elem_t* getPtrArg (Proc* cpu);
 /// @param cpu Ptr to cpu to read from
 /// @return int value
 int getIpArg (Proc* cpu);
+
+bool cmp (elem_t a, elem_t b);

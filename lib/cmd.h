@@ -93,7 +93,9 @@ DEF_CMD (jb, 10, 3, {
 
 DEF_CMD (jbe, 11, 3, {
 
-    if (POP >= POP) {
+    elem_t scd = POP;
+    elem_t fst = POP;
+    if (scd > fst or cmp (fst, scd)) {
 
         cpu->ip = ipArg;
     }
@@ -109,7 +111,9 @@ DEF_CMD (ja, 12, 3, {
 
 DEF_CMD (jae, 13, 3, {
 
-    if (POP <= POP) {
+    elem_t scd = POP;
+    elem_t fst = POP;
+    if (scd < fst or cmp (fst, scd)) {
 
         cpu->ip = ipArg;
     }
@@ -117,7 +121,7 @@ DEF_CMD (jae, 13, 3, {
 
 DEF_CMD (je, 14, 3, {
 
-    if (POP == POP) {
+    if (cmp (POP, POP)) {
 
         cpu->ip = ipArg;
     }
@@ -125,7 +129,7 @@ DEF_CMD (je, 14, 3, {
 
 DEF_CMD (jne, 15, 3, {
 
-    if (POP != POP) {
+    if (!cmp (POP, POP)) {
 
         cpu->ip = ipArg;
     }

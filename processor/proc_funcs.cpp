@@ -245,3 +245,8 @@ void ProcRunCode (Proc* cpu) {
         }
     }
 }
+
+bool cmp (elem_t a, elem_t b) {
+
+    return fabs (a - b) < EPS;
+}

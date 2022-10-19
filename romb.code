@@ -1,0 +1,76 @@
+push 0
+pop rax
+push 4
+pop rcx
+push 5
+pop rdx
+while_rax_less_5:
+push rax
+push 10
+mult
+push rcx
+add
+pop rbx
+push 1
+pop [rbx]
+push rcx
+push 1
+sub
+pop rcx
+push rax
+push 10
+mult
+push rdx
+add
+pop rbx
+push 1
+pop [rbx]
+push rdx
+push 1
+add
+pop rdx
+push 1
+push rax
+add
+pop rax
+push rax
+push 5
+jne :while_rax_less_5
+push rcx+1
+pop rcx
+push rdx+-1
+pop rdx
+while_rax_less_10:
+push rax
+push 10
+mult
+push rcx
+add
+pop rbx
+push 1
+pop [rbx]
+push rcx
+push 1
+add
+pop rcx
+push rax
+push 10
+mult
+push rdx
+add
+pop rbx
+push 1
+pop [rbx]
+push rdx
+push 1
+sub
+pop rdx
+push 1
+push rax
+add
+pop rax
+push rax
+push 10
+jne :while_rax_less_10
+video
+hlt
