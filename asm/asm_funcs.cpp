@@ -11,7 +11,7 @@ void writeBinInternal (void* val, FILE* outFile, size_t sizeOfVar) {
     }
 }
 
-void handleArg (Text* code, int line, FILE* outFile, char cmdNum, int tags[TAGS_SIZE]) {
+void handleArg (Text* code, int line, FILE* outFile, char cmdNum, Tag tags[TAGS_SIZE]) {
 
     assert (code != NULL);
     assert (tags != NULL);
@@ -62,16 +62,22 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, int tags[TAGS_
 
                 tagCheck (fputc (cmdNum, outFile);)
                 ip += sizeof (char);
-                int index = strtol (arg1 + it1 + 1, NULL, 10);
 
-                if (index < TAGS_SIZE) {
+                arg1[strlen (arg1) - 1] = '\0';
+                for (int i = 0; i <= TAGS_SIZE; i++) {
 
-                    writeBin (tags[index], outFile);
-                }
-                else {
+                    if (i == TAGS_SIZE) {
 
-                    printf ("Exceeded tags array at line %d : %s", line + 1, code->Lines[line].begin);
-                    errors = 1;
+                        unsigned int t = -1;
+                        tagCheck (fwrite (&t, 1, sizeof (unsigned int), outFile);)
+                        ip += sizeof (unsigned int);
+                    }
+                    else if (strcmp (tags[i].name, arg1 + it1 + 1) == 0) {
+
+                        tagCheck (fwrite (&tags[i].ip, 1, sizeof (unsigned int), outFile);)
+                        ip += sizeof (unsigned int);
+                        break;
+                    }
                 }
             }
             else {
@@ -205,7 +211,7 @@ char* handleComLine (int argc, char* argv[], bool* aFlag, char** outFileName) {
     return fileName;
 }
 
-void writeWtf (Text* codeFile, FILE* outFile, int tags[TAGS_SIZE]) {
+void writeWtf (Text* codeFile, FILE* outFile, Tag tags[TAGS_SIZE]) {
 
     assert (codeFile != NULL);
     assert (tags != NULL);
@@ -241,14 +247,26 @@ void writeWtf (Text* codeFile, FILE* outFile, int tags[TAGS_SIZE]) {
 
         #include header(cmd)
 
+        #undef DEF_CMD
+
         if (inputStr[strlen (inputStr) - 1] == ':') {
 
-            int tagNum = 0;
-            sscanf (codeFile->Lines[i].begin, "%d", &tagNum);
-            if (tagNum < TAGS_SIZE) tags[tagNum] = ip;
-            else {
-                printf ("Exceeded tag array at line %d : %s\n", i + 1, inputStr);
-                errors = 1;
+            for (int i = 0; i <= TAGS_SIZE; i++) {
+
+                if (i == TAGS_SIZE) {
+
+                    printf ("Exceeded tag array at line %d : %s\n", i + 1, inputStr);
+                    errors = 1;
+                }
+                else if (tags[i].name[0] == '\0') {
+
+                    // printf ("%s\n", inputStr);
+                    strcpy (tags[i].name, inputStr);
+                    // printf ("%s\n", tags[i].name);
+                    tags[i].name[strlen (inputStr) - 1] = '\0';
+                    tags[i].ip = ip;
+                    break;
+                }
             }
         }
         else {
@@ -256,5 +274,14 @@ void writeWtf (Text* codeFile, FILE* outFile, int tags[TAGS_SIZE]) {
             printf ("Wrong operator at line %d : %s\n", i + 1, inputStr);
             errors = 1;
         }
+    }
+}
+
+void TagCtor (Tag* tag) {
+
+    tag->ip = -1;
+    for (int i = 0; i < MAX_TAG_NAME_LEN; i++) {
+
+        tag->name[i] = '\0';
     }
 }

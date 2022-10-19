@@ -1,29 +1,12 @@
-in
-call :0
-out
-hlt
+push 1.000000
+push 1.000000
+add 
+out 
+jmp :0
+push 1.000000
+push 1.000000
+add 
+out 
 0:
-pop rax
-push rax
-push 1.000000
-je :1
-push rax
-push 2.000000
-je :1
-push rax
-push 1.000000
-sub
-push rax
-push 2.000000
-sub
-call :0
-pop rax
-pop rbx
-push rax
-push rbx
-call :0
-add
-ret
-1:
-push 1.000000
-ret
+dump 
+hlt 

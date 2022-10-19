@@ -7,6 +7,8 @@
 #include header(cmd)
 #include header(text)
 
+#define MAX_TAG_NAME_LEN 100
+
 /// @brief Macros to check for no writing run of writeWtf
 #define tagCheck(...) if (outFile != NULL) { \
     __VA_ARGS__                              \
@@ -17,6 +19,14 @@ extern size_t ip;
 
 /// @brief Is a flag for if errors have occured
 extern bool errors;
+
+struct Tag {
+
+    char  name[MAX_TAG_NAME_LEN ] = {0};
+    int   ip                      = -1;
+};
+
+void TagCtor (Tag* tag);
 
 /// @brief Macros for writeBinInternal
 #define writeBin(var, outFile) writeBinInternal (&var, outFile, sizeof (var))
@@ -33,7 +43,7 @@ void writeBinInternal (void* val, FILE* outFile, size_t sizeOfVar);
 /// @param outFile File to write to
 /// @param cmdNum Number of command it's counting arg for
 /// @param tags Array of tags for jumps
-void handleArg (Text* code, int line, FILE* outFile, char cmdNum, int tags[512]);
+void handleArg (Text* code, int line, FILE* outFile, char cmdNum, Tag tags[512]);
 
 /// @brief Handles command line arguments
 /// @param argc Amount of arguments
@@ -47,4 +57,4 @@ char* handleComLine (int argc, char* argv[], bool* aFlag, char** outFileName);
 /// @param codeFile Struct with source code
 /// @param outFile File to write to
 /// @param tags Array of tags for jumps
-void writeWtf (Text* codeFile, FILE* outFile, int tags[512]);
+void writeWtf (Text* codeFile, FILE* outFile, Tag tags[512]);
