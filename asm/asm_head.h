@@ -28,9 +28,6 @@ struct Tag {
 
 void TagCtor (Tag* tag);
 
-/// @brief Macros for writeBinInternal
-#define writeBin(var, outFile) writeBinInternal (&var, outFile, sizeof (var))
-
 /// @brief Internal function for writeBin macros. Is a memcpy to file basically
 /// @param val Value to write
 /// @param outFile File to write to

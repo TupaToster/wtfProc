@@ -1,16 +1,5 @@
 #include "asm_head.h"
 
-void writeBinInternal (void* val, FILE* outFile, size_t sizeOfVar) {
-
-    assert (val != NULL);
-
-    for (int i = 0; i < sizeOfVar; i++) {
-
-        tagCheck (fputc (*(((char*)val) + i), outFile);)
-        ip += sizeof (char);
-    }
-}
-
 void handleArg (Text* code, int line, FILE* outFile, char cmdNum, Tag tags[TAGS_SIZE]) {
 
     assert (code != NULL);
@@ -56,7 +45,7 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, Tag tags[TAGS_
 
                 double value = 0;
                 sscanf (arg1 + it1, elem_t_F, &value);
-                writeBin (value, outFile);
+                fwrite (&value, 1, sizeof (double), outFile);
             }
             else if (arg1[it1] == ':') {
 
@@ -115,7 +104,7 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, Tag tags[TAGS_
 
                 double value = 0;
                 sscanf (arg2 + it2, elem_t_F, &value);
-                writeBin (value, outFile);
+                fwrite (&value, 1, sizeof (double), outFile);
             }
             else if (arg1[it1] >= '0' and arg1[it1] <= '9' or arg1[it1] == '-') {
 
@@ -133,7 +122,7 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, Tag tags[TAGS_
 
                 double value = 0;
                 sscanf (arg1 + it1, elem_t_F, &value);
-                writeBin (value, outFile);
+                fwrite (&value, 1, sizeof (double), outFile);
             }
         break;
 
