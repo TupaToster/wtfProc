@@ -57,20 +57,11 @@ void checkFileSign (Proc* cpu);
 /// @param cpu Ptr to var to run from
 void ProcRunCode (Proc* cpu);
 
-/// @brief Gets a elem_t arg as a value
-/// @param cpu Ptr to cpu to read from
-/// @return elem_t value
-elem_t getValueArg (Proc* cpu);
-
-/// @brief Gets a elem_t* arg
-/// @param cpu Ptr to cpu to read from
-/// @return elem_t* value
-elem_t* getPtrArg (Proc* cpu);
-
-/// @brief Gets an ip
-/// @param cpu Ptr to cpu to read from
-/// @return int value
-int getIpArg (Proc* cpu);
+/// @brief Gets an arg from cpu->code for a command
+/// @param cpu Ptr to var to get it from
+/// @param argType Type of argument expected
+/// @return Ptr to arg
+elem_t* getArg (Proc* cpu, int argType);
 
 /// @brief Compares two size_t things
 /// @param a first number to compare

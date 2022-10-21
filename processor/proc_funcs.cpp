@@ -89,87 +89,6 @@ void checkFileSign (Proc* cpu) {
     cpu->ip = 4;
 }
 
-elem_t getValueArg (Proc* cpu) {
-
-    assert (cpu       != NULL);
-    assert (cpu->code != NULL);
-    assert (cpu->ram  != NULL);
-    assert (cpu->regs != NULL);
-
-    char command = cpu->code[cpu->ip - 1];
-
-    elem_t retVal = 0;
-
-    if (command & MASK_REG) {
-
-        retVal += cpu->regs[cpu->code[cpu->ip]];
-        cpu->ip += sizeof (char);
-    }
-    if (command & MASK_IMM) {
-
-        retVal += *(elem_t*)(cpu->code + cpu->ip);
-        cpu->ip += sizeof (elem_t);
-    }
-
-    if (command & MASK_RAM) {
-
-        retVal = cpu->ram[(size_t) retVal];
-    }
-    return retVal;
-}
-
-elem_t* getPtrArg (Proc* cpu) {
-
-    assert (cpu       != NULL);
-    assert (cpu->code != NULL);
-    assert (cpu->ram  != NULL);
-    assert (cpu->regs != NULL);
-
-    char command = cpu->code[cpu->ip - 1];
-
-    elem_t* retVal = NULL;
-
-    if (command & MASK_REG) {
-
-        retVal = cpu->regs + cpu->code[cpu->ip];
-        cpu->ip += sizeof (char);
-    }
-
-    if (command & MASK_IMM) {
-
-        retVal = (elem_t*)(cpu->code + cpu->ip);
-
-        if (command & MASK_RAM) {
-            retVal = cpu->ram + (size_t) *retVal + (size_t) cpu->code[cpu->ip];
-        }
-        else exit(0);
-
-        cpu->ip += sizeof (elem_t);
-    }
-    else if (command & MASK_RAM) {
-
-        retVal = cpu->ram + (size_t) *retVal;
-    }
-
-    return retVal;
-}
-
-int getIpArg (Proc* cpu) {
-
-    assert (cpu       != NULL);
-    assert (cpu->code != NULL);
-    assert (cpu->ram  != NULL);
-    assert (cpu->regs != NULL);
-
-    char command = cpu->code[cpu->ip - 1];
-
-    int retVal = 0;
-
-    retVal = *(int*)(cpu->code + cpu->ip);
-    cpu->ip += sizeof (int);
-    return retVal;
-}
-
 void ProcDumpInside (Proc* cpu) {
 
     assert (cpu       != NULL);
@@ -209,6 +128,48 @@ void ProcDumpInside (Proc* cpu) {
     flogprintf ("\n");
 }
 
+bool cmp (elem_t a, elem_t b) {
+    return fabs (a - b) < EPS;
+}
+
+elem_t* getArg (Proc* cpu, int argType) {
+
+    assert (cpu       != NULL);
+    assert (cpu->code != NULL);
+    assert (cpu->ram  != NULL);
+    assert (cpu->regs != NULL);
+
+    char command = cpu->code[cpu->ip - 1];
+
+    elem_t* retVal   = &cpu->regs[r0x];
+    elem_t  immConst = 0;
+
+    *retVal = 0;
+
+    if (command & MASK_REG) {
+
+        if (argType != PTR_ARG) *retVal += cpu->regs[cpu->code[cpu->ip]];
+        else retVal = cpu->regs + cpu->code[cpu->ip];
+        cpu->ip += sizeof (char);
+    }
+
+    if (command & MASK_IMM) {
+
+        *retVal += *(elem_t*)(cpu->code + cpu->ip);
+        immConst = *(elem_t*)(cpu->code + cpu->ip);
+        cpu->ip +=  sizeof (elem_t);
+    }
+
+    if (command & MASK_RAM) {
+
+        size_t ind = (size_t) *retVal;
+        *retVal -= immConst;
+        retVal = cpu->ram + ind;
+    }
+
+    return retVal;
+}
+
 void ProcRunCode (Proc* cpu) {
 
     assert (cpu       != NULL);
@@ -218,9 +179,7 @@ void ProcRunCode (Proc* cpu) {
 
     while (cpu->ip < cpu->codeSize) {
 
-        elem_t* ptrArg = NULL;
-        elem_t  valArg = 0;
-        int     ipArg  = 0;
+        elem_t* cmdArg = NULL;
 
         switch ((cpu->code[cpu->ip++] & MASK_CMD)) {
 
@@ -229,9 +188,8 @@ void ProcRunCode (Proc* cpu) {
             #define DEF_CMD(name, num, arg, code)                    \
                 case CMD_##name:                                     \
                                                                      \
-                    if      (arg == 1) valArg = getValueArg (cpu);   \
-                    else if (arg == 2) ptrArg = getPtrArg (cpu);     \
-                    else if (arg == 3) ipArg  = getIpArg (cpu);      \
+                    cmdArg = getArg (cpu, arg);                      \
+                    assert (cmdArg != NULL);                         \
                     code                                             \
                 break;
 
@@ -244,9 +202,4 @@ void ProcRunCode (Proc* cpu) {
             break;
         }
     }
-}
-
-bool cmp (elem_t a, elem_t b) {
-
-    return fabs (a - b) < EPS;
 }

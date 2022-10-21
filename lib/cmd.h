@@ -21,19 +21,23 @@ typedef double elem_t; ///< Base element of cpu
 
 #define signa "CP02" ///<signature of a fine file
 
-#define DEF_CMD(name, num, arg, code) ;
-
 #define TAGS_SIZE 512
 
 #define RAM_SIZE 100
 
 #define REG_SIZE 5
 
+#define VALUE_ARG 1
+#define PTR_ARG   2
+#define IP_ARG    3
+
+#define DEF_CMD(name, num, arg, code) ;
+
 #else ///< Template for auto code gen starts here
 
-DEF_CMD (push, 1, 1, {
+DEF_CMD (push, 1, VALUE_ARG, {
 
-    PUSH (valArg);
+    PUSH (*cmdArg);
 })
 
 DEF_CMD (add, 2, 0, {
@@ -73,72 +77,72 @@ DEF_CMD (hlt, 0, 0, {
     exit (0);
 })
 
-DEF_CMD (pop, 8, 2, {
+DEF_CMD (pop, 8, PTR_ARG, {
 
-    *ptrArg = POP;
+    *cmdArg = POP;
 })
 
-DEF_CMD (jmp, 9, 3, {
+DEF_CMD (jmp, 9, IP_ARG, {
 
-    cpu->ip = ipArg;
+    cpu->ip = (size_t) cmdArg;
 })
 
-DEF_CMD (jb, 10, 3, {
+DEF_CMD (jb, 10, IP_ARG, {
 
     if (POP > POP) {
 
-        cpu->ip = ipArg;
+        cpu->ip = (size_t) cmdArg;
     }
 })
 
-DEF_CMD (jbe, 11, 3, {
+DEF_CMD (jbe, 11, IP_ARG, {
 
     elem_t scd = POP;
     elem_t fst = POP;
     if (scd > fst or cmp (fst, scd)) {
 
-        cpu->ip = ipArg;
+        cpu->ip = (size_t) cmdArg;
     }
 })
 
-DEF_CMD (ja, 12, 3, {
+DEF_CMD (ja, 12, IP_ARG, {
 
     if (POP < POP) {
 
-        cpu->ip = ipArg;
+        cpu->ip = (size_t) cmdArg;
     }
 })
 
-DEF_CMD (jae, 13, 3, {
+DEF_CMD (jae, 13, IP_ARG, {
 
     elem_t scd = POP;
     elem_t fst = POP;
     if (scd < fst or cmp (fst, scd)) {
 
-        cpu->ip = ipArg;
+        cpu->ip = (size_t) cmdArg;
     }
 })
 
-DEF_CMD (je, 14, 3, {
+DEF_CMD (je, 14, IP_ARG, {
 
     if (cmp (POP, POP)) {
 
-        cpu->ip = ipArg;
+        cpu->ip = (size_t) cmdArg;
     }
 })
 
-DEF_CMD (jne, 15, 3, {
+DEF_CMD (jne, 15, IP_ARG, {
 
     if (!cmp (POP, POP)) {
 
-        cpu->ip = ipArg;
+        cpu->ip = (size_t) cmdArg;
     }
 })
 
-DEF_CMD (call, 16, 3, {
+DEF_CMD (call, 16, IP_ARG, {
 
     StackPush (&cpu->funcIp, cpu->ip);
-    cpu->ip = ipArg;
+    cpu->ip = (size_t) cmdArg;
 })
 
 DEF_CMD (ret, 17, 0, {

@@ -1,6 +1,6 @@
 #include "asm_head.h"
 
-void printTag (Tag tags[], const char* name, FILE* outFile) {
+void printTag (Tag tags[], const char* name, FILE* outFile, size_t* Ip) {
 
     for (int i = 0; i <= TAGS_SIZE; i++) {
 
@@ -8,37 +8,37 @@ void printTag (Tag tags[], const char* name, FILE* outFile) {
 
             unsigned int t = -1;
             tagCheck (fwrite (&t, 1, sizeof (unsigned int), outFile);)
-            ip += sizeof (unsigned int);
+            *Ip += sizeof (unsigned int);
         }
         else if (strcmp (tags[i].name, name) == 0) {
 
             tagCheck (fwrite (&tags[i].ip, 1, sizeof (unsigned int), outFile);)
-            ip += sizeof (unsigned int);
+            *Ip += sizeof (unsigned int);
             break;
         }
     }
 }
 
-void addTag (Tag tags[], const char* name){
+void addTag (Tag tags[], const char* name, size_t* Ip){
 
     for (int i = 0; i <= TAGS_SIZE; i++) {
 
         if (i == TAGS_SIZE) {
 
             printf ("Exceeded tag array at line : %s\n", name);
-            errors = 1;
+            Errors = 1;
         }
         else if (tags[i].name[0] == '\0') {
 
             strcpy (tags[i].name, name);
             tags[i].name[strlen (name) - 1] = '\0';
-            tags[i].ip = ip;
+            tags[i].ip = *Ip;
             break;
         }
     }
 }
 
-void handleArg (Text* code, int line, FILE* outFile, char cmdNum, Tag tags[TAGS_SIZE]) {
+void handleArg (Text* code, int line, FILE* outFile, char cmdNum, Tag tags[TAGS_SIZE], size_t* Ip) {
 
     assert (code != NULL);
     assert (tags != NULL);
@@ -48,6 +48,7 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, Tag tags[TAGS_
 
     int it1 = 1,
         it2 = 1;
+
 
     char temp = *code->Lines[line].end;
 
@@ -68,36 +69,35 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, Tag tags[TAGS_
                 cmdNum |= MASK_REG;
 
                 tagCheck (fputc (cmdNum, outFile);)
-                ip += sizeof (char);
+                *Ip += sizeof (char);
 
                 tagCheck (fputc (arg1[it1 + 1] - 'a' + 1, outFile);)
-                ip += sizeof (char);
+                *Ip += sizeof (char);
             }
             else if (arg1[it1] >= '0' and arg1[it1] <= '9' or arg1[it1] == '-')  {
 
                 cmdNum |= MASK_IMM;
 
                 tagCheck (fputc (cmdNum, outFile);)
-                ip += sizeof (char);
-
+                *Ip += sizeof (char);
 
                 elem_t value = 0;
                 sscanf (arg1 + it1, elem_t_F, &value);
                 fwrite (&value, 1, sizeof (elem_t), outFile);
-                ip += sizeof (elem_t);
+                *Ip += sizeof (elem_t);
             }
             else if (arg1[it1] == ':') {
 
                 tagCheck (fputc (cmdNum, outFile);)
-                ip += sizeof (char);
+                *Ip += sizeof (char);
 
                 arg1[strlen (arg1) - 1] = '\0';
-                printTag (tags, arg1 + it1 + 1, outFile);
+                printTag (tags, arg1 + it1 + 1, outFile, Ip);
             }
             else {
 
                 printf ("Wrong arg at line %d : %s", line + 1, *code->Lines[line].begin);
-                errors = 1;
+                Errors = 1;
             }
         break;
 
@@ -114,49 +114,48 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, Tag tags[TAGS_
 
             if (arg1[it1] == 'r' and arg1[it1 + 2] == 'x') {
 
-
                 if (arg2[0] != '+') {
 
                     printf ("Wrong arg at line %d : %s", line + 1, *code->Lines[line].begin);
-                    exit (0);
+                    Errors++;
                 }
 
                 tagCheck (fputc (cmdNum, outFile);)
-                ip += sizeof (char);
+                *Ip += sizeof (char);
 
                 tagCheck (fputc (arg1[it1 + 1] - 'a' + 1, outFile);)
-                ip += sizeof (char);
+                *Ip += sizeof (char);
 
                 elem_t value = 0;
                 sscanf (arg2 + it2, elem_t_F, &value);
                 fwrite (&value, 1, sizeof (elem_t), outFile);
-                ip += sizeof (elem_t);
+                *Ip += sizeof (elem_t);
             }
             else if (arg1[it1] >= '0' and arg1[it1] <= '9' or arg1[it1] == '-') {
 
                 if (arg2[0] != '+') {
 
                     printf ("Wrong arg at line %d : %s", line + 1, *code->Lines[line].begin);
-                    exit (0);
+                    Errors++;
                 }
 
                 tagCheck (fputc (cmdNum, outFile);)
-                ip += sizeof (char);
+                *Ip += sizeof (char);
 
                 tagCheck (fputc (arg2[it2] - 'a' + 1, outFile);)
-                ip += sizeof (char);
+                *Ip += sizeof (char);
 
                 elem_t value = 0;
                 sscanf (arg1 + it1, elem_t_F, &value);
                 fwrite (&value, 1, sizeof (elem_t), outFile);
-                ip += sizeof (elem_t);
+                *Ip += sizeof (elem_t);
             }
         break;
 
         default:
 
             printf ("Wrong operator in line %d : %s\n", line + 1, *code->Lines[line].begin);
-            errors = 1;
+            Errors = 1;
         break;
     }
 
@@ -164,10 +163,9 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, Tag tags[TAGS_
 
 }
 
-char* handleComLine (int argc, char* argv[], bool* aFlag, char** outFileName) {
+char* handleComLine (int argc, char* argv[], char** outFileName) {
 
     assert (argv != NULL);
-    assert (aFlag != NULL);
     assert (outFileName != NULL);
 
     char* fileName = NULL;
@@ -180,8 +178,9 @@ char* handleComLine (int argc, char* argv[], bool* aFlag, char** outFileName) {
                     "fileName - name of file to compile (commonly .codeFile)\n"
                     "-o - optional key to set name of output file .wtf\n"
                     "outFileName - name of output file with -o (set to a.wtf by default)\n");
-            exit(0);
+            return NULL;
         break;
+
         case 2:
 
             fileName = (char*) calloc (strlen (argv[1] + 1), sizeof (char));
@@ -200,7 +199,7 @@ char* handleComLine (int argc, char* argv[], bool* aFlag, char** outFileName) {
             if (strcmp (argv[2], "-o")) {
 
                 printf ("Wrong args");
-                exit (0);
+                return NULL;
             }
 
             *outFileName = (char*) calloc (strlen (argv[3] + 1), sizeof (char));
@@ -212,7 +211,7 @@ char* handleComLine (int argc, char* argv[], bool* aFlag, char** outFileName) {
         default:
 
             printf ("Wrong command line args");
-            exit (0);
+            return NULL;
         break;
     }
 
@@ -227,14 +226,15 @@ char* handleComLine (int argc, char* argv[], bool* aFlag, char** outFileName) {
     return fileName;
 }
 
-void writeWtf (Text* codeFile, FILE* outFile, Tag tags[TAGS_SIZE]) {
+void writeWtf (Text* codeFile, FILE* outFile, Tag tags[TAGS_SIZE], size_t* Ip) {
 
     assert (codeFile != NULL);
     assert (tags != NULL);
 
     tagCheck (fprintf (outFile, "%s", signa);)
 
-    ip += 4 * sizeof (char);
+
+    *Ip += 4 * sizeof (char);
 
     for (int i = 0; i < codeFile->stringCnt; i++) {
 
@@ -252,11 +252,11 @@ void writeWtf (Text* codeFile, FILE* outFile, Tag tags[TAGS_SIZE]) {
                 if (arg == 0){                                        \
                                                                       \
                     tagCheck(fputc (num, outFile);)                   \
-                    ip += sizeof (char);                              \
+                    Ip += sizeof (char);                              \
                 }                                                     \
                 else if (arg != 0) {                                  \
                                                                       \
-                    handleArg (codeFile, i, outFile, num, tags);      \
+                    handleArg (codeFile, i, outFile, num, tags, Ip);  \
                 }                                                     \
             }                                                         \
             else
@@ -267,12 +267,12 @@ void writeWtf (Text* codeFile, FILE* outFile, Tag tags[TAGS_SIZE]) {
 
         if (inputStr[strlen (inputStr) - 1] == ':') {
 
-            addTag (tags, inputStr);
+            addTag (tags, inputStr, Ip);
         }
         else {
 
             printf ("Wrong operator at line %d : %s\n", i + 1, inputStr);
-            errors = 1;
+            Errors = 1;
         }
     }
 }
@@ -283,5 +283,13 @@ void TagCtor (Tag* tag) {
     for (int i = 0; i < MAX_TAG_NAME_LEN; i++) {
 
         tag->name[i] = '\0';
+    }
+}
+
+void TagsCtor (Tag* tags) {
+
+    for (int i = 0; i < TAGS_SIZE; i++) {
+
+        TagCtor (tags + i);
     }
 }

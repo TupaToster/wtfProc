@@ -1,6 +1,4 @@
 #define pasta(str) #str
-
-#define pasta(str) #str
 #define header(fileName) pasta(D:\los_projectados\wtfProc\lib\fileName.h)
 
 // @brief names of regs array elements - regs[r*x]

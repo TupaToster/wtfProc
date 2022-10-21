@@ -1,22 +1,11 @@
 #include "asm_head.h"
 
-size_t ip = 0;
-
-bool errors = 0;
+bool Errors = 0;
 
 int main (int argc, char* argv[]) {
 
-    char* fileName          =  NULL;
     char* outFileName       =  NULL;
-    bool  aFlag             =  0;
-    Tag   tags[TAGS_SIZE]   = {};
-
-    for (int i = 0; i < TAGS_SIZE; i++) {
-
-        TagCtor (tags + i);
-    }
-
-    fileName = handleComLine (argc, argv, &aFlag, &outFileName);
+    char* fileName = handleComLine (argc, argv, &outFileName);
     assert (fileName != NULL);
 
 
@@ -25,15 +14,18 @@ int main (int argc, char* argv[]) {
 
     Text codeFile = read_Text (fileName);
 
-    writeWtf (&codeFile, NULL, tags);
+    size_t Ip = 0;
+    Tag   tags[TAGS_SIZE]   = {};
+    TagsCtor (tags);
 
-    if (errors == 1) return -1;
+    do {
+        writeWtf (&codeFile, NULL, tags, &Ip);
+        if (Errors) break;
 
-    ip = 0;
+        writeWtf (&codeFile, outFile, tags, &Ip);
+        if (Errors) break;
 
-    writeWtf (&codeFile, outFile, tags);
-
-    if (errors == 1) return -1;
+    } while(false);
 
     killText (&codeFile);
     fclose (outFile);

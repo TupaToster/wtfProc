@@ -1,7 +1,9 @@
 push 1
-push 1
-je :lol
-hlt
-lol:
-push 10
+pop rax
+push 12
+pop [2]
+push [rax+1]
 out
+push rax
+out
+hlt
