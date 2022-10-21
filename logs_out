@@ -10,3 +10,303 @@ In file asm/asm_funcs.cpp, function handleArg, line 66 : arg1 = 203A736E7573D000
 Logging session at compiled time : 12:36:20 Oct 19 2022
 
 In file asm/asm_funcs.cpp, function handleArg, line 78 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+----------------------------------------
+Logging session at compiled time : 12:48:29 Oct 21 2022
+
+In file processor/proc_funcs.cpp, function ProcRunCode, line 242, stack named cpu->stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 1880720762 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->stk.stack : 
+		cpu->stk.stack[0] : 0.000000
+		cpu->stk.stack[1] : 0.000000
+		cpu->stk.stack[2] : 0.000000
+		cpu->stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+In file processor/proc_funcs.cpp, function ProcRunCode, line 242, stack named cpu->funcIp was dumped : 
+	Errors : 
+		[ok]
+	hash = 1759344906 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->funcIp.stack : 
+		cpu->funcIp.stack[0] : 0.000000
+		cpu->funcIp.stack[1] : 0.000000
+		cpu->funcIp.stack[2] : 0.000000
+		cpu->funcIp.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+43 50 30 32 21 00 00 00 00 00 00 F0 3F 21 00 00 
+                                    /| ip = 12, cpu->code[ip] = 3F
+RAM: 
+| 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 
+----------------------------------------
+Logging session at compiled time : 12:48:29 Oct 21 2022
+
+In file processor/proc_funcs.cpp, function ProcRunCode, line 242, stack named cpu->stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 2475046897 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->stk.stack : 
+		cpu->stk.stack[0] : 0.000000
+		cpu->stk.stack[1] : 0.000000
+		cpu->stk.stack[2] : 0.000000
+		cpu->stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+In file processor/proc_funcs.cpp, function ProcRunCode, line 242, stack named cpu->funcIp was dumped : 
+	Errors : 
+		[ok]
+	hash = 2353671041 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->funcIp.stack : 
+		cpu->funcIp.stack[0] : 0.000000
+		cpu->funcIp.stack[1] : 0.000000
+		cpu->funcIp.stack[2] : 0.000000
+		cpu->funcIp.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+43 50 30 32 21 00 00 00 00 00 00 F0 3F 21 00 00 
+                                    /| ip = 12, cpu->code[ip] = 3F
+RAM: 
+| 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 
+----------------------------------------
+Logging session at compiled time : 12:48:29 Oct 21 2022
+
+In file processor/proc_funcs.cpp, function ProcRunCode, line 242, stack named cpu->stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 4135116456 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->stk.stack : 
+		cpu->stk.stack[0] : 0.000000
+		cpu->stk.stack[1] : 0.000000
+		cpu->stk.stack[2] : 0.000000
+		cpu->stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+In file processor/proc_funcs.cpp, function ProcRunCode, line 242, stack named cpu->funcIp was dumped : 
+	Errors : 
+		[ok]
+	hash = 4013740600 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->funcIp.stack : 
+		cpu->funcIp.stack[0] : 0.000000
+		cpu->funcIp.stack[1] : 0.000000
+		cpu->funcIp.stack[2] : 0.000000
+		cpu->funcIp.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+43 50 30 32 21 00 00 00 00 00 00 F0 3F 21 00 00 
+                                    /| ip = 12, cpu->code[ip] = 3F
+RAM: 
+| 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 
+----------------------------------------
+Logging session at compiled time : 13:02:29 Oct 21 2022
+
+In file processor/proc_funcs.cpp, function getValueArg, line 110 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file processor/proc_funcs.cpp, function getValueArg, line 110 : "lol" = 6C6F6C0 :: UNDEFINED_FORMAT : sizeof() = 4;
+In file processor/proc_funcs.cpp, function ProcRunCode, line 243, stack named cpu->stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 1490117025 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->stk.stack : 
+		cpu->stk.stack[0] : 0.000000
+		cpu->stk.stack[1] : 0.000000
+		cpu->stk.stack[2] : 0.000000
+		cpu->stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+In file processor/proc_funcs.cpp, function ProcRunCode, line 243, stack named cpu->funcIp was dumped : 
+	Errors : 
+		[ok]
+	hash = 1368741169 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->funcIp.stack : 
+		cpu->funcIp.stack[0] : 0.000000
+		cpu->funcIp.stack[1] : 0.000000
+		cpu->funcIp.stack[2] : 0.000000
+		cpu->funcIp.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+43 50 30 32 21 00 00 00 00 00 00 F0 3F 21 00 00 
+                                    /| ip = 12, cpu->code[ip] = 3F
+RAM: 
+| 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 
+----------------------------------------
+Logging session at compiled time : 13:04:05 Oct 21 2022
+
+In file processor/proc_funcs.cpp, function getValueArg, line 110 : cpu->ip = 5;
+In file processor/proc_funcs.cpp, function getValueArg, line 113 : cpu->ip = 13;
+In file processor/proc_funcs.cpp, function getValueArg, line 110 : cpu->ip = 14;
+In file processor/proc_funcs.cpp, function getValueArg, line 113 : cpu->ip = 22;
+In file processor/proc_funcs.cpp, function ProcRunCode, line 244, stack named cpu->stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 1150021758 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->stk.stack : 
+		cpu->stk.stack[0] : 0.000000
+		cpu->stk.stack[1] : 0.000000
+		cpu->stk.stack[2] : 0.000000
+		cpu->stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+In file processor/proc_funcs.cpp, function ProcRunCode, line 244, stack named cpu->funcIp was dumped : 
+	Errors : 
+		[ok]
+	hash = 1028645902 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->funcIp.stack : 
+		cpu->funcIp.stack[0] : 0.000000
+		cpu->funcIp.stack[1] : 0.000000
+		cpu->funcIp.stack[2] : 0.000000
+		cpu->funcIp.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+43 50 30 32 21 00 00 00 00 00 00 F0 3F 21 00 00 
+                                    /| ip = 12, cpu->code[ip] = 3F
+RAM: 
+| 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 
+----------------------------------------
+Logging session at compiled time : 12:48:29 Oct 21 2022
+
+In file processor/proc_funcs.cpp, function ProcRunCode, line 242, stack named cpu->stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 4119963915 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->stk.stack : 
+		cpu->stk.stack[0] : 0.000000
+		cpu->stk.stack[1] : 0.000000
+		cpu->stk.stack[2] : 0.000000
+		cpu->stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+In file processor/proc_funcs.cpp, function ProcRunCode, line 242, stack named cpu->funcIp was dumped : 
+	Errors : 
+		[ok]
+	hash = 3998588059 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->funcIp.stack : 
+		cpu->funcIp.stack[0] : 0.000000
+		cpu->funcIp.stack[1] : 0.000000
+		cpu->funcIp.stack[2] : 0.000000
+		cpu->funcIp.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+43 50 30 32 21 00 00 00 00 00 00 F0 3F 21 00 00 
+                                    /| ip = 12, cpu->code[ip] = 3F
+RAM: 
+| 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 
+----------------------------------------
+Logging session at compiled time : 12:48:29 Oct 21 2022
+
+In file processor/proc_funcs.cpp, function ProcRunCode, line 242, stack named cpu->stk was dumped : 
+	Errors : 
+		[ok]
+	hash = 1815059751 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->stk.stack : 
+		cpu->stk.stack[0] : 0.000000
+		cpu->stk.stack[1] : 0.000000
+		cpu->stk.stack[2] : 0.000000
+		cpu->stk.stack[3] : 0.000000
+	End of stack
+End of dump 
+In file processor/proc_funcs.cpp, function ProcRunCode, line 242, stack named cpu->funcIp was dumped : 
+	Errors : 
+		[ok]
+	hash = 1693683895 (ok)
+	canL = 0xDEADBEEF (ok)
+	canR = 0xD34DB33F (ok)
+	size = 0 (ok)
+	capacity = 4 (ok)
+	stackCanL = 0xDEADBEEF (ok)
+	stackCanR = 0xD34DB33F (ok)
+	cpu->funcIp.stack : 
+		cpu->funcIp.stack[0] : 0.000000
+		cpu->funcIp.stack[1] : 0.000000
+		cpu->funcIp.stack[2] : 0.000000
+		cpu->funcIp.stack[3] : 0.000000
+	End of stack
+End of dump 
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+43 50 30 32 21 00 00 00 00 00 00 F0 3F 21 00 00 
+                                    /| ip = 12, cpu->code[ip] = 3F
+RAM: 
+| 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 0.000000 | 

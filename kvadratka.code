@@ -14,6 +14,9 @@ push rcx
 mult
 sub
 pop rdx
+push rax
+push 0
+je :linear
 push rdx
 push 0
 ja :two_roots
@@ -58,4 +61,21 @@ div
 out
 hlt
 zero_roots:
+hlt
+linear:
+push rbx
+push 0
+je :inf_roots
+push rcx
+push -1
+mult
+push rbx
+div
+out
+hlt
+inf_roots:
+push 1
+push 0
+div
+out
 hlt

@@ -108,7 +108,7 @@ elem_t getValueArg (Proc* cpu) {
     if (command & MASK_IMM) {
 
         retVal += *(elem_t*)(cpu->code + cpu->ip);
-        cpu->ip += sizeof (retVal);
+        cpu->ip += sizeof (elem_t);
     }
 
     if (command & MASK_RAM) {

@@ -10,7 +10,7 @@
 /// @brief Variable for processor version, declared in proc_funcs.cpp
 extern char Proc_version[3];
 
-#define EPS 0.00001
+#define EPS 0.001
 
 /// @brief Macros for dumping processor
 #define ProcDump(cpu)        \

@@ -33,7 +33,7 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, Tag tags[TAGS_
                 ip += sizeof (char);
 
                 tagCheck (fputc (arg1[it1 + 1] - 'a' + 1, outFile);)
-                ip+=sizeof (char);
+                ip += sizeof (char);
             }
             else if (arg1[it1] >= '0' and arg1[it1] <= '9' or arg1[it1] == '-')  {
 
@@ -43,9 +43,10 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, Tag tags[TAGS_
                 ip += sizeof (char);
 
 
-                double value = 0;
+                elem_t value = 0;
                 sscanf (arg1 + it1, elem_t_F, &value);
-                fwrite (&value, 1, sizeof (double), outFile);
+                fwrite (&value, 1, sizeof (elem_t), outFile);
+                ip += sizeof (elem_t);
             }
             else if (arg1[it1] == ':') {
 
@@ -102,9 +103,10 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, Tag tags[TAGS_
                 tagCheck (fputc (arg1[it1 + 1] - 'a' + 1, outFile);)
                 ip += sizeof (char);
 
-                double value = 0;
+                elem_t value = 0;
                 sscanf (arg2 + it2, elem_t_F, &value);
-                fwrite (&value, 1, sizeof (double), outFile);
+                fwrite (&value, 1, sizeof (elem_t), outFile);
+                ip += sizeof (elem_t);
             }
             else if (arg1[it1] >= '0' and arg1[it1] <= '9' or arg1[it1] == '-') {
 
@@ -120,9 +122,10 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, Tag tags[TAGS_
                 tagCheck (fputc (arg2[it2] - 'a' + 1, outFile);)
                 ip += sizeof (char);
 
-                double value = 0;
+                elem_t value = 0;
                 sscanf (arg1 + it1, elem_t_F, &value);
-                fwrite (&value, 1, sizeof (double), outFile);
+                fwrite (&value, 1, sizeof (elem_t), outFile);
+                ip += sizeof (elem_t);
             }
         break;
 
@@ -251,9 +254,9 @@ void writeWtf (Text* codeFile, FILE* outFile, Tag tags[TAGS_SIZE]) {
 
                     // printf ("%s\n", inputStr);
                     strcpy (tags[i].name, inputStr);
-                    // printf ("%s\n", tags[i].name);
                     tags[i].name[strlen (inputStr) - 1] = '\0';
                     tags[i].ip = ip;
+                    // printf ("%s : %d\n", tags[i].name, tags[i].ip);
                     break;
                 }
             }

@@ -1,12 +1,7 @@
 push 1
 push 1
-add
-out
-jmp :snus
-push 1
-push 1
-add
-out
-snus:
-dump
+je :lol
 hlt
+lol:
+push 10
+out
