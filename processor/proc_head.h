@@ -72,4 +72,8 @@ elem_t* getPtrArg (Proc* cpu);
 /// @return int value
 int getIpArg (Proc* cpu);
 
+/// @brief Compares two size_t things
+/// @param a first number to compare
+/// @param b second number to compare
+/// @return true if equal with precision of EPS, false if not
 bool cmp (elem_t a, elem_t b);
