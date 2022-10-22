@@ -43,8 +43,8 @@ void handleArg (Text* code, int line, char* outStr, char cmdNum, Tag tags[TAGS_S
     assert (code != NULL);
     assert (tags != NULL);
 
-    char arg1[100] = {0};
-    char arg2[100] = {0};
+    char arg1[100] = "";
+    char arg2[100] = "";
 
     int it1 = 1,
         it2 = 1;
