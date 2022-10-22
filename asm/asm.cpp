@@ -18,17 +18,26 @@ int main (int argc, char* argv[]) {
     Tag   tags[TAGS_SIZE]   = {};
     TagsCtor (tags);
 
+    char* outStr = NULL;
+
     do {
-        writeWtf (&codeFile, NULL, tags, &Ip);
+        writeWtf (&codeFile, outStr, tags, &Ip);
         if (Errors) break;
 
-        writeWtf (&codeFile, outFile, tags, &Ip);
+        outStr = (char*) calloc (Ip, sizeof (char));
+        assert (outStr != NULL);
+
+        Ip = 0;
+
+        writeWtf (&codeFile, outStr, tags, &Ip);
         if (Errors) break;
 
+        fwrite (outStr, Ip, sizeof (char), outFile);
     } while(false);
 
     killText (&codeFile);
     fclose (outFile);
+    free (outStr);
     free (fileName);
     free (outFileName);
 }

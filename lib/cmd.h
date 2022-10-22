@@ -19,7 +19,7 @@ typedef double elem_t; ///< Base element of cpu
 #define PUSH(val) StackPush (&cpu->stk, val)
 #define POP StackPop (&cpu->stk)
 
-#define signa "CP02" ///<signature of a fine file
+#define signa "CP03" ///< signature of a fine file
 
 #define TAGS_SIZE 512
 
