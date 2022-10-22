@@ -1,9 +1,6 @@
 push 1
-pop rax
-push 12
-pop [2]
-push [rax+1]
+lol:
+push 1
 out
-push rax
-out
+jmp :lol
 hlt

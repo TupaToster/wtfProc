@@ -20,8 +20,8 @@ extern bool Errors;
 
 struct Tag {
 
-    char  name[MAX_TAG_NAME_LEN ] = {0};
-    int   ip                      = -1;
+    char   name[MAX_TAG_NAME_LEN ] = {0};
+    elem_t ip                      = -1;
 };
 
 void TagCtor (Tag* tag);

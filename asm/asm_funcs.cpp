@@ -6,14 +6,14 @@ void printTag (Tag tags[], const char* name, FILE* outFile, size_t* Ip) {
 
         if (i == TAGS_SIZE) {
 
-            unsigned int t = -1;
-            tagCheck (fwrite (&t, 1, sizeof (unsigned int), outFile);)
-            *Ip += sizeof (unsigned int);
+            elem_t t = -1;
+            tagCheck (fwrite (&t, 1, sizeof (elem_t), outFile);)
+            *Ip += sizeof (elem_t);
         }
         else if (strcmp (tags[i].name, name) == 0) {
 
-            tagCheck (fwrite (&tags[i].ip, 1, sizeof (unsigned int), outFile);)
-            *Ip += sizeof (unsigned int);
+            tagCheck (fwrite (&tags[i].ip, 1, sizeof (elem_t), outFile);)
+            *Ip += sizeof (elem_t);
             break;
         }
     }
@@ -32,7 +32,7 @@ void addTag (Tag tags[], const char* name, size_t* Ip){
 
             strcpy (tags[i].name, name);
             tags[i].name[strlen (name) - 1] = '\0';
-            tags[i].ip = *Ip;
+            tags[i].ip = (elem_t) *Ip;
             break;
         }
     }
@@ -63,7 +63,6 @@ void handleArg (Text* code, int line, FILE* outFile, char cmdNum, Tag tags[TAGS_
                 cmdNum |= MASK_RAM;
                 it1++;
             }
-
             if(arg1[it1] == 'r' and arg1[it1 + 2] == 'x') {
 
                 cmdNum |= MASK_REG;
@@ -233,7 +232,6 @@ void writeWtf (Text* codeFile, FILE* outFile, Tag tags[TAGS_SIZE], size_t* Ip) {
 
     tagCheck (fprintf (outFile, "%s", signa);)
 
-
     *Ip += 4 * sizeof (char);
 
     for (int i = 0; i < codeFile->stringCnt; i++) {
@@ -252,7 +250,7 @@ void writeWtf (Text* codeFile, FILE* outFile, Tag tags[TAGS_SIZE], size_t* Ip) {
                 if (arg == 0){                                        \
                                                                       \
                     tagCheck(fputc (num, outFile);)                   \
-                    Ip += sizeof (char);                              \
+                    *Ip += sizeof (char);                             \
                 }                                                     \
                 else if (arg != 0) {                                  \
                                                                       \

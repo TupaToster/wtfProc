@@ -1,12 +1,172 @@
+push 0.000000
+pop rax
+push 4.000000
+pop rcx
+push 5.000000
+pop rdx
+push rax
+push 10.000000
+mult
+push rcx
+add
+pop rbx
 push 1.000000
+pop [rbx]
+push rcx
 push 1.000000
-add 
-out 
+sub
+pop rcx
+push rax
+push 10.000000
+mult
+push rdx
+add
+pop rbx
+push 1.000000
+pop [rbx]
+push rdx
+push 1.000000
+add
+pop rdx
+push 1.000000
+push rax
+add
+pop rax
+push rax
+push 5.000000
+push 1.000000
+out
 jmp :0
+hlt
+hlt
+add
+hlt
 push 1.000000
+out
+push rcx+1.000000
+pop rcx
+push rdx+-1.000000
+pop rdx
+push rax
+push 10.000000
+mult
+push rcx
+add
+pop rbx
 push 1.000000
-add 
-out 
-0:
-dump 
-hlt 
+pop [rbx]
+push rcx
+push 1.000000
+add
+pop rcx
+push rax
+push 10.000000
+mult
+push rdx
+add
+pop rbx
+push 1.000000
+pop [rbx]
+push rdx
+push 1.000000
+sub
+pop rdx
+push 1.000000
+push rax
+add
+pop rax
+push rax
+push 10.000000
+jb :0
+hlt
+hlt
+pop r�x+0.000000
+hlt
+hlt
+hlt
+hlt
+hlt
+hlt
+hlt
+pop rax
+push 4.000000
+pop rcx
+push 5.000000
+pop rdx
+push rax
+push 10.000000
+mult
+push rcx
+add
+pop rbx
+push 1.000000
+pop [rbx]
+push rcx
+push 1.000000
+sub
+pop rcx
+push rax
+push 10.000000
+mult
+push rdx
+add
+pop rbx
+push 1.000000
+pop [rbx]
+push rdx
+push 1.000000
+add
+pop rdx
+push 1.000000
+push rax
+add
+pop rax
+push rax
+push 5.000000
+push 1.000000
+out
+jmp :0
+hlt
+hlt
+add
+hlt
+push 1.000000
+out
+push rcx+1.000000
+pop rcx
+push rdx+-1.000000
+pop rdx
+push rax
+push 10.000000
+mult
+push rcx
+add
+pop rbx
+push 1.000000
+pop [rbx]
+push rcx
+push 1.000000
+add
+pop rcx
+push rax
+push 10.000000
+mult
+push rdx
+add
+pop rbx
+push 1.000000
+pop [rbx]
+push rdx
+push 1.000000
+sub
+pop rdx
+push 1.000000
+push rax
+add
+pop rax
+push rax
+push 10.000000
+jb :0
+hlt
+hlt
+pop r�x+-440496074969588920000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.000000

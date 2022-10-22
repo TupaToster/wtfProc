@@ -153,11 +153,12 @@ elem_t* getArg (Proc* cpu, int argType) {
         cpu->ip += sizeof (char);
     }
 
-    if (command & MASK_IMM) {
+    if (command & MASK_IMM or argType == 3) {
 
         *retVal += *(elem_t*)(cpu->code + cpu->ip);
         immConst = *(elem_t*)(cpu->code + cpu->ip);
         cpu->ip +=  sizeof (elem_t);
+        flog (*retVal);
     }
 
     if (command & MASK_RAM) {

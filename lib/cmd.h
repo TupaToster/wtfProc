@@ -84,14 +84,14 @@ DEF_CMD (pop, 8, PTR_ARG, {
 
 DEF_CMD (jmp, 9, IP_ARG, {
 
-    cpu->ip = (size_t) cmdArg;
+    cpu->ip =  (size_t) *cmdArg;
 })
 
 DEF_CMD (jb, 10, IP_ARG, {
 
     if (POP > POP) {
 
-        cpu->ip = (size_t) cmdArg;
+        cpu->ip = (size_t) *cmdArg;
     }
 })
 
@@ -101,7 +101,7 @@ DEF_CMD (jbe, 11, IP_ARG, {
     elem_t fst = POP;
     if (scd > fst or cmp (fst, scd)) {
 
-        cpu->ip = (size_t) cmdArg;
+        cpu->ip = (size_t) *cmdArg;
     }
 })
 
@@ -109,7 +109,7 @@ DEF_CMD (ja, 12, IP_ARG, {
 
     if (POP < POP) {
 
-        cpu->ip = (size_t) cmdArg;
+        cpu->ip = (size_t) *cmdArg;
     }
 })
 
@@ -119,7 +119,7 @@ DEF_CMD (jae, 13, IP_ARG, {
     elem_t fst = POP;
     if (scd < fst or cmp (fst, scd)) {
 
-        cpu->ip = (size_t) cmdArg;
+        cpu->ip = (size_t) *cmdArg;
     }
 })
 
@@ -127,7 +127,7 @@ DEF_CMD (je, 14, IP_ARG, {
 
     if (cmp (POP, POP)) {
 
-        cpu->ip = (size_t) cmdArg;
+        cpu->ip = (size_t) *cmdArg;
     }
 })
 
@@ -135,14 +135,14 @@ DEF_CMD (jne, 15, IP_ARG, {
 
     if (!cmp (POP, POP)) {
 
-        cpu->ip = (size_t) cmdArg;
+        cpu->ip = (size_t) *cmdArg;
     }
 })
 
 DEF_CMD (call, 16, IP_ARG, {
 
-    StackPush (&cpu->funcIp, cpu->ip);
-    cpu->ip = (size_t) cmdArg;
+    StackPush (&cpu->funcIp, (elem_t)cpu->ip);
+    cpu->ip = (size_t) *cmdArg;
 })
 
 DEF_CMD (ret, 17, 0, {
