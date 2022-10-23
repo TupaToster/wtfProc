@@ -35,6 +35,18 @@ typedef double elem_t; ///< Base element of cpu
 
 #else ///< Template for auto code gen starts here
 
+#define DEF_JMP(name, num, arg, condition)\
+                                          \
+    DEF_CMD (name, num, arg, {            \
+                                          \
+        elem_t scd = POP;                 \
+        elem_t fst = POP;                 \
+        if (condition) {                  \
+                                          \
+            cpu->ip = (int) *cmdArg;      \
+        }                                 \
+    })
+
 DEF_CMD (push, 1, VALUE_ARG, {
 
     PUSH (*cmdArg);
@@ -82,62 +94,19 @@ DEF_CMD (pop, 8, PTR_ARG, {
     *cmdArg = POP;
 })
 
-DEF_CMD (jmp, 9, IP_ARG, {
+DEF_JMP (jmp, 9, IP_ARG, true)
 
-    cpu->ip =  (size_t) *cmdArg;
-})
+DEF_JMP (jb, 10, IP_ARG, fst < scd)
 
-DEF_CMD (jb, 10, IP_ARG, {
+DEF_JMP (jbe, 11, IP_ARG, fst < scd or cmp (fst, scd))
 
-    if (POP > POP) {
+DEF_JMP (ja, 12, IP_ARG, fst > scd)
 
-        cpu->ip = (size_t) *cmdArg;
-    }
-})
+DEF_JMP (jae, 13, IP_ARG, fst > scd or cmp (fst, scd))
 
-DEF_CMD (jbe, 11, IP_ARG, {
+DEF_JMP (je, 14, IP_ARG, cmp (fst, scd))
 
-    elem_t scd = POP;
-    elem_t fst = POP;
-    if (scd > fst or cmp (fst, scd)) {
-
-        cpu->ip = (size_t) *cmdArg;
-    }
-})
-
-DEF_CMD (ja, 12, IP_ARG, {
-
-    if (POP < POP) {
-
-        cpu->ip = (size_t) *cmdArg;
-    }
-})
-
-DEF_CMD (jae, 13, IP_ARG, {
-
-    elem_t scd = POP;
-    elem_t fst = POP;
-    if (scd < fst or cmp (fst, scd)) {
-
-        cpu->ip = (size_t) *cmdArg;
-    }
-})
-
-DEF_CMD (je, 14, IP_ARG, {
-
-    if (cmp (POP, POP)) {
-
-        cpu->ip = (size_t) *cmdArg;
-    }
-})
-
-DEF_CMD (jne, 15, IP_ARG, {
-
-    if (!cmp (POP, POP)) {
-
-        cpu->ip = (size_t) *cmdArg;
-    }
-})
+DEF_JMP (jne, 15, IP_ARG, !cmp (fst, scd))
 
 DEF_CMD (call, 16, IP_ARG, {
 
@@ -175,5 +144,7 @@ DEF_CMD (sqrt, 20, 0, {
 
     PUSH (sqrt (POP));
 })
+
+#undef DEF_JMP
 
 #endif
