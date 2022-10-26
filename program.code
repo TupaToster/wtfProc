@@ -1,6 +1,0 @@
-push 1
-lol:
-push 1
-out
-jmp :lol
-hlt

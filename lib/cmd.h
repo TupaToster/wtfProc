@@ -15,6 +15,7 @@
 
 typedef double elem_t; ///< Base element of cpu
 #define elem_t_F "%Lf" ///< Printf format string for elem_t
+#define elem_t_F_ignore "%*Lf" ///< Scanf format for ignoring elem_t
 
 #define PUSH(val) StackPush (&cpu->stk, val)
 #define POP StackPop (&cpu->stk)

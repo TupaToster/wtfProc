@@ -1,6 +1,11 @@
 #include "asm_head.h"
 
-void printTag (Tag tags[], const char* name, char* outStr, size_t* Ip) {
+void printTag (Tag tags[], char* name, char* outStr, size_t* Ip, size_t commandIp, char cmdNum) {
+
+    if (outStr != NULL) outStr[*Ip] = cmdNum;
+    *Ip += sizeof (char);
+
+    name[strlen (name) - 1] = '\0';
 
     for (int i = 0; i <= TAGS_SIZE; i++) {
 
@@ -46,120 +51,69 @@ void handleArg (Text* code, int line, char* outStr, char cmdNum, Tag tags[TAGS_S
     char arg1[100] = "";
     char arg2[100] = "";
 
-    int it1 = 1,
-        it2 = 1;
+    int it1 = 1;
+    int it2 = 1;
 
+    size_t commandIp = *Ip;
+    *Ip += sizeof (char);
+
+    elem_t value = 0;
 
     char temp = *code->Lines[line].end;
-
     *code->Lines[line].end = '\0';
 
-    switch (sscanf (code->Lines[line].begin, "%s%[^+\n\0]%[^\n\0 ]", arg1, arg1, arg2)) {
+    if (sscanf (code->Lines[line].begin, "%s%[^+\n\0]%[^\n\0 ]", arg1, arg1, arg2) < 2) {
 
-        case 2:
-
-            if (arg1[it1] == '[') {
-
-                cmdNum |= MASK_RAM;
-                it1++;
-            }
-            if(arg1[it1] == 'r' and arg1[it1 + 2] == 'x') {
-
-                cmdNum |= MASK_REG;
-
-                if (outStr != NULL) outStr[*Ip] = cmdNum;
-                *Ip += sizeof (char);
-
-                if (outStr != NULL) outStr[*Ip] = arg1[it1 + 1] - 'a' + 1;
-                *Ip += sizeof (char);
-            }
-            else if (arg1[it1] >= '0' and arg1[it1] <= '9' or arg1[it1] == '-')  {
-
-                cmdNum |= MASK_IMM;
-
-                if (outStr != NULL) outStr[*Ip] = cmdNum;
-                *Ip += sizeof (char);
-
-                elem_t value = 0;
-                sscanf (arg1 + it1, elem_t_F, &value);
-                if (outStr != NULL) *(elem_t*)(outStr + *Ip) = value;
-                *Ip += sizeof (elem_t);
-            }
-            else if (arg1[it1] == ':') {
-
-                if (outStr != NULL) outStr[*Ip] = cmdNum;
-                *Ip += sizeof (char);
-
-                arg1[strlen (arg1) - 1] = '\0';
-                printTag (tags, arg1 + it1 + 1, outStr, Ip);
-            }
-            else {
-
-                printf ("Wrong arg at line %d : %s", line + 1, *code->Lines[line].begin);
-                Errors = 1;
-            }
-        break;
-
-        case 3:
-
-            if (arg1[it1] == '[') {
-
-                cmdNum |= MASK_RAM;
-                it1++;
-            }
-
-            cmdNum |= MASK_REG;
-            cmdNum |= MASK_IMM;
-
-            if (arg1[it1] == 'r' and arg1[it1 + 2] == 'x') {
-
-                if (arg2[0] != '+') {
-
-                    printf ("Wrong arg at line %d : %s", line + 1, *code->Lines[line].begin);
-                    Errors++;
-                }
-
-                if (outStr != NULL) outStr[*Ip] = cmdNum;
-                *Ip += sizeof (char);
-
-                if (outStr != NULL) outStr[*Ip] = arg1[it1 + 1] - 'a' + 1;
-                *Ip += sizeof (char);
-
-                elem_t value = 0;
-                sscanf (arg2 + it2, elem_t_F, &value);
-                if (outStr != NULL) *(elem_t*)(outStr + *Ip) = value;
-                *Ip += sizeof (elem_t);
-            }
-            else if (arg1[it1] >= '0' and arg1[it1] <= '9' or arg1[it1] == '-') {
-
-                if (arg2[0] != '+') {
-
-                    printf ("Wrong arg at line %d : %s", line + 1, *code->Lines[line].begin);
-                    Errors++;
-                }
-
-                if (outStr != NULL) outStr[*Ip] = cmdNum;
-                *Ip += sizeof (char);
-
-                if (outStr != NULL) outStr[*Ip] = arg2[it2] - 'a' + 1;
-                *Ip += sizeof (char);
-
-                elem_t value = 0;
-                sscanf (arg1 + it1, elem_t_F, &value);
-                if (outStr != NULL) *(elem_t*)(outStr + *Ip) = value;
-                *Ip += sizeof (elem_t);
-            }
-        break;
-
-        default:
-
-            printf ("Wrong operator in line %d : %s\n", line + 1, *code->Lines[line].begin);
-            Errors = 1;
-        break;
+        printf ("Wrong operator in line %d : %s\n", line + 1, *code->Lines[line].begin);
+        Errors = 1;
+        goto Return;
     }
 
-    *code->Lines[line].end = temp;
+    if (arg1[it1] == ':') {
 
+        printTag (tags, arg1 + it1 + 1, outStr, Ip, commandIp, cmdNum);
+        goto Return;
+    }
+
+    if (arg1[it1] == '[') {
+
+        cmdNum |= MASK_RAM;
+        it1++;
+    }
+
+    if (arg1[it1] == 'r' and arg1[it1 + 2] == 'x')
+        printReg (Ip, commandIp, outStr, &cmdNum, arg1 + it1);
+
+    if (sscanf (arg1 + it1, elem_t_F, &value) == 1)
+        printImm (Ip, commandIp, outStr, &cmdNum, value);
+
+    if (arg2[it2] == 'r' and arg2[it2 + 2] == 'x') {
+
+        if (cmdNum & MASK_REG) {
+
+            printf ("Wrong args at line %d : %s \n", line + 1, code->Lines[line].begin);
+            Errors++;
+            goto Return;
+        }
+
+        printReg (Ip, commandIp, outStr, &cmdNum, arg2 + it2);
+    }
+
+    if (sscanf (arg2 + it2, elem_t_F, &value) == 1) {
+
+        if (cmdNum & MASK_IMM) {
+
+            printf ("Wrong args at line %d : %s \n", line + 1, code->Lines[line].begin);
+            Errors++;
+            goto Return;
+        }
+
+        printImm (Ip, commandIp, outStr, &cmdNum, value);
+    }
+
+    Return:
+
+    *code->Lines[line].end = temp;
 }
 
 char* handleComLine (int argc, char* argv[], char** outStrName) {
@@ -221,7 +175,6 @@ char* handleComLine (int argc, char* argv[], char** outStrName) {
 
         strcpy (*outStrName, "a.wtf");
     }
-
     return fileName;
 }
 
@@ -254,7 +207,7 @@ void writeWtf (Text* codeFile, char* outStr, Tag tags[TAGS_SIZE], size_t* Ip) {
                 }                                                     \
                 else if (arg != 0) {                                  \
                                                                       \
-                    handleArg (codeFile, i, outStr, num, tags, Ip);  \
+                    handleArg (codeFile, i, outStr, num, tags, Ip);   \
                 }                                                     \
             }                                                         \
             else
@@ -290,4 +243,24 @@ void TagsCtor (Tag* tags) {
 
         TagCtor (tags + i);
     }
+}
+
+void printReg (size_t* Ip, size_t commandIp, char* outStr, char* cmdNum, char* arg) {
+
+    *cmdNum |= MASK_REG;
+
+    if (outStr != NULL) outStr[commandIp] = *cmdNum;
+
+    if (outStr != NULL) outStr[*Ip] = arg[1] - 'a' + 1;
+    *Ip += sizeof (char);
+}
+
+void printImm (size_t* Ip, size_t commandIp, char* outStr, char* cmdNum, elem_t value) {
+
+    *cmdNum |= MASK_IMM;
+
+    if (outStr != NULL) outStr[commandIp] = *cmdNum;
+
+    if (outStr != NULL) *(elem_t*)(outStr + *Ip) = value;
+    *Ip += sizeof (elem_t);
 }

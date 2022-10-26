@@ -55,3 +55,19 @@ char* handleComLine (int argc, char* argv[], char** outStrName);
 /// @param outStr String to write to
 /// @param tags Array of tags for jumps
 void writeWtf (Text* codeFile, char* outStr, Tag tags[512], size_t* Ip);
+
+/// @brief Prints a register into binary
+/// @param Ip Ip of argument
+/// @param commandIp Ip of command
+/// @param outStr String to write to
+/// @param cmdNum Number of command
+/// @param arg Argument string
+void printReg (size_t* Ip, size_t commandIp, char* outStr, char* cmdNum, char* arg);
+
+/// @brief Prints an immidiate constant into binary
+/// @param Ip Ip of argument
+/// @param commandIp Ip of command
+/// @param outStr String to write to
+/// @param cmdNum Number of command
+/// @param value Argument value
+void printImm (size_t* Ip, size_t commandIp, char* outStr, char* cmdNum, elem_t value);
