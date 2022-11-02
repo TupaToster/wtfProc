@@ -32,6 +32,8 @@ typedef double elem_t; ///< Base element of cpu
 #define PTR_ARG   2
 #define IP_ARG    3
 
+#define TEMP_STR_LEN 100
+
 #define DEF_CMD(name, num, arg, code) ;
 
 #else ///< Template for auto code gen starts here

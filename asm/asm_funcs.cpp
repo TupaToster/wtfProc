@@ -1,18 +1,16 @@
+
 #include "asm_head.h"
 
 void printTag (Tag tags[], char* name, char* outStr, size_t* Ip, size_t commandIp, char cmdNum) {
 
-    if (outStr != NULL) outStr[*Ip] = cmdNum;
-    *Ip += sizeof (char);
+    if (outStr != NULL) outStr[commandIp] = cmdNum;
 
     name[strlen (name) - 1] = '\0';
-
     for (int i = 0; i <= TAGS_SIZE; i++) {
 
         if (i == TAGS_SIZE) {
 
-            elem_t t = -1;
-            if (outStr != NULL) *(elem_t*)(outStr + *Ip) = t;
+            if (outStr != NULL) *(elem_t*)(outStr + *Ip) = (elem_t) -1;
             *Ip += sizeof (elem_t);
         }
         else if (strcmp (tags[i].name, name) == 0) {
@@ -48,8 +46,8 @@ void handleArg (Text* code, int line, char* outStr, char cmdNum, Tag tags[TAGS_S
     assert (code != NULL);
     assert (tags != NULL);
 
-    char arg1[100] = "";
-    char arg2[100] = "";
+    char arg1[TEMP_STR_LEN] = "";
+    char arg2[TEMP_STR_LEN] = "";
 
     int it1 = 1;
     int it2 = 1;
@@ -189,7 +187,7 @@ void writeWtf (Text* codeFile, char* outStr, Tag tags[TAGS_SIZE], size_t* Ip) {
 
     for (int i = 0; i < codeFile->stringCnt; i++) {
 
-        char inputStr[100] = "";
+        char inputStr[TEMP_STR_LEN] = "";
 
         sscanf (codeFile->Lines[i].begin, "%s", inputStr);
 

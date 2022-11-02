@@ -1,0 +1,159 @@
+----------------------------------------
+Logging session at compiled time : 15:12:38 Oct 28 2022
+
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 0.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 4.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 5.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 5.000000;
+----------------------------------------
+Logging session at compiled time : 02:31:51 Nov  1 2022
+
+In file asm/asm_funcs.cpp, function addTag, line 40 : *Ip = 13;
+In file asm/asm_funcs.cpp, function addTag, line 40 : *Ip = 13;
+----------------------------------------
+Logging session at compiled time : 03:04:42 Nov  1 2022
+
+In file asm/asm_funcs.cpp, function printTag, line 9 : name = <while_rax_less_5>;
+In file asm/asm_funcs.cpp, function printTag, line 9 : name = <while_rax_less_10>;
+In file asm/asm_funcs.cpp, function printTag, line 9 : name = <while_rax_less_5>;
+In file asm/asm_funcs.cpp, function printTag, line 9 : name = <while_rax_less_10>;
+----------------------------------------
+Logging session at compiled time : 03:05:05 Nov  1 2022
+
+In file asm/asm_funcs.cpp, function printTag, line 9 : name = <while_rax_less_5>;
+In file asm/asm_funcs.cpp, function printTag, line 9 : name = <while_rax_less_10>;
+In file asm/asm_funcs.cpp, function printTag, line 9 : name = <while_rax_less_5>;
+In file asm/asm_funcs.cpp, function printTag, line 9 : name = <while_rax_less_10>;
+----------------------------------------
+Logging session at compiled time : 03:06:34 Nov  1 2022
+
+In file asm/asm_funcs.cpp, function printTag, line 9 : name = <while_rax_less_5>;
+In file asm/asm_funcs.cpp, function printTag, line 9 : name = <while_rax_less_10>;
+In file asm/asm_funcs.cpp, function printTag, line 9 : name = <while_rax_less_5>;
+In file asm/asm_funcs.cpp, function printTag, line 9 : name = <while_rax_less_10>;
+----------------------------------------
+Logging session at compiled time : 03:06:46 Nov  1 2022
+
+In file asm/asm_funcs.cpp, function printTag, line 9 : name = <while_rax_less_5>;
+In file asm/asm_funcs.cpp, function printTag, line 9 : name = <while_rax_less_10>;
+In file asm/asm_funcs.cpp, function printTag, line 9 : name = <while_rax_less_5>;
+In file asm/asm_funcs.cpp, function printTag, line 9 : name = <while_rax_less_10>;
+----------------------------------------
+Logging session at compiled time : 03:06:46 Nov  1 2022
+
+In file asm/asm_funcs.cpp, function printTag, line 9 : name = <while_rax_less_5>;
+In file asm/asm_funcs.cpp, function printTag, line 9 : name = <while_rax_less_10>;
+In file asm/asm_funcs.cpp, function printTag, line 9 : name = <while_rax_less_5>;
+In file asm/asm_funcs.cpp, function printTag, line 9 : name = <while_rax_less_10>;
+----------------------------------------
+Logging session at compiled time : 03:08:10 Nov  1 2022
+
+In file asm/asm_funcs.cpp, function printTag, line 11 : kok = 6675636B000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 :: UNDEFINED_FORMAT : sizeof() = 100;
+In file asm/asm_funcs.cpp, function printTag, line 11 : kok = 6675636B000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 :: UNDEFINED_FORMAT : sizeof() = 100;
+In file asm/asm_funcs.cpp, function printTag, line 11 : kok = 6675636B000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 :: UNDEFINED_FORMAT : sizeof() = 100;
+In file asm/asm_funcs.cpp, function printTag, line 11 : kok = 6675636B000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 :: UNDEFINED_FORMAT : sizeof() = 100;
+----------------------------------------
+Logging session at compiled time : 02:55:58 Nov  1 2022
+
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 0.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 4.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 5.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 5.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 37.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 5.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 37.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 5.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 37.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 5.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 37.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 5.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 37.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 0.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 9.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 179.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 179.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 179.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 179.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 1.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 10.000000;
+In file processor/proc_funcs.cpp, function getArg, line 161 : *retVal = 179.000000;

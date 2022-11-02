@@ -1,0 +1,5 @@
+push 1
+lol:
+push 12
+jmp :lol
+hlt
