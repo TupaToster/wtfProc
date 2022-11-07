@@ -24,7 +24,7 @@ typedef double elem_t; ///< Base element of cpu
 
 #define TAGS_SIZE 512
 
-#define RAM_SIZE 100
+#define RAM_SIZE 121
 
 #define REG_SIZE 5
 

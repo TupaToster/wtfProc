@@ -1,0 +1,29 @@
+in
+pop rax
+push 5
+push rax
+ja :exit
+push 0
+pop rbx
+for_rbx_=_0_to_11:
+push 0
+pop rcx
+for_rcx_=_0_to_11:
+push rbx
+push 5
+sub
+push rbx
+push 5
+sub
+mult
+push rcx
+push 5
+sub
+push rcx
+push 5
+sub
+mult
+add
+sqrt
+push rax
+
